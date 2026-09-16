@@ -58,7 +58,7 @@ from aI_agents.qa import ChatUnavailable, generate_strengths_concerns
 from aI_agents.build_report import generate_report, report_to_pdf_bytes
 from aI_agents.compare import MAX_RANK_SITES, compare
 from aI_agents.build_compare_report import generate_compare_html
-from aI_agents.qa_agent import route_and_answer
+from aI_agents.qa_agent import TOOL_DISPLAY_NAMES, route_and_answer
 from aI_agents.run_worker import run_analysis_worker
 
 from location_picker import MP_CENTER, render_location_picker_with_satellite
@@ -445,6 +445,9 @@ def _render_chat(site_summary: dict, summary_path: Path) -> None:
                     summary_path=str(summary_path),
                 )
             answer = result["answer"]
+            if result.get("tool_used"):
+                tool_label = TOOL_DISPLAY_NAMES.get(result["tool_used"], result["tool_used"])
+                answer += f"\n\n_(Used live tool: {tool_label})_"
             if result.get("mentioned_sites"):
                 answer += f"\n\n_(Also pulled in: {', '.join(result['mentioned_sites'])})_"
         except ChatUnavailable as error:
