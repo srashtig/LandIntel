@@ -1,0 +1,4 @@
+2026-09-15 04:34:56,924 INFO run_analysis starting: lat=22.729224834052804 lon=75.32020394089945 radius_km=5.0
+2026-09-15 04:34:56,986 INFO osm_roads: starting
+2026-09-15 05:23:17,886 INFO osm_roads: completed
+2026-09-15 05:23:17,892 WARNING run_analysis cancelled by caller before stage: OSM railways

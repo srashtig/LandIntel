@@ -1,0 +1,1992 @@
+{
+  "schema_version": "1.0",
+  "run_success": true,
+  "generated_at": "2026-09-15 03:37",
+  "site": {
+    "latitude": 22.871037,
+    "longitude": 75.864716,
+    "aoi_radius_km": 5.0,
+    "aoi_area_km2": 66.21709144201033,
+    "metric_crs": "EPSG:32643"
+  },
+  "administration": {
+    "village": "Jetpura",
+    "tehsil": "Sawer",
+    "block": "Sawer",
+    "district": "Indore",
+    "state": "MP",
+    "boundary_village_code": "476195",
+    "point_inside_village_polygon": true,
+    "source": "Survey of India village boundaries (vb_soi_mp)",
+    "govt_guideline_rates": {
+      "row_kind": "rural_village",
+      "village": "Jetpura",
+      "vlcode": 476195,
+      "tehsil": "SAWER",
+      "frontage_type": "plain",
+      "match_score": 99.0,
+      "plot_residential_sqm": 12000.0,
+      "plot_commercial_sqm": 15000.0,
+      "plot_industrial_sqm": 12000.0,
+      "agri_land_irrigated_per_ha": 120000000.0,
+      "agri_land_unirrigated_per_ha": 120000000.0,
+      "source": "MP Govt district guideline rates, FY2026-27"
+    },
+    "land_use": {
+      "population": 961.0,
+      "area_ha": 755.0,
+      "forest_area_ha": 0.0,
+      "non_agricultural_area_ha": 13.0,
+      "barren_land_ha": 233.0,
+      "pastures_grazing_ha": 85.0,
+      "miscellaneous_land_ha": 0.0,
+      "culturable_waste_ha": 0.0,
+      "other_fallows_ha": 0.0,
+      "current_fallows_ha": 0.0,
+      "net_area_sown_ha": 409.0,
+      "unirrigated_land_ha": 85.0,
+      "irrigated_land_ha": 324.0,
+      "forest_share_percent": 0.0,
+      "barren_share_percent": 30.86092715231788,
+      "net_sown_share_percent": 54.17218543046357,
+      "source": "Survey of India village boundaries (vb_soi_mp)"
+    },
+    "census": {
+      "population_total": 990.0,
+      "households": 187.0,
+      "cultivation_share": 74.90636704119851,
+      "agricultural_labour_share": 4.49438202247191,
+      "household_industry_share": 0.0,
+      "other_worker_share": 20.59925093632959,
+      "literacy_percent": 79.59413754227734,
+      "sc_percent": 13.737373737373735,
+      "st_percent": 0.0
+    },
+    "census_join": {
+      "method": "normalized village name",
+      "boundary_villages": 65,
+      "matched_villages": 63,
+      "unmatched_villages": 2,
+      "source": "census_derieved.csv"
+    },
+    "aoi_overlap": {
+      "village_count": 24,
+      "villages": [
+        "Amli Kheda",
+        "Barodiya Ema",
+        "Baroli",
+        "Brahman Khedi",
+        "Brahman Pipalya",
+        "Darjikaradia",
+        "Dhan Khedi",
+        "Jassa Karadiya",
+        "Jetpura",
+        "Kadwa",
+        "Kattkya",
+        "Khakrod",
+        "Mawala Khedi",
+        "Mundla Husain",
+        "Muradpura",
+        "Padariya Bajrang",
+        "Panchderiya",
+        "Rajoda",
+        "Rampipalya",
+        "Ringnodiya",
+        "Shahna",
+        "Siloda Buzurg",
+        "Solsinda",
+        "Todi"
+      ],
+      "tehsil_count": 2,
+      "tehsils": [
+        "Malharganj",
+        "Sawer"
+      ],
+      "district_count": 1,
+      "districts": [
+        "Indore"
+      ]
+    }
+  },
+  "land_cover": {
+    "classes": [
+      {
+        "name": "Cropland",
+        "area_km2": 55.79235506645218,
+        "percentage": 84.20613996813674
+      },
+      {
+        "name": "Grassland",
+        "area_km2": 4.4159645247364105,
+        "percentage": 6.664915406804077
+      },
+      {
+        "name": "Tree cover",
+        "area_km2": 2.711394748116198,
+        "percentage": 4.092246785367005
+      },
+      {
+        "name": "Built-up",
+        "area_km2": 2.682507959888924,
+        "percentage": 4.048648609061333
+      },
+      {
+        "name": "Bare / sparse vegetation",
+        "area_km2": 0.5721108787797815,
+        "percentage": 0.8634740132128185
+      },
+      {
+        "name": "Permanent water",
+        "area_km2": 0.06997515498352051,
+        "percentage": 0.10561191919244574
+      },
+      {
+        "name": "Shrubland",
+        "area_km2": 0.012564488388061524,
+        "percentage": 0.018963298225589953
+      }
+    ],
+    "aoi_area_km2": 66.21709144201033,
+    "dominant_class": "Cropland",
+    "source": "ESA WorldCover v200 (10 m)"
+  },
+  "groundwater": {
+    "wells": 1,
+    "latest_observation": "2025-11-08",
+    "latest_mean_depth_m_bgl": 2.2,
+    "latest_min_depth_m_bgl": 2.2,
+    "latest_max_depth_m_bgl": 2.2,
+    "five_year_mean_m_bgl": 7.006666666666665,
+    "five_year_mean_m_bgl_pooled": 7.006666666666665,
+    "five_year_observation_count": 21,
+    "seasonal_windows": {
+      "pre_monsoon_months": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "monsoon_months": [
+        7,
+        8,
+        9
+      ]
+    },
+    "seasonal": [
+      {
+        "year": 2023,
+        "pre_monsoon": {
+          "level_m_bgl": 15.5,
+          "observations": 1,
+          "dates": [
+            "29-05-2023"
+          ],
+          "months": [
+            "May"
+          ]
+        },
+        "monsoon": {
+          "level_m_bgl": 1.6,
+          "observations": 1,
+          "dates": [
+            "29-08-2023"
+          ],
+          "months": [
+            "Aug"
+          ]
+        },
+        "observed_months": [
+          "Jan",
+          "May",
+          "Aug",
+          "Nov"
+        ],
+        "fluctuation_m": 13.9
+      },
+      {
+        "year": 2024,
+        "pre_monsoon": {
+          "level_m_bgl": 11.7,
+          "observations": 1,
+          "dates": [
+            "29-05-2024"
+          ],
+          "months": [
+            "May"
+          ]
+        },
+        "monsoon": {
+          "level_m_bgl": 1.4,
+          "observations": 1,
+          "dates": [
+            "28-08-2024"
+          ],
+          "months": [
+            "Aug"
+          ]
+        },
+        "observed_months": [
+          "Jan",
+          "May",
+          "Aug",
+          "Nov"
+        ],
+        "fluctuation_m": 10.299999999999999
+      },
+      {
+        "year": 2025,
+        "pre_monsoon": {
+          "level_m_bgl": 12.0,
+          "observations": 1,
+          "dates": [
+            "19-05-2025"
+          ],
+          "months": [
+            "May"
+          ]
+        },
+        "monsoon": {
+          "level_m_bgl": 1.7,
+          "observations": 1,
+          "dates": [
+            "31-08-2025"
+          ],
+          "months": [
+            "Aug"
+          ]
+        },
+        "observed_months": [
+          "Jan",
+          "May",
+          "Aug",
+          "Nov"
+        ],
+        "fluctuation_m": 10.3
+      }
+    ],
+    "wells_detail": [
+      {
+        "well_no": "SIND172-OW",
+        "latitude": 22.85,
+        "longitude": 75.86666667,
+        "village": "Dharampuri",
+        "district": "Indore",
+        "well_type": "Dug Well",
+        "agency": "SGWO",
+        "depth_of_well_m": 16.2,
+        "latest_date": "2025-11-08",
+        "latest_level_m_bgl": 2.2,
+        "five_year_avg_m_bgl": 7.006666666666665,
+        "change_5yr_m": -0.5999999999999996,
+        "trend": "Improving",
+        "trend_description": "Water level has become shallower",
+        "n_5yr_observations": 21,
+        "seasonal": [
+          {
+            "year": 2023,
+            "pre_monsoon": {
+              "level_m_bgl": 15.5,
+              "observations": 1,
+              "dates": [
+                "29-05-2023"
+              ],
+              "months": [
+                "May"
+              ]
+            },
+            "monsoon": {
+              "level_m_bgl": 1.6,
+              "observations": 1,
+              "dates": [
+                "29-08-2023"
+              ],
+              "months": [
+                "Aug"
+              ]
+            },
+            "observed_months": [
+              "Jan",
+              "May",
+              "Aug",
+              "Nov"
+            ]
+          },
+          {
+            "year": 2024,
+            "pre_monsoon": {
+              "level_m_bgl": 11.7,
+              "observations": 1,
+              "dates": [
+                "29-05-2024"
+              ],
+              "months": [
+                "May"
+              ]
+            },
+            "monsoon": {
+              "level_m_bgl": 1.4,
+              "observations": 1,
+              "dates": [
+                "28-08-2024"
+              ],
+              "months": [
+                "Aug"
+              ]
+            },
+            "observed_months": [
+              "Jan",
+              "May",
+              "Aug",
+              "Nov"
+            ]
+          },
+          {
+            "year": 2025,
+            "pre_monsoon": {
+              "level_m_bgl": 12.0,
+              "observations": 1,
+              "dates": [
+                "19-05-2025"
+              ],
+              "months": [
+                "May"
+              ]
+            },
+            "monsoon": {
+              "level_m_bgl": 1.7,
+              "observations": 1,
+              "dates": [
+                "31-08-2025"
+              ],
+              "months": [
+                "Aug"
+              ]
+            },
+            "observed_months": [
+              "Jan",
+              "May",
+              "Aug",
+              "Nov"
+            ]
+          }
+        ]
+      }
+    ],
+    "trend_counts": {
+      "Improving": 1
+    },
+    "dominant_trend": "Improving",
+    "mean_change_5yr_m": -0.5999999999999996,
+    "nearest_well_m": 2337.5589213573558,
+    "nearest_well_depth_m_bgl": 2.2,
+    "well_depth_range_m": [
+      16.2,
+      16.2
+    ],
+    "source": "CGWB manual monthly groundwater monitoring"
+  },
+  "rainfall": {
+    "years": [
+      2023,
+      2024,
+      2025
+    ],
+    "monsoon_months": [
+      6,
+      7,
+      8,
+      9
+    ],
+    "thresholds_mm": {
+      "rain_day": 1.0,
+      "heavy_25": 25.0,
+      "heavy_50": 50.0,
+      "heavy_100": 100.0
+    },
+    "thresholds_in": {
+      "rain_day": 0.03937007874015748,
+      "heavy_25": 0.984251968503937,
+      "heavy_50": 1.968503937007874,
+      "heavy_100": 3.937007874015748
+    },
+    "yearly": [
+      {
+        "year": 2023,
+        "chirps": {
+          "annual_mm": 1167.8879552595602,
+          "monsoon_mm": 1026.8660984821904,
+          "rain_days": 93.88006756756758,
+          "days_ge_25mm": 13.430743243243242,
+          "days_ge_50mm": 2.3513513513513518,
+          "days_ge_100mm": 0.0,
+          "max_1day_mm": 54.90211568651973,
+          "annual_in": 45.979840758250404,
+          "monsoon_in": 40.42779915284214,
+          "max_1day_in": 2.161500617579517
+        },
+        "imd": {
+          "annual_mm": 1299.4573974609375,
+          "monsoon_mm": 1167.212890625,
+          "rain_days": 72.0,
+          "days_ge_25mm": 13.0,
+          "days_ge_50mm": 6.0,
+          "days_ge_100mm": 2.0,
+          "max_1day_mm": 169.128662109375,
+          "annual_in": 51.159740057517226,
+          "monsoon_in": 45.953263410433074,
+          "max_1day_in": 6.658608744463583
+        },
+        "diff_percent": {
+          "annual_mm": -10.124952342297348,
+          "monsoon_mm": -12.024095455941975,
+          "rain_days": 30.38898273273275,
+          "days_ge_25mm": 3.3134095634095546,
+          "days_ge_50mm": -60.81081081081081,
+          "days_ge_100mm": -100.0,
+          "max_1day_mm": -67.53825460346
+        }
+      },
+      {
+        "year": 2024,
+        "chirps": {
+          "annual_mm": 1211.4390375504286,
+          "monsoon_mm": 1100.7480324068915,
+          "rain_days": 113.0,
+          "days_ge_25mm": 12.011824324324325,
+          "days_ge_50mm": 2.0912162162162167,
+          "days_ge_100mm": 0.0,
+          "max_1day_mm": 78.40180971815778,
+          "annual_in": 47.69445029726097,
+          "monsoon_in": 43.33653670893274,
+          "max_1day_in": 3.0866854219747157
+        },
+        "imd": {
+          "annual_mm": 944.166748046875,
+          "monsoon_mm": 870.2233276367188,
+          "rain_days": 96.0,
+          "days_ge_25mm": 7.0,
+          "days_ge_50mm": 3.0,
+          "days_ge_100mm": 1.0,
+          "max_1day_mm": 106.2235107421875,
+          "annual_in": 37.171919214443896,
+          "monsoon_in": 34.26076093057948,
+          "max_1day_in": 4.182027981975886
+        },
+        "diff_percent": {
+          "annual_mm": 28.307742255956285,
+          "monsoon_mm": 26.490292485747638,
+          "rain_days": 17.708333333333332,
+          "days_ge_25mm": 71.59749034749035,
+          "days_ge_50mm": -30.292792792792778,
+          "days_ge_100mm": -100.0,
+          "max_1day_mm": -26.191660235703463
+        }
+      },
+      {
+        "year": 2025,
+        "chirps": {
+          "annual_mm": 1217.9107298593724,
+          "monsoon_mm": 956.60255556439,
+          "rain_days": 103.94763513513514,
+          "days_ge_25mm": 14.709459459459461,
+          "days_ge_50mm": 0.7010135135135136,
+          "days_ge_100mm": 0.0,
+          "max_1day_mm": 52.114492003982136,
+          "annual_in": 47.94924133304616,
+          "monsoon_in": 37.66151793560591,
+          "max_1day_in": 2.051751653700084
+        },
+        "imd": {
+          "annual_mm": 1190.3570556640625,
+          "monsoon_mm": 916.947509765625,
+          "rain_days": 85.0,
+          "days_ge_25mm": 10.0,
+          "days_ge_50mm": 7.0,
+          "days_ge_100mm": 1.0,
+          "max_1day_mm": 113.4290771484375,
+          "annual_in": 46.86445101039617,
+          "monsoon_in": 36.10029566006398,
+          "max_1day_in": 4.465711698757382
+        },
+        "diff_percent": {
+          "annual_mm": 2.3147402759702693,
+          "monsoon_mm": 4.324680025457609,
+          "rain_days": 22.29133545310017,
+          "days_ge_25mm": 47.09459459459462,
+          "days_ge_50mm": -89.98552123552123,
+          "days_ge_100mm": -100.0,
+          "max_1day_mm": -54.05543859288992
+        }
+      }
+    ],
+    "means": {
+      "chirps": {
+        "annual_mm": 1199.0792408897871,
+        "monsoon_mm": 1028.072228817824,
+        "rain_days": 103.60923423423424,
+        "days_ge_25mm": 13.384009009009008,
+        "days_ge_50mm": 1.7145270270270274,
+        "days_ge_100mm": 0.0,
+        "max_1day_mm": 61.80613913621988,
+        "annual_in": 47.20784412951918,
+        "monsoon_in": 40.47528459912693,
+        "max_1day_in": 2.433312564418106
+      },
+      "imd": {
+        "annual_mm": 1144.660400390625,
+        "monsoon_mm": 984.7945760091146,
+        "rain_days": 84.33333333333333,
+        "days_ge_25mm": 10.0,
+        "days_ge_50mm": 5.333333333333333,
+        "days_ge_100mm": 1.3333333333333333,
+        "max_1day_mm": 129.59375,
+        "annual_in": 45.065370094119096,
+        "monsoon_in": 38.771440000358844,
+        "max_1day_in": 5.102116141732283
+      }
+    },
+    "wettest_day_mm": {
+      "chirps": 78.40180971815778,
+      "imd": 169.128662109375
+    },
+    "wettest_day_in": {
+      "chirps": 3.0866854219747157,
+      "imd": 6.658608744463583
+    },
+    "imd_grid": [
+      {
+        "year": 2023,
+        "latitude": 22.75,
+        "longitude": 75.75
+      },
+      {
+        "year": 2024,
+        "latitude": 22.75,
+        "longitude": 75.75
+      },
+      {
+        "year": 2025,
+        "latitude": 22.75,
+        "longitude": 75.75
+      }
+    ],
+    "notes": [
+      "CHIRPS v3 daily (UCSB-CHC/CHIRPS/V3/DAILY_RNL), AOI mean over 5.0 km, native ~5.5 km grid.",
+      "IMD 0.25\u00b0 gridded daily rainfall at the grid cell nearest the site.",
+      "diff_percent = 100 x (CHIRPS - IMD) / |IMD| \u2014 a diagnostic, not a claim that either dataset is ground truth."
+    ],
+    "source": "CHIRPS v3 daily + IMD 0.25\u00b0 gridded daily"
+  },
+  "air_temperature": {
+    "annual_mean_c": 24.86598175708845,
+    "coldest_month": "2023-01",
+    "coldest_month_c": 18.037260489069137,
+    "warmest_month": "2024-05",
+    "warmest_month_c": 33.16470433328978,
+    "months": 36,
+    "period": "2023\u20132025",
+    "source": "ERA5-Land monthly aggregated, 2 m air temperature"
+  },
+  "land_surface_temperature": {
+    "mean_c": 37.88745884087414,
+    "min_c": 26.143757420000043,
+    "max_c": 43.68161803999999,
+    "scenes": 16,
+    "source": "Landsat 8 C2 L2 ST_B10 (median composite)"
+  },
+  "terrain": {
+    "elevation_mean_m": 527.758092244016,
+    "elevation_min_m": 509,
+    "elevation_max_m": 579,
+    "slope_mean_deg": 1.9358175372596234,
+    "slope_median_deg": 1.3685177901065562,
+    "slope_min_deg": 0,
+    "slope_max_deg": 19.10173225402832,
+    "slope_range_90pct_deg": [
+      0,
+      4.184066151266017
+    ],
+    "slope_median_deg_100m": 6.620256304286666,
+    "slope_class_share": [
+      {
+        "class": "lt_3",
+        "label": "< 3\u00b0 (nearly level)",
+        "share_percent": 86.30624391757442
+      },
+      {
+        "class": "3_8",
+        "label": "3\u20138\u00b0 (gentle)",
+        "share_percent": 12.190763446302599
+      },
+      {
+        "class": "8_15",
+        "label": "8\u201315\u00b0 (moderate)",
+        "share_percent": 1.4678677177882098
+      },
+      {
+        "class": "ge_15",
+        "label": ">= 15\u00b0 (steep)",
+        "share_percent": 0.03512491833468847
+      }
+    ],
+    "source": "SRTM 1 arc-second (USGS/SRTMGL1_003)"
+  },
+  "roads": {
+    "features": 0,
+    "nearest_major_road_m": null,
+    "nearest_major_road_class": null,
+    "nearest_major_road_name": null,
+    "nearest_major_road_beyond_aoi": false,
+    "source": "OpenStreetMap via OSMnx"
+  },
+  "railways": {
+    "features": 0,
+    "source": "OpenStreetMap via OSMnx"
+  },
+  "water_resources": {
+    "features": 0,
+    "source": "OpenStreetMap via OSMnx",
+    "worldcover_permanent_water_percent": 0.10561191919244574
+  },
+  "hydrology": {
+    "river_floodplain": {
+      "inside_supplied_river_polygon": false,
+      "nearest_river_m": 2996.4325012614736,
+      "nearest_river_name": "Khan",
+      "features_in_query_window": 1,
+      "rivers_in_query_window": [
+        {
+          "name": "Khan",
+          "ripcode": "01",
+          "distance_m": 2996.4325012614736
+        }
+      ],
+      "source": "river_polygon.GeoJSON; polygon coverage used as floodplain proxy"
+    },
+    "sac_water_bodies": {
+      "waterbodies_in_aoi": 47,
+      "nearest_water_body_m": 536.8180403722807,
+      "nearest_water_body_name": null,
+      "nearest_water_body_type": "Tank/Pond",
+      "water_bodies": [
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 3.639839149920731,
+          "distance_m": 536.8180403722807
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.8924250357458517,
+          "distance_m": 815.9148035154232
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.37812042902114357,
+          "distance_m": 898.4878482990864
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.45488566400379304,
+          "distance_m": 917.7059469527688
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.3878201814793064,
+          "distance_m": 1103.847142323174
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.6446782895732202,
+          "distance_m": 1655.2346025307734
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.3821939708386021,
+          "distance_m": 2213.1256867020575
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 8.297519889769196,
+          "distance_m": 2223.6812986838117
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 14.042009671618834,
+          "distance_m": 2415.270549315911
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 1.009195144269888,
+          "distance_m": 2457.48131503783
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.34199575171588725,
+          "distance_m": 2572.0352198904507
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.4631372635567468,
+          "distance_m": 2609.701024319617
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.6965872772904275,
+          "distance_m": 2705.179701684572
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 1.3191932839570395,
+          "distance_m": 2775.378188767169
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.3328915441556791,
+          "distance_m": 2883.924455336893
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.1586209969991749,
+          "distance_m": 2900.2032827818684
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.2054592458042634,
+          "distance_m": 2966.0043422302497
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.2960187526556047,
+          "distance_m": 3015.357346962403
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.3287614101247329,
+          "distance_m": 3063.7573059993533
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.26339659807925686,
+          "distance_m": 3137.018185100734
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 10.599207381264504,
+          "distance_m": 3315.4571763179592
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.46082394136004706,
+          "distance_m": 3321.519655712589
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.2877540997326107,
+          "distance_m": 3335.818826531601
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.9570403446937645,
+          "distance_m": 3387.477933527754
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.26291459587064214,
+          "distance_m": 3436.5390883724262
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 4.006218974832524,
+          "distance_m": 3440.148615108899
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.19414972949127474,
+          "distance_m": 3457.7656969591735
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.5387740110932296,
+          "distance_m": 3568.0461870550944
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 37.243575504908804,
+          "distance_m": 3573.5181636690854
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.19160575540143832,
+          "distance_m": 3581.3267487085004
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.7116285674823083,
+          "distance_m": 3588.170561526737
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.1314565053485577,
+          "distance_m": 3602.6759768848156
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.17062749278890366,
+          "distance_m": 3634.1020081870747
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.21331355370484062,
+          "distance_m": 3649.5505568349417
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 6.251886113129075,
+          "distance_m": 3656.1055435712465
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.14564910776099652,
+          "distance_m": 3785.188274902308
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.4700540213779762,
+          "distance_m": 3839.9134501381486
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.422572126775051,
+          "distance_m": 3979.2814464315857
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 1.1818036323314642,
+          "distance_m": 4186.122512528843
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.533320492787413,
+          "distance_m": 4220.548005770375
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.27059241862066813,
+          "distance_m": 4234.748562223345
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.3560914520978207,
+          "distance_m": 4328.0732469812765
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 1.1699941690698612,
+          "distance_m": 4368.933735681291
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.1579927068188062,
+          "distance_m": 4494.066958018382
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 1.055412561795683,
+          "distance_m": 4508.948826001369
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.26131120889979936,
+          "distance_m": 4558.219166797821
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.44787176425029784,
+          "distance_m": 4569.550392123064
+        }
+      ],
+      "source": "SAC water bodies (wb_sac_mp.GeoJSON)"
+    }
+  },
+  "settlements": {
+    "settlement_count_10km": 0,
+    "distance_to_nearest_settlement_km": null,
+    "nearest_settlement_name": null,
+    "nearest_settlement_type": null,
+    "search_radius_km": 10,
+    "settlements": [],
+    "source": "OpenStreetMap via OSMnx"
+  },
+  "nearby_places": {
+    "search_radius_km": 10,
+    "serpapi_enabled": true,
+    "categories": [
+      {
+        "category": "tourist_attractions",
+        "count": 3,
+        "nearest": {
+          "name": "Divine destination D2",
+          "type": "Tourist attraction",
+          "rating": 5,
+          "reviews": 10,
+          "address": "Sadak, Garipipliya Rd, behind petrol depot, Manglaya Sadak, Indore, Gari Pipalya, Madhya Pradesh 453771, India",
+          "latitude": 22.8249665,
+          "longitude": 75.9151191,
+          "distance_km": 7.275,
+          "place_id": "ChIJk-mIBgAdYzkRTifg7j49-U4",
+          "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Divine+destination+D2&query_place_id=ChIJk-mIBgAdYzkRTifg7j49-U4"
+        },
+        "places": [
+          {
+            "name": "Divine destination D2",
+            "type": "Tourist attraction",
+            "rating": 5,
+            "reviews": 10,
+            "address": "Sadak, Garipipliya Rd, behind petrol depot, Manglaya Sadak, Indore, Gari Pipalya, Madhya Pradesh 453771, India",
+            "latitude": 22.8249665,
+            "longitude": 75.9151191,
+            "distance_km": 7.275,
+            "place_id": "ChIJk-mIBgAdYzkRTifg7j49-U4",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Divine+destination+D2&query_place_id=ChIJk-mIBgAdYzkRTifg7j49-U4"
+          },
+          {
+            "name": "MOHAN TOUR AND TRAVELS",
+            "type": "Tourist attraction",
+            "rating": 5,
+            "reviews": 10,
+            "address": "near arvindo, Bhawrasla, Indore, Madhya Pradesh 453555, India",
+            "latitude": 22.798586099999998,
+            "longitude": 75.84943129999999,
+            "distance_km": 8.207,
+            "place_id": "ChIJPR_L0mcDYzkRuLoP8ECFSGA",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=MOHAN+TOUR+AND+TRAVELS&query_place_id=ChIJPR_L0mcDYzkRuLoP8ECFSGA"
+          },
+          {
+            "name": "Maharana Pratap Statue",
+            "type": "Tourist attraction",
+            "rating": 5,
+            "reviews": 10,
+            "address": "Dewas Naka, Phenoix township, 1074, Phenoix township, Lasudia Mori, Indore, Madhya Pradesh 452010, India",
+            "latitude": 22.7912401,
+            "longitude": 75.8916222,
+            "distance_km": 9.292,
+            "place_id": "ChIJcUCQTgADYzkRG5Y2Zd3DIpY",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Maharana+Pratap+Statue&query_place_id=ChIJcUCQTgADYzkRG5Y2Zd3DIpY"
+          }
+        ]
+      },
+      {
+        "category": "restaurants",
+        "count": 13,
+        "nearest": {
+          "name": "NH 3 Treat Family Restaurant",
+          "type": "Restaurant",
+          "rating": 4.6,
+          "reviews": 14,
+          "address": "Ujjain Rd, Dharampuri, Indore, Madhya Pradesh 453551, India",
+          "latitude": 22.8671136,
+          "longitude": 75.856841,
+          "distance_km": 0.917,
+          "place_id": "ChIJXSUNN0AFYzkRj9-MVfevJQw",
+          "google_maps_url": "https://www.google.com/maps/search/?api=1&query=NH+3+Treat+Family+Restaurant&query_place_id=ChIJXSUNN0AFYzkRj9-MVfevJQw"
+        },
+        "places": [
+          {
+            "name": "NH 3 Treat Family Restaurant",
+            "type": "Restaurant",
+            "rating": 4.6,
+            "reviews": 14,
+            "address": "Ujjain Rd, Dharampuri, Indore, Madhya Pradesh 453551, India",
+            "latitude": 22.8671136,
+            "longitude": 75.856841,
+            "distance_km": 0.917,
+            "place_id": "ChIJXSUNN0AFYzkRj9-MVfevJQw",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=NH+3+Treat+Family+Restaurant&query_place_id=ChIJXSUNN0AFYzkRj9-MVfevJQw"
+          },
+          {
+            "name": "Panjtara ujjain Road",
+            "type": "Vegetarian restaurant",
+            "rating": 4.5,
+            "reviews": 150,
+            "address": "VV84+G27, Indore Rd, Dharampuri, Jetpura, Madhya Pradesh 453551, India",
+            "latitude": 22.866204,
+            "longitude": 75.8562079,
+            "distance_km": 1.024,
+            "place_id": "ChIJc1LsMgAFYzkR6MZFnvvv6No",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Panjtara+ujjain+Road&query_place_id=ChIJc1LsMgAFYzkR6MZFnvvv6No"
+          },
+          {
+            "name": "Pinak family restaurant",
+            "type": "Vegetarian restaurant",
+            "rating": 4.8,
+            "reviews": 9,
+            "address": "RR9V+CW3, Gram Baroli, Madhya Pradesh 453111, India",
+            "latitude": 22.8184802,
+            "longitude": 75.8447961,
+            "distance_km": 6.19,
+            "place_id": "ChIJc8S9FAADYzkRnUh9vCG-J7w",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Pinak+family+restaurant&query_place_id=ChIJc8S9FAADYzkRnUh9vCG-J7w"
+          },
+          {
+            "name": "K2 Dhaba Khana khajana family restaurent",
+            "type": "Restaurant",
+            "rating": 4.9,
+            "reviews": 121,
+            "address": "Indore - Ujjain Rd, Tarana, Madhya Pradesh 453551, India",
+            "latitude": 22.9266009,
+            "longitude": 75.8535313,
+            "distance_km": 6.284,
+            "place_id": "ChIJq018QQAFYzkRaAOY5znJHKc",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=K2+Dhaba+Khana+khajana+family+restaurent&query_place_id=ChIJq018QQAFYzkRaAOY5znJHKc"
+          },
+          {
+            "name": "Saanjh Restaurant & Cafe indore",
+            "type": "Restaurant",
+            "rating": 4.6,
+            "reviews": 63,
+            "address": "Paliya square, near aurobindo hospital, Paliya, Indore, Madhya Pradesh 452007, India",
+            "latitude": 22.8128451,
+            "longitude": 75.8482849,
+            "distance_km": 6.686,
+            "place_id": "ChIJueyymbUDYzkRnVWY1HBokKk",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Saanjh+Restaurant+%26+Cafe+indore&query_place_id=ChIJueyymbUDYzkRnVWY1HBokKk"
+          },
+          {
+            "name": "Omkara Restaurant",
+            "type": "Restaurant",
+            "rating": 5,
+            "reviews": 1,
+            "address": "Infront of shiv mandir, 52- B, near Aurbindo hospital, Lotus Park Colony, Jakhya, Indore, Madhya Pradesh 453555, India",
+            "latitude": 22.802553099999997,
+            "longitude": 75.8503089,
+            "distance_km": 7.757,
+            "place_id": "ChIJ_SsMonIDYzkRb0XUDQDIqAY",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Omkara+Restaurant&query_place_id=ChIJ_SsMonIDYzkRb0XUDQDIqAY"
+          },
+          {
+            "name": "Walnut Kitchen",
+            "type": "Restaurant",
+            "rating": 4.7,
+            "reviews": 56,
+            "address": "Shakambhari evenue gate no 2, 2, Shakambhari Ave, Indore, Madhya Pradesh 453555, India",
+            "latitude": 22.802194099999998,
+            "longitude": 75.8441212,
+            "distance_km": 7.941,
+            "place_id": "ChIJOxp5b_QDYzkR3jIeUevcTvY",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Walnut+Kitchen&query_place_id=ChIJOxp5b_QDYzkR3jIeUevcTvY"
+          },
+          {
+            "name": "Shree Hari cafe and restaurant",
+            "type": "Indian restaurant",
+            "rating": 5,
+            "reviews": 16,
+            "address": "highway smart city, 08, AB Rd, near Toll Tax, Manglaya Sadak, Indore, Madhya Pradesh 453771, India",
+            "latitude": 22.821701899999997,
+            "longitude": 75.93032409999999,
+            "distance_km": 8.677,
+            "place_id": "ChIJGfzFIgAdYzkRR2Jqgpk36ro",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Shree+Hari+cafe+and+restaurant&query_place_id=ChIJGfzFIgAdYzkRR2Jqgpk36ro"
+          },
+          {
+            "name": "Namaste Indore Cafe & Restaurant",
+            "type": "Restaurant",
+            "rating": 4.8,
+            "reviews": 61,
+            "address": "Singapore GREEN view township, N-7, Singapore Township, Indore, Madhya Pradesh 453771, India",
+            "latitude": 22.801868,
+            "longitude": 75.906487,
+            "distance_km": 8.802,
+            "place_id": "ChIJgREPex0dYzkRhAdks7UDr00",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Namaste+Indore+Cafe+%26+Restaurant&query_place_id=ChIJgREPex0dYzkRhAdks7UDr00"
+          },
+          {
+            "name": "Rk Restaurant",
+            "type": "Non vegetarian restaurant",
+            "rating": 4.9,
+            "reviews": 59,
+            "address": "Diesal deapo, k samne mangaliya, Manglaya Sadak, Indore, Madhya Pradesh 453771, India",
+            "latitude": 22.812226799999998,
+            "longitude": 75.92232539999999,
+            "distance_km": 8.81,
+            "place_id": "ChIJFRLykva1fDkRw8diwM7TL1E",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Rk+Restaurant&query_place_id=ChIJFRLykva1fDkRw8diwM7TL1E"
+          },
+          {
+            "name": "Anuj restaurant & tiffin center",
+            "type": "Vegetarian restaurant",
+            "rating": 4.9,
+            "reviews": 30,
+            "address": "police chowki, near kitaab ghar, opposite magliya, Manglaya Sadak, Indore, Madhya Pradesh 452010, India",
+            "latitude": 22.816265599999998,
+            "longitude": 75.928122,
+            "distance_km": 8.906,
+            "place_id": "ChIJqw1eASYdYzkRbBSCvRIenUY",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Anuj+restaurant+%26+tiffin+center&query_place_id=ChIJqw1eASYdYzkRbBSCvRIenUY"
+          },
+          {
+            "name": "Shree matkiwala restaurant",
+            "type": "Family restaurant",
+            "rating": 4.7,
+            "reviews": 40,
+            "address": "Sanwer road, Bherughata, Kudana, Shipra, Madhya Pradesh 453551, India",
+            "latitude": 22.953156099999998,
+            "longitude": 75.86567699999999,
+            "distance_km": 9.132,
+            "place_id": "ChIJ6XXoSQAPYzkRE8OScUeK44Q",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Shree+matkiwala+restaurant&query_place_id=ChIJ6XXoSQAPYzkRE8OScUeK44Q"
+          },
+          {
+            "name": "Shree Balaji Restaurant And Dhaba",
+            "type": "Indian restaurant",
+            "rating": 4.6,
+            "reviews": 36,
+            "address": "Indore - Ujjain Rd, Lakhman Khedi, Madhya Pradesh 453551, India",
+            "latitude": 22.9547828,
+            "longitude": 75.8413116,
+            "distance_km": 9.616,
+            "place_id": "ChIJkXaBfQAPYzkRIOq3v7A4LMg",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Shree+Balaji+Restaurant+And+Dhaba&query_place_id=ChIJkXaBfQAPYzkRIOq3v7A4LMg"
+          }
+        ]
+      },
+      {
+        "category": "hospitals",
+        "count": 4,
+        "nearest": {
+          "name": "MAPLE HOSPITAL",
+          "type": "Hospital",
+          "rating": 4.1,
+          "reviews": 26,
+          "address": "AE -10 SUPERCITY TOWNSHIP, near GOL CHAURAHA, GRAM, Dhabli, Madhya Pradesh 453771, India",
+          "latitude": 22.8068424,
+          "longitude": 75.90413579999999,
+          "distance_km": 8.202,
+          "place_id": "ChIJL4fHLW4dYzkR2r5zyjdpR4o",
+          "google_maps_url": "https://www.google.com/maps/search/?api=1&query=MAPLE+HOSPITAL&query_place_id=ChIJL4fHLW4dYzkR2r5zyjdpR4o"
+        },
+        "places": [
+          {
+            "name": "MAPLE HOSPITAL",
+            "type": "Hospital",
+            "rating": 4.1,
+            "reviews": 26,
+            "address": "AE -10 SUPERCITY TOWNSHIP, near GOL CHAURAHA, GRAM, Dhabli, Madhya Pradesh 453771, India",
+            "latitude": 22.8068424,
+            "longitude": 75.90413579999999,
+            "distance_km": 8.202,
+            "place_id": "ChIJL4fHLW4dYzkR2r5zyjdpR4o",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=MAPLE+HOSPITAL&query_place_id=ChIJL4fHLW4dYzkR2r5zyjdpR4o"
+          },
+          {
+            "name": "Mohak Hitech Speciality Hospital",
+            "type": "General hospital",
+            "rating": 4,
+            "reviews": 177,
+            "address": "Indore - Ujjain Rd, Bhawrasla, Indore, Madhya Pradesh 453555, India",
+            "latitude": 22.798669999999998,
+            "longitude": 75.8449373,
+            "distance_km": 8.298,
+            "place_id": "ChIJWQCMhK4DYzkRFplJdX_Hglg",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Mohak+Hitech+Speciality+Hospital&query_place_id=ChIJWQCMhK4DYzkRFplJdX_Hglg"
+          },
+          {
+            "name": "Aurobindo Hospital",
+            "type": "General hospital",
+            "rating": 4.1,
+            "reviews": 2070,
+            "address": "Ujjain Rd, Bhawrasla, Indore, Madhya Pradesh 453555, India",
+            "latitude": 22.7978798,
+            "longitude": 75.8453796,
+            "distance_km": 8.373,
+            "place_id": "ChIJNReMvQv9YjkR0W9Ee-ytEEA",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Aurobindo+Hospital&query_place_id=ChIJNReMvQv9YjkR0W9Ee-ytEEA"
+          },
+          {
+            "name": "Sunrise Hospital",
+            "type": "Private hospital",
+            "rating": 3.8,
+            "reviews": 55,
+            "address": "54, Panchvati Colony, Indore, Madhya Pradesh 453771, India",
+            "latitude": 22.793058199999997,
+            "longitude": 75.9069529,
+            "distance_km": 9.691,
+            "place_id": "ChIJAQAA8CsdYzkRJqOJwh7tUOM",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Sunrise+Hospital&query_place_id=ChIJAQAA8CsdYzkRJqOJwh7tUOM"
+          }
+        ]
+      },
+      {
+        "category": "schools",
+        "count": 15,
+        "nearest": {
+          "name": "Bhaskar Academy",
+          "type": "CBSE school",
+          "rating": null,
+          "reviews": null,
+          "address": "Ringnodiya Square, Sanwer Road, Indore - Ujjain Rd, at, Indore, Madhya Pradesh 453551, India",
+          "latitude": 22.846985399999998,
+          "longitude": 75.8527939,
+          "distance_km": 2.94,
+          "place_id": "ChIJ67ttPiwdYzkR-dSfxBaGWis",
+          "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bhaskar+Academy&query_place_id=ChIJ67ttPiwdYzkR-dSfxBaGWis"
+        },
+        "places": [
+          {
+            "name": "Bhaskar Academy",
+            "type": "CBSE school",
+            "rating": null,
+            "reviews": null,
+            "address": "Ringnodiya Square, Sanwer Road, Indore - Ujjain Rd, at, Indore, Madhya Pradesh 453551, India",
+            "latitude": 22.846985399999998,
+            "longitude": 75.8527939,
+            "distance_km": 2.94,
+            "place_id": "ChIJ67ttPiwdYzkR-dSfxBaGWis",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bhaskar+Academy&query_place_id=ChIJ67ttPiwdYzkR-dSfxBaGWis"
+          },
+          {
+            "name": "DELHI PUBLIC ELEMENTARY SCHOOL",
+            "type": "Elementary school",
+            "rating": null,
+            "reviews": null,
+            "address": "Merkhedi, Madhya Pradesh 453111, India",
+            "latitude": 22.8712587,
+            "longitude": 75.80788,
+            "distance_km": 5.823,
+            "place_id": "ChIJL0nbESgEYzkRWRmqV-IvDVU",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=DELHI+PUBLIC+ELEMENTARY+SCHOOL&query_place_id=ChIJL0nbESgEYzkRWRmqV-IvDVU"
+          },
+          {
+            "name": "MODERN INTERNATIONAL SCHOOL",
+            "type": "International school",
+            "rating": null,
+            "reviews": null,
+            "address": "Range, Alwasa, Sanwer Rd, behind Rewati, Indore, Madhya Pradesh 453111, India",
+            "latitude": 22.823553999999998,
+            "longitude": 75.8362559,
+            "distance_km": 6.032,
+            "place_id": "ChIJ1elX0oIDYzkR7novrh4K9cQ",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=MODERN+INTERNATIONAL+SCHOOL&query_place_id=ChIJ1elX0oIDYzkR7novrh4K9cQ"
+          },
+          {
+            "name": "Mount Carmel Vidhyapeeth, Indore",
+            "type": "General education school",
+            "rating": null,
+            "reviews": null,
+            "address": "Paliya Haidar, Indore, Madhya Pradesh 453111, India",
+            "latitude": 22.8268378,
+            "longitude": 75.81826509999999,
+            "distance_km": 6.842,
+            "place_id": "ChIJqZdnnPoDYzkRQGNtvzKrEPs",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Mount+Carmel+Vidhyapeeth%2C+Indore&query_place_id=ChIJqZdnnPoDYzkRQGNtvzKrEPs"
+          },
+          {
+            "name": "eduMETA THE i- SCHOOL Aurobindo Indore",
+            "type": "Kindergarten",
+            "rating": 5,
+            "reviews": 2,
+            "address": "kalindi gold city, B-33, near London Villas, opposite Aurobindo Hospital, Bhawrasla, Indore, Madhya Pradesh 453555, India",
+            "latitude": 22.7961623,
+            "longitude": 75.85797389999999,
+            "distance_km": 8.354,
+            "place_id": "ChIJPUJHxakDYzkRPeN_-EA4PS8",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=eduMETA+THE+i-+SCHOOL+Aurobindo+Indore&query_place_id=ChIJPUJHxakDYzkRPeN_-EA4PS8"
+          },
+          {
+            "name": "Nav niketan School",
+            "type": "Educational institution",
+            "rating": 4.4,
+            "reviews": 28,
+            "address": "ramshawdamManglaya Sadak, Manglaya Sadak, Indore, Madhya Pradesh 453771, India",
+            "latitude": 22.820283,
+            "longitude": 75.9259685,
+            "distance_km": 8.441,
+            "place_id": "ChIJqx3qAescYzkR6RQSGR2NU2g",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Nav+niketan+School&query_place_id=ChIJqx3qAescYzkR6RQSGR2NU2g"
+          },
+          {
+            "name": "Orchids The International School - Aurobindo",
+            "type": "Educational institution",
+            "rating": 4.5,
+            "reviews": 80,
+            "address": "Indore - Ujjain Rd, near MR 10 Road, Bhawrasla, Indore, Madhya Pradesh 453555, India",
+            "latitude": 22.7959948,
+            "longitude": 75.8434961,
+            "distance_km": 8.623,
+            "place_id": "ChIJ_6M1mksDYzkRZUja8MjuUCg",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Orchids+The+International+School+-+Aurobindo&query_place_id=ChIJ_6M1mksDYzkRZUja8MjuUCg"
+          },
+          {
+            "name": "The Royal Indian School",
+            "type": "Co-ed school",
+            "rating": null,
+            "reviews": null,
+            "address": "241, Singapore Township, near Sai Prateek Super Market, Talawali Chanda, Indore, Madhya Pradesh 453771, India",
+            "latitude": 22.802737999999998,
+            "longitude": 75.9070923,
+            "distance_km": 8.748,
+            "place_id": "ChIJ_YTyudYcYzkRLBfuq7p6Vpg",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=The+Royal+Indian+School&query_place_id=ChIJ_YTyudYcYzkRLBfuq7p6Vpg"
+          },
+          {
+            "name": "Intellect Heights Academy CBSE School, Indore",
+            "type": "CBSE school",
+            "rating": null,
+            "reviews": null,
+            "address": "Dewas Naka, Lasudia Mori Intellect Heights Academy, Satellite Junction Main Rd, Kalod Hala, Indore, Madhya Pradesh 453771, India",
+            "latitude": 22.7973028,
+            "longitude": 75.9009872,
+            "distance_km": 9.002,
+            "place_id": "ChIJ22_5oCodYzkRPQ39xY-eW7A",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Intellect+Heights+Academy+CBSE+School%2C+Indore&query_place_id=ChIJ22_5oCodYzkRPQ39xY-eW7A"
+          },
+          {
+            "name": "Academic Heights Public School, Indore",
+            "type": "CBSE school",
+            "rating": null,
+            "reviews": null,
+            "address": "Bachpan Street, Puwarda Junarda, Near TCS Square, Super Corridor, Paliya Rd, Limboda Gari, Indore, Madhya Pradesh 453112, India",
+            "latitude": 22.8051773,
+            "longitude": 75.80693889999999,
+            "distance_km": 9.417,
+            "place_id": "ChIJP1wSZecDYzkRyg__eHZSPAU",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Academic+Heights+Public+School%2C+Indore&query_place_id=ChIJP1wSZecDYzkRyg__eHZSPAU"
+          },
+          {
+            "name": "Prarambh School, Indore",
+            "type": "Primary school",
+            "rating": null,
+            "reviews": null,
+            "address": "212/4, AB Rd, opp. Panchvati Colony, Talawali Chanda, Indore, Madhya Pradesh 453771, India",
+            "latitude": 22.7952947,
+            "longitude": 75.9093013,
+            "distance_km": 9.582,
+            "place_id": "ChIJP4hEptUdYzkRK0uSocCsOrQ",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Prarambh+School%2C+Indore&query_place_id=ChIJP4hEptUdYzkRK0uSocCsOrQ"
+          },
+          {
+            "name": "Laurels School International",
+            "type": "General education school",
+            "rating": null,
+            "reviews": null,
+            "address": "AB Road, Lasudia Mori, Talawali Chanda , PO Mangliya, Indore, Madhya Pradesh 453771, India",
+            "latitude": 22.7969938,
+            "longitude": 75.91474749999999,
+            "distance_km": 9.699,
+            "place_id": "ChIJtzNicycdYzkRr6QDmN-hyZ4",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Laurels+School+International&query_place_id=ChIJtzNicycdYzkRr6QDmN-hyZ4"
+          },
+          {
+            "name": "shree moreshwar abhyankar public school",
+            "type": "General education school",
+            "rating": null,
+            "reviews": null,
+            "address": "VX45+9H7, Dakachya, Madhya Pradesh 453771, India",
+            "latitude": 22.8559196,
+            "longitude": 75.9589222,
+            "distance_km": 9.798,
+            "place_id": "ChIJGxg5RI8bYzkRqfLU4a-VJQY",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=shree+moreshwar+abhyankar+public+school&query_place_id=ChIJGxg5RI8bYzkRqfLU4a-VJQY"
+          },
+          {
+            "name": "Little Leaders School | Indore",
+            "type": "Preschool",
+            "rating": 5,
+            "reviews": 35,
+            "address": "B-83, Ansal Town, Talawali Chanda, Indore, Madhya Pradesh 453771, India",
+            "latitude": 22.794868299999997,
+            "longitude": 75.9158479,
+            "distance_km": 9.96,
+            "place_id": "ChIJd3oR_OcdYzkRfoKOkoDOoNw",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Little+Leaders+School+%7C+Indore&query_place_id=ChIJd3oR_OcdYzkRfoKOkoDOoNw"
+          },
+          {
+            "name": "Little Millennium - Ansal Town, Talawali Chanda",
+            "type": "Playgroup",
+            "rating": 5,
+            "reviews": 30,
+            "address": "House No, B/84, nearby The Physio Clinic, Ansal Town, Talawali Chanda, Indore, Madhya Pradesh 453771, India",
+            "latitude": 22.794573399999997,
+            "longitude": 75.9159327,
+            "distance_km": 9.992,
+            "place_id": "ChIJFYmGy-AdYzkR3Z8kD8I8oTM",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Little+Millennium+-+Ansal+Town%2C+Talawali+Chanda&query_place_id=ChIJFYmGy-AdYzkR3Z8kD8I8oTM"
+          }
+        ]
+      },
+      {
+        "category": "markets",
+        "count": 13,
+        "nearest": {
+          "name": "\u0938\u0930\u094d\u0935\u092e\u094d \u092e\u093f\u0928\u0940 \u092e\u093e\u0930\u094d\u0915\u0947\u091f / Sarvam mini market",
+          "type": "Bakery",
+          "rating": null,
+          "reviews": null,
+          "address": "Shri Krishna Enclave, Power house wali gali, 180, Indore - Ujjain Rd, Panchderiya, Indore, Madhya Pradesh 453111, India",
+          "latitude": 22.8405877,
+          "longitude": 75.8593097,
+          "distance_km": 3.431,
+          "place_id": "ChIJ3QqUki8FYzkR2WAjobfDSLM",
+          "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E0%A4%B8%E0%A4%B0%E0%A5%8D%E0%A4%B5%E0%A4%AE%E0%A5%8D+%E0%A4%AE%E0%A4%BF%E0%A4%A8%E0%A5%80+%E0%A4%AE%E0%A4%BE%E0%A4%B0%E0%A5%8D%E0%A4%95%E0%A5%87%E0%A4%9F+%2F+Sarvam+mini+market&query_place_id=ChIJ3QqUki8FYzkR2WAjobfDSLM"
+        },
+        "places": [
+          {
+            "name": "\u0938\u0930\u094d\u0935\u092e\u094d \u092e\u093f\u0928\u0940 \u092e\u093e\u0930\u094d\u0915\u0947\u091f / Sarvam mini market",
+            "type": "Bakery",
+            "rating": null,
+            "reviews": null,
+            "address": "Shri Krishna Enclave, Power house wali gali, 180, Indore - Ujjain Rd, Panchderiya, Indore, Madhya Pradesh 453111, India",
+            "latitude": 22.8405877,
+            "longitude": 75.8593097,
+            "distance_km": 3.431,
+            "place_id": "ChIJ3QqUki8FYzkR2WAjobfDSLM",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E0%A4%B8%E0%A4%B0%E0%A5%8D%E0%A4%B5%E0%A4%AE%E0%A5%8D+%E0%A4%AE%E0%A4%BF%E0%A4%A8%E0%A5%80+%E0%A4%AE%E0%A4%BE%E0%A4%B0%E0%A5%8D%E0%A4%95%E0%A5%87%E0%A4%9F+%2F+Sarvam+mini+market&query_place_id=ChIJ3QqUki8FYzkR2WAjobfDSLM"
+          },
+          {
+            "name": "Sarthak Market",
+            "type": "Shopping mall",
+            "rating": 4,
+            "reviews": 2,
+            "address": "MP SH 27, Paliya, Indore, Madhya Pradesh 453555, India",
+            "latitude": 22.813867899999998,
+            "longitude": 75.8484138,
+            "distance_km": 6.573,
+            "place_id": "ChIJUU5NXiUDYzkRaJNJrpN0kQQ",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Sarthak+Market&query_place_id=ChIJUU5NXiUDYzkRaJNJrpN0kQQ"
+          },
+          {
+            "name": "MADHUR SUPER MARKET",
+            "type": "General store",
+            "rating": 5,
+            "reviews": 1,
+            "address": "40 41 Sakambhari Avenue, Road, near Arvindo Hospital, Rewati, Indore, Madhya Pradesh 453555, India",
+            "latitude": 22.8007858,
+            "longitude": 75.8437328,
+            "distance_km": 8.102,
+            "place_id": "ChIJJ4etZ7sDYzkRSp4ke2lZSIM",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=MADHUR+SUPER+MARKET&query_place_id=ChIJJ4etZ7sDYzkRSp4ke2lZSIM"
+          },
+          {
+            "name": "Kalyani Food Park & Daily Market",
+            "type": "Shopping mall",
+            "rating": 5,
+            "reviews": 3,
+            "address": "opposite Arvindo hospital, near PREMIUM PARK, Bhawrasla, Indore, Madhya Pradesh 453555, India",
+            "latitude": 22.7962191,
+            "longitude": 75.858817,
+            "distance_km": 8.341,
+            "place_id": "ChIJUUb-MQADYzkR2QPs87_qPS0",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Kalyani+Food+Park+%26+Daily+Market&query_place_id=ChIJUUb-MQADYzkR2QPs87_qPS0"
+          },
+          {
+            "name": "Rau market",
+            "type": "Market",
+            "rating": null,
+            "reviews": null,
+            "address": "QRWW+HG8, Bhawrasla, Indore, Madhya Pradesh 453555, India",
+            "latitude": 22.796411799999998,
+            "longitude": 75.8463316,
+            "distance_km": 8.509,
+            "place_id": "ChIJd3UUdwADYzkRPZbc2TFJLjQ",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Rau+market&query_place_id=ChIJd3UUdwADYzkRPZbc2TFJLjQ"
+          },
+          {
+            "name": "Stock Market Box - Classes,Demat and Trading",
+            "type": "Stock broker",
+            "rating": null,
+            "reviews": null,
+            "address": "No 178B, Metro Circle, near luvkush square, Karol Bagh, Bhawrasla, Indore, Madhya Pradesh 453555, India",
+            "latitude": 22.7947456,
+            "longitude": 75.8544407,
+            "distance_km": 8.548,
+            "place_id": "ChIJ3d9az3sDYzkRkebe2uRBcqk",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Stock+Market+Box+-+Classes%2CDemat+and+Trading&query_place_id=ChIJ3d9az3sDYzkRkebe2uRBcqk"
+          },
+          {
+            "name": "Reliance Market",
+            "type": "Hypermarket",
+            "rating": null,
+            "reviews": null,
+            "address": "Mangalya Tehsil-Sanver, AB Rd, opp. HPC Bottling Plant, Manglaya Sadak, Lasudiya Parmar, Indore, Madhya Pradesh 453771, India",
+            "latitude": 22.830156499999998,
+            "longitude": 75.9363274,
+            "distance_km": 8.632,
+            "place_id": "ChIJA0D-co4cYzkR1CphNFdb2Q8",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Reliance+Market&query_place_id=ChIJA0D-co4cYzkR1CphNFdb2Q8"
+          },
+          {
+            "name": "Atal Market",
+            "type": "Building",
+            "rating": null,
+            "reviews": null,
+            "address": "Manglaya Sadak, Indore, Madhya Pradesh 453771, India",
+            "latitude": 22.817008899999998,
+            "longitude": 75.9254907,
+            "distance_km": 8.653,
+            "place_id": "ChIJHfLQKeocYzkR3RC2jfdXF3c",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Atal+Market&query_place_id=ChIJHfLQKeocYzkR3RC2jfdXF3c"
+          },
+          {
+            "name": "YASHIKA SUPER MARKET",
+            "type": "Countertop store",
+            "rating": null,
+            "reviews": null,
+            "address": "01, Sula Khedi Rd, opposite GUJAR HOSPITAL, Manglaya Sadak, Indore, Madhya Pradesh 453771, India",
+            "latitude": 22.817792,
+            "longitude": 75.92939659999999,
+            "distance_km": 8.887,
+            "place_id": "ChIJM4dWCgEdYzkRdkYsRm1Q9HQ",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=YASHIKA+SUPER+MARKET&query_place_id=ChIJM4dWCgEdYzkRdkYsRm1Q9HQ"
+          },
+          {
+            "name": "Royal Super Market",
+            "type": "Grocery store",
+            "rating": 4.9,
+            "reviews": 11,
+            "address": "RW8H+RX4, Manglaya Sadak, Indore, Madhya Pradesh 453771, India",
+            "latitude": 22.8170097,
+            "longitude": 75.9299526,
+            "distance_km": 8.988,
+            "place_id": "ChIJBTrIGWwdYzkRr6MzfFkqOHc",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Royal+Super+Market&query_place_id=ChIJBTrIGWwdYzkRr6MzfFkqOHc"
+          },
+          {
+            "name": "MS market satellite Junction",
+            "type": "Corporate office",
+            "rating": null,
+            "reviews": null,
+            "address": "QVVX+766, IBD Twp, Lasudia Mori, Indore, Madhya Pradesh 452010, India",
+            "latitude": 22.7931654,
+            "longitude": 75.8980129,
+            "distance_km": 9.307,
+            "place_id": "ChIJV71POwIDYzkRGZphAuPL8pQ",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=MS+market+satellite+Junction&query_place_id=ChIJV71POwIDYzkRGZphAuPL8pQ"
+          },
+          {
+            "name": "Infra Market WareHouse - Indore",
+            "type": "Warehouse",
+            "rating": null,
+            "reviews": null,
+            "address": "JRG Logistics Plot no-65 B, Road, No 12, AB Road, Dakachya, Madhya Pradesh 453771, India",
+            "latitude": 22.8575117,
+            "longitude": 75.95503289999999,
+            "distance_km": 9.375,
+            "place_id": "ChIJYxrnTQAbYzkRj7HMApIRk2g",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Infra+Market+WareHouse+-+Indore&query_place_id=ChIJYxrnTQAbYzkRj7HMApIRk2g"
+          },
+          {
+            "name": "Rathore Market",
+            "type": "Market",
+            "rating": 5,
+            "reviews": 3,
+            "address": "QVRX+P36, Kalod Hala, Indore, Madhya Pradesh 452010, India",
+            "latitude": 22.7917955,
+            "longitude": 75.89763669999999,
+            "distance_km": 9.435,
+            "place_id": "ChIJu1YRn7sDYzkRxHamW_39g1Y",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Rathore+Market&query_place_id=ChIJu1YRn7sDYzkRxHamW_39g1Y"
+          }
+        ]
+      },
+      {
+        "category": "hotels",
+        "count": 13,
+        "nearest": {
+          "name": "Fusion Resort",
+          "type": "Resort hotel",
+          "rating": 4.3,
+          "reviews": 412,
+          "address": "Sanwer, Indore - Ujjain Rd, near Shishu Kunj School, Barodiya Ema, Indore, Madhya Pradesh 453551, India",
+          "latitude": 22.854606999999998,
+          "longitude": 75.8514418,
+          "distance_km": 2.278,
+          "place_id": "ChIJg9cd8BoFYzkRy4UePlF5ZJE",
+          "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Fusion+Resort&query_place_id=ChIJg9cd8BoFYzkRy4UePlF5ZJE"
+        },
+        "places": [
+          {
+            "name": "Fusion Resort",
+            "type": "Resort hotel",
+            "rating": 4.3,
+            "reviews": 412,
+            "address": "Sanwer, Indore - Ujjain Rd, near Shishu Kunj School, Barodiya Ema, Indore, Madhya Pradesh 453551, India",
+            "latitude": 22.854606999999998,
+            "longitude": 75.8514418,
+            "distance_km": 2.278,
+            "place_id": "ChIJg9cd8BoFYzkRy4UePlF5ZJE",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Fusion+Resort&query_place_id=ChIJg9cd8BoFYzkRy4UePlF5ZJE"
+          },
+          {
+            "name": "The Highway Inn Hotel & Resorts",
+            "type": "Hotel",
+            "rating": 4.7,
+            "reviews": 34,
+            "address": "Indore - Ujjain Rd, behind Toll Plaza, near Hotel Clarion Inn, Baroli, Indore, Madhya Pradesh 453111, India",
+            "latitude": 22.819760499999997,
+            "longitude": 75.8498516,
+            "distance_km": 5.902,
+            "place_id": "ChIJQfOx6dgDYzkRmD51J7kc-2A",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=The+Highway+Inn+Hotel+%26+Resorts&query_place_id=ChIJQfOx6dgDYzkRmD51J7kc-2A"
+          },
+          {
+            "name": "Golden Yug",
+            "type": "Resort hotel",
+            "rating": 4.9,
+            "reviews": 430,
+            "address": "Golden Yug Resort, 245/1/1/2, Sanwer, Tarana, Indore, Madhya Pradesh 453551, India",
+            "latitude": 22.9246132,
+            "longitude": 75.8555475,
+            "distance_km": 6.031,
+            "place_id": "ChIJ43r3ZwAFYzkR5aEHznlxK1g",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Golden+Yug&query_place_id=ChIJ43r3ZwAFYzkR5aEHznlxK1g"
+          },
+          {
+            "name": "Clarion Inn Indore",
+            "type": "Hotel",
+            "rating": 4.2,
+            "reviews": 885,
+            "address": "Aurobindo toll plaza, Near, Indore - Ujjain Rd, Indore, Gram Baroli, Madhya Pradesh 453111, India",
+            "latitude": 22.8181282,
+            "longitude": 75.84955289999999,
+            "distance_km": 6.085,
+            "place_id": "ChIJ1Tp4ZtMDYzkR6T7yKN4mZl0",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Clarion+Inn+Indore&query_place_id=ChIJ1Tp4ZtMDYzkR6T7yKN4mZl0"
+          },
+          {
+            "name": "Hotel Purvi by Vilaasitaa",
+            "type": "Hotel",
+            "rating": 4.5,
+            "reviews": 35,
+            "address": "QVW6+VX5, Bhawrasla, Indore, Madhya Pradesh 453555, India",
+            "latitude": 22.797145999999998,
+            "longitude": 75.86249819999999,
+            "distance_km": 8.219,
+            "place_id": "ChIJA6BePQADYzkRnQa4_Xs_Wm4",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Hotel+Purvi+by+Vilaasitaa&query_place_id=ChIJA6BePQADYzkRnQa4_Xs_Wm4"
+          },
+          {
+            "name": "Hotel Pravasa Stay, Luv Kush Square",
+            "type": "Hotel",
+            "rating": 4.7,
+            "reviews": 65,
+            "address": "Plot No. 33, Indore - Ujjain Rd, opp. Aurobindo Hospital, Premium Park Colony, Township, Jakhya, Indore, Madhya Pradesh 453555, India",
+            "latitude": 22.796971,
+            "longitude": 75.856388,
+            "distance_km": 8.28,
+            "place_id": "ChIJae_qVuYDYzkRR0kkqt-fYvA",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Hotel+Pravasa+Stay%2C+Luv+Kush+Square&query_place_id=ChIJae_qVuYDYzkRR0kkqt-fYvA"
+          },
+          {
+            "name": "HIDE AWAY VILLA",
+            "type": "Villa",
+            "rating": 3.8,
+            "reviews": 65,
+            "address": "145, Bardari Rd, near Lavkush Square, Bhawrasla, Indore, Madhya Pradesh 453555, India",
+            "latitude": 22.792852399999997,
+            "longitude": 75.8457114,
+            "distance_km": 8.909,
+            "place_id": "ChIJJTqcuJYDYzkRd-71VY3fSMg",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=HIDE+AWAY+VILLA&query_place_id=ChIJJTqcuJYDYzkRd-71VY3fSMg"
+          },
+          {
+            "name": "Rudraksh Garden Resort",
+            "type": "Resort hotel",
+            "rating": 4.3,
+            "reviews": 109,
+            "address": "QVQ5+R7, Kumedi, Indore, Madhya Pradesh 453555, India",
+            "latitude": 22.7895978,
+            "longitude": 75.8586407,
+            "distance_km": 9.077,
+            "place_id": "ChIJjw6lbQADYzkR9UM5JH3oChE",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Rudraksh+Garden+Resort&query_place_id=ChIJjw6lbQADYzkR9UM5JH3oChE"
+          },
+          {
+            "name": "The White Town",
+            "type": "Homestay",
+            "rating": 4.9,
+            "reviews": 61,
+            "address": "Tirupati industrial Area, C 14, near Aurbindo Hospital, Kumedi, Indore, Madhya Pradesh 453555, India",
+            "latitude": 22.7885278,
+            "longitude": 75.8703364,
+            "distance_km": 9.193,
+            "place_id": "ChIJXfib91QDYzkRiJkpvDAz8SI",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=The+White+Town&query_place_id=ChIJXfib91QDYzkRiJkpvDAz8SI"
+          },
+          {
+            "name": "LAKEVIEW (Resort & Restro)",
+            "type": "Resort hotel",
+            "rating": 4,
+            "reviews": 342,
+            "address": "RW29+93F, Talawali Chanda, Indore, Madhya Pradesh 453771, India",
+            "latitude": 22.801318199999997,
+            "longitude": 75.9177918,
+            "distance_km": 9.47,
+            "place_id": "ChIJLfkJaf8dYzkRl4pV_40peVI",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=LAKEVIEW+%28Resort+%26+Restro%29&query_place_id=ChIJLfkJaf8dYzkRl4pV_40peVI"
+          },
+          {
+            "name": "JMD HOTEL 11",
+            "type": "Hotel",
+            "rating": 4.9,
+            "reviews": 370,
+            "address": "Panchvati Colony, Indore, Madhya Pradesh 453771, India",
+            "latitude": 22.793063,
+            "longitude": 75.9071739,
+            "distance_km": 9.701,
+            "place_id": "ChIJ6f__7ysdYzkR0o_xXDcFN9U",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=JMD+HOTEL+11&query_place_id=ChIJ6f__7ysdYzkR0o_xXDcFN9U"
+          },
+          {
+            "name": "THE AMBERLY GARDENS",
+            "type": "Hotel",
+            "rating": 4.6,
+            "reviews": 27,
+            "address": "Omaxe city 2, 9 & 10, bypass, near Spice Curve Restaurant, Sai City, Manglaya Sadak, Indore, Madhya Pradesh 453771, India",
+            "latitude": 22.815248699999998,
+            "longitude": 75.9376113,
+            "distance_km": 9.71,
+            "place_id": "ChIJuTOM9twdYzkRbSU1vmMXclI",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=THE+AMBERLY+GARDENS&query_place_id=ChIJuTOM9twdYzkRbSU1vmMXclI"
+          },
+          {
+            "name": "Monk's Nirvanaa Hotel & Resort",
+            "type": "Resort hotel",
+            "rating": 4.3,
+            "reviews": 2584,
+            "address": "MR 10 Rd, near Toll Plaza, Gram, Kumedi, Indore, Madhya Pradesh 453555, India",
+            "latitude": 22.7811928,
+            "longitude": 75.8614336,
+            "distance_km": 9.996,
+            "place_id": "ChIJZ9o3QPECYzkREX9vGaXfG3Q",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Monk%27s+Nirvanaa+Hotel+%26+Resort&query_place_id=ChIJZ9o3QPECYzkREX9vGaXfG3Q"
+          }
+        ]
+      },
+      {
+        "category": "industrial_businesses",
+        "count": 4,
+        "nearest": {
+          "name": "A-Star Insulation & Refrigeration",
+          "type": "Manufacturer",
+          "rating": 4.8,
+          "reviews": 86,
+          "address": "Gram- Siloda buzurg, Indore - Ujjain Rd, Indore, Madhya Pradesh 453551, India",
+          "latitude": 22.909969,
+          "longitude": 75.84589489999999,
+          "distance_km": 4.739,
+          "place_id": "ChIJQTAKrLkFYzkRlV2SjcC3KHA",
+          "google_maps_url": "https://www.google.com/maps/search/?api=1&query=A-Star+Insulation+%26+Refrigeration&query_place_id=ChIJQTAKrLkFYzkRlV2SjcC3KHA"
+        },
+        "places": [
+          {
+            "name": "A-Star Insulation & Refrigeration",
+            "type": "Manufacturer",
+            "rating": 4.8,
+            "reviews": 86,
+            "address": "Gram- Siloda buzurg, Indore - Ujjain Rd, Indore, Madhya Pradesh 453551, India",
+            "latitude": 22.909969,
+            "longitude": 75.84589489999999,
+            "distance_km": 4.739,
+            "place_id": "ChIJQTAKrLkFYzkRlV2SjcC3KHA",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=A-Star+Insulation+%26+Refrigeration&query_place_id=ChIJQTAKrLkFYzkRlV2SjcC3KHA"
+          },
+          {
+            "name": "Beeta Industrial Park",
+            "type": "Corporate office",
+            "rating": 4,
+            "reviews": 44,
+            "address": "RV29+H7P, Bhawrasla, Indore, Madhya Pradesh 453555, India",
+            "latitude": 22.8004645,
+            "longitude": 75.8675118,
+            "distance_km": 7.853,
+            "place_id": "ChIJz60rgvYDYzkRSU5WJdjgZ_A",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Beeta+Industrial+Park&query_place_id=ChIJz60rgvYDYzkRSU5WJdjgZ_A"
+          },
+          {
+            "name": "VRL Logistics Ltd - Indore Tpt",
+            "type": "Logistics service",
+            "rating": 4.4,
+            "reviews": 17,
+            "address": "Khara No.282, A-8 Road, Dakachya, Indore, Madhya Pradesh 453771, India",
+            "latitude": 22.860114,
+            "longitude": 75.95347799999999,
+            "distance_km": 9.175,
+            "place_id": "ChIJ23A26m4bYzkR7OOPwqbG98w",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=VRL+Logistics+Ltd+-+Indore+Tpt&query_place_id=ChIJ23A26m4bYzkR7OOPwqbG98w"
+          },
+          {
+            "name": "Havisha polymers pvt Ltd plastic | Manufacturer of Plastic granules | Reprocessed plastic dana",
+            "type": "Manufacturer",
+            "rating": 4.8,
+            "reviews": 8,
+            "address": "Toll Plaza, 19-B tirupati industrial estate, MR 10 Rd, near nirwana hotel, Kumedi, Indore, Madhya Pradesh 453555, India",
+            "latitude": 22.7859783,
+            "longitude": 75.86578639999999,
+            "distance_km": 9.459,
+            "place_id": "ChIJk2ceMgADYzkRzNlDqMK88WM",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Havisha+polymers+pvt+Ltd+plastic+%7C+Manufacturer+of+Plastic+granules+%7C+Reprocessed+plastic+dana&query_place_id=ChIJk2ceMgADYzkRzNlDqMK88WM"
+          }
+        ]
+      },
+      {
+        "category": "warehouses_logistics",
+        "count": 6,
+        "nearest": {
+          "name": "Shree Sanwariya Warehouse",
+          "type": "Warehouse",
+          "rating": null,
+          "reviews": null,
+          "address": "Dakachya, Madhya Pradesh 453771, India",
+          "latitude": 22.860991499999997,
+          "longitude": 75.9429711,
+          "distance_km": 8.095,
+          "place_id": "ChIJ5Tcdpf0bYzkRCitZn5AqrZE",
+          "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Shree+Sanwariya+Warehouse&query_place_id=ChIJ5Tcdpf0bYzkRCitZn5AqrZE"
+        },
+        "places": [
+          {
+            "name": "Shree Sanwariya Warehouse",
+            "type": "Warehouse",
+            "rating": null,
+            "reviews": null,
+            "address": "Dakachya, Madhya Pradesh 453771, India",
+            "latitude": 22.860991499999997,
+            "longitude": 75.9429711,
+            "distance_km": 8.095,
+            "place_id": "ChIJ5Tcdpf0bYzkRCitZn5AqrZE",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Shree+Sanwariya+Warehouse&query_place_id=ChIJ5Tcdpf0bYzkRCitZn5AqrZE"
+          },
+          {
+            "name": "Gurukripa India Warehousing Private Limited",
+            "type": "Warehouse",
+            "rating": 4.3,
+            "reviews": 3,
+            "address": "VW5V+47R, Dakachya , Lasudiya Parmar, near by Pass, Dakachya, Madhya Pradesh 453771, India",
+            "latitude": 22.8578565,
+            "longitude": 75.9431322,
+            "distance_km": 8.167,
+            "place_id": "ChIJkW5zynkbYzkR2QvL6gd6bxA",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Gurukripa+India+Warehousing+Private+Limited&query_place_id=ChIJkW5zynkbYzkR2QvL6gd6bxA"
+          },
+          {
+            "name": "S.B. Warehousing and Logistics Pvt. Ltd.",
+            "type": "Warehouse",
+            "rating": 4.3,
+            "reviews": 13,
+            "address": "Khasra No. 61/62/63 Centre Point Junction Gram Raukhedi, Tehsil, Sanwer, Madhya Pradesh 453771, India",
+            "latitude": 22.832150799999997,
+            "longitude": 75.9388853,
+            "distance_km": 8.744,
+            "place_id": "ChIJlek1CEAdYzkRF8SVtlIiQeY",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=S.B.+Warehousing+and+Logistics+Pvt.+Ltd.&query_place_id=ChIJlek1CEAdYzkRF8SVtlIiQeY"
+          },
+          {
+            "name": "Shiv Savitri Warehousing",
+            "type": "Warehouse",
+            "rating": null,
+            "reviews": null,
+            "address": "289, 2, AB Rd, Manglaya Sadak, Arjun Baroda, Indore, Madhya Pradesh 453771, India",
+            "latitude": 22.8045129,
+            "longitude": 75.9166558,
+            "distance_km": 9.113,
+            "place_id": "ChIJO9vba90dYzkRwB6pRAag0SI",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Shiv+Savitri+Warehousing&query_place_id=ChIJO9vba90dYzkRwB6pRAag0SI"
+          },
+          {
+            "name": "Shiv logistics park",
+            "type": "Storage facility",
+            "rating": 4.3,
+            "reviews": 9,
+            "address": "VX53+WHF, Dakachya, Madhya Pradesh 453771, India",
+            "latitude": 22.8598143,
+            "longitude": 75.95391339999999,
+            "distance_km": 9.224,
+            "place_id": "ChIJQ33_LNYbYzkRVe7eNw0dgyc",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Shiv+logistics+park&query_place_id=ChIJQ33_LNYbYzkRVe7eNw0dgyc"
+          },
+          {
+            "name": "Udaan Food Warehouse Indore",
+            "type": "Warehouse",
+            "rating": 4,
+            "reviews": 5,
+            "address": "VX84+3Q4, Indore, Madhya Pradesh 453771, India",
+            "latitude": 22.8651414,
+            "longitude": 75.95695409999999,
+            "distance_km": 9.473,
+            "place_id": "ChIJRb5wBr0bYzkRyPO9srIv9QE",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Udaan+Food+Warehouse+Indore&query_place_id=ChIJRb5wBr0bYzkRyPO9srIv9QE"
+          }
+        ]
+      }
+    ],
+    "source": "SerpApi / Google Maps local results"
+  },
+  "ndvi": {
+    "mean": 0.24908053326108542,
+    "min": -0.32174307107925415,
+    "max": 0.806174099445343,
+    "share_ge_030_percent": 22.922806515264945,
+    "share_ge_050_percent": 4.1556763624404365,
+    "period": "2025-09-14 \u2192 2026-09-14",
+    "source": "Sentinel-2 SR Harmonized (median NDVI, whole year)",
+    "peak": {
+      "mean": 0.6065856742355341,
+      "period": "Dec-Feb",
+      "scene_count": 17,
+      "source": "Sentinel-2 SR Harmonized (median NDVI, peak 3-month period found within the year; mean from the 30 m scan, no separate min/max/share breakdown)"
+    }
+  },
+  "buying_purpose": {
+    "key": "farmhouse",
+    "label": "farmhouse",
+    "is_other": false,
+    "free_text": null
+  },
+  "buying_preferences": null
+}

@@ -1,0 +1,1959 @@
+{
+  "schema_version": "1.0",
+  "run_success": true,
+  "generated_at": "2026-09-15 03:26",
+  "site": {
+    "latitude": 22.6695,
+    "longitude": 75.5639,
+    "aoi_radius_km": 5.0,
+    "aoi_area_km2": 66.40327446933328,
+    "metric_crs": "EPSG:32643"
+  },
+  "administration": {
+    "village": "Methwada",
+    "tehsil": "Depalpur",
+    "block": "Depalpur",
+    "district": "Indore",
+    "state": "MP",
+    "boundary_village_code": "476019",
+    "point_inside_village_polygon": true,
+    "source": "Survey of India village boundaries (vb_soi_mp)",
+    "govt_guideline_rates": {
+      "row_kind": "rural_village",
+      "village": "Methwada",
+      "vlcode": 476019,
+      "tehsil": "DEPALPUR",
+      "frontage_type": "plain",
+      "match_score": 87.5,
+      "plot_residential_sqm": 12000.0,
+      "plot_commercial_sqm": 18100.0,
+      "plot_industrial_sqm": 12000.0,
+      "agri_land_irrigated_per_ha": 120000000.0,
+      "agri_land_unirrigated_per_ha": 120000000.0,
+      "source": "MP Govt district guideline rates, FY2026-27"
+    },
+    "land_use": {
+      "population": 2892.0,
+      "area_ha": 1244.0,
+      "forest_area_ha": 0.0,
+      "non_agricultural_area_ha": 5.0,
+      "barren_land_ha": 34.0,
+      "pastures_grazing_ha": 39.0,
+      "miscellaneous_land_ha": 0.0,
+      "culturable_waste_ha": 0.0,
+      "other_fallows_ha": 69.0,
+      "current_fallows_ha": 69.0,
+      "net_area_sown_ha": 1078.0,
+      "unirrigated_land_ha": 814.0,
+      "irrigated_land_ha": 264.0,
+      "forest_share_percent": 0.0,
+      "barren_share_percent": 2.7331189710610935,
+      "net_sown_share_percent": 86.65594855305466,
+      "source": "Survey of India village boundaries (vb_soi_mp)"
+    },
+    "census": {
+      "population_total": 2892.0,
+      "households": 595.0,
+      "cultivation_share": 35.56298773690078,
+      "agricultural_labour_share": 24.526198439241917,
+      "household_industry_share": 0.8918617614269788,
+      "other_worker_share": 39.01895206243032,
+      "literacy_percent": 66.43327841845141,
+      "sc_percent": 14.937759336099584,
+      "st_percent": 5.94744121715076
+    },
+    "census_join": {
+      "method": "normalized village name",
+      "boundary_villages": 57,
+      "matched_villages": 55,
+      "unmatched_villages": 2,
+      "source": "census_derieved.csv"
+    },
+    "aoi_overlap": {
+      "village_count": 24,
+      "villages": [
+        "Badipura",
+        "Betma",
+        "Datoda",
+        "Dehrisaray CT",
+        "Dhureri",
+        "Ghatabillod",
+        "Jhalariya",
+        "Kalibillod",
+        "Karwasa",
+        "Manpura",
+        "Methwada",
+        "Mothala",
+        "Osrod",
+        "Pirpipliya",
+        "Pithampur",
+        "Rambadodiya",
+        "Ranmalbiluod",
+        "Rawad",
+        "Salampur",
+        "Sangvi",
+        "Sejwani",
+        "Sulavad",
+        "Tajkhedi",
+        "Umriya"
+      ],
+      "tehsil_count": 3,
+      "tehsils": [
+        "Depalpur",
+        "Dhar",
+        "Pithampur"
+      ],
+      "district_count": 2,
+      "districts": [
+        "Dhar",
+        "Indore"
+      ]
+    }
+  },
+  "land_cover": {
+    "classes": [
+      {
+        "name": "Cropland",
+        "area_km2": 57.60093991665928,
+        "percentage": 86.68236780231318
+      },
+      {
+        "name": "Built-up",
+        "area_km2": 4.559751350213412,
+        "percentage": 6.86186795212311
+      },
+      {
+        "name": "Grassland",
+        "area_km2": 2.0688828861686273,
+        "percentage": 3.1134156411033302
+      },
+      {
+        "name": "Tree cover",
+        "area_km2": 1.8422622668274826,
+        "percentage": 2.7723793332628803
+      },
+      {
+        "name": "Bare / sparse vegetation",
+        "area_km2": 0.2206200787060607,
+        "percentage": 0.3320062282775884
+      },
+      {
+        "name": "Permanent water",
+        "area_km2": 0.1577604783863442,
+        "percentage": 0.237410219901618
+      },
+      {
+        "name": "Shrubland",
+        "area_km2": 0.0003673541259765625,
+        "percentage": 0.0005528230182991865
+      }
+    ],
+    "aoi_area_km2": 66.40327446933328,
+    "dominant_class": "Cropland",
+    "source": "ESA WorldCover v200 (10 m)"
+  },
+  "groundwater": {
+    "wells": 1,
+    "latest_observation": "2025-11-07",
+    "latest_mean_depth_m_bgl": 3.4,
+    "latest_min_depth_m_bgl": 3.4,
+    "latest_max_depth_m_bgl": 3.4,
+    "five_year_mean_m_bgl": 5.716896551724138,
+    "five_year_mean_m_bgl_pooled": 5.716896551724138,
+    "five_year_observation_count": 58,
+    "seasonal_windows": {
+      "pre_monsoon_months": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "monsoon_months": [
+        7,
+        8,
+        9
+      ]
+    },
+    "seasonal": [
+      {
+        "year": 2023,
+        "pre_monsoon": {
+          "level_m_bgl": 9.9875,
+          "observations": 4,
+          "dates": [
+            "27-03-2023",
+            "27-04-2023",
+            "27-06-2023",
+            "28-05-2023"
+          ],
+          "months": [
+            "Apr",
+            "Jun",
+            "Mar",
+            "May"
+          ]
+        },
+        "monsoon": {
+          "level_m_bgl": 3.0333333333333337,
+          "observations": 3,
+          "dates": [
+            "26-09-2023",
+            "28-08-2023",
+            "29-07-2023"
+          ],
+          "months": [
+            "Aug",
+            "Jul",
+            "Sep"
+          ]
+        },
+        "observed_months": [
+          "Jan",
+          "Feb",
+          "Mar",
+          "Apr",
+          "May",
+          "Jun",
+          "Jul",
+          "Aug",
+          "Sep",
+          "Oct",
+          "Nov",
+          "Dec"
+        ],
+        "fluctuation_m": 6.9541666666666675
+      },
+      {
+        "year": 2024,
+        "pre_monsoon": {
+          "level_m_bgl": 10.175,
+          "observations": 4,
+          "dates": [
+            "27-03-2024",
+            "28-04-2024",
+            "28-05-2024",
+            "28-06-2024"
+          ],
+          "months": [
+            "Apr",
+            "Jun",
+            "Mar",
+            "May"
+          ]
+        },
+        "monsoon": {
+          "level_m_bgl": 5.3500000000000005,
+          "observations": 3,
+          "dates": [
+            "25-09-2024",
+            "27-08-2024",
+            "28-07-2024"
+          ],
+          "months": [
+            "Aug",
+            "Jul",
+            "Sep"
+          ]
+        },
+        "observed_months": [
+          "Jan",
+          "Feb",
+          "Mar",
+          "Apr",
+          "May",
+          "Jun",
+          "Jul",
+          "Aug",
+          "Sep",
+          "Oct",
+          "Nov",
+          "Dec"
+        ],
+        "fluctuation_m": 4.825
+      },
+      {
+        "year": 2025,
+        "pre_monsoon": {
+          "level_m_bgl": 7.2,
+          "observations": 4,
+          "dates": [
+            "18-05-2025",
+            "26-03-2025",
+            "26-04-2025",
+            "27-06-2025"
+          ],
+          "months": [
+            "Apr",
+            "Jun",
+            "Mar",
+            "May"
+          ]
+        },
+        "monsoon": {
+          "level_m_bgl": 3.6666666666666665,
+          "observations": 3,
+          "dates": [
+            "27-07-2025",
+            "27-09-2025",
+            "30-08-2025"
+          ],
+          "months": [
+            "Aug",
+            "Jul",
+            "Sep"
+          ]
+        },
+        "observed_months": [
+          "Jan",
+          "Mar",
+          "Apr",
+          "May",
+          "Jun",
+          "Jul",
+          "Aug",
+          "Sep",
+          "Oct",
+          "Nov"
+        ],
+        "fluctuation_m": 3.5333333333333337
+      }
+    ],
+    "wells_detail": [
+      {
+        "well_no": "SIND-005-PZ",
+        "latitude": 22.65722222,
+        "longitude": 75.55527778,
+        "village": "Methwada",
+        "district": "Indore",
+        "well_type": "Bore Well",
+        "agency": "SGWO",
+        "depth_of_well_m": 38.11000061,
+        "latest_date": "2025-11-07",
+        "latest_level_m_bgl": 3.4,
+        "five_year_avg_m_bgl": 5.716896551724138,
+        "change_5yr_m": 1.9,
+        "trend": "Declining",
+        "trend_description": "Water level has become deeper",
+        "n_5yr_observations": 58,
+        "seasonal": [
+          {
+            "year": 2023,
+            "pre_monsoon": {
+              "level_m_bgl": 9.9875,
+              "observations": 4,
+              "dates": [
+                "27-03-2023",
+                "27-04-2023",
+                "27-06-2023",
+                "28-05-2023"
+              ],
+              "months": [
+                "Apr",
+                "Jun",
+                "Mar",
+                "May"
+              ]
+            },
+            "monsoon": {
+              "level_m_bgl": 3.0333333333333337,
+              "observations": 3,
+              "dates": [
+                "26-09-2023",
+                "28-08-2023",
+                "29-07-2023"
+              ],
+              "months": [
+                "Aug",
+                "Jul",
+                "Sep"
+              ]
+            },
+            "observed_months": [
+              "Jan",
+              "Feb",
+              "Mar",
+              "Apr",
+              "May",
+              "Jun",
+              "Jul",
+              "Aug",
+              "Sep",
+              "Oct",
+              "Nov",
+              "Dec"
+            ]
+          },
+          {
+            "year": 2024,
+            "pre_monsoon": {
+              "level_m_bgl": 10.175,
+              "observations": 4,
+              "dates": [
+                "27-03-2024",
+                "28-04-2024",
+                "28-05-2024",
+                "28-06-2024"
+              ],
+              "months": [
+                "Apr",
+                "Jun",
+                "Mar",
+                "May"
+              ]
+            },
+            "monsoon": {
+              "level_m_bgl": 5.3500000000000005,
+              "observations": 3,
+              "dates": [
+                "25-09-2024",
+                "27-08-2024",
+                "28-07-2024"
+              ],
+              "months": [
+                "Aug",
+                "Jul",
+                "Sep"
+              ]
+            },
+            "observed_months": [
+              "Jan",
+              "Feb",
+              "Mar",
+              "Apr",
+              "May",
+              "Jun",
+              "Jul",
+              "Aug",
+              "Sep",
+              "Oct",
+              "Nov",
+              "Dec"
+            ]
+          },
+          {
+            "year": 2025,
+            "pre_monsoon": {
+              "level_m_bgl": 7.2,
+              "observations": 4,
+              "dates": [
+                "18-05-2025",
+                "26-03-2025",
+                "26-04-2025",
+                "27-06-2025"
+              ],
+              "months": [
+                "Apr",
+                "Jun",
+                "Mar",
+                "May"
+              ]
+            },
+            "monsoon": {
+              "level_m_bgl": 3.6666666666666665,
+              "observations": 3,
+              "dates": [
+                "27-07-2025",
+                "27-09-2025",
+                "30-08-2025"
+              ],
+              "months": [
+                "Aug",
+                "Jul",
+                "Sep"
+              ]
+            },
+            "observed_months": [
+              "Jan",
+              "Mar",
+              "Apr",
+              "May",
+              "Jun",
+              "Jul",
+              "Aug",
+              "Sep",
+              "Oct",
+              "Nov"
+            ]
+          }
+        ]
+      }
+    ],
+    "trend_counts": {
+      "Declining": 1
+    },
+    "dominant_trend": "Declining",
+    "mean_change_5yr_m": 1.9,
+    "nearest_well_m": 1622.3347943729868,
+    "nearest_well_depth_m_bgl": 3.4,
+    "well_depth_range_m": [
+      38.11000061,
+      38.11000061
+    ],
+    "source": "CGWB manual monthly groundwater monitoring"
+  },
+  "rainfall": {
+    "years": [
+      2023,
+      2024,
+      2025
+    ],
+    "monsoon_months": [
+      6,
+      7,
+      8,
+      9
+    ],
+    "thresholds_mm": {
+      "rain_day": 1.0,
+      "heavy_25": 25.0,
+      "heavy_50": 50.0,
+      "heavy_100": 100.0
+    },
+    "thresholds_in": {
+      "rain_day": 0.03937007874015748,
+      "heavy_25": 0.984251968503937,
+      "heavy_50": 1.968503937007874,
+      "heavy_100": 3.937007874015748
+    },
+    "yearly": [
+      {
+        "year": 2023,
+        "chirps": {
+          "annual_mm": 1351.4351624413628,
+          "monsoon_mm": 1219.5874870830191,
+          "rain_days": 90.66386554621849,
+          "days_ge_25mm": 15.275630252100841,
+          "days_ge_50mm": 5.59327731092437,
+          "days_ge_100mm": 0.8722689075630252,
+          "max_1day_mm": 103.22067374862544,
+          "annual_in": 53.20610875753397,
+          "monsoon_in": 48.01525539696926,
+          "max_1day_in": 4.06380605309549
+        },
+        "imd": {
+          "annual_mm": 1243.1082763671875,
+          "monsoon_mm": 1134.3751220703125,
+          "rain_days": 72.0,
+          "days_ge_25mm": 11.0,
+          "days_ge_50mm": 4.0,
+          "days_ge_100mm": 2.0,
+          "max_1day_mm": 190.490966796875,
+          "annual_in": 48.94127072311762,
+          "monsoon_in": 44.66043787678396,
+          "max_1day_in": 7.4996443620816935
+        },
+        "diff_percent": {
+          "annual_mm": 8.714195547852489,
+          "monsoon_mm": 7.511833021971447,
+          "rain_days": 25.922035480859012,
+          "days_ge_25mm": 38.86936592818947,
+          "days_ge_50mm": 39.83193277310926,
+          "days_ge_100mm": -56.38655462184874,
+          "max_1day_mm": -45.81334984839881
+        }
+      },
+      {
+        "year": 2024,
+        "chirps": {
+          "annual_mm": 1205.476943817319,
+          "monsoon_mm": 1061.0843516514244,
+          "rain_days": 105.98991596638656,
+          "days_ge_25mm": 14.927731092436975,
+          "days_ge_50mm": 2.6672268907563024,
+          "days_ge_100mm": 0.0,
+          "max_1day_mm": 63.42868089435481,
+          "annual_in": 47.459722197532244,
+          "monsoon_in": 41.77497447446553,
+          "max_1day_in": 2.4971921611950716
+        },
+        "imd": {
+          "annual_mm": 1029.1905517578125,
+          "monsoon_mm": 920.0936279296875,
+          "rain_days": 90.0,
+          "days_ge_25mm": 11.0,
+          "days_ge_50mm": 2.0,
+          "days_ge_100mm": 0.0,
+          "max_1day_mm": 64.47404479980469,
+          "annual_in": 40.519313061331204,
+          "monsoon_in": 36.22415857990896,
+          "max_1day_in": 2.538348220464752
+        },
+        "diff_percent": {
+          "annual_mm": 17.12864461866823,
+          "monsoon_mm": 15.323519198690859,
+          "rain_days": 17.76657329598507,
+          "days_ge_25mm": 35.70664629488159,
+          "days_ge_50mm": 33.36134453781512,
+          "days_ge_100mm": null,
+          "max_1day_mm": -1.6213716832809004
+        }
+      },
+      {
+        "year": 2025,
+        "chirps": {
+          "annual_mm": 1304.9293751146442,
+          "monsoon_mm": 1009.3989026476596,
+          "rain_days": 103.93109243697481,
+          "days_ge_25mm": 17.410084033613444,
+          "days_ge_50mm": 0.4605042016806724,
+          "days_ge_100mm": 0.0,
+          "max_1day_mm": 48.800512906883945,
+          "annual_in": 51.375172248608045,
+          "monsoon_in": 39.740114277466915,
+          "max_1day_in": 1.9212800357040924
+        },
+        "imd": {
+          "annual_mm": 1232.84033203125,
+          "monsoon_mm": 1026.833740234375,
+          "rain_days": 85.0,
+          "days_ge_25mm": 14.0,
+          "days_ge_50mm": 5.0,
+          "days_ge_100mm": 0.0,
+          "max_1day_mm": 99.32601165771484,
+          "annual_in": 48.53702094611221,
+          "monsoon_in": 40.426525206077756,
+          "max_1day_in": 3.9104728999100336
+        },
+        "diff_percent": {
+          "annual_mm": 5.847394931071004,
+          "monsoon_mm": -1.6979221565835851,
+          "rain_days": 22.27187345526448,
+          "days_ge_25mm": 24.357743097238885,
+          "days_ge_50mm": -90.78991596638654,
+          "days_ge_100mm": null,
+          "max_1day_mm": -50.868345469206695
+        }
+      }
+    ],
+    "means": {
+      "chirps": {
+        "annual_mm": 1287.2804937911087,
+        "monsoon_mm": 1096.6902471273677,
+        "rain_days": 100.1949579831933,
+        "days_ge_25mm": 15.871148459383754,
+        "days_ge_50mm": 2.9070028011204485,
+        "days_ge_100mm": 0.2907563025210084,
+        "max_1day_mm": 71.8166225166214,
+        "annual_in": 50.680334401224755,
+        "monsoon_in": 43.176781382967235,
+        "max_1day_in": 2.827426083331551
+      },
+      "imd": {
+        "annual_mm": 1168.3797200520833,
+        "monsoon_mm": 1027.100830078125,
+        "rain_days": 82.33333333333333,
+        "days_ge_25mm": 12.0,
+        "days_ge_50mm": 3.6666666666666665,
+        "days_ge_100mm": 0.6666666666666666,
+        "max_1day_mm": 118.09700775146484,
+        "annual_in": 45.99920157685367,
+        "monsoon_in": 40.43704055425689,
+        "max_1day_in": 4.649488494152159
+      }
+    },
+    "wettest_day_mm": {
+      "chirps": 103.22067374862544,
+      "imd": 190.490966796875
+    },
+    "wettest_day_in": {
+      "chirps": 4.06380605309549,
+      "imd": 7.4996443620816935
+    },
+    "imd_grid": [
+      {
+        "year": 2023,
+        "latitude": 22.75,
+        "longitude": 75.5
+      },
+      {
+        "year": 2024,
+        "latitude": 22.75,
+        "longitude": 75.5
+      },
+      {
+        "year": 2025,
+        "latitude": 22.75,
+        "longitude": 75.5
+      }
+    ],
+    "notes": [
+      "CHIRPS v3 daily (UCSB-CHC/CHIRPS/V3/DAILY_RNL), AOI mean over 5.0 km, native ~5.5 km grid.",
+      "IMD 0.25\u00b0 gridded daily rainfall at the grid cell nearest the site.",
+      "diff_percent = 100 x (CHIRPS - IMD) / |IMD| \u2014 a diagnostic, not a claim that either dataset is ground truth."
+    ],
+    "source": "CHIRPS v3 daily + IMD 0.25\u00b0 gridded daily"
+  },
+  "air_temperature": {
+    "annual_mean_c": 24.89472348591835,
+    "coldest_month": "2023-01",
+    "coldest_month_c": 18.399231325299112,
+    "warmest_month": "2024-05",
+    "warmest_month_c": 33.08592181953791,
+    "months": 36,
+    "period": "2023\u20132025",
+    "source": "ERA5-Land monthly aggregated, 2 m air temperature"
+  },
+  "land_surface_temperature": {
+    "mean_c": 37.681037024870946,
+    "min_c": 27.12814718000004,
+    "max_c": 47.83793036000003,
+    "scenes": 45,
+    "source": "Landsat 8 C2 L2 ST_B10 (median composite)"
+  },
+  "terrain": {
+    "elevation_mean_m": 535.2260896249616,
+    "elevation_min_m": 513,
+    "elevation_max_m": 557,
+    "slope_mean_deg": 1.741252090858567,
+    "slope_median_deg": 1.3674254021562768,
+    "slope_min_deg": 0,
+    "slope_max_deg": 11.254070281982422,
+    "slope_range_90pct_deg": [
+      0,
+      3.5357963639274743
+    ],
+    "slope_median_deg_100m": 1.0050456078582684,
+    "slope_class_share": [
+      {
+        "class": "lt_3",
+        "label": "< 3\u00b0 (nearly level)",
+        "share_percent": 88.85766666612408
+      },
+      {
+        "class": "3_8",
+        "label": "3\u20138\u00b0 (gentle)",
+        "share_percent": 11.099100666809012
+      },
+      {
+        "class": "8_15",
+        "label": "8\u201315\u00b0 (moderate)",
+        "share_percent": 0.04323266706688326
+      },
+      {
+        "class": "ge_15",
+        "label": ">= 15\u00b0 (steep)",
+        "share_percent": 0
+      }
+    ],
+    "source": "SRTM 1 arc-second (USGS/SRTMGL1_003)"
+  },
+  "roads": {
+    "features": 229,
+    "total_length_km": 176.2696315437459,
+    "length_km_by_class": [
+      {
+        "highway_class": "trunk",
+        "length_km": 51.971732768859844
+      },
+      {
+        "highway_class": "residential",
+        "length_km": 50.74169183909812
+      },
+      {
+        "highway_class": "unclassified",
+        "length_km": 36.359132599720745
+      },
+      {
+        "highway_class": "tertiary",
+        "length_km": 16.659525504508636
+      },
+      {
+        "highway_class": "primary",
+        "length_km": 15.961615173489013
+      },
+      {
+        "highway_class": "secondary",
+        "length_km": 4.575933658069531
+      }
+    ],
+    "density_km_per_km2": 2.654532219268068,
+    "nearest_road_m": 650.37498650989,
+    "nearest_road_class": "trunk",
+    "nearest_road_name": "Ahmedabad - Indore Road",
+    "nearest_major_road_m": 650.37498650989,
+    "nearest_major_road_class": "trunk",
+    "nearest_major_road_name": "Ahmedabad - Indore Road",
+    "nearest_major_road_beyond_aoi": false,
+    "source": "OpenStreetMap via OSMnx"
+  },
+  "railways": {
+    "features": 0,
+    "source": "OpenStreetMap via OSMnx"
+  },
+  "water_resources": {
+    "features": 4,
+    "waterbody_area_km2": 0.20591955477461377,
+    "waterway_length_km": 137.6425266088736,
+    "waterbodies": 2,
+    "waterways": 2,
+    "waterway_types": [
+      {
+        "type": "river",
+        "count": 1
+      },
+      {
+        "type": "stream",
+        "count": 1
+      }
+    ],
+    "nearest_water_m": 1756.5343721323418,
+    "nearest_water_type": "stream",
+    "nearest_water_name": null,
+    "source": "OpenStreetMap via OSMnx",
+    "waterbody_share_of_aoi_percent": 0.31010451882115037,
+    "worldcover_permanent_water_percent": 0.237410219901618
+  },
+  "hydrology": {
+    "river_floodplain": {
+      "inside_supplied_river_polygon": false,
+      "nearest_river_m": 4370.399112067142,
+      "nearest_river_name": "Chambal",
+      "features_in_query_window": 1,
+      "rivers_in_query_window": [
+        {
+          "name": "Chambal",
+          "ripcode": "01",
+          "distance_m": 4370.399112067142
+        }
+      ],
+      "source": "river_polygon.GeoJSON; polygon coverage used as floodplain proxy"
+    },
+    "sac_water_bodies": {
+      "waterbodies_in_aoi": 67,
+      "nearest_water_body_m": 27.414781357139862,
+      "nearest_water_body_name": null,
+      "nearest_water_body_type": "Tank/Pond",
+      "water_bodies": [
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.25133731108812396,
+          "distance_m": 27.414781357139862
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.16375686399767092,
+          "distance_m": 178.65219613975685
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.1459259816262379,
+          "distance_m": 205.5896771685018
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 25.49117425534841,
+          "distance_m": 555.3847094783195
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.16509152215759124,
+          "distance_m": 924.2219189323254
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.31139190928761884,
+          "distance_m": 1035.2796008459761
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.7841395667440791,
+          "distance_m": 1147.902948855543
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.33494999211805804,
+          "distance_m": 1400.703828781526
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.6017076922410439,
+          "distance_m": 1408.1981889894907
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.6447497060140946,
+          "distance_m": 1425.9504066237014
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.4692058255901809,
+          "distance_m": 1531.5669269670307
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.11608012425684594,
+          "distance_m": 1645.912234814717
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.11582629264273991,
+          "distance_m": 1685.8448193192005
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.6059747430312818,
+          "distance_m": 1743.707031070099
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.28691118779494884,
+          "distance_m": 1778.0115656825938
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.14211013170972098,
+          "distance_m": 1932.753307770482
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.2103407898750776,
+          "distance_m": 2012.3081748275656
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 2.1416296109842747,
+          "distance_m": 2039.8170787506817
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.19821227098985295,
+          "distance_m": 2039.8555740635702
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.1918086624113116,
+          "distance_m": 2188.97153064682
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.34697380700384395,
+          "distance_m": 2352.300599822005
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.16611689927791534,
+          "distance_m": 2371.03715981903
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.1328410168971734,
+          "distance_m": 2446.1400650772075
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.2139668023120298,
+          "distance_m": 2510.6246049020297
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.20040458496171162,
+          "distance_m": 2557.65380899667
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.2718377029287957,
+          "distance_m": 2579.5414333680706
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.15693725069776762,
+          "distance_m": 2762.7004618738565
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.17899086176227544,
+          "distance_m": 2815.8524352262716
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.19580875471898898,
+          "distance_m": 2863.906661387874
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.149271394194227,
+          "distance_m": 3022.5931364381286
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.26990234362031884,
+          "distance_m": 3075.3390716628373
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.2907945296699889,
+          "distance_m": 3084.180691578205
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.6098732956610765,
+          "distance_m": 3126.8039693957494
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.6635306926094918,
+          "distance_m": 3134.8660633604145
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 1.1870414760945398,
+          "distance_m": 3139.4235017931132
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 6.903587992521124,
+          "distance_m": 3259.091763074398
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.17682747613687985,
+          "distance_m": 3277.5791753488165
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.2706607233104422,
+          "distance_m": 3339.226711517404
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.44637028961047626,
+          "distance_m": 3344.3030350981485
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.3510791265678817,
+          "distance_m": 3390.3141513185897
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 1.5931716193985255,
+          "distance_m": 3405.974868216623
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.12964431636776613,
+          "distance_m": 3480.61683280771
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.11094308287736898,
+          "distance_m": 3494.9499282898128
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.14653476893198655,
+          "distance_m": 3512.7162686850493
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.6626659229656382,
+          "distance_m": 3513.2249290665777
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.14817205589866522,
+          "distance_m": 3522.847009953949
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.1415220898194293,
+          "distance_m": 3529.9906000678598
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.9694053435935348,
+          "distance_m": 3542.587581869175
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.1626672074019867,
+          "distance_m": 3563.9019845798553
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 1.3248111047720605,
+          "distance_m": 3591.2561713289815
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.9232656643579031,
+          "distance_m": 3605.6011418686867
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.65871197447706,
+          "distance_m": 3715.949351077193
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.1496631112460237,
+          "distance_m": 3764.095960858451
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.1514421406789798,
+          "distance_m": 3784.063726554828
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.7051776902400435,
+          "distance_m": 3797.881123767957
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.16021010660189292,
+          "distance_m": 3808.8785386730915
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.2823832448878659,
+          "distance_m": 3846.095472275258
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.1423848582514176,
+          "distance_m": 3892.1686480501935
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 16.812596001467544,
+          "distance_m": 3923.3780850902344
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.16405805309990731,
+          "distance_m": 4001.5171289909704
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.1179620511242996,
+          "distance_m": 4017.1684684911324
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.16594529964727506,
+          "distance_m": 4073.6683421252965
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 1.3278493417132509,
+          "distance_m": 4277.073952150228
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.20346328072204306,
+          "distance_m": 4363.0310246171
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 2.354406064761804,
+          "distance_m": 4392.504796505314
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 19.47541731454457,
+          "distance_m": 4472.025074306163
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 1.6702927801028382,
+          "distance_m": 4524.551407260011
+        }
+      ],
+      "source": "SAC water bodies (wb_sac_mp.GeoJSON)"
+    }
+  },
+  "settlements": {
+    "settlement_count_10km": 3,
+    "distance_to_nearest_settlement_km": 5.297114418262128,
+    "nearest_settlement_name": "Betma",
+    "nearest_settlement_type": "town",
+    "search_radius_km": 10,
+    "settlements": [
+      {
+        "name": "Betma",
+        "place_type": "town",
+        "distance_km": 5.297114418262128
+      },
+      {
+        "name": "Rangwasa",
+        "place_type": "village",
+        "distance_km": 8.174509235020759
+      },
+      {
+        "name": "Lebad",
+        "place_type": "village",
+        "distance_km": 8.915735717342226
+      }
+    ],
+    "source": "OpenStreetMap via OSMnx"
+  },
+  "nearby_places": {
+    "search_radius_km": 10,
+    "serpapi_enabled": true,
+    "categories": [
+      {
+        "category": "tourist_attractions",
+        "count": 4,
+        "nearest": {
+          "name": "Dudh talayi",
+          "type": "Tourist attraction",
+          "rating": 5,
+          "reviews": 3,
+          "address": "JH5R+GJG, Sagore, Madhya Pradesh 454774, India",
+          "latitude": 22.608812099999998,
+          "longitude": 75.5915648,
+          "distance_km": 7.317,
+          "place_id": "ChIJJ-yG_gxRYjkRYYJrckLLxDo",
+          "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Dudh+talayi&query_place_id=ChIJJ-yG_gxRYjkRYYJrckLLxDo"
+        },
+        "places": [
+          {
+            "name": "Dudh talayi",
+            "type": "Tourist attraction",
+            "rating": 5,
+            "reviews": 3,
+            "address": "JH5R+GJG, Sagore, Madhya Pradesh 454774, India",
+            "latitude": 22.608812099999998,
+            "longitude": 75.5915648,
+            "distance_km": 7.317,
+            "place_id": "ChIJJ-yG_gxRYjkRYYJrckLLxDo",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Dudh+talayi&query_place_id=ChIJJ-yG_gxRYjkRYYJrckLLxDo"
+          },
+          {
+            "name": "Bara talab",
+            "type": "Tourist attraction",
+            "rating": 4.5,
+            "reviews": 11,
+            "address": "JHQJ+38Q, Indorama, shree ram mandir, Pithampur Industrial Area, Pithampur, Achana, Madhya Pradesh 454774, India",
+            "latitude": 22.602459,
+            "longitude": 75.55096019999999,
+            "distance_km": 7.568,
+            "place_id": "ChIJwZBqJINTYjkRTAfDcMnzG_A",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bara+talab&query_place_id=ChIJwZBqJINTYjkRTAfDcMnzG_A"
+          },
+          {
+            "name": "Sagore kuti",
+            "type": "Tourist attraction",
+            "rating": 4.2,
+            "reviews": 102,
+            "address": "HHWX+G4P, Sagore Kuti Rd, Pithampur Industrial Area, Sagore, Madhya Pradesh 454774, India",
+            "latitude": 22.596338,
+            "longitude": 75.5978227,
+            "distance_km": 8.845,
+            "place_id": "ChIJ3b1s-CBRYjkRL6tOJxnJmac",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Sagore+kuti&query_place_id=ChIJ3b1s-CBRYjkRL6tOJxnJmac"
+          },
+          {
+            "name": "Picnic Spot",
+            "type": "Tourist attraction",
+            "rating": 2,
+            "reviews": 6,
+            "address": "MMF4+9GQ, Betma Khurd, Madhya Pradesh 453001, India",
+            "latitude": 22.6723137,
+            "longitude": 75.6570982,
+            "distance_km": 9.566,
+            "place_id": "ChIJK-2Vu19VYjkRStdfkhhQtaE",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Picnic+Spot&query_place_id=ChIJK-2Vu19VYjkRStdfkhhQtaE"
+          }
+        ]
+      },
+      {
+        "category": "restaurants",
+        "count": 6,
+        "nearest": {
+          "name": "Anmol Punjabi Restaurant",
+          "type": "Punjabi restaurant",
+          "rating": 4.6,
+          "reviews": 24,
+          "address": "Pipliya, NH 47, Betma, Madhya Pradesh 453001, India",
+          "latitude": 22.6812154,
+          "longitude": 75.5828774,
+          "distance_km": 2.344,
+          "place_id": "ChIJs78q-VNTYjkRzp6ZUeP8sa8",
+          "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Anmol+Punjabi+Restaurant&query_place_id=ChIJs78q-VNTYjkRzp6ZUeP8sa8"
+        },
+        "places": [
+          {
+            "name": "Anmol Punjabi Restaurant",
+            "type": "Punjabi restaurant",
+            "rating": 4.6,
+            "reviews": 24,
+            "address": "Pipliya, NH 47, Betma, Madhya Pradesh 453001, India",
+            "latitude": 22.6812154,
+            "longitude": 75.5828774,
+            "distance_km": 2.344,
+            "place_id": "ChIJs78q-VNTYjkRzp6ZUeP8sa8",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Anmol+Punjabi+Restaurant&query_place_id=ChIJs78q-VNTYjkRzp6ZUeP8sa8"
+          },
+          {
+            "name": "Darbar Shree Dhaba And Restaurant",
+            "type": "Restaurant",
+            "rating": 5,
+            "reviews": 11,
+            "address": "near Radha Kunj Garden, Osrud Phata, Ghatabillod, Osrod, Madhya Pradesh 454773, India",
+            "latitude": 22.6603676,
+            "longitude": 75.51119179999999,
+            "distance_km": 5.503,
+            "place_id": "ChIJd3kfPHZNYjkRkakv7-YWH0w",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Darbar+Shree+Dhaba+And+Restaurant&query_place_id=ChIJd3kfPHZNYjkRkakv7-YWH0w"
+          },
+          {
+            "name": "Shree Sanwariya Seth Family Restaurant",
+            "type": "Vegetarian restaurant",
+            "rating": 4.6,
+            "reviews": 185,
+            "address": "Indore Dhar Road, NH-47, Betma Bypass, near Ankit Automobile, Betma, Madhya Pradesh 453001, India",
+            "latitude": 22.683218699999998,
+            "longitude": 75.61933049999999,
+            "distance_km": 5.888,
+            "place_id": "ChIJGXO-fwBTYjkRhQstkxJTyHM",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Shree+Sanwariya+Seth+Family+Restaurant&query_place_id=ChIJGXO-fwBTYjkRhQstkxJTyHM"
+          },
+          {
+            "name": "All Seasons Restaurant",
+            "type": "Restaurant",
+            "rating": 4.8,
+            "reviews": 30,
+            "address": "Sagor, 11, Road, Pithampur, Madhya Pradesh 454774, India",
+            "latitude": 22.6167248,
+            "longitude": 75.6073637,
+            "distance_km": 7.367,
+            "place_id": "ChIJVzHodppRYjkR64bKjvx9CCM",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=All+Seasons+Restaurant&query_place_id=ChIJVzHodppRYjkR64bKjvx9CCM"
+          },
+          {
+            "name": "Deepshikha Restaurant",
+            "type": "Restaurant",
+            "rating": 4.5,
+            "reviews": 10,
+            "address": "MFFH+6XX, Lebad, Madhya Pradesh 454773, India",
+            "latitude": 22.6731174,
+            "longitude": 75.4799936,
+            "distance_km": 8.62,
+            "place_id": "ChIJ538XdDNNYjkRR-Z3U0IhRe0",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Deepshikha+Restaurant&query_place_id=ChIJ538XdDNNYjkRR-Z3U0IhRe0"
+          },
+          {
+            "name": "No 1 dhaba and restaurant",
+            "type": "Restaurant",
+            "rating": 5,
+            "reviews": 1,
+            "address": "HHQM+2PV, Sagore, Kuti, Pithampur, Suhagpura, Madhya Pradesh 454774, India",
+            "latitude": 22.5876116,
+            "longitude": 75.58427809999999,
+            "distance_km": 9.338,
+            "place_id": "ChIJLzs2OABRYjkRhu9Rg7eOceM",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=No+1+dhaba+and+restaurant&query_place_id=ChIJLzs2OABRYjkRhu9Rg7eOceM"
+          }
+        ]
+      },
+      {
+        "category": "hospitals",
+        "count": 1,
+        "nearest": {
+          "name": "Indorama Hospital Indorama",
+          "type": "General hospital",
+          "rating": 5,
+          "reviews": 2,
+          "address": "JHRJ+2RW, Bypass Road, Pithampur Industrial Area, Vijay Nagar Colony, \u092a\u0940\u0925\u092e\u092a\u0941\u0930, Madhya Pradesh 454774, India",
+          "latitude": 22.6401093,
+          "longitude": 75.5821575,
+          "distance_km": 3.763,
+          "place_id": "ChIJ5xtAHgBTYjkRPE6iYQb4gDw",
+          "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Indorama+Hospital+Indorama&query_place_id=ChIJ5xtAHgBTYjkRPE6iYQb4gDw"
+        },
+        "places": [
+          {
+            "name": "Indorama Hospital Indorama",
+            "type": "General hospital",
+            "rating": 5,
+            "reviews": 2,
+            "address": "JHRJ+2RW, Bypass Road, Pithampur Industrial Area, Vijay Nagar Colony, \u092a\u0940\u0925\u092e\u092a\u0941\u0930, Madhya Pradesh 454774, India",
+            "latitude": 22.6401093,
+            "longitude": 75.5821575,
+            "distance_km": 3.763,
+            "place_id": "ChIJ5xtAHgBTYjkRPE6iYQb4gDw",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Indorama+Hospital+Indorama&query_place_id=ChIJ5xtAHgBTYjkRPE6iYQb4gDw"
+          }
+        ]
+      },
+      {
+        "category": "schools",
+        "count": 11,
+        "nearest": {
+          "name": "Verma Public High School",
+          "type": "High school",
+          "rating": null,
+          "reviews": null,
+          "address": "Mandlawda Pithampur Sector 3 Dist Dhar [M.P.], Pithampur, Madhya Pradesh 454774, India",
+          "latitude": 22.645671,
+          "longitude": 75.5690394,
+          "distance_km": 2.697,
+          "place_id": "ChIJYTPHGjRSYjkRGFZqV9JMwr4",
+          "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Verma+Public+High+School&query_place_id=ChIJYTPHGjRSYjkRGFZqV9JMwr4"
+        },
+        "places": [
+          {
+            "name": "Verma Public High School",
+            "type": "High school",
+            "rating": null,
+            "reviews": null,
+            "address": "Mandlawda Pithampur Sector 3 Dist Dhar [M.P.], Pithampur, Madhya Pradesh 454774, India",
+            "latitude": 22.645671,
+            "longitude": 75.5690394,
+            "distance_km": 2.697,
+            "place_id": "ChIJYTPHGjRSYjkRGFZqV9JMwr4",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Verma+Public+High+School&query_place_id=ChIJYTPHGjRSYjkRGFZqV9JMwr4"
+          },
+          {
+            "name": "New Pithampur Public Senior Secondary School",
+            "type": "Secondary school",
+            "rating": null,
+            "reviews": null,
+            "address": "Indorama square, Sector-3, indorama, Pithampur, Madhya Pradesh 454774, India",
+            "latitude": 22.638566299999997,
+            "longitude": 75.582641,
+            "distance_km": 3.936,
+            "place_id": "ChIJj2CEoF9XYjkR1l4qDGfS2kY",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=New+Pithampur+Public+Senior+Secondary+School&query_place_id=ChIJj2CEoF9XYjkR1l4qDGfS2kY"
+          },
+          {
+            "name": "Delhi World Public School",
+            "type": "General education school",
+            "rating": null,
+            "reviews": null,
+            "address": "Indore - Dhar Rd, Betma, Badipura, Madhya Pradesh 453001, India",
+            "latitude": 22.685861199999998,
+            "longitude": 75.60586599999999,
+            "distance_km": 4.675,
+            "place_id": "ChIJ4QscBHFTYjkRN26F6psxfqI",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Delhi+World+Public+School&query_place_id=ChIJ4QscBHFTYjkRN26F6psxfqI"
+          },
+          {
+            "name": "Sky heights academy",
+            "type": "CBSE school",
+            "rating": null,
+            "reviews": null,
+            "address": "MJF6+84R, Betma, Madhya Pradesh 453001, India",
+            "latitude": 22.6733525,
+            "longitude": 75.6102578,
+            "distance_km": 4.775,
+            "place_id": "ChIJU7ZEiQNTYjkRW2y7Ia_yUwc",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Sky+heights+academy&query_place_id=ChIJU7ZEiQNTYjkRW2y7Ia_yUwc"
+          },
+          {
+            "name": "MS JUNIOR INTERNATIONAL SCHOOL",
+            "type": "Education center",
+            "rating": 4.7,
+            "reviews": 36,
+            "address": "Neemuch - Mhow Rd, behind Jivan jyoti colony, maa vihar colony, Jeevan Jyothi Colony, Pithampur, Kalibillod, Madhya Pradesh 454774, India",
+            "latitude": 22.638133699999997,
+            "longitude": 75.6029997,
+            "distance_km": 5.312,
+            "place_id": "ChIJX3RJlDVTYjkRvx0itIlhIjI",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=MS+JUNIOR+INTERNATIONAL+SCHOOL&query_place_id=ChIJX3RJlDVTYjkRvx0itIlhIjI"
+          },
+          {
+            "name": "HOLY ROSARY SCHOOL",
+            "type": "General education school",
+            "rating": null,
+            "reviews": null,
+            "address": "MJR6+8QM, Depalpur Rd, Kushwah Mohalla, Betma, Madhya Pradesh 453001, India",
+            "latitude": 22.6908441,
+            "longitude": 75.6119147,
+            "distance_km": 5.469,
+            "place_id": "ChIJSxgLfYBUYjkRlzEZS9qY1wA",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=HOLY+ROSARY+SCHOOL&query_place_id=ChIJSxgLfYBUYjkRlzEZS9qY1wA"
+          },
+          {
+            "name": "Heritage De Success Public School",
+            "type": "General education school",
+            "rating": null,
+            "reviews": null,
+            "address": "Pithampur, Jeevan Jyothi Colony, Village Kali Billod, Depalpur, 3, Sagour Kuti, Pithampur, Madhya Pradesh 454774, India",
+            "latitude": 22.6347472,
+            "longitude": 75.6055243,
+            "distance_km": 5.756,
+            "place_id": "ChIJ98tKu-NTYjkR3WHQgcIIRPw",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Heritage+De+Success+Public+School&query_place_id=ChIJ98tKu-NTYjkR3WHQgcIIRPw"
+          },
+          {
+            "name": "VINAYAK PUBLIC SCHOOL",
+            "type": "General education school",
+            "rating": null,
+            "reviews": null,
+            "address": "Sagore Kuti Rd, behind Bhojpuri colony, Pithampur Industrial Area, Kalibillod, Madhya Pradesh 454774, India",
+            "latitude": 22.6360577,
+            "longitude": 75.609569,
+            "distance_km": 5.979,
+            "place_id": "ChIJ690xeCr7hS0R_Hn3AUF7bG8",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=VINAYAK+PUBLIC+SCHOOL&query_place_id=ChIJ690xeCr7hS0R_Hn3AUF7bG8"
+          },
+          {
+            "name": "M.G.M. English Medium School, Kalibillod.",
+            "type": "CBSE school",
+            "rating": null,
+            "reviews": null,
+            "address": "Sagore Betma, Road, Kalibillod, Madhya Pradesh 453001, India",
+            "latitude": 22.6395932,
+            "longitude": 75.6161004,
+            "distance_km": 6.302,
+            "place_id": "ChIJuz3Ba_lTYjkRDo71SWfY9IA",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=M.G.M.+English+Medium+School%2C+Kalibillod.&query_place_id=ChIJuz3Ba_lTYjkRDo71SWfY9IA"
+          },
+          {
+            "name": "Kids Academy School",
+            "type": "School center",
+            "rating": 4.9,
+            "reviews": 17,
+            "address": "near Gurudwara, Upadhyay nagar, Depalpur, Betma, Madhya Pradesh 453001, India",
+            "latitude": 22.688098399999998,
+            "longitude": 75.6224714,
+            "distance_km": 6.355,
+            "place_id": "ChIJj25Oh3lVYjkRxDvYy3NOzEM",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Kids+Academy+School&query_place_id=ChIJj25Oh3lVYjkRxDvYy3NOzEM"
+          },
+          {
+            "name": "South Valley International School",
+            "type": "CBSE school",
+            "rating": null,
+            "reviews": null,
+            "address": "Salampur, Betma, Madhya Pradesh 453001, India",
+            "latitude": 22.6570479,
+            "longitude": 75.6331977,
+            "distance_km": 7.242,
+            "place_id": "ChIJOXEmTm1UYjkR_qIokVnQqSM",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=South+Valley+International+School&query_place_id=ChIJOXEmTm1UYjkR_qIokVnQqSM"
+          }
+        ]
+      },
+      {
+        "category": "markets",
+        "count": 12,
+        "nearest": {
+          "name": "SHREE BADRI SETH CLOTH MARKET GHATABILLOD (Choki)",
+          "type": "Clothes market",
+          "rating": 5,
+          "reviews": 3,
+          "address": "GHATABILLOD, ROAD, Chouki, RATLAM, Madhya Pradesh 454773, India",
+          "latitude": 22.6705418,
+          "longitude": 75.525233,
+          "distance_km": 3.971,
+          "place_id": "ChIJ_-Cv529NYjkRNknGEMc4Xc4",
+          "google_maps_url": "https://www.google.com/maps/search/?api=1&query=SHREE+BADRI+SETH+CLOTH+MARKET+GHATABILLOD+%28Choki%29&query_place_id=ChIJ_-Cv529NYjkRNknGEMc4Xc4"
+        },
+        "places": [
+          {
+            "name": "SHREE BADRI SETH CLOTH MARKET GHATABILLOD (Choki)",
+            "type": "Clothes market",
+            "rating": 5,
+            "reviews": 3,
+            "address": "GHATABILLOD, ROAD, Chouki, RATLAM, Madhya Pradesh 454773, India",
+            "latitude": 22.6705418,
+            "longitude": 75.525233,
+            "distance_km": 3.971,
+            "place_id": "ChIJ_-Cv529NYjkRNknGEMc4Xc4",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=SHREE+BADRI+SETH+CLOTH+MARKET+GHATABILLOD+%28Choki%29&query_place_id=ChIJ_-Cv529NYjkRNknGEMc4Xc4"
+          },
+          {
+            "name": "Best value super market",
+            "type": "Grocery store",
+            "rating": 5,
+            "reviews": 2,
+            "address": "JHPM+JXC, Pithampur Industrial Area, Vijay Nagar Colony, Madhya Pradesh 454774, India",
+            "latitude": 22.636574,
+            "longitude": 75.5848797,
+            "distance_km": 4.243,
+            "place_id": "ChIJE7LSJA5TYjkRja0C2jUHo8I",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Best+value+super+market&query_place_id=ChIJE7LSJA5TYjkRja0C2jUHo8I"
+          },
+          {
+            "name": "JHPP+H22 Murga Market Indorama",
+            "type": "Building",
+            "rating": null,
+            "reviews": null,
+            "address": "Pithampur Industrial Area, Vijay Nagar Colony, Khandwa, Madhya Pradesh 454774, India",
+            "latitude": 22.636446199999998,
+            "longitude": 75.58496769999999,
+            "distance_km": 4.26,
+            "place_id": "ChIJz0HRltBTYjkRw5MpgybMDUE",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=JHPP%2BH22+Murga+Market+Indorama&query_place_id=ChIJz0HRltBTYjkRw5MpgybMDUE"
+          },
+          {
+            "name": "Sabji mandi",
+            "type": "Market",
+            "rating": 3.4,
+            "reviews": 7,
+            "address": "MJQ6+QC4, Betma, Madhya Pradesh 453001, India",
+            "latitude": 22.6893983,
+            "longitude": 75.6110805,
+            "distance_km": 5.323,
+            "place_id": "ChIJDbM3QQBTYjkR_9M1BdPuSnI",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Sabji+mandi&query_place_id=ChIJDbM3QQBTYjkR_9M1BdPuSnI"
+          },
+          {
+            "name": "Jmadar market",
+            "type": "Market",
+            "rating": null,
+            "reviews": null,
+            "address": "MJQ7+7CG, Rajwada Chowk, Rajwada, Kushwah Mohalla, Indore, Betma, Madhya Pradesh 453001, India",
+            "latitude": 22.6881824,
+            "longitude": 75.6135643,
+            "distance_km": 5.503,
+            "place_id": "ChIJmSWPMwBTYjkRbdSYVSf6VTw",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Jmadar+market&query_place_id=ChIJmSWPMwBTYjkRbdSYVSf6VTw"
+          },
+          {
+            "name": "Shree Ramgeneral Store Ghatabillod",
+            "type": "General store",
+            "rating": 4.5,
+            "reviews": 72,
+            "address": "Trimurti Nagar, Dehari Saray Ghatabillod, Nayapura Road, Ghatabillod, Madhya Pradesh 454773, India",
+            "latitude": 22.6643781,
+            "longitude": 75.5078286,
+            "distance_km": 5.782,
+            "place_id": "ChIJGdMs5J5NYjkRO1NZ8VbybCE",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Shree+Ramgeneral+Store+Ghatabillod&query_place_id=ChIJGdMs5J5NYjkRO1NZ8VbybCE"
+          },
+          {
+            "name": "Shivaay Deals.",
+            "type": "Auto market",
+            "rating": 5,
+            "reviews": 2,
+            "address": "Sagore kuti pithmpur Indore pithampur, Dr. Ambedkar Nagar, Madhya Pradesh 454774, India",
+            "latitude": 22.6311263,
+            "longitude": 75.60686319999999,
+            "distance_km": 6.132,
+            "place_id": "ChIJ73Sj5L5TYjkRNm2X6H_KenY",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Shivaay+Deals.&query_place_id=ChIJ73Sj5L5TYjkRNm2X6H_KenY"
+          },
+          {
+            "name": "Sharnam Stationers",
+            "type": "Stationery store",
+            "rating": 5,
+            "reviews": 25,
+            "address": "Shiv Shakti Market, Betma Rd, Kalibillod, Madhya Pradesh 453001, India",
+            "latitude": 22.6416966,
+            "longitude": 75.61593289999999,
+            "distance_km": 6.167,
+            "place_id": "ChIJO_16dABTYjkRpXjHP7pWTgQ",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Sharnam+Stationers&query_place_id=ChIJO_16dABTYjkRpXjHP7pWTgQ"
+          },
+          {
+            "name": "Shree Maruti Market",
+            "type": "Market",
+            "rating": 5,
+            "reviews": 2,
+            "address": "MJPC+PPR, Indore - Dhar Rd, Betma, Madhya Pradesh 453001, India",
+            "latitude": 22.686869599999998,
+            "longitude": 75.62175669999999,
+            "distance_km": 6.242,
+            "place_id": "ChIJn0eVPQBVYjkRu1msUAgdOxc",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Shree+Maruti+Market&query_place_id=ChIJn0eVPQBVYjkRu1msUAgdOxc"
+          },
+          {
+            "name": "MILINIOURS LAND MARK PHASE-2",
+            "type": "Grocery store",
+            "rating": 3.7,
+            "reviews": 11,
+            "address": "PHFH+V7X, Rawad, Madhya Pradesh 453001, India",
+            "latitude": 22.7247442,
+            "longitude": 75.5782265,
+            "distance_km": 6.32,
+            "place_id": "ChIJHUv3W9SsYzkRAihrz8fbuvw",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=MILINIOURS+LAND+MARK+PHASE-2&query_place_id=ChIJHUv3W9SsYzkRAihrz8fbuvw"
+          },
+          {
+            "name": "Khushi traders",
+            "type": "Farmers' market",
+            "rating": 4,
+            "reviews": 1,
+            "address": "Chambal Baroda, Madhya Pradesh 454773, India",
+            "latitude": 22.6029727,
+            "longitude": 75.5247584,
+            "distance_km": 8.415,
+            "place_id": "ChIJ13rqUUxPYjkRgiVDBdQf5AQ",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Khushi+traders&query_place_id=ChIJ13rqUUxPYjkRgiVDBdQf5AQ"
+          },
+          {
+            "name": "Rahul rajpoot",
+            "type": "Market",
+            "rating": null,
+            "reviews": null,
+            "address": "MM44+WV7, Kishanpura, Madhya Pradesh 453001, India",
+            "latitude": 22.6572781,
+            "longitude": 75.6571751,
+            "distance_km": 9.665,
+            "place_id": "ChIJ88l6cgBVYjkRTjXPgwCyVrc",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Rahul+rajpoot&query_place_id=ChIJ88l6cgBVYjkRTjXPgwCyVrc"
+          }
+        ]
+      },
+      {
+        "category": "hotels",
+        "count": 5,
+        "nearest": {
+          "name": "HOTEL STAY WELL Hotel in Pithampur, SECTOR-3",
+          "type": "Hotel",
+          "rating": 4.9,
+          "reviews": 335,
+          "address": "near Toll Plaza, Pithampur Industrial Area, Sector -3, Indorama, Pithampur, Indore, Madhya Pradesh 454774, India",
+          "latitude": 22.644379999999998,
+          "longitude": 75.56991,
+          "distance_km": 2.856,
+          "place_id": "ChIJxexg9LVRYjkRVWbLaka7vaM",
+          "google_maps_url": "https://www.google.com/maps/search/?api=1&query=HOTEL+STAY+WELL+Hotel+in+Pithampur%2C+SECTOR-3&query_place_id=ChIJxexg9LVRYjkRVWbLaka7vaM"
+        },
+        "places": [
+          {
+            "name": "HOTEL STAY WELL Hotel in Pithampur, SECTOR-3",
+            "type": "Hotel",
+            "rating": 4.9,
+            "reviews": 335,
+            "address": "near Toll Plaza, Pithampur Industrial Area, Sector -3, Indorama, Pithampur, Indore, Madhya Pradesh 454774, India",
+            "latitude": 22.644379999999998,
+            "longitude": 75.56991,
+            "distance_km": 2.856,
+            "place_id": "ChIJxexg9LVRYjkRVWbLaka7vaM",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=HOTEL+STAY+WELL+Hotel+in+Pithampur%2C+SECTOR-3&query_place_id=ChIJxexg9LVRYjkRVWbLaka7vaM"
+          },
+          {
+            "name": "JMC HOTEL KIA INN PITHAMPUR",
+            "type": "Hotel",
+            "rating": 4.9,
+            "reviews": 84,
+            "address": "JJJ5+6HV, Pithampur Industrial Area, Kalibillod, Madhya Pradesh 454774, India",
+            "latitude": 22.6306188,
+            "longitude": 75.6090802,
+            "distance_km": 6.335,
+            "place_id": "ChIJwyjXHwBRYjkRz386v8xPg2A",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=JMC+HOTEL+KIA+INN+PITHAMPUR&query_place_id=ChIJwyjXHwBRYjkRz386v8xPg2A"
+          },
+          {
+            "name": "Ramnaa Hotel",
+            "type": "Hotel",
+            "rating": 4.9,
+            "reviews": 256,
+            "address": "81 Betma Road, Kalibillod Pithampur Sector-3, Kuti, Sagore, Pithampur, Madhya Pradesh 454774, India",
+            "latitude": 22.6325063,
+            "longitude": 75.6128985,
+            "distance_km": 6.493,
+            "place_id": "ChIJVZs1dQBTYjkROcgU8AE_miw",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Ramnaa+Hotel&query_place_id=ChIJVZs1dQBTYjkROcgU8AE_miw"
+          },
+          {
+            "name": "JMC HOTEL G9 PITHAMPUR",
+            "type": "Hotel",
+            "rating": 4.7,
+            "reviews": 658,
+            "address": "JMC G9, Betma Rd, near PHARMA ZONE, Pithampur Industrial Area, SECTOR 3, Sagour Kuti, Pithampur, Kalibillod, Madhya Pradesh 454774, India",
+            "latitude": 22.6322254,
+            "longitude": 75.6139752,
+            "distance_km": 6.598,
+            "place_id": "ChIJeWgVrsVTYjkR7iBRE_iUsVI",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=JMC+HOTEL+G9+PITHAMPUR&query_place_id=ChIJeWgVrsVTYjkR7iBRE_iUsVI"
+          },
+          {
+            "name": "Click Hotels Pithampur",
+            "type": "Hotel",
+            "rating": 4.5,
+            "reviews": 304,
+            "address": "Commercial Plot Industrial Growth Centre, Plot No. 5, Neemuch - Mhow Rd, Pithampur Industrial Area, Sector 5, Pithampur, Madhya Pradesh 454774, India",
+            "latitude": 22.6211102,
+            "longitude": 75.6331368,
+            "distance_km": 8.909,
+            "place_id": "ChIJUbeKY4b5YjkRKV0TtD3gSCg",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Click+Hotels+Pithampur&query_place_id=ChIJUbeKY4b5YjkRKV0TtD3gSCg"
+          }
+        ]
+      },
+      {
+        "category": "industrial_businesses",
+        "count": 3,
+        "nearest": {
+          "name": "AVTEC Limited",
+          "type": "Manufacturer",
+          "rating": 4.1,
+          "reviews": 45,
+          "address": "Pithampur Industrial Area Sector III, Pithampur, Sagore, Madhya Pradesh 454774, India",
+          "latitude": 22.628894499999998,
+          "longitude": 75.60804019999999,
+          "distance_km": 6.392,
+          "place_id": "ChIJOTFfy1lRYjkRo7EluODysEM",
+          "google_maps_url": "https://www.google.com/maps/search/?api=1&query=AVTEC+Limited&query_place_id=ChIJOTFfy1lRYjkRo7EluODysEM"
+        },
+        "places": [
+          {
+            "name": "AVTEC Limited",
+            "type": "Manufacturer",
+            "rating": 4.1,
+            "reviews": 45,
+            "address": "Pithampur Industrial Area Sector III, Pithampur, Sagore, Madhya Pradesh 454774, India",
+            "latitude": 22.628894499999998,
+            "longitude": 75.60804019999999,
+            "distance_km": 6.392,
+            "place_id": "ChIJOTFfy1lRYjkRo7EluODysEM",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=AVTEC+Limited&query_place_id=ChIJOTFfy1lRYjkRo7EluODysEM"
+          },
+          {
+            "name": "SEZ ll main gate",
+            "type": "Lodge",
+            "rating": 4,
+            "reviews": 167,
+            "address": "JJ9R+QJM, Pithampur Industrial Area, Madhya Pradesh 454774, India",
+            "latitude": 22.6194626,
+            "longitude": 75.6415528,
+            "distance_km": 9.716,
+            "place_id": "ChIJfUkewIFXYjkRYNfXu_gC8XA",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=SEZ+ll+main+gate&query_place_id=ChIJfUkewIFXYjkRYNfXu_gC8XA"
+          },
+          {
+            "name": "Aura Industries",
+            "type": "Manufacturer",
+            "rating": 5,
+            "reviews": 1,
+            "address": "MF98+JP, Kalsada Khurd, Madhya Pradesh 454773, India",
+            "latitude": 22.6690538,
+            "longitude": 75.4668159,
+            "distance_km": 9.963,
+            "place_id": "ChIJp0vaCABNYjkRhd8EVoHe3qs",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Aura+Industries&query_place_id=ChIJp0vaCABNYjkRhd8EVoHe3qs"
+          }
+        ]
+      },
+      {
+        "category": "warehouses_logistics",
+        "count": 2,
+        "nearest": {
+          "name": "WWL CNH WAREHOUSE",
+          "type": "Storage facility",
+          "rating": 5,
+          "reviews": 1,
+          "address": "durga kaloni, JM65+9JP, jyoti kirana store, Madhya Pradesh 480559, India",
+          "latitude": 22.6343754,
+          "longitude": 75.6055322,
+          "distance_km": 5.785,
+          "place_id": "ChIJ2VbfNh1XYjkREQY0e3I4oxA",
+          "google_maps_url": "https://www.google.com/maps/search/?api=1&query=WWL+CNH+WAREHOUSE&query_place_id=ChIJ2VbfNh1XYjkREQY0e3I4oxA"
+        },
+        "places": [
+          {
+            "name": "WWL CNH WAREHOUSE",
+            "type": "Storage facility",
+            "rating": 5,
+            "reviews": 1,
+            "address": "durga kaloni, JM65+9JP, jyoti kirana store, Madhya Pradesh 480559, India",
+            "latitude": 22.6343754,
+            "longitude": 75.6055322,
+            "distance_km": 5.785,
+            "place_id": "ChIJ2VbfNh1XYjkREQY0e3I4oxA",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=WWL+CNH+WAREHOUSE&query_place_id=ChIJ2VbfNh1XYjkREQY0e3I4oxA"
+          },
+          {
+            "name": "Aditya warehouse",
+            "type": "Warehouse",
+            "rating": 4,
+            "reviews": 3,
+            "address": "JH6H+Q3, Sulawad, Madhya Pradesh 454774, India",
+            "latitude": 22.6118301,
+            "longitude": 75.5777027,
+            "distance_km": 6.563,
+            "place_id": "ChIJb2X-MAhRYjkRPSFv4f6-fcE",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Aditya+warehouse&query_place_id=ChIJb2X-MAhRYjkRPSFv4f6-fcE"
+          }
+        ]
+      }
+    ],
+    "source": "SerpApi / Google Maps local results"
+  },
+  "ndvi": {
+    "mean": 0.24091961909425402,
+    "min": -0.24946220219135284,
+    "max": 0.8023315072059631,
+    "share_ge_030_percent": 20.468197347542972,
+    "share_ge_050_percent": 2.7351935149457836,
+    "period": "2025-09-14 \u2192 2026-09-14",
+    "source": "Sentinel-2 SR Harmonized (median NDVI, whole year)",
+    "peak": {
+      "mean": 0.6314067801911364,
+      "period": "Dec-Feb",
+      "scene_count": 17,
+      "source": "Sentinel-2 SR Harmonized (median NDVI, peak 3-month period found within the year; mean from the 30 m scan, no separate min/max/share breakdown)"
+    }
+  },
+  "buying_purpose": {
+    "key": "housing",
+    "label": "housing",
+    "is_other": false,
+    "free_text": null
+  },
+  "buying_preferences": "close to a developed town with schools and restaurants"
+}

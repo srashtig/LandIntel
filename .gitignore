@@ -1,0 +1,18 @@
+# Secrets — never committed; copy .env.example to .env locally instead.
+.env
+
+# Python
+__pycache__/
+*.pyc
+
+# The ~2.3 GB reference dataset (boundary shapefiles, guideline-rate CSVs,
+# rainfall NetCDFs, census/groundwater data) — downloaded via the sidebar's
+# "Download source data" button or a manual Drive link, not committed.
+data/
+
+# osmnx's Overpass HTTP response cache (hash-named .json blobs, ephemeral
+# and regenerable) — everything else in cache/ (e.g. mp_location_index.parquet)
+# is a small, deliberately-committed precomputed asset and stays tracked.
+cache/*.json
+
+.DS_Store

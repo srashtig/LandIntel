@@ -1,0 +1,1682 @@
+{
+  "schema_version": "1.0",
+  "run_success": true,
+  "generated_at": "2026-09-15 03:29",
+  "site": {
+    "latitude": 22.769916,
+    "longitude": 76.142114,
+    "aoi_radius_km": 5.0,
+    "aoi_area_km2": 66.32402963704452,
+    "metric_crs": "EPSG:32643"
+  },
+  "administration": {
+    "village": "Kishangarh",
+    "tehsil": "Dewas",
+    "block": "Dewas",
+    "district": "Dewas",
+    "state": "MP",
+    "boundary_village_code": "473693",
+    "point_inside_village_polygon": true,
+    "source": "Survey of India village boundaries (vb_soi_mp)",
+    "govt_guideline_rates": {
+      "row_kind": "rural_village",
+      "village": "Kishangarh",
+      "vlcode": 473693,
+      "tehsil": "DEWAS",
+      "frontage_type": "plain",
+      "match_score": 99.0,
+      "plot_residential_sqm": 1500.0,
+      "plot_commercial_sqm": 1500.0,
+      "plot_industrial_sqm": 1500.0,
+      "agri_land_irrigated_per_ha": 2500000.0,
+      "agri_land_unirrigated_per_ha": 1450000.0,
+      "source": "MP Govt district guideline rates, FY2026-27"
+    },
+    "land_use": {
+      "population": 281.0,
+      "area_ha": 168.0,
+      "forest_area_ha": 0.0,
+      "non_agricultural_area_ha": 7.0,
+      "barren_land_ha": 27.0,
+      "pastures_grazing_ha": 5.0,
+      "miscellaneous_land_ha": 0.0,
+      "culturable_waste_ha": 0.0,
+      "other_fallows_ha": 6.0,
+      "current_fallows_ha": 6.0,
+      "net_area_sown_ha": 124.0,
+      "unirrigated_land_ha": 108.0,
+      "irrigated_land_ha": 16.0,
+      "forest_share_percent": 0.0,
+      "barren_share_percent": 16.071428571428573,
+      "net_sown_share_percent": 73.80952380952381,
+      "source": "Survey of India village boundaries (vb_soi_mp)"
+    },
+    "census": {
+      "population_total": 405.0,
+      "households": 29.0,
+      "cultivation_share": 0.8241758241758242,
+      "agricultural_labour_share": 0.0,
+      "household_industry_share": 0.0,
+      "other_worker_share": 99.17582417582418,
+      "literacy_percent": 94.3298969072165,
+      "sc_percent": 6.666666666666667,
+      "st_percent": 2.9629629629629632
+    },
+    "census_join": {
+      "method": "normalized village name",
+      "boundary_villages": 74,
+      "matched_villages": 72,
+      "unmatched_villages": 2,
+      "source": "census_derieved.csv"
+    },
+    "aoi_overlap": {
+      "village_count": 33,
+      "villages": [
+        "Amodiya",
+        "Anarthiya",
+        "Banjari",
+        "Bhagwanpura",
+        "Chobapipalya",
+        "Dhanora",
+        "Dudhapura",
+        "Gabbapura",
+        "Gogya",
+        "Hirapura",
+        "Kaneriya",
+        "Karmankhedi",
+        "Khatediya",
+        "Kishangarh",
+        "Mahudiya",
+        "Mirzapur",
+        "Molay",
+        "Nabipur",
+        "Nawdakhedi",
+        "Padampura",
+        "Panwasa",
+        "Parwatpura",
+        "Patadi",
+        "Ratedi",
+        "Rudrawasa",
+        "Rupatta",
+        "Sannod",
+        "Sarol",
+        "Sarpatti",
+        "Sendukhedi",
+        "Shukrawasa",
+        "Sutarkheda Marethya",
+        "Tinoniya"
+      ],
+      "tehsil_count": 1,
+      "tehsils": [
+        "Dewas"
+      ],
+      "district_count": 1,
+      "districts": [
+        "Dewas"
+      ]
+    }
+  },
+  "land_cover": {
+    "classes": [
+      {
+        "name": "Cropland",
+        "area_km2": 56.09449946415486,
+        "percentage": 84.53794945947357
+      },
+      {
+        "name": "Tree cover",
+        "area_km2": 5.526077561108037,
+        "percentage": 8.328147501674488
+      },
+      {
+        "name": "Grassland",
+        "area_km2": 3.2228224500994815,
+        "percentage": 4.856996746667942
+      },
+      {
+        "name": "Built-up",
+        "area_km2": 1.3370283740176931,
+        "percentage": 2.014986107163989
+      },
+      {
+        "name": "Shrubland",
+        "area_km2": 0.08559469848991844,
+        "percentage": 0.12899661043527993
+      },
+      {
+        "name": "Permanent water",
+        "area_km2": 0.04598396074676514,
+        "percentage": 0.06930072978083247
+      },
+      {
+        "name": "Bare / sparse vegetation",
+        "area_km2": 0.04221644429016113,
+        "percentage": 0.06362284480389906
+      }
+    ],
+    "aoi_area_km2": 66.32402963704452,
+    "dominant_class": "Cropland",
+    "source": "ESA WorldCover v200 (10 m)"
+  },
+  "groundwater": {
+    "wells": 1,
+    "latest_observation": "2025-11-04",
+    "latest_mean_depth_m_bgl": 1.65,
+    "latest_min_depth_m_bgl": 1.65,
+    "latest_max_depth_m_bgl": 1.65,
+    "five_year_mean_m_bgl": 6.4875,
+    "five_year_mean_m_bgl_pooled": 6.4875,
+    "five_year_observation_count": 20,
+    "seasonal_windows": {
+      "pre_monsoon_months": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "monsoon_months": [
+        7,
+        8,
+        9
+      ]
+    },
+    "seasonal": [
+      {
+        "year": 2023,
+        "pre_monsoon": {
+          "level_m_bgl": 10.4,
+          "observations": 1,
+          "dates": [
+            "25-05-2023"
+          ],
+          "months": [
+            "May"
+          ]
+        },
+        "monsoon": {
+          "level_m_bgl": 8.1,
+          "observations": 1,
+          "dates": [
+            "23-08-2023"
+          ],
+          "months": [
+            "Aug"
+          ]
+        },
+        "observed_months": [
+          "Jan",
+          "May",
+          "Aug",
+          "Nov"
+        ],
+        "fluctuation_m": 2.3000000000000007
+      },
+      {
+        "year": 2024,
+        "pre_monsoon": {
+          "level_m_bgl": 11.7,
+          "observations": 1,
+          "dates": [
+            "20-05-2024"
+          ],
+          "months": [
+            "May"
+          ]
+        },
+        "monsoon": {
+          "level_m_bgl": 6.05,
+          "observations": 1,
+          "dates": [
+            "27-08-2024"
+          ],
+          "months": [
+            "Aug"
+          ]
+        },
+        "observed_months": [
+          "Jan",
+          "May",
+          "Aug",
+          "Nov"
+        ],
+        "fluctuation_m": 5.6499999999999995
+      },
+      {
+        "year": 2025,
+        "pre_monsoon": {
+          "level_m_bgl": 10.9,
+          "observations": 1,
+          "dates": [
+            "21-05-2025"
+          ],
+          "months": [
+            "May"
+          ]
+        },
+        "monsoon": {
+          "level_m_bgl": 8.1,
+          "observations": 1,
+          "dates": [
+            "24-08-2025"
+          ],
+          "months": [
+            "Aug"
+          ]
+        },
+        "observed_months": [
+          "Jan",
+          "May",
+          "Aug",
+          "Nov"
+        ],
+        "fluctuation_m": 2.8000000000000007
+      }
+    ],
+    "wells_detail": [
+      {
+        "well_no": "SDWS123-OW",
+        "latitude": 22.78138889,
+        "longitude": 76.12333333,
+        "village": "Sannod",
+        "district": "Dewas",
+        "well_type": "Dug Well",
+        "agency": "SGWO",
+        "depth_of_well_m": 13.0,
+        "latest_date": "2025-11-04",
+        "latest_level_m_bgl": 1.65,
+        "five_year_avg_m_bgl": 6.4875,
+        "change_5yr_m": -3.65,
+        "trend": "Improving",
+        "trend_description": "Water level has become shallower",
+        "n_5yr_observations": 20,
+        "seasonal": [
+          {
+            "year": 2023,
+            "pre_monsoon": {
+              "level_m_bgl": 10.4,
+              "observations": 1,
+              "dates": [
+                "25-05-2023"
+              ],
+              "months": [
+                "May"
+              ]
+            },
+            "monsoon": {
+              "level_m_bgl": 8.1,
+              "observations": 1,
+              "dates": [
+                "23-08-2023"
+              ],
+              "months": [
+                "Aug"
+              ]
+            },
+            "observed_months": [
+              "Jan",
+              "May",
+              "Aug",
+              "Nov"
+            ]
+          },
+          {
+            "year": 2024,
+            "pre_monsoon": {
+              "level_m_bgl": 11.7,
+              "observations": 1,
+              "dates": [
+                "20-05-2024"
+              ],
+              "months": [
+                "May"
+              ]
+            },
+            "monsoon": {
+              "level_m_bgl": 6.05,
+              "observations": 1,
+              "dates": [
+                "27-08-2024"
+              ],
+              "months": [
+                "Aug"
+              ]
+            },
+            "observed_months": [
+              "Jan",
+              "May",
+              "Aug",
+              "Nov"
+            ]
+          },
+          {
+            "year": 2025,
+            "pre_monsoon": {
+              "level_m_bgl": 10.9,
+              "observations": 1,
+              "dates": [
+                "21-05-2025"
+              ],
+              "months": [
+                "May"
+              ]
+            },
+            "monsoon": {
+              "level_m_bgl": 8.1,
+              "observations": 1,
+              "dates": [
+                "24-08-2025"
+              ],
+              "months": [
+                "Aug"
+              ]
+            },
+            "observed_months": [
+              "Jan",
+              "May",
+              "Aug",
+              "Nov"
+            ]
+          }
+        ]
+      }
+    ],
+    "trend_counts": {
+      "Improving": 1
+    },
+    "dominant_trend": "Improving",
+    "mean_change_5yr_m": -3.65,
+    "nearest_well_m": 2308.953182036142,
+    "nearest_well_depth_m_bgl": 1.65,
+    "well_depth_range_m": [
+      13.0,
+      13.0
+    ],
+    "source": "CGWB manual monthly groundwater monitoring"
+  },
+  "rainfall": {
+    "years": [
+      2023,
+      2024,
+      2025
+    ],
+    "monsoon_months": [
+      6,
+      7,
+      8,
+      9
+    ],
+    "thresholds_mm": {
+      "rain_day": 1.0,
+      "heavy_25": 25.0,
+      "heavy_50": 50.0,
+      "heavy_100": 100.0
+    },
+    "thresholds_in": {
+      "rain_day": 0.03937007874015748,
+      "heavy_25": 0.984251968503937,
+      "heavy_50": 1.968503937007874,
+      "heavy_100": 3.937007874015748
+    },
+    "yearly": [
+      {
+        "year": 2023,
+        "chirps": {
+          "annual_mm": 1282.1851399435757,
+          "monsoon_mm": 1160.323427784501,
+          "rain_days": 91.55837563451777,
+          "days_ge_25mm": 17.3756345177665,
+          "days_ge_50mm": 0.8020304568527918,
+          "days_ge_100mm": 0.0,
+          "max_1day_mm": 51.260552614473454,
+          "annual_in": 50.47972991903841,
+          "monsoon_in": 45.682024715925245,
+          "max_1day_in": 2.0181319926958055
+        },
+        "imd": {
+          "annual_mm": 1198.7176513671875,
+          "monsoon_mm": 1104.5760498046875,
+          "rain_days": 73.0,
+          "days_ge_25mm": 10.0,
+          "days_ge_50mm": 4.0,
+          "days_ge_100mm": 3.0,
+          "max_1day_mm": 172.8306884765625,
+          "annual_in": 47.19360832154282,
+          "monsoon_in": 43.48724605530266,
+          "max_1day_in": 6.804357814037894
+        },
+        "diff_percent": {
+          "annual_mm": 6.963064945376421,
+          "monsoon_mm": 5.0469479208489885,
+          "rain_days": 25.422432376051745,
+          "days_ge_25mm": 73.756345177665,
+          "days_ge_50mm": -79.94923857868021,
+          "days_ge_100mm": -100.0,
+          "max_1day_mm": -70.34059572040363
+        }
+      },
+      {
+        "year": 2024,
+        "chirps": {
+          "annual_mm": 1413.6515585587892,
+          "monsoon_mm": 1293.4212280543718,
+          "rain_days": 120.55837563451779,
+          "days_ge_25mm": 13.871404399323183,
+          "days_ge_50mm": 3.802030456852792,
+          "days_ge_100mm": 0.0,
+          "max_1day_mm": 82.62881573000939,
+          "annual_in": 55.65557317160588,
+          "monsoon_in": 50.922095592691804,
+          "max_1day_in": 3.253102981496433
+        },
+        "imd": {
+          "annual_mm": 1128.037841796875,
+          "monsoon_mm": 991.5377807617188,
+          "rain_days": 83.0,
+          "days_ge_25mm": 13.0,
+          "days_ge_50mm": 4.0,
+          "days_ge_100mm": 0.0,
+          "max_1day_mm": 76.08010864257812,
+          "annual_in": 44.41093865342028,
+          "monsoon_in": 39.03692050242987,
+          "max_1day_in": 2.9952798678180366
+        },
+        "diff_percent": {
+          "annual_mm": 25.319515549846646,
+          "monsoon_mm": 30.44598533207078,
+          "rain_days": 45.25105498134673,
+          "days_ge_25mm": 6.703110764024482,
+          "days_ge_50mm": -4.949238578680204,
+          "days_ge_100mm": null,
+          "max_1day_mm": 8.607646866274706
+        }
+      },
+      {
+        "year": 2025,
+        "chirps": {
+          "annual_mm": 1345.6811989457487,
+          "monsoon_mm": 1085.5929777779115,
+          "rain_days": 111.7783417935702,
+          "days_ge_25mm": 12.51776649746193,
+          "days_ge_50mm": 1.5109983079526228,
+          "days_ge_100mm": 0.0,
+          "max_1day_mm": 65.67433639629643,
+          "annual_in": 52.979574761643654,
+          "monsoon_in": 42.73988101487841,
+          "max_1day_in": 2.5856037951297806
+        },
+        "imd": {
+          "annual_mm": 1112.323486328125,
+          "monsoon_mm": 899.0331420898438,
+          "rain_days": 79.0,
+          "days_ge_25mm": 13.0,
+          "days_ge_50mm": 3.0,
+          "days_ge_100mm": 0.0,
+          "max_1day_mm": 84.84576416015625,
+          "annual_in": 43.79226324126476,
+          "monsoon_in": 35.39500559408834,
+          "max_1day_in": 3.3403844157541833
+        },
+        "diff_percent": {
+          "annual_mm": 20.979302827449732,
+          "monsoon_mm": 20.751163328017125,
+          "rain_days": 41.491571890595196,
+          "days_ge_25mm": -3.7094884810620816,
+          "days_ge_50mm": -49.633389734912576,
+          "days_ge_100mm": null,
+          "max_1day_mm": -22.59562154177965
+        }
+      }
+    ],
+    "means": {
+      "chirps": {
+        "annual_mm": 1347.1726324827046,
+        "monsoon_mm": 1179.7792112055947,
+        "rain_days": 107.96503102086858,
+        "days_ge_25mm": 14.588268471517203,
+        "days_ge_50mm": 2.038353073886069,
+        "days_ge_100mm": 0.0,
+        "max_1day_mm": 66.52123491359309,
+        "annual_in": 53.03829261742931,
+        "monsoon_in": 46.44800044116515,
+        "max_1day_in": 2.618946256440673
+      },
+      "imd": {
+        "annual_mm": 1146.3596598307292,
+        "monsoon_mm": 998.38232421875,
+        "rain_days": 78.33333333333333,
+        "days_ge_25mm": 12.0,
+        "days_ge_50mm": 3.6666666666666665,
+        "days_ge_100mm": 1.0,
+        "max_1day_mm": 111.25218709309895,
+        "annual_in": 45.132270072075954,
+        "monsoon_in": 39.30639071727362,
+        "max_1day_in": 4.380007365870037
+      }
+    },
+    "wettest_day_mm": {
+      "chirps": 82.62881573000939,
+      "imd": 172.8306884765625
+    },
+    "wettest_day_in": {
+      "chirps": 3.253102981496433,
+      "imd": 6.804357814037894
+    },
+    "imd_grid": [
+      {
+        "year": 2023,
+        "latitude": 22.75,
+        "longitude": 76.25
+      },
+      {
+        "year": 2024,
+        "latitude": 22.75,
+        "longitude": 76.25
+      },
+      {
+        "year": 2025,
+        "latitude": 22.75,
+        "longitude": 76.25
+      }
+    ],
+    "notes": [
+      "CHIRPS v3 daily (UCSB-CHC/CHIRPS/V3/DAILY_RNL), AOI mean over 5.0 km, native ~5.5 km grid.",
+      "IMD 0.25\u00b0 gridded daily rainfall at the grid cell nearest the site.",
+      "diff_percent = 100 x (CHIRPS - IMD) / |IMD| \u2014 a diagnostic, not a claim that either dataset is ground truth."
+    ],
+    "source": "CHIRPS v3 daily + IMD 0.25\u00b0 gridded daily"
+  },
+  "air_temperature": {
+    "annual_mean_c": 24.890781646553197,
+    "coldest_month": "2023-01",
+    "coldest_month_c": 18.170271798022167,
+    "warmest_month": "2024-05",
+    "warmest_month_c": 33.4516810697287,
+    "months": 36,
+    "period": "2023\u20132025",
+    "source": "ERA5-Land monthly aggregated, 2 m air temperature"
+  },
+  "land_surface_temperature": {
+    "mean_c": 35.444043587497404,
+    "min_c": 29.578867520000017,
+    "max_c": 42.45113084000002,
+    "scenes": 15,
+    "source": "Landsat 8 C2 L2 ST_B10 (median composite)"
+  },
+  "terrain": {
+    "elevation_mean_m": 554.1213385685896,
+    "elevation_min_m": 532,
+    "elevation_max_m": 663,
+    "slope_mean_deg": 2.5638049250294013,
+    "slope_median_deg": 1.8543341159820546,
+    "slope_min_deg": 0,
+    "slope_max_deg": 25.539941787719727,
+    "slope_range_90pct_deg": [
+      0,
+      9.986643685234917
+    ],
+    "slope_median_deg_100m": 2.214165449142456,
+    "slope_class_share": [
+      {
+        "class": "lt_3",
+        "label": "< 3\u00b0 (nearly level)",
+        "share_percent": 81.15629021950464
+      },
+      {
+        "class": "3_8",
+        "label": "3\u20138\u00b0 (gentle)",
+        "share_percent": 12.619924334272465
+      },
+      {
+        "class": "8_15",
+        "label": "8\u201315\u00b0 (moderate)",
+        "share_percent": 4.397367079071132
+      },
+      {
+        "class": "ge_15",
+        "label": ">= 15\u00b0 (steep)",
+        "share_percent": 1.8264183671515233
+      }
+    ],
+    "source": "SRTM 1 arc-second (USGS/SRTMGL1_003)"
+  },
+  "roads": {
+    "features": 0,
+    "nearest_major_road_m": 2109.4891056313486,
+    "nearest_major_road_class": "secondary",
+    "nearest_major_road_name": "MD2703",
+    "nearest_major_road_beyond_aoi": true,
+    "source": "OpenStreetMap via OSMnx"
+  },
+  "railways": {
+    "features": 0,
+    "source": "OpenStreetMap via OSMnx"
+  },
+  "water_resources": {
+    "features": 4,
+    "waterbody_area_km2": 0.1218799684827779,
+    "waterway_length_km": 0.0,
+    "waterbodies": 4,
+    "waterways": 0,
+    "waterway_types": [],
+    "nearest_water_m": 364.8346676165756,
+    "nearest_water_type": "water",
+    "nearest_water_name": null,
+    "source": "OpenStreetMap via OSMnx",
+    "waterbody_share_of_aoi_percent": 0.1837644201502245,
+    "worldcover_permanent_water_percent": 0.06930072978083247
+  },
+  "hydrology": {
+    "river_floodplain": {
+      "inside_supplied_river_polygon": false,
+      "nearest_river_m": 6161.548663261915,
+      "nearest_river_name": "Sipra",
+      "features_in_query_window": 1,
+      "rivers_in_query_window": [
+        {
+          "name": "Sipra",
+          "ripcode": "01",
+          "distance_m": 6161.548663261915
+        }
+      ],
+      "source": "river_polygon.GeoJSON; polygon coverage used as floodplain proxy"
+    },
+    "sac_water_bodies": {
+      "waterbodies_in_aoi": 61,
+      "nearest_water_body_m": 272.79863779744437,
+      "nearest_water_body_name": null,
+      "nearest_water_body_type": "Tank/Pond",
+      "water_bodies": [
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.1097243603977597,
+          "distance_m": 272.79863779744437
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.40311001092252047,
+          "distance_m": 369.69800508985094
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.2939359093250661,
+          "distance_m": 715.4066672058999
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.11446976089664213,
+          "distance_m": 911.9649042038258
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.3893334527517145,
+          "distance_m": 1517.1826873548202
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 13.724556606050237,
+          "distance_m": 1798.4039240284235
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 2.0859377231688025,
+          "distance_m": 1909.5068882189062
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.25877647213020755,
+          "distance_m": 1977.6484913613883
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 10.57812180296361,
+          "distance_m": 2047.954521143073
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 1.73512974409767,
+          "distance_m": 2087.776951648502
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 1.3797091973439162,
+          "distance_m": 2182.651252503147
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.182806551197643,
+          "distance_m": 2256.8364373056593
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 10.495317284459952,
+          "distance_m": 2418.8381383587907
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.3481418560327172,
+          "distance_m": 2441.3068022812763
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.14818214113321052,
+          "distance_m": 2707.759262874676
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.15031256066024723,
+          "distance_m": 2753.603530393629
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.30871736761712887,
+          "distance_m": 2773.382986124865
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 3.5283600172310616,
+          "distance_m": 2977.0840179432043
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.6827985188308839,
+          "distance_m": 3069.406581039334
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.10770172705816554,
+          "distance_m": 3089.0319212581308
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 2.0378306371764907,
+          "distance_m": 3178.7122744427356
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.2139745482249311,
+          "distance_m": 3277.129994328201
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.5353251882104967,
+          "distance_m": 3333.3737002560547
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.11351236532658354,
+          "distance_m": 3350.088252345768
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.8670672292782794,
+          "distance_m": 3432.1611135884623
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.3350722117753993,
+          "distance_m": 3455.212094240554
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.2241707854571755,
+          "distance_m": 3464.7559351253967
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.28325692284899945,
+          "distance_m": 3503.59874254859
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.1915938850331438,
+          "distance_m": 3516.0641870487116
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 4.54323969587041,
+          "distance_m": 3521.8498028706913
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.930614361469399,
+          "distance_m": 3593.396263030776
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.2485512913117816,
+          "distance_m": 3656.5481722424383
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.1617644123495155,
+          "distance_m": 3716.604508955452
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.4329425393798028,
+          "distance_m": 3735.3226335123986
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.17148452469203257,
+          "distance_m": 3746.4081924197276
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.42140875541258793,
+          "distance_m": 3792.114493260426
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.1368939978331354,
+          "distance_m": 3828.313935900896
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.17364752400201117,
+          "distance_m": 3913.8830089371436
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.2601065037704502,
+          "distance_m": 4050.115287469613
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.6597373352707696,
+          "distance_m": 4116.8378271256015
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.1327815909637613,
+          "distance_m": 4127.814232663371
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.172896447048171,
+          "distance_m": 4160.9409104899205
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.41738299170130194,
+          "distance_m": 4170.976867700843
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.14612111013378112,
+          "distance_m": 4185.871243010198
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.2037851624714703,
+          "distance_m": 4220.5956804799025
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.14804147403043363,
+          "distance_m": 4249.338829221165
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.45506092007935356,
+          "distance_m": 4346.545453350175
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.21415016644829185,
+          "distance_m": 4367.127059192909
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.23308945830945577,
+          "distance_m": 4401.970175848733
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.15861035749380126,
+          "distance_m": 4423.594040079899
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.3968922286276352,
+          "distance_m": 4452.412613216956
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.5001338414952032,
+          "distance_m": 4464.424186498618
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 1.0303636138795682,
+          "distance_m": 4484.453174498967
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.7213131921004269,
+          "distance_m": 4493.512253151038
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.2054165657301476,
+          "distance_m": 4530.421556560789
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.1782599769321312,
+          "distance_m": 4538.360653603195
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.2308174709011466,
+          "distance_m": 4541.021244987003
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.250046482588772,
+          "distance_m": 4553.895956509125
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.15209442446813623,
+          "distance_m": 4586.196847979592
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.2168060831612651,
+          "distance_m": 4591.820899183837
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.23246721701957476,
+          "distance_m": 4593.156906574284
+        }
+      ],
+      "source": "SAC water bodies (wb_sac_mp.GeoJSON)"
+    }
+  },
+  "settlements": {
+    "settlement_count_10km": 52,
+    "distance_to_nearest_settlement_km": 1.256708625315471,
+    "nearest_settlement_name": "Kishangarh",
+    "nearest_settlement_type": "village",
+    "search_radius_km": 10,
+    "settlements": [
+      {
+        "name": "Kishangarh",
+        "place_type": "village",
+        "distance_km": 1.256708625315471
+      },
+      {
+        "name": "Sannaud",
+        "place_type": "village",
+        "distance_km": 2.4168095622038983
+      },
+      {
+        "name": "Sarol",
+        "place_type": "village",
+        "distance_km": 2.4356183911561895
+      },
+      {
+        "name": "Patari",
+        "place_type": "village",
+        "distance_km": 3.2035956171894178
+      },
+      {
+        "name": "Kaneriya",
+        "place_type": "village",
+        "distance_km": 3.23185752544586
+      },
+      {
+        "name": "Rupeta",
+        "place_type": "village",
+        "distance_km": 3.277108426381427
+      },
+      {
+        "name": "Choba Pipliya",
+        "place_type": "village",
+        "distance_km": 3.3101637958844274
+      },
+      {
+        "name": "Hirapur",
+        "place_type": "village",
+        "distance_km": 3.507320837912617
+      },
+      {
+        "name": "Tinoniya",
+        "place_type": "village",
+        "distance_km": 3.5826885835368847
+      },
+      {
+        "name": "Mirzapur",
+        "place_type": "village",
+        "distance_km": 3.6522206351516773
+      },
+      {
+        "name": "Mahuria",
+        "place_type": "village",
+        "distance_km": 3.767118096426757
+      },
+      {
+        "name": "Parbatpura",
+        "place_type": "village",
+        "distance_km": 4.029310413706053
+      },
+      {
+        "name": "Amodiya",
+        "place_type": "village",
+        "distance_km": 4.105850713364019
+      },
+      {
+        "name": "Mola",
+        "place_type": "hamlet",
+        "distance_km": 4.361366710316419
+      },
+      {
+        "name": "Rudrawasa",
+        "place_type": "village",
+        "distance_km": 4.37779415661468
+      },
+      {
+        "name": "Gopalpura",
+        "place_type": "hamlet",
+        "distance_km": 4.430395766939855
+      },
+      {
+        "name": "Karadiya",
+        "place_type": "village",
+        "distance_km": 4.467345709045326
+      },
+      {
+        "name": "Banjari",
+        "place_type": "hamlet",
+        "distance_km": 4.566271748654731
+      },
+      {
+        "name": "Navda Kheri",
+        "place_type": "village",
+        "distance_km": 5.041644697038855
+      },
+      {
+        "name": "Nanyakhera",
+        "place_type": "village",
+        "distance_km": 5.114504154713055
+      },
+      {
+        "name": "Khateriya",
+        "place_type": "village",
+        "distance_km": 5.177255142751125
+      },
+      {
+        "name": "Antrakori",
+        "place_type": "hamlet",
+        "distance_km": 5.642881178015696
+      },
+      {
+        "name": "Dakhnakheri",
+        "place_type": "village",
+        "distance_km": 5.768716379537713
+      },
+      {
+        "name": "Ghanora",
+        "place_type": "village",
+        "distance_km": 5.783967355359956
+      },
+      {
+        "name": "Sutarkhera",
+        "place_type": "village",
+        "distance_km": 5.853791922424652
+      },
+      {
+        "name": "Rateri",
+        "place_type": "village",
+        "distance_km": 6.022936991757701
+      },
+      {
+        "name": "Sukarwasa",
+        "place_type": "village",
+        "distance_km": 6.054315278198574
+      },
+      {
+        "name": "Sarpatti",
+        "place_type": "village",
+        "distance_km": 6.078906269459626
+      },
+      {
+        "name": "Sunwani Karar",
+        "place_type": "village",
+        "distance_km": 6.329029220928787
+      },
+      {
+        "name": "Baray",
+        "place_type": "village",
+        "distance_km": 6.4026345380093765
+      },
+      {
+        "name": "Akhepur",
+        "place_type": "village",
+        "distance_km": 6.44136000814816
+      },
+      {
+        "name": "Karmankheri",
+        "place_type": "village",
+        "distance_km": 6.547268794018643
+      },
+      {
+        "name": "Baroli",
+        "place_type": "village",
+        "distance_km": 6.560352669511917
+      },
+      {
+        "name": "Gajnod Khera",
+        "place_type": "village",
+        "distance_km": 6.643174510301483
+      },
+      {
+        "name": "Akbarpur",
+        "place_type": "town",
+        "distance_km": 6.976499977556125
+      },
+      {
+        "name": "Rewari",
+        "place_type": "village",
+        "distance_km": 7.042784208378658
+      },
+      {
+        "name": "Sajnod Khera",
+        "place_type": "village",
+        "distance_km": 7.051576637289039
+      },
+      {
+        "name": "Akbarpur",
+        "place_type": "village",
+        "distance_km": 7.072429952161269
+      },
+      {
+        "name": "Nabipur",
+        "place_type": "village",
+        "distance_km": 7.175263190465022
+      },
+      {
+        "name": "Jhikrakhera",
+        "place_type": "village",
+        "distance_km": 7.361409213175581
+      },
+      {
+        "name": "Patara",
+        "place_type": "village",
+        "distance_km": 7.405758365025078
+      },
+      {
+        "name": "Baroli",
+        "place_type": "town",
+        "distance_km": 7.497226432385014
+      },
+      {
+        "name": "Raghagarh",
+        "place_type": "village",
+        "distance_km": 7.504838315372261
+      },
+      {
+        "name": "Double Chowki",
+        "place_type": "town",
+        "distance_km": 7.8622224466435195
+      },
+      {
+        "name": "Kelod",
+        "place_type": "village",
+        "distance_km": 7.974718624573791
+      },
+      {
+        "name": "Kaladeh",
+        "place_type": "village",
+        "distance_km": 8.343540014101242
+      },
+      {
+        "name": "Timarni",
+        "place_type": "village",
+        "distance_km": 8.3917612680219
+      },
+      {
+        "name": "Bhilakhera",
+        "place_type": "village",
+        "distance_km": 8.463045988776546
+      },
+      {
+        "name": "Dungariya",
+        "place_type": "village",
+        "distance_km": 8.46893201430949
+      },
+      {
+        "name": "Rinayar",
+        "place_type": "village",
+        "distance_km": 8.834438313272344
+      },
+      {
+        "name": "Dehriya Sahu",
+        "place_type": "village",
+        "distance_km": 9.386242622716981
+      },
+      {
+        "name": "Sadashivpura",
+        "place_type": "village",
+        "distance_km": 9.392168936886526
+      }
+    ],
+    "source": "OpenStreetMap via OSMnx"
+  },
+  "nearby_places": {
+    "search_radius_km": 10,
+    "serpapi_enabled": true,
+    "categories": [
+      {
+        "category": "tourist_attractions",
+        "count": 2,
+        "nearest": {
+          "name": "Lotus velly arniya kund",
+          "type": "Tourist attraction",
+          "rating": 5,
+          "reviews": 3,
+          "address": "P32V+725, Arniya Fata Rd, Aranya, Madhya Pradesh 452016, India",
+          "latitude": 22.7006318,
+          "longitude": 76.09261889999999,
+          "distance_km": 9.226,
+          "place_id": "ChIJOSYNLwDfYjkRgvFFsSEQaso",
+          "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Lotus+velly+arniya+kund&query_place_id=ChIJOSYNLwDfYjkRgvFFsSEQaso"
+        },
+        "places": [
+          {
+            "name": "Lotus velly arniya kund",
+            "type": "Tourist attraction",
+            "rating": 5,
+            "reviews": 3,
+            "address": "P32V+725, Arniya Fata Rd, Aranya, Madhya Pradesh 452016, India",
+            "latitude": 22.7006318,
+            "longitude": 76.09261889999999,
+            "distance_km": 9.226,
+            "place_id": "ChIJOSYNLwDfYjkRgvFFsSEQaso",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Lotus+velly+arniya+kund&query_place_id=ChIJOSYNLwDfYjkRgvFFsSEQaso"
+          },
+          {
+            "name": "Daulat Baroda Lake",
+            "type": "Tourist attraction",
+            "rating": 4.6,
+            "reviews": 29,
+            "address": "Q25W+MJ, Baroda Daulat, Madhya Pradesh 452016, India",
+            "latitude": 22.7591862,
+            "longitude": 76.0466166,
+            "distance_km": 9.864,
+            "place_id": "ChIJBUcbyKXhYjkRv7BJG4CIBiQ",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Daulat+Baroda+Lake&query_place_id=ChIJBUcbyKXhYjkRv7BJG4CIBiQ"
+          }
+        ]
+      },
+      {
+        "category": "restaurants",
+        "count": 8,
+        "nearest": {
+          "name": "Kunta mata dhaba",
+          "type": "Restaurant",
+          "rating": 4.7,
+          "reviews": 11,
+          "address": "Semliya chau road, Sunwani Karad, Gogya, Madhya Pradesh 452016, India",
+          "latitude": 22.782989,
+          "longitude": 76.0981868,
+          "distance_km": 4.732,
+          "place_id": "ChIJqx98RQAhYzkRpy0muCwbM70",
+          "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Kunta+mata+dhaba&query_place_id=ChIJqx98RQAhYzkRpy0muCwbM70"
+        },
+        "places": [
+          {
+            "name": "Kunta mata dhaba",
+            "type": "Restaurant",
+            "rating": 4.7,
+            "reviews": 11,
+            "address": "Semliya chau road, Sunwani Karad, Gogya, Madhya Pradesh 452016, India",
+            "latitude": 22.782989,
+            "longitude": 76.0981868,
+            "distance_km": 4.732,
+            "place_id": "ChIJqx98RQAhYzkRpy0muCwbM70",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Kunta+mata+dhaba&query_place_id=ChIJqx98RQAhYzkRpy0muCwbM70"
+          },
+          {
+            "name": "Darbar Da Dhaba",
+            "type": "Restaurant",
+            "rating": 4.6,
+            "reviews": 31,
+            "address": "Q39V+FQF, Tinoniya, Madhya Pradesh 452016, India",
+            "latitude": 22.768675899999998,
+            "longitude": 76.09443569999999,
+            "distance_km": 4.89,
+            "place_id": "ChIJ_9M8nQcgYzkRAPX8eaiQcGk",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Darbar+Da+Dhaba&query_place_id=ChIJ_9M8nQcgYzkRAPX8eaiQcGk"
+          },
+          {
+            "name": "Natraj Naivaidyam",
+            "type": "Fast food restaurant",
+            "rating": 4.2,
+            "reviews": 112,
+            "address": "Nemawar Rd, Double chowki, AmbikaPur, Madhya Pradesh 455221, India",
+            "latitude": 22.7064341,
+            "longitude": 76.14653249999999,
+            "distance_km": 7.073,
+            "place_id": "ChIJJ6WdgLLfYjkR1Mi7YODvUGk",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Natraj+Naivaidyam&query_place_id=ChIJJ6WdgLLfYjkR1Mi7YODvUGk"
+          },
+          {
+            "name": "Koushal Restaurant",
+            "type": "Fast food restaurant",
+            "rating": 5,
+            "reviews": 1,
+            "address": "3, Nemawar Rd, Double chowki, Madhya Pradesh 455111, India",
+            "latitude": 22.7039957,
+            "longitude": 76.1328061,
+            "distance_km": 7.392,
+            "place_id": "ChIJhb1faZrfYjkRA9BechEryWk",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Koushal+Restaurant&query_place_id=ChIJhb1faZrfYjkRA9BechEryWk"
+          },
+          {
+            "name": "Natraj Naivedhyam",
+            "type": "Restaurant",
+            "rating": 4,
+            "reviews": 243,
+            "address": "NH59, A, Double chowki, Madhya Pradesh 455221, India",
+            "latitude": 22.7033304,
+            "longitude": 76.1287583,
+            "distance_km": 7.53,
+            "place_id": "ChIJcUD6gGDeYjkRAKRSu6NVNTc",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Natraj+Naivedhyam&query_place_id=ChIJcUD6gGDeYjkRAKRSu6NVNTc"
+          },
+          {
+            "name": "Santushti Bhojanalay and restaurant",
+            "type": "Restaurant",
+            "rating": 4.3,
+            "reviews": 29,
+            "address": "Nabipur, kanadiya road, Barotha, Madhya Pradesh 455001, India",
+            "latitude": 22.833710099999998,
+            "longitude": 76.1774179,
+            "distance_km": 7.963,
+            "place_id": "ChIJrfazFxYhYzkRcAONixyxAro",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Santushti+Bhojanalay+and+restaurant&query_place_id=ChIJrfazFxYhYzkRcAONixyxAro"
+          },
+          {
+            "name": "River wood resort",
+            "type": "Restaurant",
+            "rating": 4.4,
+            "reviews": 158,
+            "address": "Aranya, Mundi, Madhya Pradesh 452016, India",
+            "latitude": 22.713496,
+            "longitude": 76.0873929,
+            "distance_km": 8.417,
+            "place_id": "ChIJcdcTtsPfYjkR8xWStaw4gvo",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=River+wood+resort&query_place_id=ChIJcdcTtsPfYjkR8xWStaw4gvo"
+          },
+          {
+            "name": "Mali Baba Dhaba And Restaurant",
+            "type": "Restaurant",
+            "rating": null,
+            "reviews": null,
+            "address": "25, Fata Indore Road, Karnawad, Madhya Pradesh 455221, India",
+            "latitude": 22.719301599999998,
+            "longitude": 76.21722559999999,
+            "distance_km": 9.54,
+            "place_id": "ChIJd8SJCQfZYjkRQ_bv7PfWtS4",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Mali+Baba+Dhaba+And+Restaurant&query_place_id=ChIJd8SJCQfZYjkRQ_bv7PfWtS4"
+          }
+        ]
+      },
+      {
+        "category": "hospitals",
+        "count": 1,
+        "nearest": {
+          "name": "Poonam Clinic, Dr.M.K. Goswami",
+          "type": "General hospital",
+          "rating": null,
+          "reviews": null,
+          "address": "Q5W3+CQF, Patadi, Madhya Pradesh 455221, India",
+          "latitude": 22.7960545,
+          "longitude": 76.1544351,
+          "distance_km": 3.169,
+          "place_id": "ChIJ7XEiTpUgYzkRDPjx0lAvh1s",
+          "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Poonam+Clinic%2C+Dr.M.K.+Goswami&query_place_id=ChIJ7XEiTpUgYzkRDPjx0lAvh1s"
+        },
+        "places": [
+          {
+            "name": "Poonam Clinic, Dr.M.K. Goswami",
+            "type": "General hospital",
+            "rating": null,
+            "reviews": null,
+            "address": "Q5W3+CQF, Patadi, Madhya Pradesh 455221, India",
+            "latitude": 22.7960545,
+            "longitude": 76.1544351,
+            "distance_km": 3.169,
+            "place_id": "ChIJ7XEiTpUgYzkRDPjx0lAvh1s",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Poonam+Clinic%2C+Dr.M.K.+Goswami&query_place_id=ChIJ7XEiTpUgYzkRDPjx0lAvh1s"
+          }
+        ]
+      },
+      {
+        "category": "schools",
+        "count": 2,
+        "nearest": {
+          "name": "S.G.M. PUBLIC SCHOOL",
+          "type": "General education school",
+          "rating": null,
+          "reviews": null,
+          "address": "Double chowki, Akhepura, Madhya Pradesh 455221, India",
+          "latitude": 22.7037744,
+          "longitude": 76.1312973,
+          "distance_km": 7.438,
+          "place_id": "ChIJBWQ2g1_eYjkRBT1syVu6NyM",
+          "google_maps_url": "https://www.google.com/maps/search/?api=1&query=S.G.M.+PUBLIC+SCHOOL&query_place_id=ChIJBWQ2g1_eYjkRBT1syVu6NyM"
+        },
+        "places": [
+          {
+            "name": "S.G.M. PUBLIC SCHOOL",
+            "type": "General education school",
+            "rating": null,
+            "reviews": null,
+            "address": "Double chowki, Akhepura, Madhya Pradesh 455221, India",
+            "latitude": 22.7037744,
+            "longitude": 76.1312973,
+            "distance_km": 7.438,
+            "place_id": "ChIJBWQ2g1_eYjkRBT1syVu6NyM",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=S.G.M.+PUBLIC+SCHOOL&query_place_id=ChIJBWQ2g1_eYjkRBT1syVu6NyM"
+          },
+          {
+            "name": "Shubhankan Public School",
+            "type": "General education school",
+            "rating": null,
+            "reviews": null,
+            "address": "Kanadia Main Road, Semliya Chau Rd, Indore, Madhya Pradesh 452016, India",
+            "latitude": 22.764881,
+            "longitude": 76.062462,
+            "distance_km": 8.186,
+            "place_id": "ChIJJwwouTv9YjkRhi1ghNk0MjA",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Shubhankan+Public+School&query_place_id=ChIJJwwouTv9YjkRhi1ghNk0MjA"
+          }
+        ]
+      },
+      {
+        "category": "markets",
+        "count": 3,
+        "nearest": {
+          "name": "DK masala dhanora",
+          "type": "Market",
+          "rating": null,
+          "reviews": null,
+          "address": "R464+9P4, Dhanora, Madhya Pradesh 452016, India",
+          "latitude": 22.8108954,
+          "longitude": 76.1068162,
+          "distance_km": 5.819,
+          "place_id": "ChIJlznwIQAhYzkRYW00yAU4ihs",
+          "google_maps_url": "https://www.google.com/maps/search/?api=1&query=DK+masala+dhanora&query_place_id=ChIJlznwIQAhYzkRYW00yAU4ihs"
+        },
+        "places": [
+          {
+            "name": "DK masala dhanora",
+            "type": "Market",
+            "rating": null,
+            "reviews": null,
+            "address": "R464+9P4, Dhanora, Madhya Pradesh 452016, India",
+            "latitude": 22.8108954,
+            "longitude": 76.1068162,
+            "distance_km": 5.819,
+            "place_id": "ChIJlznwIQAhYzkRYW00yAU4ihs",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=DK+masala+dhanora&query_place_id=ChIJlznwIQAhYzkRYW00yAU4ihs"
+          },
+          {
+            "name": "Sai Dham Market",
+            "type": "Housing complex",
+            "rating": 5,
+            "reviews": 1,
+            "address": "P43M+PVQ, Double chowki, Akhepura, Madhya Pradesh 455221, India",
+            "latitude": 22.704804499999998,
+            "longitude": 76.1342923,
+            "distance_km": 7.284,
+            "place_id": "ChIJYx6_CgDfYjkR7FwtxddPywI",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Sai+Dham+Market&query_place_id=ChIJYx6_CgDfYjkR7FwtxddPywI"
+          },
+          {
+            "name": "MAMTA Traders",
+            "type": "Building materials market",
+            "rating": 4.7,
+            "reviews": 20,
+            "address": "P55F+RH4, Raghogarh, Madhya Pradesh 455221, India",
+            "latitude": 22.7095107,
+            "longitude": 76.1739614,
+            "distance_km": 7.469,
+            "place_id": "ChIJsck8k8veYjkRGU4awam9UoQ",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=MAMTA+Traders&query_place_id=ChIJsck8k8veYjkRGU4awam9UoQ"
+          }
+        ]
+      },
+      {
+        "category": "hotels",
+        "count": 1,
+        "nearest": {
+          "name": "Eco Holiday Resorts",
+          "type": "Resort hotel",
+          "rating": 3.8,
+          "reviews": 575,
+          "address": "kanadiya, road, Sannod, Madhya Pradesh 455221, India",
+          "latitude": 22.7751609,
+          "longitude": 76.1206457,
+          "distance_km": 2.277,
+          "place_id": "ChIJh8YyVncgYzkRGk7ACkPA7IM",
+          "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Eco+Holiday+Resorts&query_place_id=ChIJh8YyVncgYzkRGk7ACkPA7IM"
+        },
+        "places": [
+          {
+            "name": "Eco Holiday Resorts",
+            "type": "Resort hotel",
+            "rating": 3.8,
+            "reviews": 575,
+            "address": "kanadiya, road, Sannod, Madhya Pradesh 455221, India",
+            "latitude": 22.7751609,
+            "longitude": 76.1206457,
+            "distance_km": 2.277,
+            "place_id": "ChIJh8YyVncgYzkRGk7ACkPA7IM",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Eco+Holiday+Resorts&query_place_id=ChIJh8YyVncgYzkRGk7ACkPA7IM"
+          }
+        ]
+      },
+      {
+        "category": "industrial_businesses",
+        "count": 0,
+        "nearest": null,
+        "places": []
+      },
+      {
+        "category": "warehouses_logistics",
+        "count": 0,
+        "nearest": null,
+        "places": []
+      }
+    ],
+    "source": "SerpApi / Google Maps local results"
+  },
+  "ndvi": {
+    "mean": 0.28441287753079575,
+    "min": -0.15364624559879303,
+    "max": 0.8062552809715271,
+    "share_ge_030_percent": 34.06128492500836,
+    "share_ge_050_percent": 4.460536602695187,
+    "period": "2025-09-14 \u2192 2026-09-14",
+    "source": "Sentinel-2 SR Harmonized (median NDVI, whole year)",
+    "peak": {
+      "mean": 0.6784726643424281,
+      "period": "Dec-Feb",
+      "scene_count": 16,
+      "source": "Sentinel-2 SR Harmonized (median NDVI, peak 3-month period found within the year; mean from the 30 m scan, no separate min/max/share breakdown)"
+    }
+  },
+  "buying_purpose": {
+    "key": "farming",
+    "label": "farming",
+    "is_other": false,
+    "free_text": null
+  },
+  "buying_preferences": "good irrigation potential"
+}

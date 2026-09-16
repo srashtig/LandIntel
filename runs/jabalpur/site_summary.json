@@ -1,0 +1,2667 @@
+{
+  "schema_version": "1.0",
+  "run_success": true,
+  "generated_at": "2026-09-15 03:40",
+  "site": {
+    "latitude": 23.153982,
+    "longitude": 79.934514,
+    "aoi_radius_km": 5.0,
+    "aoi_area_km2": 65.9496023041957,
+    "metric_crs": "EPSG:32644"
+  },
+  "administration": {
+    "village": "Jabalpur",
+    "tehsil": "Jabalpur",
+    "block": null,
+    "district": "Jabalpur",
+    "state": "MP",
+    "boundary_village_code": "277265",
+    "point_inside_village_polygon": true,
+    "source": "Survey of India village boundaries (vb_soi_mp)",
+    "govt_guideline_rates": {
+      "row_kind": "urban_range",
+      "tehsil": "Jabalpur",
+      "n_wards": 15.0,
+      "n_rows": 44.0,
+      "plot_residential_sqm_min": 6000.0,
+      "plot_residential_sqm_max": 18000.0,
+      "plot_commercial_sqm_min": 8000.0,
+      "plot_commercial_sqm_max": 25000.0,
+      "plot_industrial_sqm_min": 6000.0,
+      "plot_industrial_sqm_max": 18000.0,
+      "agri_land_irrigated_per_ha_min": 3500000.0,
+      "agri_land_irrigated_per_ha_max": 90000000.0,
+      "agri_land_unirrigated_per_ha_min": 3500000.0,
+      "agri_land_unirrigated_per_ha_max": 90000000.0,
+      "source": "MP Govt district guideline rates, FY2026-27"
+    },
+    "land_use": {
+      "population": 72261.0,
+      "area_ha": 0.0,
+      "forest_area_ha": 0.0,
+      "non_agricultural_area_ha": 0.0,
+      "barren_land_ha": 0.0,
+      "pastures_grazing_ha": 0.0,
+      "miscellaneous_land_ha": 0.0,
+      "culturable_waste_ha": 0.0,
+      "other_fallows_ha": 0.0,
+      "current_fallows_ha": 0.0,
+      "net_area_sown_ha": 0.0,
+      "unirrigated_land_ha": 0.0,
+      "irrigated_land_ha": 0.0,
+      "forest_share_percent": null,
+      "barren_share_percent": null,
+      "net_sown_share_percent": null,
+      "source": "Survey of India village boundaries (vb_soi_mp)"
+    },
+    "census": {
+      "population_total": 0.0,
+      "households": 0.0,
+      "cultivation_share": null,
+      "agricultural_labour_share": null,
+      "household_industry_share": null,
+      "other_worker_share": null,
+      "literacy_percent": null,
+      "sc_percent": null,
+      "st_percent": null
+    },
+    "census_join": {
+      "method": "normalized village name",
+      "boundary_villages": 49,
+      "matched_villages": 35,
+      "unmatched_villages": 14,
+      "source": "census_derieved.csv"
+    },
+    "aoi_overlap": {
+      "village_count": 6,
+      "villages": [
+        "Bhatauli OG",
+        "Chhiwlaha OG",
+        "Gcf Jabalpur CT",
+        "Jabalpur",
+        "Lamti OG",
+        "Raksha"
+      ],
+      "tehsil_count": 2,
+      "tehsils": [
+        "Jabalpur",
+        "Panagar"
+      ],
+      "district_count": 1,
+      "districts": [
+        "Jabalpur"
+      ]
+    }
+  },
+  "land_cover": {
+    "classes": [
+      {
+        "name": "Built-up",
+        "area_km2": 32.6377387133414,
+        "percentage": 49.464117042898
+      },
+      {
+        "name": "Tree cover",
+        "area_km2": 22.20941661809853,
+        "percentage": 33.659476004170756
+      },
+      {
+        "name": "Grassland",
+        "area_km2": 6.273903506950227,
+        "percentage": 9.508412948253024
+      },
+      {
+        "name": "Cropland",
+        "area_km2": 3.570783385760737,
+        "percentage": 5.411699899904679
+      },
+      {
+        "name": "Shrubland",
+        "area_km2": 0.5549729064541686,
+        "percentage": 0.8410890546551553
+      },
+      {
+        "name": "Permanent water",
+        "area_km2": 0.4302089935836792,
+        "percentage": 0.6520031365663158
+      },
+      {
+        "name": "Bare / sparse vegetation",
+        "area_km2": 0.3056329300879086,
+        "percentage": 0.46320191355206886
+      }
+    ],
+    "aoi_area_km2": 65.9496023041957,
+    "dominant_class": "Built-up",
+    "source": "ESA WorldCover v200 (10 m)"
+  },
+  "groundwater": {
+    "wells": 1,
+    "latest_observation": "2025-08-11",
+    "latest_mean_depth_m_bgl": 0.95,
+    "latest_min_depth_m_bgl": 0.95,
+    "latest_max_depth_m_bgl": 0.95,
+    "five_year_mean_m_bgl": 1.3975,
+    "five_year_mean_m_bgl_pooled": 1.3975,
+    "five_year_observation_count": 20,
+    "seasonal_windows": {
+      "pre_monsoon_months": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "monsoon_months": [
+        7,
+        8,
+        9
+      ]
+    },
+    "seasonal": [
+      {
+        "year": 2023,
+        "pre_monsoon": {
+          "level_m_bgl": 2.25,
+          "observations": 1,
+          "dates": [
+            "18-05-2023"
+          ],
+          "months": [
+            "May"
+          ]
+        },
+        "monsoon": null,
+        "observed_months": [
+          "Jan",
+          "May",
+          "Nov"
+        ],
+        "fluctuation_m": null
+      },
+      {
+        "year": 2024,
+        "pre_monsoon": {
+          "level_m_bgl": 1.2,
+          "observations": 1,
+          "dates": [
+            "22-05-2024"
+          ],
+          "months": [
+            "May"
+          ]
+        },
+        "monsoon": {
+          "level_m_bgl": 1.05,
+          "observations": 1,
+          "dates": [
+            "21-08-2024"
+          ],
+          "months": [
+            "Aug"
+          ]
+        },
+        "observed_months": [
+          "Jan",
+          "May",
+          "Aug",
+          "Nov"
+        ],
+        "fluctuation_m": 0.1499999999999999
+      },
+      {
+        "year": 2025,
+        "pre_monsoon": {
+          "level_m_bgl": 2.35,
+          "observations": 1,
+          "dates": [
+            "04-05-2025"
+          ],
+          "months": [
+            "May"
+          ]
+        },
+        "monsoon": {
+          "level_m_bgl": 0.95,
+          "observations": 1,
+          "dates": [
+            "11-08-2025"
+          ],
+          "months": [
+            "Aug"
+          ]
+        },
+        "observed_months": [
+          "Jan",
+          "May",
+          "Aug"
+        ],
+        "fluctuation_m": 1.4000000000000001
+      }
+    ],
+    "wells_detail": [
+      {
+        "well_no": "SJBP001-OW-B",
+        "latitude": 23.15777778,
+        "longitude": 79.90138889,
+        "village": "Chikni Kuwa Garha",
+        "district": "Jabalpur",
+        "well_type": "Dug Well",
+        "agency": "SGWO-Madhya Pradesh",
+        "depth_of_well_m": 12.2,
+        "latest_date": "2025-08-11",
+        "latest_level_m_bgl": 0.95,
+        "five_year_avg_m_bgl": 1.3975,
+        "change_5yr_m": 0.83,
+        "trend": "Declining",
+        "trend_description": "Water level has become deeper",
+        "n_5yr_observations": 20,
+        "seasonal": [
+          {
+            "year": 2023,
+            "pre_monsoon": {
+              "level_m_bgl": 2.25,
+              "observations": 1,
+              "dates": [
+                "18-05-2023"
+              ],
+              "months": [
+                "May"
+              ]
+            },
+            "monsoon": null,
+            "observed_months": [
+              "Jan",
+              "May",
+              "Nov"
+            ]
+          },
+          {
+            "year": 2024,
+            "pre_monsoon": {
+              "level_m_bgl": 1.2,
+              "observations": 1,
+              "dates": [
+                "22-05-2024"
+              ],
+              "months": [
+                "May"
+              ]
+            },
+            "monsoon": {
+              "level_m_bgl": 1.05,
+              "observations": 1,
+              "dates": [
+                "21-08-2024"
+              ],
+              "months": [
+                "Aug"
+              ]
+            },
+            "observed_months": [
+              "Jan",
+              "May",
+              "Aug",
+              "Nov"
+            ]
+          },
+          {
+            "year": 2025,
+            "pre_monsoon": {
+              "level_m_bgl": 2.35,
+              "observations": 1,
+              "dates": [
+                "04-05-2025"
+              ],
+              "months": [
+                "May"
+              ]
+            },
+            "monsoon": {
+              "level_m_bgl": 0.95,
+              "observations": 1,
+              "dates": [
+                "11-08-2025"
+              ],
+              "months": [
+                "Aug"
+              ]
+            },
+            "observed_months": [
+              "Jan",
+              "May",
+              "Aug"
+            ]
+          }
+        ]
+      }
+    ],
+    "trend_counts": {
+      "Declining": 1
+    },
+    "dominant_trend": "Declining",
+    "mean_change_5yr_m": 0.83,
+    "nearest_well_m": 3417.2564940021875,
+    "nearest_well_depth_m_bgl": 0.95,
+    "well_depth_range_m": [
+      12.2,
+      12.2
+    ],
+    "source": "CGWB manual monthly groundwater monitoring"
+  },
+  "rainfall": {
+    "years": [
+      2023,
+      2024,
+      2025
+    ],
+    "monsoon_months": [
+      6,
+      7,
+      8,
+      9
+    ],
+    "thresholds_mm": {
+      "rain_day": 1.0,
+      "heavy_25": 25.0,
+      "heavy_50": 50.0,
+      "heavy_100": 100.0
+    },
+    "thresholds_in": {
+      "rain_day": 0.03937007874015748,
+      "heavy_25": 0.984251968503937,
+      "heavy_50": 1.968503937007874,
+      "heavy_100": 3.937007874015748
+    },
+    "yearly": [
+      {
+        "year": 2023,
+        "chirps": {
+          "annual_mm": 1172.1642164986395,
+          "monsoon_mm": 1039.1996547442848,
+          "rain_days": 101.70875420875421,
+          "days_ge_25mm": 13.356902356902358,
+          "days_ge_50mm": 2.584175084175084,
+          "days_ge_100mm": 0.0,
+          "max_1day_mm": 66.69963374282375,
+          "annual_in": 46.14819749994644,
+          "monsoon_in": 40.91337223402696,
+          "max_1day_in": 2.625969832394636
+        },
+        "imd": {
+          "annual_mm": 1274.05224609375,
+          "monsoon_mm": 1157.6890869140625,
+          "rain_days": 62.0,
+          "days_ge_25mm": 13.0,
+          "days_ge_50mm": 8.0,
+          "days_ge_100mm": 2.0,
+          "max_1day_mm": 151.15728759765625,
+          "annual_in": 50.15953724778544,
+          "monsoon_in": 45.57831050842766,
+          "max_1day_in": 5.9510743148683565
+        },
+        "diff_percent": {
+          "annual_mm": -7.997162589485611,
+          "monsoon_mm": -10.234996037288672,
+          "rain_days": 64.0463777560552,
+          "days_ge_25mm": 2.745402745402755,
+          "days_ge_50mm": -67.69781144781145,
+          "days_ge_100mm": -100.0,
+          "max_1day_mm": -55.87402049687351
+        }
+      },
+      {
+        "year": 2024,
+        "chirps": {
+          "annual_mm": 1601.9436609155587,
+          "monsoon_mm": 1520.1821831853674,
+          "rain_days": 120.25589225589225,
+          "days_ge_25mm": 13.760942760942763,
+          "days_ge_50mm": 6.602693602693602,
+          "days_ge_100mm": 0.05387205387205387,
+          "max_1day_mm": 96.3885497661552,
+          "annual_in": 63.06864806754168,
+          "monsoon_in": 59.84969225139242,
+          "max_1day_in": 3.794824793943118
+        },
+        "imd": {
+          "annual_mm": 1249.138671875,
+          "monsoon_mm": 1154.3592529296875,
+          "rain_days": 71.0,
+          "days_ge_25mm": 13.0,
+          "days_ge_50mm": 4.0,
+          "days_ge_100mm": 2.0,
+          "max_1day_mm": 107.13793182373047,
+          "annual_in": 49.17868786909449,
+          "monsoon_in": 45.44721468227117,
+          "max_1day_in": 4.218028811957892
+        },
+        "diff_percent": {
+          "annual_mm": 28.24386090865206,
+          "monsoon_mm": 31.6905616104558,
+          "rain_days": 69.3744961350595,
+          "days_ge_25mm": 5.853405853405869,
+          "days_ge_50mm": 65.06734006734006,
+          "days_ge_100mm": -97.3063973063973,
+          "max_1day_mm": -10.033217810533044
+        }
+      },
+      {
+        "year": 2025,
+        "chirps": {
+          "annual_mm": 1545.0233389090965,
+          "monsoon_mm": 1477.3499890366631,
+          "rain_days": 108.34511784511784,
+          "days_ge_25mm": 17.693602693602692,
+          "days_ge_50mm": 2.7710437710437708,
+          "days_ge_100mm": 0.0,
+          "max_1day_mm": 66.85230526137431,
+          "annual_in": 60.82769050823215,
+          "monsoon_in": 58.163385395144225,
+          "max_1day_in": 2.631980522101351
+        },
+        "imd": {
+          "annual_mm": 1343.231689453125,
+          "monsoon_mm": 1237.810791015625,
+          "rain_days": 80.0,
+          "days_ge_25mm": 19.0,
+          "days_ge_50mm": 2.0,
+          "days_ge_100mm": 1.0,
+          "max_1day_mm": 124.83588409423828,
+          "annual_in": 52.883137380044296,
+          "monsoon_in": 48.73270830770178,
+          "max_1day_in": 4.9147985863873345
+        },
+        "diff_percent": {
+          "annual_mm": 15.022847587680703,
+          "monsoon_mm": 19.351842766251536,
+          "rain_days": 35.4313973063973,
+          "days_ge_25mm": -6.875775296827936,
+          "days_ge_50mm": 38.55218855218854,
+          "days_ge_100mm": -100.0,
+          "max_1day_mm": -46.44784570844415
+        }
+      }
+    ],
+    "means": {
+      "chirps": {
+        "annual_mm": 1439.7104054410981,
+        "monsoon_mm": 1345.5772756554386,
+        "rain_days": 110.10325476992143,
+        "days_ge_25mm": 14.937149270482605,
+        "days_ge_50mm": 3.985970819304152,
+        "days_ge_100mm": 0.017957351290684622,
+        "max_1day_mm": 76.64682959011775,
+        "annual_in": 56.68151202524009,
+        "monsoon_in": 52.97548329352121,
+        "max_1day_in": 3.0175917161463683
+      },
+      "imd": {
+        "annual_mm": 1288.8075358072917,
+        "monsoon_mm": 1183.286376953125,
+        "rain_days": 71.0,
+        "days_ge_25mm": 15.0,
+        "days_ge_50mm": 4.666666666666667,
+        "days_ge_100mm": 1.6666666666666667,
+        "max_1day_mm": 127.71036783854167,
+        "annual_in": 50.74045416564141,
+        "monsoon_in": 46.5860778328002,
+        "max_1day_in": 5.027967237737862
+      }
+    },
+    "wettest_day_mm": {
+      "chirps": 96.3885497661552,
+      "imd": 151.15728759765625
+    },
+    "wettest_day_in": {
+      "chirps": 3.794824793943118,
+      "imd": 5.9510743148683565
+    },
+    "imd_grid": [
+      {
+        "year": 2023,
+        "latitude": 23.25,
+        "longitude": 80.0
+      },
+      {
+        "year": 2024,
+        "latitude": 23.25,
+        "longitude": 80.0
+      },
+      {
+        "year": 2025,
+        "latitude": 23.25,
+        "longitude": 80.0
+      }
+    ],
+    "notes": [
+      "CHIRPS v3 daily (UCSB-CHC/CHIRPS/V3/DAILY_RNL), AOI mean over 5.0 km, native ~5.5 km grid.",
+      "IMD 0.25\u00b0 gridded daily rainfall at the grid cell nearest the site.",
+      "diff_percent = 100 x (CHIRPS - IMD) / |IMD| \u2014 a diagnostic, not a claim that either dataset is ground truth."
+    ],
+    "source": "CHIRPS v3 daily + IMD 0.25\u00b0 gridded daily"
+  },
+  "air_temperature": {
+    "annual_mean_c": 25.111183127575572,
+    "coldest_month": "2025-12",
+    "coldest_month_c": 17.03069599792422,
+    "warmest_month": "2024-05",
+    "warmest_month_c": 33.22180458391565,
+    "months": 36,
+    "period": "2023\u20132025",
+    "source": "ERA5-Land monthly aggregated, 2 m air temperature"
+  },
+  "land_surface_temperature": {
+    "mean_c": 32.918535419408435,
+    "min_c": 25.66181660000001,
+    "max_c": 40.890804710000026,
+    "scenes": 18,
+    "source": "Landsat 8 C2 L2 ST_B10 (median composite)"
+  },
+  "terrain": {
+    "elevation_mean_m": 407.6587936605776,
+    "elevation_min_m": 377,
+    "elevation_max_m": 506,
+    "slope_mean_deg": 3.4938123474013563,
+    "slope_median_deg": 2.8940494845684435,
+    "slope_min_deg": 0,
+    "slope_max_deg": 32.37126922607422,
+    "slope_range_90pct_deg": [
+      0.9274099469184875,
+      9.179204428827738
+    ],
+    "slope_median_deg_100m": 1.3700726081107237,
+    "slope_class_share": [
+      {
+        "class": "lt_3",
+        "label": "< 3\u00b0 (nearly level)",
+        "share_percent": 55.90059160597883
+      },
+      {
+        "class": "3_8",
+        "label": "3\u20138\u00b0 (gentle)",
+        "share_percent": 37.23368044755272
+      },
+      {
+        "class": "8_15",
+        "label": "8\u201315\u00b0 (moderate)",
+        "share_percent": 5.665610978862492
+      },
+      {
+        "class": "ge_15",
+        "label": ">= 15\u00b0 (steep)",
+        "share_percent": 1.2001169676058987
+      }
+    ],
+    "source": "SRTM 1 arc-second (USGS/SRTMGL1_003)"
+  },
+  "roads": {
+    "features": 0,
+    "nearest_major_road_m": null,
+    "nearest_major_road_class": null,
+    "nearest_major_road_name": null,
+    "nearest_major_road_beyond_aoi": false,
+    "source": "OpenStreetMap via OSMnx"
+  },
+  "railways": {
+    "features": 0,
+    "source": "OpenStreetMap via OSMnx"
+  },
+  "water_resources": {
+    "features": 0,
+    "source": "OpenStreetMap via OSMnx",
+    "worldcover_permanent_water_percent": 0.6520031365663158
+  },
+  "hydrology": {
+    "river_floodplain": {
+      "inside_supplied_river_polygon": false,
+      "nearest_river_m": 5308.735890505673,
+      "nearest_river_name": "Narmada",
+      "features_in_query_window": 15,
+      "rivers_in_query_window": [
+        {
+          "name": "Narmada",
+          "ripcode": "01",
+          "distance_m": 5308.735890505673
+        },
+        {
+          "name": "Narmada",
+          "ripcode": "02",
+          "distance_m": 5311.706076188663
+        },
+        {
+          "name": "Narmada",
+          "ripcode": "02",
+          "distance_m": 5341.339689358742
+        },
+        {
+          "name": "Narmada",
+          "ripcode": "03",
+          "distance_m": 5468.1529956804225
+        },
+        {
+          "name": "Narmada",
+          "ripcode": "02",
+          "distance_m": 5553.939069781674
+        },
+        {
+          "name": "Narmada",
+          "ripcode": "02",
+          "distance_m": 5832.174574034704
+        },
+        {
+          "name": "Narmada",
+          "ripcode": "03",
+          "distance_m": 5835.202273338889
+        },
+        {
+          "name": "Narmada",
+          "ripcode": "02",
+          "distance_m": 6228.876942318917
+        },
+        {
+          "name": "Gaur",
+          "ripcode": "01",
+          "distance_m": 7132.768426240156
+        },
+        {
+          "name": "Gaur",
+          "ripcode": "02",
+          "distance_m": 7276.727261339528
+        },
+        {
+          "name": "Gaur",
+          "ripcode": "02",
+          "distance_m": 7499.944907782934
+        },
+        {
+          "name": "Gaur",
+          "ripcode": "02",
+          "distance_m": 8059.650208038315
+        },
+        {
+          "name": "Gaur",
+          "ripcode": "02",
+          "distance_m": 8077.449858285867
+        },
+        {
+          "name": "Gaur",
+          "ripcode": "03",
+          "distance_m": 8130.258643631392
+        },
+        {
+          "name": "Narmada",
+          "ripcode": "02",
+          "distance_m": 8309.60534358268
+        }
+      ],
+      "source": "river_polygon.GeoJSON; polygon coverage used as floodplain proxy"
+    },
+    "sac_water_bodies": {
+      "waterbodies_in_aoi": 42,
+      "nearest_water_body_m": 416.4676088247007,
+      "nearest_water_body_name": null,
+      "nearest_water_body_type": "Tank/Pond",
+      "water_bodies": [
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 1.1676267882227283,
+          "distance_m": 416.4676088247007
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 2.29292881965045,
+          "distance_m": 831.4473359914921
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 1.0282832039532184,
+          "distance_m": 996.0746209627274
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 1.3211210148924266,
+          "distance_m": 1001.5525212793251
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.45846274723519426,
+          "distance_m": 1093.5435720523992
+        },
+        {
+          "name": "Mahanadda",
+          "type": "Tank/Pond",
+          "area_ha": 3.1062529999490356,
+          "distance_m": 1176.169988320531
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 1.6687671358123164,
+          "distance_m": 1266.9729668712444
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.8595370613738372,
+          "distance_m": 2271.9665140891852
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 18.549580367140464,
+          "distance_m": 2289.0861223542984
+        },
+        {
+          "name": "Rani Tal",
+          "type": "Tank/Pond",
+          "area_ha": 11.047586480114958,
+          "distance_m": 2418.261814736378
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 2.8839645518984867,
+          "distance_m": 2538.207434882516
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 1.292170793992347,
+          "distance_m": 2552.419801963042
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.7368359473535202,
+          "distance_m": 2567.136476714097
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 3.058788607735949,
+          "distance_m": 2797.2600748005293
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 1.809845646829952,
+          "distance_m": 2840.9024642895456
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 1.7482280527948435,
+          "distance_m": 2902.8625214435842
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 6.0873339802812,
+          "distance_m": 2961.524673112871
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.3473781944686661,
+          "distance_m": 3022.096904932441
+        },
+        {
+          "name": "Garha Pond",
+          "type": "Tank/Pond",
+          "area_ha": 3.7382074378951904,
+          "distance_m": 3064.3384336442145
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 1.0255926964008655,
+          "distance_m": 3091.64520960734
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.9751175227924159,
+          "distance_m": 3178.7694038908394
+        },
+        {
+          "name": "Supa Tal",
+          "type": "Tank/Pond",
+          "area_ha": 6.957681127420488,
+          "distance_m": 3320.6083423784626
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 3.5491762405228777,
+          "distance_m": 3345.3548544189052
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.12224417498290338,
+          "distance_m": 3505.384808395096
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.5365346151748956,
+          "distance_m": 3595.2580702427613
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.7333859164753564,
+          "distance_m": 3779.079606260132
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.49607556472699,
+          "distance_m": 3785.775582156282
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.2724624138641914,
+          "distance_m": 3788.7229524835075
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 1.0772643500366743,
+          "distance_m": 3865.6539083905036
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.5798916127115166,
+          "distance_m": 3954.249177841121
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 1.9085736836697684,
+          "distance_m": 3961.691044613548
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.32917170764610254,
+          "distance_m": 3964.0530110626596
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.458228044163143,
+          "distance_m": 4020.602379496355
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.30681997377127973,
+          "distance_m": 4049.6921759570796
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.5976278431069524,
+          "distance_m": 4098.031773913666
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.5233948344545999,
+          "distance_m": 4134.772809329861
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 1.2203996287452046,
+          "distance_m": 4217.3782861893305
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 1.4851180027373334,
+          "distance_m": 4232.162709832905
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 1.3592220307184248,
+          "distance_m": 4234.134964235108
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 1.1615059102284075,
+          "distance_m": 4261.729828661959
+        },
+        {
+          "name": "Emarti Talab",
+          "type": "Tank/Pond",
+          "area_ha": 1.4131313265842254,
+          "distance_m": 4365.920580453995
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.6173992905171911,
+          "distance_m": 4386.814183116755
+        }
+      ],
+      "source": "SAC water bodies (wb_sac_mp.GeoJSON)"
+    }
+  },
+  "settlements": {
+    "settlement_count_10km": 0,
+    "distance_to_nearest_settlement_km": null,
+    "nearest_settlement_name": null,
+    "nearest_settlement_type": null,
+    "search_radius_km": 10,
+    "settlements": [],
+    "source": "OpenStreetMap via OSMnx"
+  },
+  "nearby_places": {
+    "search_radius_km": 10,
+    "serpapi_enabled": true,
+    "categories": [
+      {
+        "category": "tourist_attractions",
+        "count": 15,
+        "nearest": {
+          "name": "Rani Durgavati Museum",
+          "type": "Tourist attraction",
+          "rating": 4.2,
+          "reviews": 2196,
+          "address": "5W7M+7M3, Napier Town, Jabalpur, Madhya Pradesh 482002, India",
+          "latitude": 23.1631483,
+          "longitude": 79.9341628,
+          "distance_km": 1.02,
+          "place_id": "ChIJgV3r9g6ugTkRJLaQk_i3r4M",
+          "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Rani+Durgavati+Museum&query_place_id=ChIJgV3r9g6ugTkRJLaQk_i3r4M"
+        },
+        "places": [
+          {
+            "name": "Rani Durgavati Museum",
+            "type": "Tourist attraction",
+            "rating": 4.2,
+            "reviews": 2196,
+            "address": "5W7M+7M3, Napier Town, Jabalpur, Madhya Pradesh 482002, India",
+            "latitude": 23.1631483,
+            "longitude": 79.9341628,
+            "distance_km": 1.02,
+            "place_id": "ChIJgV3r9g6ugTkRJLaQk_i3r4M",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Rani+Durgavati+Museum&query_place_id=ChIJgV3r9g6ugTkRJLaQk_i3r4M"
+          },
+          {
+            "name": "Ghanta ghar",
+            "type": "Tourist attraction",
+            "rating": 4.1,
+            "reviews": 4447,
+            "address": "Ghantaghar, Madhya Pradesh 482002, India",
+            "latitude": 23.1694574,
+            "longitude": 79.9400797,
+            "distance_km": 1.812,
+            "place_id": "ChIJJ7hR4BKugTkRdEOzWZwn-4A",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Ghanta+ghar&query_place_id=ChIJJ7hR4BKugTkRdEOzWZwn-4A"
+          },
+          {
+            "name": "HanumanTal Lake Sondhiya House",
+            "type": "Tourist attraction",
+            "rating": 4.1,
+            "reviews": 59,
+            "address": "5WJP+GH8, Hanumantal Ward, Jabalpur, Madhya Pradesh 482002, India",
+            "latitude": 23.181299199999998,
+            "longitude": 79.93645099999999,
+            "distance_km": 3.044,
+            "place_id": "ChIJZwxIhz6ugTkRJNdDjkN6_fg",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=HanumanTal+Lake+Sondhiya+House&query_place_id=ChIJZwxIhz6ugTkRJNdDjkN6_fg"
+          },
+          {
+            "name": "Balancing Rock",
+            "type": "Tourist attraction",
+            "rating": 4.3,
+            "reviews": 4161,
+            "address": "4WX3+9XF, Ratan Nagar, Madan Mahal, Jabalpur, Madhya Pradesh 482001, India",
+            "latitude": 23.1484357,
+            "longitude": 79.9049096,
+            "distance_km": 3.089,
+            "place_id": "ChIJoe9_WxyygTkRgN34wRVFeKM",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Balancing+Rock&query_place_id=ChIJoe9_WxyygTkRgN34wRVFeKM"
+          },
+          {
+            "name": "Madar chilla tedi neem jabalpur mp",
+            "type": "Tourist attraction",
+            "rating": 4.1,
+            "reviews": 39,
+            "address": "5WQW+CVW, Adhartal, Jabalpur, Madhya Pradesh 482002, India",
+            "latitude": 23.1886217,
+            "longitude": 79.94720269999999,
+            "distance_km": 4.064,
+            "place_id": "ChIJOQLSfVCvgTkRr6wIZmJkExA",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Madar+chilla+tedi+neem+jabalpur+mp&query_place_id=ChIJOQLSfVCvgTkRr6wIZmJkExA"
+          },
+          {
+            "name": "View Point Jabalpur",
+            "type": "Tourist attraction",
+            "rating": 4.1,
+            "reviews": 82,
+            "address": "4VGX+CPF, Naya Gaon, Rampur, Jabalpur, Madhya Pradesh 482008, India",
+            "latitude": 23.126065399999998,
+            "longitude": 79.8992937,
+            "distance_km": 4.754,
+            "place_id": "ChIJD9WlbPyzgTkRZ89WzPGISE8",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=View+Point+Jabalpur&query_place_id=ChIJD9WlbPyzgTkRZ89WzPGISE8"
+          },
+          {
+            "name": "Siddh Ghat",
+            "type": "Tourist attraction",
+            "rating": 4.6,
+            "reviews": 121,
+            "address": "4W4G+GQC, Gwarighat, Jabalpur, Madhya Pradesh 482008, India",
+            "latitude": 23.106301,
+            "longitude": 79.9268829,
+            "distance_km": 5.359,
+            "place_id": "ChIJHeu9mnitgTkRFEU8oIpwtMI",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Siddh+Ghat&query_place_id=ChIJHeu9mnitgTkRFEU8oIpwtMI"
+          },
+          {
+            "name": "Uma Ghat",
+            "type": "Tourist attraction",
+            "rating": 4.5,
+            "reviews": 419,
+            "address": "4W4G+H93, Gwarighat, Jabalpur, Madhya Pradesh 482008, India",
+            "latitude": 23.1063796,
+            "longitude": 79.92593409999999,
+            "distance_km": 5.365,
+            "place_id": "ChIJJ4mMmXitgTkRv0aPKd1Mt1U",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Uma+Ghat&query_place_id=ChIJJ4mMmXitgTkRv0aPKd1Mt1U"
+          },
+          {
+            "name": "Adhartal Lake",
+            "type": "Tourist attraction",
+            "rating": 4.2,
+            "reviews": 56,
+            "address": "6X62+2QM, Jawaharlal Nehru Krishi Vishwa Vidyalaya Campus, Jabalpur, Madhya Pradesh 482004, India",
+            "latitude": 23.2092603,
+            "longitude": 79.95169299999999,
+            "distance_km": 6.393,
+            "place_id": "ChIJu-3pa9CvgTkRMDN1Xop5TGs",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Adhartal+Lake&query_place_id=ChIJu-3pa9CvgTkRMDN1Xop5TGs"
+          },
+          {
+            "name": "Dadda Ghat",
+            "type": "Tourist attraction",
+            "rating": 4.6,
+            "reviews": 116,
+            "address": "4V6R+W5M, Narayanpur, Madhya Pradesh 482008, India",
+            "latitude": 23.1123334,
+            "longitude": 79.89041259999999,
+            "distance_km": 6.464,
+            "place_id": "ChIJKfIAqXazgTkR6Ncb2ZK_TYk",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Dadda+Ghat&query_place_id=ChIJKfIAqXazgTkR6Ncb2ZK_TYk"
+          },
+          {
+            "name": "Sun set point",
+            "type": "Tourist attraction",
+            "rating": 4.4,
+            "reviews": 71,
+            "address": "Airport Rd, Priyadarshni Colony, Jabalpur, Madhya Pradesh 482005, India",
+            "latitude": 23.170030099999998,
+            "longitude": 79.9971058,
+            "distance_km": 6.643,
+            "place_id": "ChIJrT9UoMavgTkRUapezO_E2yE",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Sun+set+point&query_place_id=ChIJrT9UoMavgTkRUapezO_E2yE"
+          },
+          {
+            "name": "Jabalpur view point",
+            "type": "Tourist attraction",
+            "rating": 4.1,
+            "reviews": 9,
+            "address": "4V7F+J6H, Tilwara, Madhya Pradesh 482003, India",
+            "latitude": 23.1140741,
+            "longitude": 79.8731133,
+            "distance_km": 7.688,
+            "place_id": "ChIJg5wLpfW3gTkRmFClNcxKQF4",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Jabalpur+view+point&query_place_id=ChIJg5wLpfW3gTkRmFClNcxKQF4"
+          },
+          {
+            "name": "Dumna waterfall short",
+            "type": "Tourist attraction",
+            "rating": 4.6,
+            "reviews": 87,
+            "address": "5287+6F, Dumna Nature Reserve, Jabalpur, Sukhalalpur, Madhya Pradesh 482001, India",
+            "latitude": 23.165585,
+            "longitude": 80.01369799999999,
+            "distance_km": 8.197,
+            "place_id": "ChIJjZCCWI2pgTkR4Z85jrEaKZg",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Dumna+waterfall+short&query_place_id=ChIJjZCCWI2pgTkR4Z85jrEaKZg"
+          },
+          {
+            "name": "Khandari lake Water fall",
+            "type": "Tourist attraction",
+            "rating": 4.3,
+            "reviews": 329,
+            "address": "Dumna Nature Reserve, Jabalpur, Sukhalalpur, Madhya Pradesh 482001, India",
+            "latitude": 23.1624658,
+            "longitude": 80.0164808,
+            "distance_km": 8.433,
+            "place_id": "ChIJIwhi1IOpgTkRfdIav0yOyOw",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Khandari+lake+Water+fall&query_place_id=ChIJIwhi1IOpgTkRfdIav0yOyOw"
+          },
+          {
+            "name": "Bhadbhada Waterfall",
+            "type": "Tourist attraction",
+            "rating": 4.4,
+            "reviews": 1013,
+            "address": "3XPG+QH9, Tewar, Madhya Pradesh 482021, India",
+            "latitude": 23.086900399999998,
+            "longitude": 79.976492,
+            "distance_km": 8.606,
+            "place_id": "ChIJ7-ugtOmsgTkRwGiKZeRShdQ",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bhadbhada+Waterfall&query_place_id=ChIJ7-ugtOmsgTkRwGiKZeRShdQ"
+          }
+        ]
+      },
+      {
+        "category": "restaurants",
+        "count": 19,
+        "nearest": {
+          "name": "Dawat Restaurant",
+          "type": "Restaurant",
+          "rating": 4.7,
+          "reviews": 50,
+          "address": "Samdareeya hotel private limited, Dr Barat Rd, Napier Town, Jabalpur, Madhya Pradesh 482001, India",
+          "latitude": 23.1612418,
+          "longitude": 79.9384566,
+          "distance_km": 0.902,
+          "place_id": "ChIJJSQDTKyvgTkR1cXBP4Ypq2w",
+          "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Dawat+Restaurant&query_place_id=ChIJJSQDTKyvgTkR1cXBP4Ypq2w"
+        },
+        "places": [
+          {
+            "name": "Dawat Restaurant",
+            "type": "Restaurant",
+            "rating": 4.7,
+            "reviews": 50,
+            "address": "Samdareeya hotel private limited, Dr Barat Rd, Napier Town, Jabalpur, Madhya Pradesh 482001, India",
+            "latitude": 23.1612418,
+            "longitude": 79.9384566,
+            "distance_km": 0.902,
+            "place_id": "ChIJJSQDTKyvgTkR1cXBP4Ypq2w",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Dawat+Restaurant&query_place_id=ChIJJSQDTKyvgTkR1cXBP4Ypq2w"
+          },
+          {
+            "name": "Hotel Options Restaurant",
+            "type": "Restaurant",
+            "rating": 4.7,
+            "reviews": 558,
+            "address": "Bus Stand, 872, near Teen Patti Square, Wright Town, Jabalpur, Madhya Pradesh 482002, India",
+            "latitude": 23.1654926,
+            "longitude": 79.9302988,
+            "distance_km": 1.351,
+            "place_id": "ChIJrQPuiESvgTkR67RniUrGHL4",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Hotel+Options+Restaurant&query_place_id=ChIJrQPuiESvgTkR67RniUrGHL4"
+          },
+          {
+            "name": "Dubai Dine",
+            "type": "Family restaurant",
+            "rating": 4.8,
+            "reviews": 36,
+            "address": "AZ Height, Naudra Bridge, behind Hotel Kartik :, Naya Mohalla, Jabalpur, Madhya Pradesh 482002, India",
+            "latitude": 23.1667831,
+            "longitude": 79.9381635,
+            "distance_km": 1.472,
+            "place_id": "ChIJwaV5JQCvgTkRKcK9YnAyC8M",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Dubai+Dine&query_place_id=ChIJwaV5JQCvgTkRKcK9YnAyC8M"
+          },
+          {
+            "name": "Special food hub Restaurant",
+            "type": "North Indian restaurant",
+            "rating": 4.7,
+            "reviews": 63,
+            "address": "Sadar, Cantt, Jabalpur, Madhya Pradesh 482001, India",
+            "latitude": 23.1510723,
+            "longitude": 79.9486489,
+            "distance_km": 1.481,
+            "place_id": "ChIJJdj9hYutgTkRnnM0a8lrN_E",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Special+food+hub+Restaurant&query_place_id=ChIJJdj9hYutgTkRnnM0a8lrN_E"
+          },
+          {
+            "name": "Nature\u2019s Tavern North Civil Lines",
+            "type": "Vegetarian restaurant",
+            "rating": 4.7,
+            "reviews": 26,
+            "address": "Ground Floor, TAJ ENCLAVE, North, opposite Christ Church Girls School, South Civil Lines, Jabalpur, Madhya Pradesh 482001, India",
+            "latitude": 23.164436,
+            "longitude": 79.94353799999999,
+            "distance_km": 1.484,
+            "place_id": "ChIJPe09m4KvgTkRVpOjnfaVcr4",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Nature%E2%80%99s+Tavern+North+Civil+Lines&query_place_id=ChIJPe09m4KvgTkRVpOjnfaVcr4"
+          },
+          {
+            "name": "chef rasoi cafe and restaurant",
+            "type": "North Indian restaurant",
+            "rating": 4.5,
+            "reviews": 284,
+            "address": "Sadar, Jabalpur, Madhya Pradesh 482001, India",
+            "latitude": 23.1541978,
+            "longitude": 79.9520603,
+            "distance_km": 1.794,
+            "place_id": "ChIJ_zYBCtqtgTkReJZceVglGJA",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=chef+rasoi+cafe+and+restaurant&query_place_id=ChIJ_zYBCtqtgTkReJZceVglGJA"
+          },
+          {
+            "name": "NAMMEE RESTAURANT",
+            "type": "Restaurant",
+            "rating": 5,
+            "reviews": 24,
+            "address": "Link road, Shiv shakti parisar, near Under Bridge Road, beside chandi mata mandir, Shukla Nagar, Madan Mahal, Jabalpur, Madhya Pradesh 482001, India",
+            "latitude": 23.1620411,
+            "longitude": 79.9170183,
+            "distance_km": 2.001,
+            "place_id": "ChIJyU6w0DyzgTkR4lhzvcacmhg",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=NAMMEE+RESTAURANT&query_place_id=ChIJyU6w0DyzgTkR4lhzvcacmhg"
+          },
+          {
+            "name": "Uttam's Restaurant",
+            "type": "Vegetarian restaurant",
+            "rating": 4.6,
+            "reviews": 420,
+            "address": "Kachiyana road, Gol Bazar Rd, opp. Dasmukhi Kali Mandir, Siddha Baba Ward, LordGanj, Jabalpur, Madhya Pradesh 482002, India",
+            "latitude": 23.172105199999997,
+            "longitude": 79.92881539999999,
+            "distance_km": 2.098,
+            "place_id": "ChIJN25vXDivgTkRAtoecsMPnxc",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Uttam%27s+Restaurant&query_place_id=ChIJN25vXDivgTkRAtoecsMPnxc"
+          },
+          {
+            "name": "Headquarters Bistro - restaurant and cafe",
+            "type": "Bistro",
+            "rating": 4.8,
+            "reviews": 136,
+            "address": "Headquarters Bistro, 1042, Gol Bazar Rd, Wright Town, Jabalpur, Madhya Pradesh 482002, India",
+            "latitude": 23.1705476,
+            "longitude": 79.9243584,
+            "distance_km": 2.114,
+            "place_id": "ChIJr0CCEVavgTkRVSVfLxMSCSk",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Headquarters+Bistro+-+restaurant+and+cafe&query_place_id=ChIJr0CCEVavgTkRVSVfLxMSCSk"
+          },
+          {
+            "name": "Punjabi Tadka Restaurant",
+            "type": "Indian restaurant",
+            "rating": 4.6,
+            "reviews": 163,
+            "address": "Infront of Hotel, Kalchuri Near, Station, near Hotel Kalchuri, Prestige Town, South Civil Lines, Jabalpur, Madhya Pradesh 482001, India",
+            "latitude": 23.1630057,
+            "longitude": 79.9541267,
+            "distance_km": 2.242,
+            "place_id": "ChIJhbaH-R6vgTkRWZ6k8kDCp9Q",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Punjabi+Tadka+Restaurant&query_place_id=ChIJhbaH-R6vgTkRWZ6k8kDCp9Q"
+          },
+          {
+            "name": "Zayka junction restaurant",
+            "type": "Indian restaurant",
+            "rating": 5,
+            "reviews": 1,
+            "address": "police station, near ghamapur, KanchGhar, Jabalpur, Madhya Pradesh 482001, India",
+            "latitude": 23.1762107,
+            "longitude": 79.96195949999999,
+            "distance_km": 3.739,
+            "place_id": "ChIJ05VYvbCvgTkR2tMveiqqqqA",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Zayka+junction+restaurant&query_place_id=ChIJ05VYvbCvgTkR2tMveiqqqqA"
+          },
+          {
+            "name": "THE INDIAN GRILL RESTAURANT",
+            "type": "Restaurant",
+            "rating": 4.5,
+            "reviews": 26,
+            "address": "Vijay Nagar, Raksha, Jabalpur, Madhya Pradesh 482002, India",
+            "latitude": 23.1908019,
+            "longitude": 79.91351449999999,
+            "distance_km": 4.623,
+            "place_id": "ChIJBXad0tCxgTkRNO1LpDtmb90",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=THE+INDIAN+GRILL+RESTAURANT&query_place_id=ChIJBXad0tCxgTkRNO1LpDtmb90"
+          },
+          {
+            "name": "The Shri Sai Restaurant",
+            "type": "Restaurant",
+            "rating": 4.6,
+            "reviews": 15,
+            "address": "Subhash ward 6568, 1 Katra, Neta Colony, Adhartal, Jabalpur, Madhya Pradesh 482004, India",
+            "latitude": 23.196687999999998,
+            "longitude": 79.95418099999999,
+            "distance_km": 5.157,
+            "place_id": "ChIJg7i6-xWvgTkRaznB6RLdyhg",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=The+Shri+Sai+Restaurant&query_place_id=ChIJg7i6-xWvgTkRaznB6RLdyhg"
+          },
+          {
+            "name": "FRIEDEN RESTAURANT",
+            "type": "Restaurant",
+            "rating": 4.5,
+            "reviews": 118,
+            "address": "Siddhghat, Gwarighat, Jabalpur, Madhya Pradesh 482008, India",
+            "latitude": 23.1069256,
+            "longitude": 79.92693419999999,
+            "distance_km": 5.29,
+            "place_id": "ChIJ42wyC_StgTkRoq7YoNs1VQc",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=FRIEDEN+RESTAURANT&query_place_id=ChIJ42wyC_StgTkRoq7YoNs1VQc"
+          },
+          {
+            "name": "Bhagwati's Restaurant",
+            "type": "Restaurant",
+            "rating": 4.7,
+            "reviews": 171,
+            "address": "12-13, opposite medical College, opposite Indian coffee house medical college, nehru nagar, Nehru Nagar, Jabalpur, Madhya Pradesh 482003, India",
+            "latitude": 23.1483232,
+            "longitude": 79.8823511,
+            "distance_km": 5.37,
+            "place_id": "ChIJ24kbzKyzgTkRNZk5AaHJuEM",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bhagwati%27s+Restaurant&query_place_id=ChIJ24kbzKyzgTkRNZk5AaHJuEM"
+          },
+          {
+            "name": "Ananta Restaurant",
+            "type": "Restaurant",
+            "rating": 4.9,
+            "reviews": 11,
+            "address": "Katangi Rd, opp. True value car, near Shri Ram College Road, Dixit Colony, chungi naka, Rajeev Gandhi Nagar, Karmeta, Jabalpur, Madhya Pradesh 482002, India",
+            "latitude": 23.2010664,
+            "longitude": 79.9058075,
+            "distance_km": 6.002,
+            "place_id": "ChIJ77jAluGxgTkRN8gWJJLzI_8",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Ananta+Restaurant&query_place_id=ChIJ77jAluGxgTkRN8gWJJLzI_8"
+          },
+          {
+            "name": "PATIALA PLATTER Family Restaurant",
+            "type": "Restaurant",
+            "rating": 4.2,
+            "reviews": 30,
+            "address": "4VR8+GJ, Jabalpur, Madhya Pradesh 482003, India",
+            "latitude": 23.1393623,
+            "longitude": 79.8643383,
+            "distance_km": 7.357,
+            "place_id": "ChIJYUmqFgCzgTkRiD0sjXBr5gk",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=PATIALA+PLATTER+Family+Restaurant&query_place_id=ChIJYUmqFgCzgTkRiD0sjXBr5gk"
+          },
+          {
+            "name": "Canopy Restaurant",
+            "type": "Restaurant",
+            "rating": 4.8,
+            "reviews": 137,
+            "address": "Jabalpur - Nagpur Rd, across Tilwara Bridge, Jabalpur, Madhya Pradesh 482003, India",
+            "latitude": 23.104182599999998,
+            "longitude": 79.8824331,
+            "distance_km": 7.683,
+            "place_id": "ChIJMRyNx4azgTkR1FfzCEztMwo",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Canopy+Restaurant&query_place_id=ChIJMRyNx4azgTkR1FfzCEztMwo"
+          },
+          {
+            "name": "Garam masala restaurant by 7 vachan",
+            "type": "Family restaurant",
+            "rating": 4.7,
+            "reviews": 1051,
+            "address": "5V33+P32, behind 7vachan, Tewar, Jabalpur, Madhya Pradesh 483053, India",
+            "latitude": 23.1543125,
+            "longitude": 79.8526875,
+            "distance_km": 8.366,
+            "place_id": "ChIJa5wYO3WxgTkRgqumu4G4Yfw",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Garam+masala+restaurant+by+7+vachan&query_place_id=ChIJa5wYO3WxgTkRgqumu4G4Yfw"
+          }
+        ]
+      },
+      {
+        "category": "hospitals",
+        "count": 19,
+        "nearest": {
+          "name": "Jabalpur Hospital and Research Centre",
+          "type": "General hospital",
+          "rating": 4.1,
+          "reviews": 1073,
+          "address": "Russel Chowk, Napier Town, Jabalpur, Madhya Pradesh 482002, India",
+          "latitude": 23.1622085,
+          "longitude": 79.9361318,
+          "distance_km": 0.93,
+          "place_id": "ChIJN4xEHwyugTkRP_VLclm8MZ8",
+          "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Jabalpur+Hospital+and+Research+Centre&query_place_id=ChIJN4xEHwyugTkRP_VLclm8MZ8"
+        },
+        "places": [
+          {
+            "name": "Jabalpur Hospital and Research Centre",
+            "type": "General hospital",
+            "rating": 4.1,
+            "reviews": 1073,
+            "address": "Russel Chowk, Napier Town, Jabalpur, Madhya Pradesh 482002, India",
+            "latitude": 23.1622085,
+            "longitude": 79.9361318,
+            "distance_km": 0.93,
+            "place_id": "ChIJN4xEHwyugTkRP_VLclm8MZ8",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Jabalpur+Hospital+and+Research+Centre&query_place_id=ChIJN4xEHwyugTkRP_VLclm8MZ8"
+          },
+          {
+            "name": "Aditya Hospital",
+            "type": "General hospital",
+            "rating": 4.6,
+            "reviews": 2916,
+            "address": "5W6H+6FC, Napier Town, opposite little kingdom School, near to home Science College road, Jabalpur, Madhya Pradesh 482001, India",
+            "latitude": 23.1606231,
+            "longitude": 79.9286051,
+            "distance_km": 0.954,
+            "place_id": "ChIJAcRv2gWugTkRtcRyBrD7SX0",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Aditya+Hospital&query_place_id=ChIJAcRv2gWugTkRtcRyBrD7SX0"
+          },
+          {
+            "name": "Marble City Hospital",
+            "type": "General hospital",
+            "rating": 3.3,
+            "reviews": 350,
+            "address": "No. 321, Parsi, Anjuman Complex, Bhavartal Garden Rd, near Museum, near Rani Durgawati Museum, Extension, Napier Town, Jabalpur, Madhya Pradesh 482001, India",
+            "latitude": 23.1634606,
+            "longitude": 79.9354324,
+            "distance_km": 1.058,
+            "place_id": "ChIJzaa7hw6ugTkRxErJXgf0jJw",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Marble+City+Hospital&query_place_id=ChIJzaa7hw6ugTkRxErJXgf0jJw"
+          },
+          {
+            "name": "Ashish Hospital",
+            "type": "General hospital",
+            "rating": 2.8,
+            "reviews": 245,
+            "address": "0x381fa9be0806b870 1309, Home Science College Rd, Napier Town, Jabalpur, Madhya Pradesh 482001, India",
+            "latitude": 23.1603802,
+            "longitude": 79.9240964,
+            "distance_km": 1.281,
+            "place_id": "ChIJ68t64wOugTkRzkm7Otkwcv0",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Ashish+Hospital&query_place_id=ChIJ68t64wOugTkRzkm7Otkwcv0"
+          },
+          {
+            "name": "THC Triveni Healthcare/A Unit of Jamdar Hospital",
+            "type": "Hospital",
+            "rating": 4.6,
+            "reviews": 592,
+            "address": "1480, Wright Town, Jabalpur, Madhya Pradesh 482002, India",
+            "latitude": 23.166102,
+            "longitude": 79.9270061,
+            "distance_km": 1.551,
+            "place_id": "ChIJO7G5JtWvgTkR7tcT5vEOu5I",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=THC+Triveni+Healthcare%2FA+Unit+of+Jamdar+Hospital&query_place_id=ChIJO7G5JtWvgTkR7tcT5vEOu5I"
+          },
+          {
+            "name": "New life Multispeciality Hospital",
+            "type": "Hospital",
+            "rating": 3,
+            "reviews": 23,
+            "address": "JDA Complex, s-15, Shiv Nagar, Road Main Rad, Damoh Naka, Jabalpur, Madhya Pradesh 482001, India",
+            "latitude": 23.1561497,
+            "longitude": 79.9192264,
+            "distance_km": 1.581,
+            "place_id": "ChIJJd9MHOGxgTkRCIol11HORi0",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=New+life+Multispeciality+Hospital&query_place_id=ChIJJd9MHOGxgTkRCIol11HORi0"
+          },
+          {
+            "name": "Military Hospital Jabalpur Madhya Pradesh",
+            "type": "Military hospital",
+            "rating": 4.2,
+            "reviews": 97,
+            "address": "4XV3+3HW, Cantt, Jabalpur, Madhya Pradesh 482001, India",
+            "latitude": 23.1427388,
+            "longitude": 79.9539635,
+            "distance_km": 2.349,
+            "place_id": "ChIJd1dQJeStgTkRMjr-maLCbkw",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Military+Hospital+Jabalpur+Madhya+Pradesh&query_place_id=ChIJd1dQJeStgTkRMjr-maLCbkw"
+          },
+          {
+            "name": "JABALPUR PHYSIO & HOME HEALTH CARE",
+            "type": "Home health care service",
+            "rating": 4.6,
+            "reviews": 20,
+            "address": "KJ Memorial Hospital, BeoharBagh, Jabalpur, Madhya Pradesh 482001, India",
+            "latitude": 23.1737497,
+            "longitude": 79.9468922,
+            "distance_km": 2.536,
+            "place_id": "ChIJq6qqqn6ugTkRigZc2E13QVI",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=JABALPUR+PHYSIO+%26+HOME+HEALTH+CARE&query_place_id=ChIJq6qqqn6ugTkRigZc2E13QVI"
+          },
+          {
+            "name": "Seth Mannulal Jagannathdas Trust Hospital",
+            "type": "General hospital",
+            "rating": 3.3,
+            "reviews": 140,
+            "address": "5, Dixitpura Rd, Uprainganj, Jabalpur, Madhya Pradesh 482002, India",
+            "latitude": 23.1793729,
+            "longitude": 79.93157479999999,
+            "distance_km": 2.839,
+            "place_id": "ChIJI2-7QD2ugTkRzvC8gIMVDos",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Seth+Mannulal+Jagannathdas+Trust+Hospital&query_place_id=ChIJI2-7QD2ugTkRzvC8gIMVDos"
+          },
+          {
+            "name": "Hospital services",
+            "type": "Hospital",
+            "rating": null,
+            "reviews": null,
+            "address": "Sanjeevni Nagar, near Reliance Smart Point, Mohan Vihar Colony, Garha, Jabalpur, Madhya Pradesh 482002, India",
+            "latitude": 23.1652552,
+            "longitude": 79.9015424,
+            "distance_km": 3.596,
+            "place_id": "ChIJMd91PwCxgTkRjeZo-Gp9h3E",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Hospital+services&query_place_id=ChIJMd91PwCxgTkRjeZo-Gp9h3E"
+          },
+          {
+            "name": "Sanjeevani Hospital",
+            "type": "General hospital",
+            "rating": 5,
+            "reviews": 1,
+            "address": "4WF6+P66, Rewa Colony, Rampur, Jabalpur, Madhya Pradesh 482008, India",
+            "latitude": 23.1233373,
+            "longitude": 79.9106431,
+            "distance_km": 4.192,
+            "place_id": "ChIJuaNlAACzgTkRJ5GHnp-uQBc",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Sanjeevani+Hospital&query_place_id=ChIJuaNlAACzgTkRJ5GHnp-uQBc"
+          },
+          {
+            "name": "Triveni Prashad Samudayak Bhawan",
+            "type": "General hospital",
+            "rating": null,
+            "reviews": null,
+            "address": "5WRH+H78, Shanti Nagar, Jabalpur, Madhya Pradesh 482002, India",
+            "latitude": 23.1914244,
+            "longitude": 79.9281957,
+            "distance_km": 4.213,
+            "place_id": "ChIJEVTKo8ivgTkRZhVrqfd2p5I",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Triveni+Prashad+Samudayak+Bhawan&query_place_id=ChIJEVTKo8ivgTkRZhVrqfd2p5I"
+          },
+          {
+            "name": "Pandey Clinic",
+            "type": "General hospital",
+            "rating": 4.6,
+            "reviews": 10,
+            "address": "5WRH+J79, Shanti Nagar, Jabalpur, Madhya Pradesh 482002, India",
+            "latitude": 23.191538299999998,
+            "longitude": 79.92822919999999,
+            "distance_km": 4.225,
+            "place_id": "ChIJLTjYq3uvgTkRiDg0wnht7Po",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Pandey+Clinic&query_place_id=ChIJLTjYq3uvgTkRiDg0wnht7Po"
+          },
+          {
+            "name": "Swastik Multispeciality Hospital",
+            "type": "Hospital",
+            "rating": 4.4,
+            "reviews": 764,
+            "address": "5WW6+J57, I.T, I Road, in front of Interstate Bus Terminal, near Deendayal Chowk, Vijay Nagar, Jabalpur, Raksha, Madhya Pradesh 482002, India",
+            "latitude": 23.1946498,
+            "longitude": 79.9115484,
+            "distance_km": 5.095,
+            "place_id": "ChIJAUknXNGxgTkRbuwpqAP6d_o",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Swastik+Multispeciality+Hospital&query_place_id=ChIJAUknXNGxgTkRbuwpqAP6d_o"
+          },
+          {
+            "name": "Medical",
+            "type": "Specialized hospital",
+            "rating": 4.1,
+            "reviews": 368,
+            "address": "subhaash chashme, 84/A, JDA Colony, Medical Garha, Jabalpur, Madhya Pradesh 482003, India",
+            "latitude": 23.1485488,
+            "longitude": 79.88221469999999,
+            "distance_km": 5.381,
+            "place_id": "ChIJLf3fAKGzgTkRU7JyA6GZbRc",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Medical&query_place_id=ChIJLf3fAKGzgTkRU7JyA6GZbRc"
+          },
+          {
+            "name": "Seoni",
+            "type": "Maternity hospital",
+            "rating": 3,
+            "reviews": 14,
+            "address": "5XJP+HHM, Central Ordinance Depot Area, Jabalpur, Madhya Pradesh 482011, India",
+            "latitude": 23.181466999999998,
+            "longitude": 79.9864071,
+            "distance_km": 6.122,
+            "place_id": "ChIJJ0Z_BB2vgTkRdjmexBjWX-4",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Seoni&query_place_id=ChIJJ0Z_BB2vgTkRdjmexBjWX-4"
+          },
+          {
+            "name": "Dr. Choubey Clinic",
+            "type": "General hospital",
+            "rating": 1,
+            "reviews": 1,
+            "address": "Happy kids school, Road, Karmeta, Jabalpur, Madhya Pradesh 482002, India",
+            "latitude": 23.2031515,
+            "longitude": 79.9039634,
+            "distance_km": 6.296,
+            "place_id": "ChIJ131qojOwgTkRES1krlpWrYA",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Dr.+Choubey+Clinic&query_place_id=ChIJ131qojOwgTkRES1krlpWrYA"
+          },
+          {
+            "name": "Ranjhi Govt Hospital",
+            "type": "Government hospital",
+            "rating": 3.9,
+            "reviews": 34,
+            "address": "Gokulpur, Jabalpur, Madhya Pradesh 482009, India",
+            "latitude": 23.194947499999998,
+            "longitude": 79.9911882,
+            "distance_km": 7.37,
+            "place_id": "ChIJqfb1mNyugTkRe0bvDuxx9E0",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Ranjhi+Govt+Hospital&query_place_id=ChIJqfb1mNyugTkRe0bvDuxx9E0"
+          },
+          {
+            "name": "HealthCity MultiSpeciality Hospital Jabalpur",
+            "type": "Hospital",
+            "rating": 3.3,
+            "reviews": 77,
+            "address": "6VCW+VH9, Katangi Rd, Karmeta, Jabalpur, Nandni Ronsara, near Katangi Bypass, Turn, Kathoda, Jabalpur, Madhya Pradesh 482002, India",
+            "latitude": 23.2221875,
+            "longitude": 79.89643749999999,
+            "distance_km": 8.524,
+            "place_id": "ChIJARW_HACxgTkRw4Q8nEm8glY",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=HealthCity+MultiSpeciality+Hospital+Jabalpur&query_place_id=ChIJARW_HACxgTkRw4Q8nEm8glY"
+          }
+        ]
+      },
+      {
+        "category": "schools",
+        "count": 20,
+        "nearest": {
+          "name": "Kidz Castle School",
+          "type": "Kindergarten",
+          "rating": 4.8,
+          "reviews": 84,
+          "address": "Civic Centre, Bishambhar Bhavan, Marhatal, Jabalpur, Madhya Pradesh 482002, India",
+          "latitude": 23.166516599999998,
+          "longitude": 79.9332529,
+          "distance_km": 1.4,
+          "place_id": "ChIJ78f0uN-vgTkRHeL5gpMUhoM",
+          "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Kidz+Castle+School&query_place_id=ChIJ78f0uN-vgTkRHeL5gpMUhoM"
+        },
+        "places": [
+          {
+            "name": "Kidz Castle School",
+            "type": "Kindergarten",
+            "rating": 4.8,
+            "reviews": 84,
+            "address": "Civic Centre, Bishambhar Bhavan, Marhatal, Jabalpur, Madhya Pradesh 482002, India",
+            "latitude": 23.166516599999998,
+            "longitude": 79.9332529,
+            "distance_km": 1.4,
+            "place_id": "ChIJ78f0uN-vgTkRHeL5gpMUhoM",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Kidz+Castle+School&query_place_id=ChIJ78f0uN-vgTkRHeL5gpMUhoM"
+          },
+          {
+            "name": "THE BRAIN TRAIN",
+            "type": "School center",
+            "rating": 4.9,
+            "reviews": 639,
+            "address": "Agrawal Complex, Dashmesh Dwar Road, Madan Mahal, Jabalpur, Madhya Pradesh 482001, India",
+            "latitude": 23.154860499999998,
+            "longitude": 79.91827839999999,
+            "distance_km": 1.663,
+            "place_id": "ChIJwejE6f-xgTkRNZ6LfYXnMYw",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=THE+BRAIN+TRAIN&query_place_id=ChIJwejE6f-xgTkRNZ6LfYXnMYw"
+          },
+          {
+            "name": "Maharashtra Higher secondary School",
+            "type": "Higher secondary school",
+            "rating": null,
+            "reviews": null,
+            "address": "5W9H+8J5, Wright Town, Jabalpur, Madhya Pradesh 482002, India",
+            "latitude": 23.1682685,
+            "longitude": 79.9291185,
+            "distance_km": 1.682,
+            "place_id": "ChIJCcuakhqugTkRRv9aB7qhaXs",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Maharashtra+Higher+secondary+School&query_place_id=ChIJCcuakhqugTkRRv9aB7qhaXs"
+          },
+          {
+            "name": "Pt. LS Jha High School",
+            "type": "High school",
+            "rating": null,
+            "reviews": null,
+            "address": "5WCW+99M, Chhoti Omti Rd, South Civil Lines, Jabalpur, Madhya Pradesh 482001, India",
+            "latitude": 23.170960899999997,
+            "longitude": 79.945931,
+            "distance_km": 2.22,
+            "place_id": "ChIJgU7cR2yugTkRJqr91KYrSSY",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Pt.+LS+Jha+High+School&query_place_id=ChIJgU7cR2yugTkRJqr91KYrSSY"
+          },
+          {
+            "name": "Little Buds School",
+            "type": "Nursery school",
+            "rating": 4.7,
+            "reviews": 216,
+            "address": "behind Pandey Hospital, BeoharBagh, Ghamapur, Jabalpur, Madhya Pradesh 482001, India",
+            "latitude": 23.1736079,
+            "longitude": 79.9458125,
+            "distance_km": 2.469,
+            "place_id": "ChIJQ4noRCWvgTkRvIcXGqlbQjA",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Little+Buds+School&query_place_id=ChIJQ4noRCWvgTkRvIcXGqlbQjA"
+          },
+          {
+            "name": "Stemfield International School",
+            "type": "International school",
+            "rating": null,
+            "reviews": null,
+            "address": "616, Anand Colony, Ukhri Rd, Baldeobagh, Cherital Ward, Jabalpur, Madhya Pradesh 482002, India",
+            "latitude": 23.1830383,
+            "longitude": 79.9207084,
+            "distance_km": 3.526,
+            "place_id": "ChIJec1YWiCugTkR7aXSAmyQgXM",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Stemfield+International+School&query_place_id=ChIJec1YWiCugTkR7aXSAmyQgXM"
+          },
+          {
+            "name": "Somja Nursery and Primary School",
+            "type": "Kindergarten",
+            "rating": 4.6,
+            "reviews": 16,
+            "address": "Janki Nagar, Jabalpur, Madhya Pradesh 482002, India",
+            "latitude": 23.1829246,
+            "longitude": 79.9111116,
+            "distance_km": 4.01,
+            "place_id": "ChIJZ6FvgduxgTkRHW7E2pvgwTE",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Somja+Nursery+and+Primary+School&query_place_id=ChIJZ6FvgduxgTkRHW7E2pvgwTE"
+          },
+          {
+            "name": "Satya Prakash Public School",
+            "type": "General education school",
+            "rating": null,
+            "reviews": null,
+            "address": "Gwarighat Main Rd, inside State Research Forest Institute, Bhim Nagar, Polipather, Jabalpur, Madhya Pradesh 482008, India",
+            "latitude": 23.1177457,
+            "longitude": 79.93425529999999,
+            "distance_km": 4.029,
+            "place_id": "ChIJz5so8pqtgTkR1vxEPZdxfbw",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Satya+Prakash+Public+School&query_place_id=ChIJz5so8pqtgTkR1vxEPZdxfbw"
+          },
+          {
+            "name": "Ryan International School, Shanti Nagar, Jabalpur - CBSE",
+            "type": "International school",
+            "rating": null,
+            "reviews": null,
+            "address": "45/46, Shanti Nagar, Jabalpur, Madhya Pradesh 482001, India",
+            "latitude": 23.191404199999997,
+            "longitude": 79.92974079999999,
+            "distance_km": 4.19,
+            "place_id": "ChIJ62-qxTSvgTkRLsPVE4ncpHs",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Ryan+International+School%2C+Shanti+Nagar%2C+Jabalpur+-+CBSE&query_place_id=ChIJ62-qxTSvgTkRLsPVE4ncpHs"
+          },
+          {
+            "name": "4 Sisters Play School",
+            "type": "Preschool",
+            "rating": 4.7,
+            "reviews": 210,
+            "address": "Lalmati, KanchGhar, Jabalpur, Madhya Pradesh 482001, India",
+            "latitude": 23.1808069,
+            "longitude": 79.963634,
+            "distance_km": 4.214,
+            "place_id": "ChIJtVy68F-ugTkRpV6YQkBeIoM",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=4+Sisters+Play+School&query_place_id=ChIJtVy68F-ugTkRpV6YQkBeIoM"
+          },
+          {
+            "name": "Royal Edtech School",
+            "type": "School center",
+            "rating": 4.8,
+            "reviews": 56,
+            "address": "Ganji Nagar, Adhartal, Jabalpur, Madhya Pradesh 482002, India",
+            "latitude": 23.1940381,
+            "longitude": 79.9355823,
+            "distance_km": 4.455,
+            "place_id": "ChIJqbC180yvgTkRaqVLw5fQRdo",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Royal+Edtech+School&query_place_id=ChIJqbC180yvgTkRaqVLw5fQRdo"
+          },
+          {
+            "name": "Kidzee Vijay Nagar",
+            "type": "Preschool",
+            "rating": 5,
+            "reviews": 100,
+            "address": "843, near Shakti Bhog Chowk, Vijay Nagar, Jabalpur, Madhya Pradesh 482002, India",
+            "latitude": 23.187380899999997,
+            "longitude": 79.907934,
+            "distance_km": 4.602,
+            "place_id": "ChIJAe-9_1CxgTkRyaYBzHcQeqk",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Kidzee+Vijay+Nagar&query_place_id=ChIJAe-9_1CxgTkRyaYBzHcQeqk"
+          },
+          {
+            "name": "DCY Public School",
+            "type": "Preschool",
+            "rating": 5,
+            "reviews": 23,
+            "address": "Plot No 379, Rani Durgawati Chowk, near State Bank ATM, Trimurti Nagar, Jabalpur, Madhya Pradesh 482002, India",
+            "latitude": 23.196729899999998,
+            "longitude": 79.9229884,
+            "distance_km": 4.897,
+            "place_id": "ChIJe1ggw9-vgTkRvEWVM8Y62ek",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=DCY+Public+School&query_place_id=ChIJe1ggw9-vgTkRvEWVM8Y62ek"
+          },
+          {
+            "name": "Jupiter International School",
+            "type": "School center",
+            "rating": 4.7,
+            "reviews": 84,
+            "address": "482002, Yashwar Nagar, Kanchan Vihar, Vijay Nagar, Jabalpur, Madhya Pradesh 482002, India",
+            "latitude": 23.186461299999998,
+            "longitude": 79.9013518,
+            "distance_km": 4.953,
+            "place_id": "ChIJ7beUFMaxgTkR50NaGpKXpww",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Jupiter+International+School&query_place_id=ChIJ7beUFMaxgTkR50NaGpKXpww"
+          },
+          {
+            "name": "Neev Junior School",
+            "type": "School house",
+            "rating": 4.9,
+            "reviews": 88,
+            "address": "rajbhawan, Kanchan Vihar, Vijay Nagar, Lamti, Raksha, Madhya Pradesh 482002, India",
+            "latitude": 23.1919322,
+            "longitude": 79.9023079,
+            "distance_km": 5.352,
+            "place_id": "ChIJM-uhB06xgTkRlQGE3HIftjg",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Neev+Junior+School&query_place_id=ChIJM-uhB06xgTkRlQGE3HIftjg"
+          },
+          {
+            "name": "Shri Balaji Public School",
+            "type": "CBSE school",
+            "rating": null,
+            "reviews": null,
+            "address": "No.41, Shri balaji public school Basaha, near JDA scheme, Jabalpur, Raksha, Madhya Pradesh 482003, India",
+            "latitude": 23.1859711,
+            "longitude": 79.8895929,
+            "distance_km": 5.809,
+            "place_id": "ChIJZ5Ff0xuugTkRR9HGCHqIsZU",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Shri+Balaji+Public+School&query_place_id=ChIJZ5Ff0xuugTkRR9HGCHqIsZU"
+          },
+          {
+            "name": "Stemfield International School",
+            "type": "CBSE school",
+            "rating": null,
+            "reviews": null,
+            "address": "JDA 41, Gram Kachnari, near Prince Viraj Hotel, Vijay Nagar, Jabalpur, Madhya Pradesh 482002, India",
+            "latitude": 23.186645,
+            "longitude": 79.8882804,
+            "distance_km": 5.961,
+            "place_id": "ChIJOUYwZXmvgTkR83i6FUJKBr8",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Stemfield+International+School&query_place_id=ChIJOUYwZXmvgTkR83i6FUJKBr8"
+          },
+          {
+            "name": "Gyan Ganga Orchids - The International School",
+            "type": "Private educational institution",
+            "rating": null,
+            "reviews": null,
+            "address": "Near Medical College, Bypass, Junction, Bhedaghat Road, Jabalpur, Madhya Pradesh 482003, India",
+            "latitude": 23.158437499999998,
+            "longitude": 79.8623125,
+            "distance_km": 7.398,
+            "place_id": "ChIJCzMvzmSxgTkRqLnKutRpV5s",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Gyan+Ganga+Orchids+-+The+International+School&query_place_id=ChIJCzMvzmSxgTkRqLnKutRpV5s"
+          },
+          {
+            "name": "MM INTERNATIONAL SCHOOL JABALPUR",
+            "type": "CBSE school",
+            "rating": null,
+            "reviews": null,
+            "address": "KATNI-NAGPUR Bypass Rd, behind NTPC, BETWEEN GLOBAL ENGINEERING & ORIENTAL ENGINEERING COLLEGE, near Balaji Petrol Pump, Jabalpur, Simariya, Madhya Pradesh 482004, India",
+            "latitude": 23.1942609,
+            "longitude": 79.8716847,
+            "distance_km": 7.83,
+            "place_id": "ChIJ1TnBZ_-wgTkRmsW0OkPplRc",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=MM+INTERNATIONAL+SCHOOL+JABALPUR&query_place_id=ChIJ1TnBZ_-wgTkRmsW0OkPplRc"
+          },
+          {
+            "name": "JSP PlaygrounD School",
+            "type": "Preschool",
+            "rating": 4.9,
+            "reviews": 91,
+            "address": "Subhash Nagar, Maharajpur, Jabalpur, Madhya Pradesh 482004, India",
+            "latitude": 23.2359369,
+            "longitude": 79.96141589999999,
+            "distance_km": 9.519,
+            "place_id": "ChIJ6T-93KKvgTkRaMEhfTN799Y",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=JSP+PlaygrounD+School&query_place_id=ChIJ6T-93KKvgTkRaMEhfTN799Y"
+          }
+        ]
+      },
+      {
+        "category": "markets",
+        "count": 20,
+        "nearest": {
+          "name": "Gorakhpur MARKET",
+          "type": "Market",
+          "rating": 4.1,
+          "reviews": 215,
+          "address": "Gulatee chowk, Gorakhpur, Jabalpur, Madhya Pradesh 482001, India",
+          "latitude": 23.1525851,
+          "longitude": 79.932827,
+          "distance_km": 0.232,
+          "place_id": "ChIJRcXjMCOtgTkRG66r7vdR3v4",
+          "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Gorakhpur+MARKET&query_place_id=ChIJRcXjMCOtgTkRG66r7vdR3v4"
+        },
+        "places": [
+          {
+            "name": "Gorakhpur MARKET",
+            "type": "Market",
+            "rating": 4.1,
+            "reviews": 215,
+            "address": "Gulatee chowk, Gorakhpur, Jabalpur, Madhya Pradesh 482001, India",
+            "latitude": 23.1525851,
+            "longitude": 79.932827,
+            "distance_km": 0.232,
+            "place_id": "ChIJRcXjMCOtgTkRG66r7vdR3v4",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Gorakhpur+MARKET&query_place_id=ChIJRcXjMCOtgTkRG66r7vdR3v4"
+          },
+          {
+            "name": "Sadar Veggie Market",
+            "type": "Produce market",
+            "rating": 3.9,
+            "reviews": 329,
+            "address": "5W3R+H2F, Nehru Railway Colony, Gorakhpur, Jabalpur, Madhya Pradesh 482001, India",
+            "latitude": 23.1539443,
+            "longitude": 79.9400314,
+            "distance_km": 0.564,
+            "place_id": "ChIJzThSGOCtgTkRDh9gIHY_uUQ",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Sadar+Veggie+Market&query_place_id=ChIJzThSGOCtgTkRDh9gIHY_uUQ"
+          },
+          {
+            "name": "Stadium Market",
+            "type": "Building",
+            "rating": null,
+            "reviews": null,
+            "address": "Wright Town, Jabalpur, Madhya Pradesh 482002, India",
+            "latitude": 23.1652472,
+            "longitude": 79.9278837,
+            "distance_km": 1.424,
+            "place_id": "ChIJ69g6JgWugTkRcUnIcLz1SKk",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Stadium+Market&query_place_id=ChIJ69g6JgWugTkRcUnIcLz1SKk"
+          },
+          {
+            "name": "Sadar Market",
+            "type": "Market",
+            "rating": 4.1,
+            "reviews": 355,
+            "address": "5W3X+RPH, Street Number 8, Sadar Bazar, Malhotra Compound, Sadar, Jabalpur, Madhya Pradesh 482001, India",
+            "latitude": 23.1545642,
+            "longitude": 79.9493689,
+            "distance_km": 1.52,
+            "place_id": "ChIJVVVVOd-tgTkRRnMI4RtzwIk",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Sadar+Market&query_place_id=ChIJVVVVOd-tgTkRRnMI4RtzwIk"
+          },
+          {
+            "name": "Sadar Main Road MARKET AREA",
+            "type": "Market",
+            "rating": 4,
+            "reviews": 160,
+            "address": "5X32+QPX, Sadar Main Rd, Malhotra Compound, Sadar, Jabalpur, Madhya Pradesh 482001, India",
+            "latitude": 23.1544946,
+            "longitude": 79.9518512,
+            "distance_km": 1.773,
+            "place_id": "ChIJbTOWFtitgTkR1LYLTop5RGk",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Sadar+Main+Road+MARKET+AREA&query_place_id=ChIJbTOWFtitgTkR1LYLTop5RGk"
+          },
+          {
+            "name": "Anjuman Market",
+            "type": "Market",
+            "rating": 3.5,
+            "reviews": 34,
+            "address": "5WCM+5FQ, Hanumantal Ward, Jabalpur, Madhya Pradesh 482002, India",
+            "latitude": 23.170460799999997,
+            "longitude": 79.9337299,
+            "distance_km": 1.834,
+            "place_id": "ChIJ3RpX_HSvgTkR_mOPwORyuwI",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Anjuman+Market&query_place_id=ChIJ3RpX_HSvgTkR_mOPwORyuwI"
+          },
+          {
+            "name": "Ganjipura Market",
+            "type": "Market",
+            "rating": 4.1,
+            "reviews": 690,
+            "address": "5WFM+4G6, Normal School Rd, Ganjipura, Jabalpur, Madhya Pradesh 482002, India",
+            "latitude": 23.173211,
+            "longitude": 79.9318661,
+            "distance_km": 2.155,
+            "place_id": "ChIJ9SWvuBCvgTkR-zgjuSRc_gI",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Ganjipura+Market&query_place_id=ChIJ9SWvuBCvgTkR-zgjuSRc_gI"
+          },
+          {
+            "name": "5WFR+F9H Main Market",
+            "type": "Building",
+            "rating": null,
+            "reviews": null,
+            "address": "Darshan Chawk, Gurandi Rd, Gurandi, Jabalpur, Madhya Pradesh 482002, India",
+            "latitude": 23.1737224,
+            "longitude": 79.9410975,
+            "distance_km": 2.296,
+            "place_id": "ChIJp9HbsBSugTkRquO55qNEXyI",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=5WFR%2BF9H+Main+Market&query_place_id=ChIJp9HbsBSugTkRquO55qNEXyI"
+          },
+          {
+            "name": "Narghaiya market",
+            "type": "Market",
+            "rating": 4,
+            "reviews": 330,
+            "address": "659, Hemraj Bhavan Lot Shop Tiraha Narghaiya, Ganjipura, Jabalpur, Madhya Pradesh 482002, India",
+            "latitude": 23.1764905,
+            "longitude": 79.9347299,
+            "distance_km": 2.503,
+            "place_id": "ChIJT7E6YaWvgTkRJ0jYeOEPgSU",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Narghaiya+market&query_place_id=ChIJT7E6YaWvgTkRJ0jYeOEPgSU"
+          },
+          {
+            "name": "Gaya Prasad ji market",
+            "type": "Market",
+            "rating": 4.1,
+            "reviews": 8,
+            "address": "5WHM+493, Sarafa Rd, Sarafa, Uprainganj, Jabalpur, Madhya Pradesh 482002, India",
+            "latitude": 23.1777841,
+            "longitude": 79.933407,
+            "distance_km": 2.649,
+            "place_id": "ChIJxTOJTgCvgTkRHBO_hb6a1XE",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Gaya+Prasad+ji+market&query_place_id=ChIJxTOJTgCvgTkRHBO_hb6a1XE"
+          },
+          {
+            "name": "Mahila Market",
+            "type": "Market",
+            "rating": 3.4,
+            "reviews": 86,
+            "address": "5WMC+CC6, 477, Ranital Link Road, Baldeobagh, Sushi Mandi, Jabalpur, Madhya Pradesh 482002, India",
+            "latitude": 23.177516,
+            "longitude": 79.92550489999999,
+            "distance_km": 2.774,
+            "place_id": "ChIJdaQQqBiugTkRju5OvtZjhmI",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Mahila+Market&query_place_id=ChIJdaQQqBiugTkRju5OvtZjhmI"
+          },
+          {
+            "name": "Choubey market",
+            "type": "Apartment complex",
+            "rating": 4.5,
+            "reviews": 2,
+            "address": "5WJ8+MPH, Sarvodaya Nagar, Jabalpur, Madhya Pradesh 482002, India",
+            "latitude": 23.1815809,
+            "longitude": 79.9166721,
+            "distance_km": 3.57,
+            "place_id": "ChIJby0sUQCxgTkRieRbODmMhMM",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Choubey+market&query_place_id=ChIJby0sUQCxgTkRieRbODmMhMM"
+          },
+          {
+            "name": "Satpula Bazar",
+            "type": "Market",
+            "rating": 4,
+            "reviews": 939,
+            "address": "GCF Jabalpur, Jabalpur, Madhya Pradesh 482011, India",
+            "latitude": 23.1820034,
+            "longitude": 79.96950369999999,
+            "distance_km": 4.744,
+            "place_id": "ChIJYxXOn_SugTkRQrWDEc_AYFU",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Satpula+Bazar&query_place_id=ChIJYxXOn_SugTkRQrWDEc_AYFU"
+          },
+          {
+            "name": "Sahu Market",
+            "type": "Market",
+            "rating": 5,
+            "reviews": 3,
+            "address": "5V5Q+X2F, Ganga Nagar, Jabalpur, Madhya Pradesh 482003, India",
+            "latitude": 23.1599434,
+            "longitude": 79.88755669999999,
+            "distance_km": 4.846,
+            "place_id": "ChIJGcuqtaOxgTkRBuL32dTIxk8",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Sahu+Market&query_place_id=ChIJGcuqtaOxgTkRBuL32dTIxk8"
+          },
+          {
+            "name": "Suhagi Market",
+            "type": "Market",
+            "rating": 3.4,
+            "reviews": 256,
+            "address": "5WXG+H68, Krishna Colony, Suhagi, Jabalpur, Madhya Pradesh 482002, India",
+            "latitude": 23.1989175,
+            "longitude": 79.9255665,
+            "distance_km": 5.08,
+            "place_id": "ChIJhZci_aSvgTkRX9LYI_9iF44",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Suhagi+Market&query_place_id=ChIJhZci_aSvgTkRX9LYI_9iF44"
+          },
+          {
+            "name": "Adhartal",
+            "type": "Market",
+            "rating": 3.8,
+            "reviews": 628,
+            "address": "6X23+FGJ, Khajanchi Nagar, Chhota Fuhara, Mansarovar Colony, Jawaharlal Nehru Krishi Vishwa Vidyalaya Campus, Jabalpur, Madhya Pradesh 482004, India",
+            "latitude": 23.1998218,
+            "longitude": 79.9542579,
+            "distance_km": 5.482,
+            "place_id": "ChIJj9jollKugTkRjgf4feCymAM",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Adhartal&query_place_id=ChIJj9jollKugTkRjgf4feCymAM"
+          },
+          {
+            "name": "Saini market",
+            "type": "Market",
+            "rating": 2,
+            "reviews": 2,
+            "address": "A158, A158, Garha Rd, Garha, Purwa, Jabalpur, Madhya Pradesh 482003, India",
+            "latitude": 23.15618,
+            "longitude": 79.8766067,
+            "distance_km": 5.925,
+            "place_id": "ChIJ14yfNgWxgTkRDUG8OoWY2tI",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Saini+market&query_place_id=ChIJ14yfNgWxgTkRDUG8OoWY2tI"
+          },
+          {
+            "name": "Rai market suhagi",
+            "type": "Market",
+            "rating": 5,
+            "reviews": 1,
+            "address": "82, COD Colony, Suhagi, Jabalpur, Madhya Pradesh 482004, India",
+            "latitude": 23.2179435,
+            "longitude": 79.9548768,
+            "distance_km": 7.411,
+            "place_id": "ChIJASS-GwCvgTkRn9rdsFKQndU",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Rai+market+suhagi&query_place_id=ChIJASS-GwCvgTkRn9rdsFKQndU"
+          },
+          {
+            "name": "Jabalpur Market",
+            "type": "Grocery store",
+            "rating": 4.2,
+            "reviews": 18,
+            "address": "Dhanshri apartment, Jabalpur, Nandni Ronsara, Madhya Pradesh 482002, India",
+            "latitude": 23.2238285,
+            "longitude": 79.8996253,
+            "distance_km": 8.546,
+            "place_id": "ChIJa8YnaS2xgTkRYdfGWNvGAsY",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Jabalpur+Market&query_place_id=ChIJa8YnaS2xgTkRYdfGWNvGAsY"
+          },
+          {
+            "name": "MAHARAJ MARKET",
+            "type": "Family restaurant",
+            "rating": 5,
+            "reviews": 1,
+            "address": "6WQW+8C4, Jabalpur Byp Rd, Maharajpur, Jabalpur, Hathna, Madhya Pradesh 482004, India",
+            "latitude": 23.238255799999997,
+            "longitude": 79.9460855,
+            "distance_km": 9.445,
+            "place_id": "ChIJm-H4OACvgTkRfT-bd8qr01Q",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=MAHARAJ+MARKET&query_place_id=ChIJm-H4OACvgTkRfT-bd8qr01Q"
+          }
+        ]
+      },
+      {
+        "category": "hotels",
+        "count": 18,
+        "nearest": {
+          "name": "Pride by samrat",
+          "type": "Hotel",
+          "rating": 4.5,
+          "reviews": 970,
+          "address": "Gorakhpur Rd, near Indian bank, crossing, Katanga, Jabalpur, Madhya Pradesh 482001, India",
+          "latitude": 23.1514077,
+          "longitude": 79.9351875,
+          "distance_km": 0.294,
+          "place_id": "ChIJBy8iT36tgTkRkhJAIqHdgCM",
+          "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Pride+by+samrat&query_place_id=ChIJBy8iT36tgTkRkhJAIqHdgCM"
+        },
+        "places": [
+          {
+            "name": "Pride by samrat",
+            "type": "Hotel",
+            "rating": 4.5,
+            "reviews": 970,
+            "address": "Gorakhpur Rd, near Indian bank, crossing, Katanga, Jabalpur, Madhya Pradesh 482001, India",
+            "latitude": 23.1514077,
+            "longitude": 79.9351875,
+            "distance_km": 0.294,
+            "place_id": "ChIJBy8iT36tgTkRkhJAIqHdgCM",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Pride+by+samrat&query_place_id=ChIJBy8iT36tgTkRkhJAIqHdgCM"
+          },
+          {
+            "name": "Samdareeya hotel private limited",
+            "type": "Hotel",
+            "rating": 3.8,
+            "reviews": 4822,
+            "address": "Dr Barat Rd, near Maharshi Dayanand Saraswati Chowk, near russel chowk, Napier Town, Jabalpur, Madhya Pradesh 482001, India",
+            "latitude": 23.1616873,
+            "longitude": 79.9384934,
+            "distance_km": 0.948,
+            "place_id": "ChIJ-Y9qTwyugTkR5JlgQbYufOs",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Samdareeya+hotel+private+limited&query_place_id=ChIJ-Y9qTwyugTkR5JlgQbYufOs"
+          },
+          {
+            "name": "Hotel Satya Ashoka",
+            "type": "Hotel",
+            "rating": 3.9,
+            "reviews": 2364,
+            "address": "Pandit Ravishankar Shukla Stadium, Opposite, Wright Town, Jabalpur, Madhya Pradesh 482002, India",
+            "latitude": 23.1656452,
+            "longitude": 79.9277661,
+            "distance_km": 1.469,
+            "place_id": "ChIJJb7bKwWugTkRH1_YhG2gNVM",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Hotel+Satya+Ashoka&query_place_id=ChIJJb7bKwWugTkRH1_YhG2gNVM"
+          },
+          {
+            "name": "BK Castles & Hotels Pvt Ltd.",
+            "type": "Hotel",
+            "rating": 3.8,
+            "reviews": 3125,
+            "address": "Jayanti Complex, Marhatal, Jabalpur, Madhya Pradesh 482001, India",
+            "latitude": 23.168341899999998,
+            "longitude": 79.93556699999999,
+            "distance_km": 1.6,
+            "place_id": "ChIJE0TyjhGugTkRIfuOlkpC6GA",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=BK+Castles+%26+Hotels+Pvt+Ltd.&query_place_id=ChIJE0TyjhGugTkRIfuOlkpC6GA"
+          },
+          {
+            "name": "Hotel Vijan Palace",
+            "type": "Hotel",
+            "rating": 3.9,
+            "reviews": 4519,
+            "address": "313, near Karamchand Chowk, Vijan Market, Ganjipura, Jabalpur, Madhya Pradesh 482002, India",
+            "latitude": 23.1712898,
+            "longitude": 79.9344978,
+            "distance_km": 1.925,
+            "place_id": "ChIJpfnZOBGugTkR6mQ8SSgBmCc",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Hotel+Vijan+Palace&query_place_id=ChIJpfnZOBGugTkR6mQ8SSgBmCc"
+          },
+          {
+            "name": "Max Hotels Jabalpur",
+            "type": "Hotel",
+            "rating": 3.7,
+            "reviews": 1773,
+            "address": "Multi-Functional Complex, 6, Railway Station Rd, near platform, South Civil Lines, Jabalpur, Madhya Pradesh 482001, India",
+            "latitude": 23.1652228,
+            "longitude": 79.9496867,
+            "distance_km": 1.992,
+            "place_id": "ChIJx4z4rXGugTkRq9NkVWZneik",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Max+Hotels+Jabalpur&query_place_id=ChIJx4z4rXGugTkRq9NkVWZneik"
+          },
+          {
+            "name": "Kalchuri Residency",
+            "type": "Hotel",
+            "rating": 4,
+            "reviews": 3821,
+            "address": "2, Railway Station Rd, opp. Circuit House, Prestige Town, South Civil Lines, Jabalpur, Madhya Pradesh 482001, India",
+            "latitude": 23.1625242,
+            "longitude": 79.95360629999999,
+            "distance_km": 2.171,
+            "place_id": "ChIJ-dbQv3KugTkRpcZSPynjvWE",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Kalchuri+Residency&query_place_id=ChIJ-dbQv3KugTkRpcZSPynjvWE"
+          },
+          {
+            "name": "Hotel Delite Grand",
+            "type": "Hotel",
+            "rating": 4.3,
+            "reviews": 2049,
+            "address": "Delite Talkies Campus, Delite Talkies Ln, near Railway Station Road, Prestige Town, South Civil Lines, Jabalpur, Madhya Pradesh 482001, India",
+            "latitude": 23.1629997,
+            "longitude": 79.9551135,
+            "distance_km": 2.332,
+            "place_id": "ChIJpdCrN3qugTkRLO-8OkCxbzg",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Hotel+Delite+Grand&query_place_id=ChIJpdCrN3qugTkRLO-8OkCxbzg"
+          },
+          {
+            "name": "Hotel Narmada Jacksons (A Grand Heritage Hotel)",
+            "type": "Hotel",
+            "rating": 4.1,
+            "reviews": 4580,
+            "address": "beside Petrol Pump, Govindh Bhavan Colony, South Civil Lines, Jabalpur, Madhya Pradesh 482001, India",
+            "latitude": 23.164020999999998,
+            "longitude": 79.958367,
+            "distance_km": 2.682,
+            "place_id": "ChIJDYsf_X2ugTkRNBZa7aPYn68",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Hotel+Narmada+Jacksons+%28A+Grand+Heritage+Hotel%29&query_place_id=ChIJDYsf_X2ugTkRNBZa7aPYn68"
+          },
+          {
+            "name": "Hotel Prince Viraj",
+            "type": "Hotel",
+            "rating": 4.3,
+            "reviews": 2442,
+            "address": "JDA Scheme no 41, Plot No.113, MR-4 Rd, near Ekta Square, Vijay Nagar, Jabalpur, Madhya Pradesh 482002, India",
+            "latitude": 23.1803326,
+            "longitude": 79.8988576,
+            "distance_km": 4.677,
+            "place_id": "ChIJab4CTMGxgTkR85CotULUKCo",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Hotel+Prince+Viraj&query_place_id=ChIJab4CTMGxgTkR85CotULUKCo"
+          },
+          {
+            "name": "Hotel Vijan Mahal",
+            "type": "Hotel",
+            "rating": 4.4,
+            "reviews": 13828,
+            "address": "114/2 and 107, Mandla - Jabalpur Rd, Tilhari, Madhya Pradesh 482008, India",
+            "latitude": 23.1238611,
+            "longitude": 79.96773759999999,
+            "distance_km": 4.77,
+            "place_id": "ChIJhY61yE2sgTkRyHNlJ-qflUA",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Hotel+Vijan+Mahal&query_place_id=ChIJhY61yE2sgTkRyHNlJ-qflUA"
+          },
+          {
+            "name": "Hotel Pasricha - Banquets & Lawns",
+            "type": "Hotel",
+            "rating": 4.3,
+            "reviews": 1819,
+            "address": "Near Ekta Market New Bypass Road Tilhari, Jabalpur, Madhya Pradesh 482021, India",
+            "latitude": 23.108200099999998,
+            "longitude": 79.9747477,
+            "distance_km": 6.545,
+            "place_id": "ChIJfSTGc8GtgTkRpy_EbyNuizo",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Hotel+Pasricha+-+Banquets+%26+Lawns&query_place_id=ChIJfSTGc8GtgTkRpy_EbyNuizo"
+          },
+          {
+            "name": "Hilton Garden Inn Jabalpur",
+            "type": "Hotel",
+            "rating": 4.5,
+            "reviews": 866,
+            "address": "466, Hitkarini College Rd, Priyadarshni Colony, Jabalpur, Madhya Pradesh 482005, India",
+            "latitude": 23.1671467,
+            "longitude": 79.99693719999999,
+            "distance_km": 6.547,
+            "place_id": "ChIJyTEvGj-vgTkRdA95QdelCxk",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Hilton+Garden+Inn+Jabalpur&query_place_id=ChIJyTEvGj-vgTkRdA95QdelCxk"
+          },
+          {
+            "name": "Park Inn by Radisson Jabalpur",
+            "type": "Hotel",
+            "rating": 4.5,
+            "reviews": 428,
+            "address": "Tilwara Road, opposite Bargi Hills, Sagda, Sagra, Jabalpur, Madhya Pradesh 482003, India",
+            "latitude": 23.1317947,
+            "longitude": 79.8733508,
+            "distance_km": 6.723,
+            "place_id": "ChIJBzPTY5izgTkR4liI3I5DwRk",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Park+Inn+by+Radisson+Jabalpur&query_place_id=ChIJBzPTY5izgTkR4liI3I5DwRk"
+          },
+          {
+            "name": "Welcomhotel by ITC Hotels, Jabalpur",
+            "type": "Hotel",
+            "rating": 4.8,
+            "reviews": 1569,
+            "address": "4VJF+R25, Welcomhotel by ITC Hotels Jabalpur, Old Tilwara road, Bargi Hills, Sagra, Jabalpur, Madhya Pradesh 482003, India",
+            "latitude": 23.1314612,
+            "longitude": 79.8730839,
+            "distance_km": 6.762,
+            "place_id": "ChIJien37GezgTkR6aKeA-MzdEY",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Welcomhotel+by+ITC+Hotels%2C+Jabalpur&query_place_id=ChIJien37GezgTkR6aKeA-MzdEY"
+          },
+          {
+            "name": "SHAWN ELIZEY",
+            "type": "Hotel",
+            "rating": 4.4,
+            "reviews": 6465,
+            "address": "MEDICAL TO OLD TILWARA ROAD, near GYAN GANGA COLLEGE, Jabalpur, Madhya Pradesh 482003, India",
+            "latitude": 23.1284097,
+            "longitude": 79.87021419999999,
+            "distance_km": 7.163,
+            "place_id": "ChIJm2KrBmOzgTkRKdzgSKzIvko",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=SHAWN+ELIZEY&query_place_id=ChIJm2KrBmOzgTkRKdzgSKzIvko"
+          },
+          {
+            "name": "Royal Orbit",
+            "type": "Hotel",
+            "rating": 4.5,
+            "reviews": 6529,
+            "address": "across Tilwara Bridge, Madhya Pradesh 482051, India",
+            "latitude": 23.1010377,
+            "longitude": 79.8927946,
+            "distance_km": 7.27,
+            "place_id": "ChIJBxi8B_OzgTkRPXUWUAMABu8",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Royal+Orbit&query_place_id=ChIJBxi8B_OzgTkRPXUWUAMABu8"
+          },
+          {
+            "name": "Sukoon Resort",
+            "type": "Resort hotel",
+            "rating": 4.6,
+            "reviews": 3671,
+            "address": "Nagpur Highway Road, Near, Tilwara Bridge, Jabalpur, Madhya Pradesh 482003, India",
+            "latitude": 23.103711099999998,
+            "longitude": 79.8804863,
+            "distance_km": 7.859,
+            "place_id": "ChIJL535FuqzgTkRukFdEtd_7WE",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Sukoon+Resort&query_place_id=ChIJL535FuqzgTkRukFdEtd_7WE"
+          }
+        ]
+      },
+      {
+        "category": "industrial_businesses",
+        "count": 12,
+        "nearest": {
+          "name": "DOAGuru InfoSystems : Digital Marketing And IT Solutions Company",
+          "type": "Internet marketing service",
+          "rating": 4.9,
+          "reviews": 82,
+          "address": "1815, Wright Town, Jabalpur, Madhya Pradesh 482002, India",
+          "latitude": 23.163625399999997,
+          "longitude": 79.9229896,
+          "distance_km": 1.593,
+          "place_id": "ChIJT-5eGRaxgTkRxyMc7_psGWI",
+          "google_maps_url": "https://www.google.com/maps/search/?api=1&query=DOAGuru+InfoSystems+%3A+Digital+Marketing+And+IT+Solutions+Company&query_place_id=ChIJT-5eGRaxgTkRxyMc7_psGWI"
+        },
+        "places": [
+          {
+            "name": "DOAGuru InfoSystems : Digital Marketing And IT Solutions Company",
+            "type": "Internet marketing service",
+            "rating": 4.9,
+            "reviews": 82,
+            "address": "1815, Wright Town, Jabalpur, Madhya Pradesh 482002, India",
+            "latitude": 23.163625399999997,
+            "longitude": 79.9229896,
+            "distance_km": 1.593,
+            "place_id": "ChIJT-5eGRaxgTkRxyMc7_psGWI",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=DOAGuru+InfoSystems+%3A+Digital+Marketing+And+IT+Solutions+Company&query_place_id=ChIJT-5eGRaxgTkRxyMc7_psGWI"
+          },
+          {
+            "name": "JP Techno Park",
+            "type": "Website designer",
+            "rating": 5,
+            "reviews": 47,
+            "address": "482008 4th FLOOR, PLOT NO 06, SG Square, Rampur, Chowk, Shakti Bhawan Rd, Rampur, Jabalpur, Madhya Pradesh 482001, India",
+            "latitude": 23.140701999999997,
+            "longitude": 79.9259526,
+            "distance_km": 1.717,
+            "place_id": "ChIJOYOuHwCygTkRf7YIPoigsok",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=JP+Techno+Park&query_place_id=ChIJOYOuHwCygTkRf7YIPoigsok"
+          },
+          {
+            "name": "Upkar Kala",
+            "type": "Laser cutting service",
+            "rating": 5,
+            "reviews": 25,
+            "address": "Shop No. 11, Malaviya Chowk, Gole Bazar, Wright Town, Jabalpur, Madhya Pradesh 482001, India",
+            "latitude": 23.1692698,
+            "longitude": 79.9317014,
+            "distance_km": 1.724,
+            "place_id": "ChIJY79Sn1ixgTkRq1YuFpyIK00",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Upkar+Kala&query_place_id=ChIJY79Sn1ixgTkRq1YuFpyIK00"
+          },
+          {
+            "name": "Western Hoshizaki (Authorised) Minerva Sales",
+            "type": "Refrigerator store",
+            "rating": 5,
+            "reviews": 32,
+            "address": "GAJANAN SOCIETY, Plot no 1001, MR-4 Rd, Yadav Colony, Jabalpur, New Adaresh Colony, Madhya Pradesh 482002, India",
+            "latitude": 23.171298099999998,
+            "longitude": 79.91011879999999,
+            "distance_km": 3.151,
+            "place_id": "ChIJUY6xi7exgTkRSk2TkCxPlIY",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Western+Hoshizaki+%28Authorised%29+Minerva+Sales&query_place_id=ChIJUY6xi7exgTkRSk2TkCxPlIY"
+          },
+          {
+            "name": "Perfect Video Agency",
+            "type": "Business management consultant",
+            "rating": 5,
+            "reviews": 14,
+            "address": "527/40, New Jagdamba Colony, Sarvodaya Nagar, Jabalpur, Madhya Pradesh 482001, India",
+            "latitude": 23.185654,
+            "longitude": 79.9169376,
+            "distance_km": 3.954,
+            "place_id": "ChIJ-b1z9pyxgTkRcl4oIVtUCnI",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Perfect+Video+Agency&query_place_id=ChIJ-b1z9pyxgTkRcl4oIVtUCnI"
+          },
+          {
+            "name": "Laxmi industries",
+            "type": "Agricultural engineer",
+            "rating": 4.3,
+            "reviews": 6,
+            "address": "Iti chungi naka patan road, in front of english wine shop, Jabalpur, Madhya Pradesh 482002, India",
+            "latitude": 23.1973766,
+            "longitude": 79.9066273,
+            "distance_km": 5.604,
+            "place_id": "ChIJuyB1dh-xgTkRVUTs1-7p_To",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Laxmi+industries&query_place_id=ChIJuyB1dh-xgTkRVUTs1-7p_To"
+          },
+          {
+            "name": "Stark industries",
+            "type": "Corporate office",
+            "rating": 5,
+            "reviews": 2,
+            "address": "stark industries, 29, Jabalpur, Madhya Pradesh 482005, India",
+            "latitude": 23.198045399999998,
+            "longitude": 79.96871569999999,
+            "distance_km": 6.019,
+            "place_id": "ChIJYepjs_6ugTkRlys7k_9CcIg",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Stark+industries&query_place_id=ChIJYepjs_6ugTkRlys7k_9CcIg"
+          },
+          {
+            "name": "VRL Logistics Ltd - Jabalpur",
+            "type": "Logistics service",
+            "rating": 3.5,
+            "reviews": 94,
+            "address": "WARD NO. 73, SUMITRA WAREHOUSE PARISAR, Katangi Rd, Karmeta, Jabalpur, Madhya Pradesh 482002, India",
+            "latitude": 23.200953,
+            "longitude": 79.90473,
+            "distance_km": 6.046,
+            "place_id": "ChIJrylTDTgbYzkRx56rAFeiL3E",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=VRL+Logistics+Ltd+-+Jabalpur&query_place_id=ChIJrylTDTgbYzkRx56rAFeiL3E"
+          },
+          {
+            "name": "Industrial consultant",
+            "type": "Industrial consultant",
+            "rating": null,
+            "reviews": null,
+            "address": "H.ni.2/B-46 Nagpur road ,Nalanda vihar colony,purwa, Madhya Pradesh 482003, India",
+            "latitude": 23.1371684,
+            "longitude": 79.8769045,
+            "distance_km": 6.18,
+            "place_id": "ChIJiZteGOyzgTkRzRV8MFIbEyM",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Industrial+consultant&query_place_id=ChIJiZteGOyzgTkRzRV8MFIbEyM"
+          },
+          {
+            "name": "Spintex Industries",
+            "type": "Farm equipment supplier",
+            "rating": 4.1,
+            "reviews": 10,
+            "address": "Shed No. 1, Industrial Area, Adhartar, Richhai, Jabalpur, Madhya Pradesh 482010, India",
+            "latitude": 23.2218664,
+            "longitude": 79.97449069999999,
+            "distance_km": 8.583,
+            "place_id": "ChIJiykMCA6vgTkRRW8rCtInuEw",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Spintex+Industries&query_place_id=ChIJiykMCA6vgTkRRW8rCtInuEw"
+          },
+          {
+            "name": "J.V. INDUSTRIES",
+            "type": "Manufacturer",
+            "rating": 4.3,
+            "reviews": 21,
+            "address": "256/1, Richhai Industrial Area, Ruchia, Jabalpur, Madhya Pradesh 482001, India",
+            "latitude": 23.2224711,
+            "longitude": 79.9759933,
+            "distance_km": 8.716,
+            "place_id": "ChIJPwLC1hOvgTkRzfcVq4s3w20",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=J.V.+INDUSTRIES&query_place_id=ChIJPwLC1hOvgTkRzfcVq4s3w20"
+          },
+          {
+            "name": "Samyak Industries",
+            "type": "Rice mill",
+            "rating": 5,
+            "reviews": 2,
+            "address": "Plot no. 76, in front of Rewa Polymers, Richhai Industrial Area, Richhai, Jabalpur, Madhya Pradesh 482010, India",
+            "latitude": 23.230164,
+            "longitude": 79.9823212,
+            "distance_km": 9.779,
+            "place_id": "ChIJp-_CeN-vgTkR8rXDxyFx2bE",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Samyak+Industries&query_place_id=ChIJp-_CeN-vgTkR8rXDxyFx2bE"
+          }
+        ]
+      },
+      {
+        "category": "warehouses_logistics",
+        "count": 4,
+        "nearest": {
+          "name": "MP Warehousing & Logistics Corporation",
+          "type": "Warehouse",
+          "rating": 3.9,
+          "reviews": 16,
+          "address": "KRISHI UPAJ MANDI DEENDAYAL CHOWK, Jabalpur, Madhya Pradesh 482002, India",
+          "latitude": 23.1895678,
+          "longitude": 79.91912769999999,
+          "distance_km": 4.258,
+          "place_id": "ChIJ02gc_dexgTkRn1OmmJlzkTI",
+          "google_maps_url": "https://www.google.com/maps/search/?api=1&query=MP+Warehousing+%26+Logistics+Corporation&query_place_id=ChIJ02gc_dexgTkRn1OmmJlzkTI"
+        },
+        "places": [
+          {
+            "name": "MP Warehousing & Logistics Corporation",
+            "type": "Warehouse",
+            "rating": 3.9,
+            "reviews": 16,
+            "address": "KRISHI UPAJ MANDI DEENDAYAL CHOWK, Jabalpur, Madhya Pradesh 482002, India",
+            "latitude": 23.1895678,
+            "longitude": 79.91912769999999,
+            "distance_km": 4.258,
+            "place_id": "ChIJ02gc_dexgTkRn1OmmJlzkTI",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=MP+Warehousing+%26+Logistics+Corporation&query_place_id=ChIJ02gc_dexgTkRn1OmmJlzkTI"
+          },
+          {
+            "name": "Shree Laxmi Warehouse",
+            "type": "Storage facility",
+            "rating": 4.5,
+            "reviews": 8,
+            "address": "ITI, Patan Rd, in front of Hyundai Showroom, Karmeta, Jabalpur, Madhya Pradesh 482002, India",
+            "latitude": 23.2008273,
+            "longitude": 79.8953159,
+            "distance_km": 6.572,
+            "place_id": "ChIJ_R9rZwaxgTkRQhcMgnxmJdw",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Shree+Laxmi+Warehouse&query_place_id=ChIJ_R9rZwaxgTkRQhcMgnxmJdw"
+          },
+          {
+            "name": "UNITY LOGISTICS PARK, JABALPUR",
+            "type": "Warehouse",
+            "rating": 4.6,
+            "reviews": 216,
+            "address": "Unity Traders, Neelam Kanwar Warehousing Complex, Village Padwarkala, Katangi Bypass Crossing, Jabalpur, Madhya Pradesh 482002, India",
+            "latitude": 23.228790999999998,
+            "longitude": 79.900874,
+            "distance_km": 9.001,
+            "place_id": "ChIJeT1TdBSwgTkRifOOFGpYsZU",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=UNITY+LOGISTICS+PARK%2C+JABALPUR&query_place_id=ChIJeT1TdBSwgTkRifOOFGpYsZU"
+          },
+          {
+            "name": "M P Warehousing and Logistics Corporation",
+            "type": "Warehouse",
+            "rating": 3.5,
+            "reviews": 29,
+            "address": "Adhartal Railway Station Rd, Richhai Industrial Area, Ruchia, Jabalpur, Madhya Pradesh 482010, India",
+            "latitude": 23.2279113,
+            "longitude": 79.97293479999999,
+            "distance_km": 9.11,
+            "place_id": "ChIJAQAA03KvgTkRj7rtFgL1FCc",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=M+P+Warehousing+and+Logistics+Corporation&query_place_id=ChIJAQAA03KvgTkRj7rtFgL1FCc"
+          }
+        ]
+      }
+    ],
+    "source": "SerpApi / Google Maps local results"
+  },
+  "ndvi": {
+    "mean": 0.35353635387143956,
+    "min": -0.1551889032125473,
+    "max": 0.8580559492111206,
+    "share_ge_030_percent": 55.24057162687507,
+    "share_ge_050_percent": 27.226532483478255,
+    "period": "2025-09-14 \u2192 2026-09-14",
+    "source": "Sentinel-2 SR Harmonized (median NDVI, whole year)",
+    "peak": {
+      "mean": 0.4248411215270763,
+      "period": "Sep-Nov",
+      "scene_count": 12,
+      "source": "Sentinel-2 SR Harmonized (median NDVI, peak 3-month period found within the year; mean from the 30 m scan, no separate min/max/share breakdown)"
+    }
+  },
+  "buying_purpose": {
+    "key": "industry",
+    "label": "industry",
+    "is_other": false,
+    "free_text": null
+  },
+  "buying_preferences": "close to rail and major road connectivity"
+}

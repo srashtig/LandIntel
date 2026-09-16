@@ -1,0 +1,28 @@
+2026-09-15 03:30:03,492 INFO run_analysis starting: lat=22.495707 lon=75.788402 radius_km=5.0
+2026-09-15 03:30:03,546 INFO osm_roads: starting
+2026-09-15 03:31:18,870 INFO osm_roads: completed
+2026-09-15 03:31:18,874 INFO osm_railways: starting (background)
+2026-09-15 03:31:18,875 INFO sentinel_ndvi: starting
+2026-09-15 03:32:12,470 INFO sentinel_ndvi: completed
+2026-09-15 03:32:12,471 INFO osm_railways: completed
+2026-09-15 03:32:12,471 INFO land_cover: starting
+2026-09-15 03:32:13,383 INFO land_cover: completed
+2026-09-15 03:32:13,383 INFO land_surface_temperature: starting
+2026-09-15 03:32:17,325 INFO land_surface_temperature: completed
+2026-09-15 03:32:17,325 INFO air_temperature: starting
+2026-09-15 03:32:18,100 INFO air_temperature: completed
+2026-09-15 03:32:18,100 INFO terrain: starting
+2026-09-15 03:32:21,518 INFO terrain: completed
+2026-09-15 03:32:21,518 INFO osm_water: starting (background)
+2026-09-15 03:32:21,519 INFO groundwater: starting
+2026-09-15 03:32:22,736 INFO groundwater: completed
+2026-09-15 03:32:36,612 INFO osm_water: completed
+2026-09-15 03:32:36,613 INFO hydrology: starting
+2026-09-15 03:32:56,701 INFO hydrology: completed
+2026-09-15 03:32:56,702 INFO rainfall: starting
+2026-09-15 03:33:05,791 INFO rainfall: completed
+2026-09-15 03:33:05,792 INFO nearby_places: starting
+2026-09-15 03:33:20,851 INFO nearby_places: completed
+2026-09-15 03:33:20,852 INFO admin_context: starting
+2026-09-15 03:33:25,950 INFO admin_context: completed
+2026-09-15 03:34:05,045 INFO run_analysis completed: run_success=True

@@ -1,0 +1,1205 @@
+{
+  "schema_version": "1.0",
+  "run_success": true,
+  "generated_at": "2026-09-15 03:44",
+  "site": {
+    "latitude": 22.33803,
+    "longitude": 75.908241,
+    "aoi_radius_km": 5.0,
+    "aoi_area_km2": 66.72758082567006,
+    "metric_crs": "EPSG:32643"
+  },
+  "administration": {
+    "village": "Surpala",
+    "tehsil": "Barwaha",
+    "block": "Barwaha",
+    "district": "Khargone",
+    "state": "MP",
+    "boundary_village_code": "476574",
+    "point_inside_village_polygon": true,
+    "source": "Survey of India village boundaries (vb_soi_mp)",
+    "govt_guideline_rates": {
+      "row_kind": "rural_village",
+      "village": "Surpala",
+      "vlcode": 476574,
+      "tehsil": "BARWAHA",
+      "frontage_type": "plain",
+      "match_score": 99.0,
+      "plot_residential_sqm": 1600.0,
+      "plot_commercial_sqm": 1600.0,
+      "plot_industrial_sqm": 1600.0,
+      "agri_land_irrigated_per_ha": 1880000.0,
+      "agri_land_unirrigated_per_ha": 940000.0,
+      "source": "MP Govt district guideline rates, FY2026-27"
+    },
+    "land_use": {
+      "population": 1497.0,
+      "area_ha": 254.0,
+      "forest_area_ha": 0.0,
+      "non_agricultural_area_ha": 13.0,
+      "barren_land_ha": 0.0,
+      "pastures_grazing_ha": 12.0,
+      "miscellaneous_land_ha": 0.0,
+      "culturable_waste_ha": 17.0,
+      "other_fallows_ha": 3.0,
+      "current_fallows_ha": 3.0,
+      "net_area_sown_ha": 210.0,
+      "unirrigated_land_ha": 55.0,
+      "irrigated_land_ha": 155.0,
+      "forest_share_percent": 0.0,
+      "barren_share_percent": 0.0,
+      "net_sown_share_percent": 82.67716535433071,
+      "source": "Survey of India village boundaries (vb_soi_mp)"
+    },
+    "census": {
+      "population_total": 1497.0,
+      "households": 302.0,
+      "cultivation_share": 45.66395663956639,
+      "agricultural_labour_share": 50.81300813008131,
+      "household_industry_share": 0.0,
+      "other_worker_share": 3.523035230352303,
+      "literacy_percent": 62.460815047021946,
+      "sc_percent": 27.388109552438213,
+      "st_percent": 19.7060788243153
+    },
+    "census_join": {
+      "method": "normalized village name",
+      "boundary_villages": 77,
+      "matched_villages": 76,
+      "unmatched_villages": 1,
+      "source": "census_derieved.csv"
+    },
+    "aoi_overlap": {
+      "village_count": 30,
+      "villages": [
+        "Athwan",
+        "Bagod",
+        "Baman Puri",
+        "Bandikhar",
+        "Bawi",
+        "Bhikariya",
+        "Bolali",
+        "Chandanpura",
+        "Daulatpura",
+        "Deo Garh",
+        "Dongar Gaon",
+        "Jhabariya",
+        "Julwaniya",
+        "Kaulariya",
+        "Maheshwar R F",
+        "Manakpura",
+        "Methwan",
+        "Mongar Gaon",
+        "Muriya Khedi",
+        "Pala Palasiya Jathway",
+        "Pipal Jhar",
+        "Pipaljhar",
+        "Ramthan",
+        "Rupla",
+        "Sasaliya Khurd",
+        "Sasaliyabujurg",
+        "Siralya",
+        "Surpala",
+        "Temla",
+        "Ugharnya"
+      ],
+      "tehsil_count": 2,
+      "tehsils": [
+        "Barwaha",
+        "Maheshwar"
+      ],
+      "district_count": 1,
+      "districts": [
+        "Khargone"
+      ]
+    }
+  },
+  "land_cover": {
+    "classes": [
+      {
+        "name": "Cropland",
+        "area_km2": 49.90098394320581,
+        "percentage": 74.73985899122317
+      },
+      {
+        "name": "Grassland",
+        "area_km2": 9.970646119305682,
+        "percentage": 14.933667156872874
+      },
+      {
+        "name": "Tree cover",
+        "area_km2": 4.014827364854339,
+        "percentage": 6.013260809943862
+      },
+      {
+        "name": "Permanent water",
+        "area_km2": 1.3541273352594707,
+        "percentage": 2.0281621342104486
+      },
+      {
+        "name": "Built-up",
+        "area_km2": 0.9905640695682604,
+        "percentage": 1.4836304423489033
+      },
+      {
+        "name": "Shrubland",
+        "area_km2": 0.47669770138457057,
+        "percentage": 0.7139802899171878
+      },
+      {
+        "name": "Bare / sparse vegetation",
+        "area_km2": 0.05838050608723958,
+        "percentage": 0.08744017548356614
+      }
+    ],
+    "aoi_area_km2": 66.72758082567006,
+    "dominant_class": "Cropland",
+    "source": "ESA WorldCover v200 (10 m)"
+  },
+  "groundwater": {
+    "wells": 2,
+    "latest_observation": "2025-11-07",
+    "latest_mean_depth_m_bgl": 4.225,
+    "latest_min_depth_m_bgl": 3.25,
+    "latest_max_depth_m_bgl": 5.2,
+    "five_year_mean_m_bgl": 5.194523809523809,
+    "five_year_mean_m_bgl_pooled": 5.19452380952381,
+    "five_year_observation_count": 42,
+    "seasonal_windows": {
+      "pre_monsoon_months": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "monsoon_months": [
+        7,
+        8,
+        9
+      ]
+    },
+    "seasonal": [
+      {
+        "year": 2023,
+        "pre_monsoon": {
+          "level_m_bgl": 8.3,
+          "observations": 2,
+          "dates": [
+            "27-05-2023"
+          ],
+          "months": [
+            "May"
+          ]
+        },
+        "monsoon": {
+          "level_m_bgl": 4.55,
+          "observations": 2,
+          "dates": [
+            "28-08-2023"
+          ],
+          "months": [
+            "Aug"
+          ]
+        },
+        "observed_months": [
+          "Jan",
+          "May",
+          "Aug",
+          "Nov"
+        ],
+        "fluctuation_m": 3.750000000000001
+      },
+      {
+        "year": 2024,
+        "pre_monsoon": {
+          "level_m_bgl": 6.78,
+          "observations": 2,
+          "dates": [
+            "24-05-2024"
+          ],
+          "months": [
+            "May"
+          ]
+        },
+        "monsoon": {
+          "level_m_bgl": 3.525,
+          "observations": 2,
+          "dates": [
+            "29-08-2024"
+          ],
+          "months": [
+            "Aug"
+          ]
+        },
+        "observed_months": [
+          "Jan",
+          "May",
+          "Aug",
+          "Nov"
+        ],
+        "fluctuation_m": 3.2550000000000003
+      },
+      {
+        "year": 2025,
+        "pre_monsoon": {
+          "level_m_bgl": 7.0,
+          "observations": 2,
+          "dates": [
+            "22-05-2025"
+          ],
+          "months": [
+            "May"
+          ]
+        },
+        "monsoon": {
+          "level_m_bgl": 4.125,
+          "observations": 2,
+          "dates": [
+            "21-08-2025"
+          ],
+          "months": [
+            "Aug"
+          ]
+        },
+        "observed_months": [
+          "Jan",
+          "May",
+          "Aug",
+          "Nov"
+        ],
+        "fluctuation_m": 2.875
+      }
+    ],
+    "wells_detail": [
+      {
+        "well_no": "SKGN-057-OW2016",
+        "latitude": 22.345,
+        "longitude": 75.91555556,
+        "village": "Bavi",
+        "district": "Khargone",
+        "well_type": "Dug Well",
+        "agency": "SGWO",
+        "depth_of_well_m": null,
+        "latest_date": "2025-11-07",
+        "latest_level_m_bgl": 3.25,
+        "five_year_avg_m_bgl": 4.011428571428572,
+        "change_5yr_m": 0.2799999999999998,
+        "trend": "Stable",
+        "trend_description": "Little change in water level",
+        "n_5yr_observations": 21,
+        "seasonal": [
+          {
+            "year": 2023,
+            "pre_monsoon": {
+              "level_m_bgl": 6.8,
+              "observations": 1,
+              "dates": [
+                "27-05-2023"
+              ],
+              "months": [
+                "May"
+              ]
+            },
+            "monsoon": {
+              "level_m_bgl": 2.8,
+              "observations": 1,
+              "dates": [
+                "28-08-2023"
+              ],
+              "months": [
+                "Aug"
+              ]
+            },
+            "observed_months": [
+              "Jan",
+              "May",
+              "Aug",
+              "Nov"
+            ]
+          },
+          {
+            "year": 2024,
+            "pre_monsoon": {
+              "level_m_bgl": 4.92,
+              "observations": 1,
+              "dates": [
+                "24-05-2024"
+              ],
+              "months": [
+                "May"
+              ]
+            },
+            "monsoon": {
+              "level_m_bgl": 2.05,
+              "observations": 1,
+              "dates": [
+                "29-08-2024"
+              ],
+              "months": [
+                "Aug"
+              ]
+            },
+            "observed_months": [
+              "Jan",
+              "May",
+              "Aug",
+              "Nov"
+            ]
+          },
+          {
+            "year": 2025,
+            "pre_monsoon": {
+              "level_m_bgl": 4.3,
+              "observations": 1,
+              "dates": [
+                "22-05-2025"
+              ],
+              "months": [
+                "May"
+              ]
+            },
+            "monsoon": {
+              "level_m_bgl": 2.45,
+              "observations": 1,
+              "dates": [
+                "21-08-2025"
+              ],
+              "months": [
+                "Aug"
+              ]
+            },
+            "observed_months": [
+              "Jan",
+              "May",
+              "Aug",
+              "Nov"
+            ]
+          }
+        ]
+      },
+      {
+        "well_no": "SKGN-093-OW",
+        "latitude": 22.32,
+        "longitude": 75.87111111,
+        "village": "Bagod",
+        "district": "Khargone",
+        "well_type": "Dug Well",
+        "agency": "SGWO",
+        "depth_of_well_m": 12.4,
+        "latest_date": "2025-11-07",
+        "latest_level_m_bgl": 5.2,
+        "five_year_avg_m_bgl": 6.377619047619047,
+        "change_5yr_m": 2.45,
+        "trend": "Declining",
+        "trend_description": "Water level has become deeper",
+        "n_5yr_observations": 21,
+        "seasonal": [
+          {
+            "year": 2023,
+            "pre_monsoon": {
+              "level_m_bgl": 9.8,
+              "observations": 1,
+              "dates": [
+                "27-05-2023"
+              ],
+              "months": [
+                "May"
+              ]
+            },
+            "monsoon": {
+              "level_m_bgl": 6.3,
+              "observations": 1,
+              "dates": [
+                "28-08-2023"
+              ],
+              "months": [
+                "Aug"
+              ]
+            },
+            "observed_months": [
+              "Jan",
+              "May",
+              "Aug",
+              "Nov"
+            ]
+          },
+          {
+            "year": 2024,
+            "pre_monsoon": {
+              "level_m_bgl": 8.64,
+              "observations": 1,
+              "dates": [
+                "24-05-2024"
+              ],
+              "months": [
+                "May"
+              ]
+            },
+            "monsoon": {
+              "level_m_bgl": 5.0,
+              "observations": 1,
+              "dates": [
+                "29-08-2024"
+              ],
+              "months": [
+                "Aug"
+              ]
+            },
+            "observed_months": [
+              "Jan",
+              "May",
+              "Aug",
+              "Nov"
+            ]
+          },
+          {
+            "year": 2025,
+            "pre_monsoon": {
+              "level_m_bgl": 9.7,
+              "observations": 1,
+              "dates": [
+                "22-05-2025"
+              ],
+              "months": [
+                "May"
+              ]
+            },
+            "monsoon": {
+              "level_m_bgl": 5.8,
+              "observations": 1,
+              "dates": [
+                "21-08-2025"
+              ],
+              "months": [
+                "Aug"
+              ]
+            },
+            "observed_months": [
+              "Jan",
+              "May",
+              "Aug",
+              "Nov"
+            ]
+          }
+        ]
+      }
+    ],
+    "trend_counts": {
+      "Stable": 1,
+      "Declining": 1
+    },
+    "dominant_trend": "Stable",
+    "mean_change_5yr_m": 1.365,
+    "nearest_well_m": 1078.3263552638973,
+    "nearest_well_depth_m_bgl": 3.25,
+    "well_depth_range_m": [
+      12.4,
+      12.4
+    ],
+    "source": "CGWB manual monthly groundwater monitoring"
+  },
+  "rainfall": {
+    "years": [
+      2023,
+      2024,
+      2025
+    ],
+    "monsoon_months": [
+      6,
+      7,
+      8,
+      9
+    ],
+    "thresholds_mm": {
+      "rain_day": 1.0,
+      "heavy_25": 25.0,
+      "heavy_50": 50.0,
+      "heavy_100": 100.0
+    },
+    "thresholds_in": {
+      "rain_day": 0.03937007874015748,
+      "heavy_25": 0.984251968503937,
+      "heavy_50": 1.968503937007874,
+      "heavy_100": 3.937007874015748
+    },
+    "yearly": [
+      {
+        "year": 2023,
+        "chirps": {
+          "annual_mm": 1184.1084838917582,
+          "monsoon_mm": 1067.158254566679,
+          "rain_days": 94.1323283082077,
+          "days_ge_25mm": 12.43718592964824,
+          "days_ge_50mm": 1.3835845896147403,
+          "days_ge_100mm": 0.11725293132328309,
+          "max_1day_mm": 82.71432395436655,
+          "annual_in": 46.61844424770702,
+          "monsoon_in": 42.01410451049918,
+          "max_1day_in": 3.2564694470223055
+        },
+        "imd": {
+          "annual_mm": 1088.29150390625,
+          "monsoon_mm": 1009.57470703125,
+          "rain_days": 47.0,
+          "days_ge_25mm": 13.0,
+          "days_ge_50mm": 5.0,
+          "days_ge_100mm": 3.0,
+          "max_1day_mm": 163.35040283203125,
+          "annual_in": 42.84612220103347,
+          "monsoon_in": 39.74703570989173,
+          "max_1day_in": 6.431118221733514
+        },
+        "diff_percent": {
+          "annual_mm": 8.804348801914587,
+          "monsoon_mm": 5.703743084527039,
+          "rain_days": 100.2815495919313,
+          "days_ge_25mm": -4.329339002705842,
+          "days_ge_50mm": -72.32830820770519,
+          "days_ge_100mm": -96.09156895589057,
+          "max_1day_mm": -49.36386900776766
+        }
+      },
+      {
+        "year": 2024,
+        "chirps": {
+          "annual_mm": 1008.0659058009918,
+          "monsoon_mm": 908.0032460374861,
+          "rain_days": 101.22278056951423,
+          "days_ge_25mm": 7.0,
+          "days_ge_50mm": 1.4154103852596314,
+          "days_ge_100mm": 0.0,
+          "max_1day_mm": 52.324900635123456,
+          "annual_in": 39.687634086653226,
+          "monsoon_in": 35.748159292814414,
+          "max_1day_in": 2.0600354580757267
+        },
+        "imd": {
+          "annual_mm": 1017.05078125,
+          "monsoon_mm": 958.5244140625,
+          "rain_days": 73.0,
+          "days_ge_25mm": 12.0,
+          "days_ge_50mm": 2.0,
+          "days_ge_100mm": 1.0,
+          "max_1day_mm": 130.0550994873047,
+          "annual_in": 40.041369340551185,
+          "monsoon_in": 37.73718165600394,
+          "max_1day_in": 5.1202795073742005
+        },
+        "diff_percent": {
+          "annual_mm": -0.8834244675536648,
+          "monsoon_mm": -5.270723132746386,
+          "rain_days": 38.661343245909904,
+          "days_ge_25mm": -41.666666666666664,
+          "days_ge_50mm": -29.22948073701843,
+          "days_ge_100mm": -100.0,
+          "max_1day_mm": -59.767128823555936
+        }
+      },
+      {
+        "year": 2025,
+        "chirps": {
+          "annual_mm": 1193.4075424429388,
+          "monsoon_mm": 985.1527738380967,
+          "rain_days": 100.98157453936348,
+          "days_ge_25mm": 12.638190954773869,
+          "days_ge_50mm": 2.0,
+          "days_ge_100mm": 0.0,
+          "max_1day_mm": 70.41489751614519,
+          "annual_in": 46.98454891507634,
+          "monsoon_in": 38.78554227709042,
+          "max_1day_in": 2.7722400596907555
+        },
+        "imd": {
+          "annual_mm": 1100.173095703125,
+          "monsoon_mm": 961.0792236328125,
+          "rain_days": 77.0,
+          "days_ge_25mm": 11.0,
+          "days_ge_50mm": 4.0,
+          "days_ge_100mm": 0.0,
+          "max_1day_mm": 67.16412353515625,
+          "annual_in": 43.313901405634844,
+          "monsoon_in": 37.83776470995325,
+          "max_1day_in": 2.6442568320927657
+        },
+        "diff_percent": {
+          "annual_mm": 8.474525245523054,
+          "monsoon_mm": 2.5048455541768786,
+          "rain_days": 31.14490199917335,
+          "days_ge_25mm": 14.892645043398806,
+          "days_ge_50mm": -50.0,
+          "days_ge_100mm": null,
+          "max_1day_mm": 4.840045265069766
+        }
+      }
+    ],
+    "means": {
+      "chirps": {
+        "annual_mm": 1128.5273107118962,
+        "monsoon_mm": 986.7714248140874,
+        "rain_days": 98.7788944723618,
+        "days_ge_25mm": 10.691792294807371,
+        "days_ge_50mm": 1.5996649916247907,
+        "days_ge_100mm": 0.03908431044109436,
+        "max_1day_mm": 68.48470736854506,
+        "annual_in": 44.43020908314552,
+        "monsoon_in": 38.84926869346801,
+        "max_1day_in": 2.6962483215962623
+      },
+      "imd": {
+        "annual_mm": 1068.505126953125,
+        "monsoon_mm": 976.3927815755209,
+        "rain_days": 65.66666666666667,
+        "days_ge_25mm": 12.0,
+        "days_ge_50mm": 3.6666666666666665,
+        "days_ge_100mm": 1.3333333333333333,
+        "max_1day_mm": 120.18987528483073,
+        "annual_in": 42.067130982406496,
+        "monsoon_in": 38.440660691949645,
+        "max_1day_in": 4.731884853733494
+      }
+    },
+    "wettest_day_mm": {
+      "chirps": 82.71432395436655,
+      "imd": 163.35040283203125
+    },
+    "wettest_day_in": {
+      "chirps": 3.2564694470223055,
+      "imd": 6.431118221733514
+    },
+    "imd_grid": [
+      {
+        "year": 2023,
+        "latitude": 22.25,
+        "longitude": 76.0
+      },
+      {
+        "year": 2024,
+        "latitude": 22.25,
+        "longitude": 76.0
+      },
+      {
+        "year": 2025,
+        "latitude": 22.25,
+        "longitude": 76.0
+      }
+    ],
+    "notes": [
+      "CHIRPS v3 daily (UCSB-CHC/CHIRPS/V3/DAILY_RNL), AOI mean over 5.0 km, native ~5.5 km grid.",
+      "IMD 0.25\u00b0 gridded daily rainfall at the grid cell nearest the site.",
+      "diff_percent = 100 x (CHIRPS - IMD) / |IMD| \u2014 a diagnostic, not a claim that either dataset is ground truth."
+    ],
+    "source": "CHIRPS v3 daily + IMD 0.25\u00b0 gridded daily"
+  },
+  "air_temperature": {
+    "annual_mean_c": 26.092408867876767,
+    "coldest_month": "2025-12",
+    "coldest_month_c": 18.936411883842535,
+    "warmest_month": "2024-05",
+    "warmest_month_c": 34.805156027850856,
+    "months": 36,
+    "period": "2023\u20132025",
+    "source": "ERA5-Land monthly aggregated, 2 m air temperature"
+  },
+  "land_surface_temperature": {
+    "mean_c": 38.75245254817449,
+    "min_c": 27.931381880000004,
+    "max_c": 48.504444260000014,
+    "scenes": 30,
+    "source": "Landsat 8 C2 L2 ST_B10 (median composite)"
+  },
+  "terrain": {
+    "elevation_mean_m": 258.0251803859768,
+    "elevation_min_m": 216,
+    "elevation_max_m": 485,
+    "slope_mean_deg": 2.5977207609755872,
+    "slope_median_deg": 1.8543341159820543,
+    "slope_min_deg": 0,
+    "slope_max_deg": 33.05967712402344,
+    "slope_range_90pct_deg": [
+      0,
+      8.124363960979654
+    ],
+    "slope_median_deg_100m": 1.3656582111885767,
+    "slope_class_share": [
+      {
+        "class": "lt_3",
+        "label": "< 3\u00b0 (nearly level)",
+        "share_percent": 77.65603459294434
+      },
+      {
+        "class": "3_8",
+        "label": "3\u20138\u00b0 (gentle)",
+        "share_percent": 17.251251983242945
+      },
+      {
+        "class": "8_15",
+        "label": "8\u201315\u00b0 (moderate)",
+        "share_percent": 3.8525495385627266
+      },
+      {
+        "class": "ge_15",
+        "label": ">= 15\u00b0 (steep)",
+        "share_percent": 1.2401638852500072
+      }
+    ],
+    "source": "SRTM 1 arc-second (USGS/SRTMGL1_003)"
+  },
+  "roads": {
+    "features": 0,
+    "nearest_major_road_m": null,
+    "nearest_major_road_class": null,
+    "nearest_major_road_name": null,
+    "nearest_major_road_beyond_aoi": false,
+    "source": "OpenStreetMap via OSMnx"
+  },
+  "railways": {
+    "features": 0,
+    "source": "OpenStreetMap via OSMnx"
+  },
+  "water_resources": {
+    "features": 0,
+    "source": "OpenStreetMap via OSMnx",
+    "worldcover_permanent_water_percent": 2.0281621342104486
+  },
+  "hydrology": {
+    "river_floodplain": {
+      "inside_supplied_river_polygon": false,
+      "nearest_river_m": null,
+      "nearest_river_name": null,
+      "features_in_query_window": 0,
+      "rivers_in_query_window": [],
+      "source": "river_polygon.GeoJSON; polygon coverage used as floodplain proxy"
+    },
+    "sac_water_bodies": {
+      "waterbodies_in_aoi": 28,
+      "nearest_water_body_m": 1470.110295580119,
+      "nearest_water_body_name": null,
+      "nearest_water_body_type": "Tank/Pond",
+      "water_bodies": [
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 2.3101617530825296,
+          "distance_m": 1470.110295580119
+        },
+        {
+          "name": "Sasaliya Talab",
+          "type": "Reservoir/Barrage",
+          "area_ha": 94.92528095016462,
+          "distance_m": 2207.4564689119675
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.2535923405045356,
+          "distance_m": 2280.5613176276233
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.2532122619708087,
+          "distance_m": 2292.939669500898
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.3056148867823237,
+          "distance_m": 2356.6532784229257
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.6293996202758392,
+          "distance_m": 2433.3629021236543
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 16.608249924954173,
+          "distance_m": 2450.318846974705
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.31387200524234676,
+          "distance_m": 2529.941511266413
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 1.2810110884333854,
+          "distance_m": 2838.897647081089
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.21458255246575578,
+          "distance_m": 2866.475486686745
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.44364672299044466,
+          "distance_m": 2932.4562962101204
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.2510468710691656,
+          "distance_m": 2966.843575544876
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 1.7380276589586883,
+          "distance_m": 2984.190289949554
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.8865926650195539,
+          "distance_m": 3467.296321585082
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 29.078872337541597,
+          "distance_m": 3480.179082960356
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.1676355697082502,
+          "distance_m": 3674.4649343142014
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.33651995921463174,
+          "distance_m": 3782.3363063813263
+        },
+        {
+          "name": null,
+          "type": "Reservoir/Barrage",
+          "area_ha": 88.35450898064728,
+          "distance_m": 3788.919517201837
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.22279281065429185,
+          "distance_m": 3816.968922343245
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 11.214805317065826,
+          "distance_m": 3946.222787253782
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.33246165676315576,
+          "distance_m": 3965.7019206249934
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.12519257039749374,
+          "distance_m": 4080.281401629002
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.1847261525978121,
+          "distance_m": 4086.9226383427936
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 3.9397195839223045,
+          "distance_m": 4228.7562325722965
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 1.4454159340756796,
+          "distance_m": 4376.025159173638
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.339754638282908,
+          "distance_m": 4401.959202999355
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.17588278539862826,
+          "distance_m": 4468.315591399724
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.16091233902647864,
+          "distance_m": 4493.430903583355
+        }
+      ],
+      "source": "SAC water bodies (wb_sac_mp.GeoJSON)"
+    }
+  },
+  "settlements": {
+    "settlement_count_10km": 0,
+    "distance_to_nearest_settlement_km": null,
+    "nearest_settlement_name": null,
+    "nearest_settlement_type": null,
+    "search_radius_km": 10,
+    "settlements": [],
+    "source": "OpenStreetMap via OSMnx"
+  },
+  "nearby_places": {
+    "search_radius_km": 10,
+    "serpapi_enabled": true,
+    "categories": [
+      {
+        "category": "tourist_attractions",
+        "count": 0,
+        "nearest": null,
+        "places": []
+      },
+      {
+        "category": "restaurants",
+        "count": 2,
+        "nearest": {
+          "name": "Shree satguru retreat",
+          "type": "Restaurant",
+          "rating": null,
+          "reviews": null,
+          "address": "9X8G+XP3, Kurawar, Mukhtyara, Madhya Pradesh 451115, India",
+          "latitude": 22.3673765,
+          "longitude": 75.9768101,
+          "distance_km": 7.77,
+          "place_id": "ChIJhSBiRwCTYjkRdpK6V6UKkEg",
+          "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Shree+satguru+retreat&query_place_id=ChIJhSBiRwCTYjkRdpK6V6UKkEg"
+        },
+        "places": [
+          {
+            "name": "Shree satguru retreat",
+            "type": "Restaurant",
+            "rating": null,
+            "reviews": null,
+            "address": "9X8G+XP3, Kurawar, Mukhtyara, Madhya Pradesh 451115, India",
+            "latitude": 22.3673765,
+            "longitude": 75.9768101,
+            "distance_km": 7.77,
+            "place_id": "ChIJhSBiRwCTYjkRdpK6V6UKkEg",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Shree+satguru+retreat&query_place_id=ChIJhSBiRwCTYjkRdpK6V6UKkEg"
+          },
+          {
+            "name": "New Saini Rajasthani Restaurant",
+            "type": "Family restaurant",
+            "rating": 4,
+            "reviews": 27,
+            "address": "Indore - Icchapur Hwy, Khandwa, Mukhtyara, Madhya Pradesh 451115, India",
+            "latitude": 22.3683928,
+            "longitude": 75.97647049999999,
+            "distance_km": 7.787,
+            "place_id": "ChIJ6xrPvLGTYjkRsUpNyzfZZ60",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=New+Saini+Rajasthani+Restaurant&query_place_id=ChIJ6xrPvLGTYjkRsUpNyzfZZ60"
+          }
+        ]
+      },
+      {
+        "category": "hospitals",
+        "count": 1,
+        "nearest": {
+          "name": "Government Hospital",
+          "type": "Hospital",
+          "rating": 3.3,
+          "reviews": 3,
+          "address": "8VCG+XF2, Ramthan, Madhya Pradesh 451220, India",
+          "latitude": 22.3223979,
+          "longitude": 75.8761531,
+          "distance_km": 3.73,
+          "place_id": "ChIJS_DHU6SNYjkRBGEZzBlcmf0",
+          "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Government+Hospital&query_place_id=ChIJS_DHU6SNYjkRBGEZzBlcmf0"
+        },
+        "places": [
+          {
+            "name": "Government Hospital",
+            "type": "Hospital",
+            "rating": 3.3,
+            "reviews": 3,
+            "address": "8VCG+XF2, Ramthan, Madhya Pradesh 451220, India",
+            "latitude": 22.3223979,
+            "longitude": 75.8761531,
+            "distance_km": 3.73,
+            "place_id": "ChIJS_DHU6SNYjkRBGEZzBlcmf0",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Government+Hospital&query_place_id=ChIJS_DHU6SNYjkRBGEZzBlcmf0"
+          }
+        ]
+      },
+      {
+        "category": "schools",
+        "count": 3,
+        "nearest": {
+          "name": "Primary school piplud",
+          "type": "Elementary school",
+          "rating": null,
+          "reviews": null,
+          "address": "7VXW+6Q, Piplud, Temla, Madhya Pradesh 451220, India",
+          "latitude": 22.2979512,
+          "longitude": 75.8969266,
+          "distance_km": 4.606,
+          "place_id": "ChIJYe5pdwCNYjkRktmuAOqB1OU",
+          "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Primary+school+piplud&query_place_id=ChIJYe5pdwCNYjkRktmuAOqB1OU"
+        },
+        "places": [
+          {
+            "name": "Primary school piplud",
+            "type": "Elementary school",
+            "rating": null,
+            "reviews": null,
+            "address": "7VXW+6Q, Piplud, Temla, Madhya Pradesh 451220, India",
+            "latitude": 22.2979512,
+            "longitude": 75.8969266,
+            "distance_km": 4.606,
+            "place_id": "ChIJYe5pdwCNYjkRktmuAOqB1OU",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Primary+school+piplud&query_place_id=ChIJYe5pdwCNYjkRktmuAOqB1OU"
+          },
+          {
+            "name": "Government primary school bhogasa, Khargone Madhya Pradesh",
+            "type": "Elementary school",
+            "rating": null,
+            "reviews": null,
+            "address": "7VPX+5PH, hanuman mandir ke pas, road, Piplud, Bhogasha, Madhya Pradesh 451220, India",
+            "latitude": 22.285449399999997,
+            "longitude": 75.8993533,
+            "distance_km": 5.918,
+            "place_id": "ChIJTf_oLCKNYjkRcm6wJGBzeSQ",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Government+primary+school+bhogasa%2C+Khargone+Madhya+Pradesh&query_place_id=ChIJTf_oLCKNYjkRcm6wJGBzeSQ"
+          },
+          {
+            "name": "Naya",
+            "type": "Government school",
+            "rating": null,
+            "reviews": null,
+            "address": "7XXQ+J27, Road, Bagod, Naya, Madhya Pradesh 451115, India",
+            "latitude": 22.2990298,
+            "longitude": 75.9875591,
+            "distance_km": 9.24,
+            "place_id": "ChIJ53Z_n9iTYjkRd0zVRUXx_4w",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Naya&query_place_id=ChIJ53Z_n9iTYjkRd0zVRUXx_4w"
+          }
+        ]
+      },
+      {
+        "category": "markets",
+        "count": 2,
+        "nearest": {
+          "name": "Roshani Barton bhandar",
+          "type": "Market",
+          "rating": 5,
+          "reviews": 2,
+          "address": "Ramthan, Madhya Pradesh 451220, India",
+          "latitude": 22.3213322,
+          "longitude": 75.8747574,
+          "distance_km": 3.913,
+          "place_id": "ChIJjTjLZLONYjkRK0aoFZ2SizU",
+          "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Roshani+Barton+bhandar&query_place_id=ChIJjTjLZLONYjkRK0aoFZ2SizU"
+        },
+        "places": [
+          {
+            "name": "Roshani Barton bhandar",
+            "type": "Market",
+            "rating": 5,
+            "reviews": 2,
+            "address": "Ramthan, Madhya Pradesh 451220, India",
+            "latitude": 22.3213322,
+            "longitude": 75.8747574,
+            "distance_km": 3.913,
+            "place_id": "ChIJjTjLZLONYjkRK0aoFZ2SizU",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Roshani+Barton+bhandar&query_place_id=ChIJjTjLZLONYjkRK0aoFZ2SizU"
+          },
+          {
+            "name": "Dangi market",
+            "type": "Computer store",
+            "rating": 5,
+            "reviews": 1,
+            "address": "CX3F+5G3, Balwara, Madhya Pradesh 451115, India",
+            "latitude": 22.4028864,
+            "longitude": 75.9737923,
+            "distance_km": 9.871,
+            "place_id": "ChIJGaf7fgDtYjkR8zTgAKzsZzk",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Dangi+market&query_place_id=ChIJGaf7fgDtYjkR8zTgAKzsZzk"
+          }
+        ]
+      },
+      {
+        "category": "hotels",
+        "count": 0,
+        "nearest": null,
+        "places": []
+      },
+      {
+        "category": "industrial_businesses",
+        "count": 1,
+        "nearest": {
+          "name": "SHREE AGRAWAL INDUSTRIES",
+          "type": "Manufacturer",
+          "rating": 4.7,
+          "reviews": 19,
+          "address": "Shree Agrawal Industries, 535/8, MAIN ROAD, Bagod, Ramthan, Madhya Pradesh 451220, India",
+          "latitude": 22.324943599999997,
+          "longitude": 75.8852861,
+          "distance_km": 2.773,
+          "place_id": "ChIJVe00YJyNYjkRm_8wZWyCyMI",
+          "google_maps_url": "https://www.google.com/maps/search/?api=1&query=SHREE+AGRAWAL+INDUSTRIES&query_place_id=ChIJVe00YJyNYjkRm_8wZWyCyMI"
+        },
+        "places": [
+          {
+            "name": "SHREE AGRAWAL INDUSTRIES",
+            "type": "Manufacturer",
+            "rating": 4.7,
+            "reviews": 19,
+            "address": "Shree Agrawal Industries, 535/8, MAIN ROAD, Bagod, Ramthan, Madhya Pradesh 451220, India",
+            "latitude": 22.324943599999997,
+            "longitude": 75.8852861,
+            "distance_km": 2.773,
+            "place_id": "ChIJVe00YJyNYjkRm_8wZWyCyMI",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=SHREE+AGRAWAL+INDUSTRIES&query_place_id=ChIJVe00YJyNYjkRm_8wZWyCyMI"
+          }
+        ]
+      },
+      {
+        "category": "warehouses_logistics",
+        "count": 0,
+        "nearest": null,
+        "places": []
+      }
+    ],
+    "source": "SerpApi / Google Maps local results"
+  },
+  "ndvi": {
+    "mean": 0.30855607707223204,
+    "min": -0.35687732696533203,
+    "max": 0.8423236608505249,
+    "share_ge_030_percent": 48.16707583086548,
+    "share_ge_050_percent": 7.156896034088367,
+    "period": "2025-09-14 \u2192 2026-09-14",
+    "source": "Sentinel-2 SR Harmonized (median NDVI, whole year)",
+    "peak": {
+      "mean": 0.5178611874314785,
+      "period": "Dec-Feb",
+      "scene_count": 17,
+      "source": "Sentinel-2 SR Harmonized (median NDVI, peak 3-month period found within the year; mean from the 30 m scan, no separate min/max/share breakdown)"
+    }
+  },
+  "buying_purpose": {
+    "key": "hotel",
+    "label": "hotel",
+    "is_other": false,
+    "free_text": null
+  },
+  "buying_preferences": null
+}

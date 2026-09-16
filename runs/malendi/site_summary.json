@@ -1,0 +1,2115 @@
+{
+  "schema_version": "1.0",
+  "run_success": true,
+  "generated_at": "2026-09-15 03:33",
+  "site": {
+    "latitude": 22.495707,
+    "longitude": 75.788402,
+    "aoi_radius_km": 5.0,
+    "aoi_area_km2": 66.57440802939475,
+    "metric_crs": "EPSG:32643"
+  },
+  "administration": {
+    "village": "Kekariya Dabri",
+    "tehsil": "Mhow",
+    "block": "Mhow",
+    "district": "Indore",
+    "state": "MP",
+    "boundary_village_code": "476481",
+    "point_inside_village_polygon": true,
+    "source": "Survey of India village boundaries (vb_soi_mp)",
+    "govt_guideline_rates": {
+      "row_kind": "rural_village",
+      "village": "Kekariya Dabri",
+      "vlcode": 476481,
+      "tehsil": "MHOW",
+      "frontage_type": "plain",
+      "match_score": 96.2962962962963,
+      "plot_residential_sqm": 1500.0,
+      "plot_commercial_sqm": 2000.0,
+      "plot_industrial_sqm": 1500.0,
+      "agri_land_irrigated_per_ha": 1200000.0,
+      "agri_land_unirrigated_per_ha": 1200000.0,
+      "source": "MP Govt district guideline rates, FY2026-27"
+    },
+    "land_use": {
+      "population": 31.0,
+      "area_ha": 11.0,
+      "forest_area_ha": 0.0,
+      "non_agricultural_area_ha": 4.0,
+      "barren_land_ha": 0.0,
+      "pastures_grazing_ha": 1.0,
+      "miscellaneous_land_ha": 0.0,
+      "culturable_waste_ha": 0.0,
+      "other_fallows_ha": 0.0,
+      "current_fallows_ha": 0.0,
+      "net_area_sown_ha": 6.0,
+      "unirrigated_land_ha": 1.0,
+      "irrigated_land_ha": 5.0,
+      "forest_share_percent": 0.0,
+      "barren_share_percent": 0.0,
+      "net_sown_share_percent": 54.54545454545454,
+      "source": "Survey of India village boundaries (vb_soi_mp)"
+    },
+    "census": {
+      "population_total": 31.0,
+      "households": 6.0,
+      "cultivation_share": 21.428571428571427,
+      "agricultural_labour_share": 78.57142857142857,
+      "household_industry_share": 0.0,
+      "other_worker_share": 0.0,
+      "literacy_percent": 65.51724137931035,
+      "sc_percent": 0.0,
+      "st_percent": 100.0
+    },
+    "census_join": {
+      "method": "normalized village name",
+      "boundary_villages": 45,
+      "matched_villages": 44,
+      "unmatched_villages": 1,
+      "source": "census_derieved.csv"
+    },
+    "aoi_overlap": {
+      "village_count": 18,
+      "villages": [
+        "Ashapur",
+        "Badgonda",
+        "Badiya",
+        "Badoda Sindh",
+        "Bhagora",
+        "Borkhedi",
+        "Gangaliya Khedi",
+        "Gawali Palasya",
+        "Gunjara",
+        "Guwadi",
+        "Jhikadiya Khedi",
+        "Kekariya Dabri",
+        "Kodriya",
+        "Malendi",
+        "Mhow",
+        "Neu Guradiya",
+        "Patal Pani",
+        "Pipalya"
+      ],
+      "tehsil_count": 1,
+      "tehsils": [
+        "Mhow"
+      ],
+      "district_count": 1,
+      "districts": [
+        "Indore"
+      ]
+    }
+  },
+  "land_cover": {
+    "classes": [
+      {
+        "name": "Cropland",
+        "area_km2": 30.079459470463625,
+        "percentage": 45.15314274466973
+      },
+      {
+        "name": "Grassland",
+        "area_km2": 20.45770829697445,
+        "percentage": 30.709655001252713
+      },
+      {
+        "name": "Tree cover",
+        "area_km2": 13.53573403755021,
+        "percentage": 20.31888012321283
+      },
+      {
+        "name": "Built-up",
+        "area_km2": 1.6666856736920528,
+        "percentage": 2.5019098567449536
+      },
+      {
+        "name": "Shrubland",
+        "area_km2": 0.49632543172427906,
+        "percentage": 0.7450483971782216
+      },
+      {
+        "name": "Bare / sparse vegetation",
+        "area_km2": 0.23028166794304936,
+        "percentage": 0.3456824426756521
+      },
+      {
+        "name": "Permanent water",
+        "area_km2": 0.1503411532974243,
+        "percentage": 0.22568143426588785
+      }
+    ],
+    "aoi_area_km2": 66.57440802939475,
+    "dominant_class": "Cropland",
+    "source": "ESA WorldCover v200 (10 m)"
+  },
+  "groundwater": {
+    "wells": 2,
+    "latest_observation": "2025-11-05",
+    "latest_mean_depth_m_bgl": 3.1500000000000004,
+    "latest_min_depth_m_bgl": 2.1,
+    "latest_max_depth_m_bgl": 4.2,
+    "five_year_mean_m_bgl": 5.452499999999999,
+    "five_year_mean_m_bgl_pooled": 5.4525,
+    "five_year_observation_count": 40,
+    "seasonal_windows": {
+      "pre_monsoon_months": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "monsoon_months": [
+        7,
+        8,
+        9
+      ]
+    },
+    "seasonal": [
+      {
+        "year": 2023,
+        "pre_monsoon": {
+          "level_m_bgl": 6.05,
+          "observations": 2,
+          "dates": [
+            "25-05-2023"
+          ],
+          "months": [
+            "May"
+          ]
+        },
+        "monsoon": {
+          "level_m_bgl": 3.3,
+          "observations": 2,
+          "dates": [
+            "24-08-2023"
+          ],
+          "months": [
+            "Aug"
+          ]
+        },
+        "observed_months": [
+          "Jan",
+          "May",
+          "Aug",
+          "Nov"
+        ],
+        "fluctuation_m": 2.75
+      },
+      {
+        "year": 2024,
+        "pre_monsoon": {
+          "level_m_bgl": 9.25,
+          "observations": 2,
+          "dates": [
+            "23-05-2024"
+          ],
+          "months": [
+            "May"
+          ]
+        },
+        "monsoon": {
+          "level_m_bgl": 1.4,
+          "observations": 2,
+          "dates": [
+            "24-08-2024"
+          ],
+          "months": [
+            "Aug"
+          ]
+        },
+        "observed_months": [
+          "Jan",
+          "May",
+          "Aug",
+          "Nov"
+        ],
+        "fluctuation_m": 7.85
+      },
+      {
+        "year": 2025,
+        "pre_monsoon": {
+          "level_m_bgl": 8.95,
+          "observations": 2,
+          "dates": [
+            "16-05-2025"
+          ],
+          "months": [
+            "May"
+          ]
+        },
+        "monsoon": {
+          "level_m_bgl": 2.05,
+          "observations": 2,
+          "dates": [
+            "29-08-2025"
+          ],
+          "months": [
+            "Aug"
+          ]
+        },
+        "observed_months": [
+          "Jan",
+          "May",
+          "Aug",
+          "Nov"
+        ],
+        "fluctuation_m": 6.8999999999999995
+      }
+    ],
+    "wells_detail": [
+      {
+        "well_no": "SIND075-OW",
+        "latitude": 22.50027778,
+        "longitude": 75.80583333,
+        "village": "Patalpani",
+        "district": "Indore",
+        "well_type": "Dug Well",
+        "agency": "SGWO",
+        "depth_of_well_m": 11.7,
+        "latest_date": "2025-11-05",
+        "latest_level_m_bgl": 4.2,
+        "five_year_avg_m_bgl": 5.284999999999999,
+        "change_5yr_m": -4.3999999999999995,
+        "trend": "Improving",
+        "trend_description": "Water level has become shallower",
+        "n_5yr_observations": 20,
+        "seasonal": [
+          {
+            "year": 2023,
+            "pre_monsoon": {
+              "level_m_bgl": 5.0,
+              "observations": 1,
+              "dates": [
+                "25-05-2023"
+              ],
+              "months": [
+                "May"
+              ]
+            },
+            "monsoon": {
+              "level_m_bgl": 3.5,
+              "observations": 1,
+              "dates": [
+                "24-08-2023"
+              ],
+              "months": [
+                "Aug"
+              ]
+            },
+            "observed_months": [
+              "Jan",
+              "May",
+              "Aug",
+              "Nov"
+            ]
+          },
+          {
+            "year": 2024,
+            "pre_monsoon": {
+              "level_m_bgl": 8.6,
+              "observations": 1,
+              "dates": [
+                "23-05-2024"
+              ],
+              "months": [
+                "May"
+              ]
+            },
+            "monsoon": {
+              "level_m_bgl": 2.0,
+              "observations": 1,
+              "dates": [
+                "24-08-2024"
+              ],
+              "months": [
+                "Aug"
+              ]
+            },
+            "observed_months": [
+              "Jan",
+              "May",
+              "Aug",
+              "Nov"
+            ]
+          },
+          {
+            "year": 2025,
+            "pre_monsoon": {
+              "level_m_bgl": 9.8,
+              "observations": 1,
+              "dates": [
+                "16-05-2025"
+              ],
+              "months": [
+                "May"
+              ]
+            },
+            "monsoon": {
+              "level_m_bgl": 2.5,
+              "observations": 1,
+              "dates": [
+                "29-08-2025"
+              ],
+              "months": [
+                "Aug"
+              ]
+            },
+            "observed_months": [
+              "Jan",
+              "May",
+              "Aug",
+              "Nov"
+            ]
+          }
+        ]
+      },
+      {
+        "well_no": "SIND147-OW",
+        "latitude": 22.52166667,
+        "longitude": 75.76944444,
+        "village": "Kodriya",
+        "district": "Indore",
+        "well_type": "Dug Well",
+        "agency": "SGWO",
+        "depth_of_well_m": 13.9,
+        "latest_date": "2025-11-05",
+        "latest_level_m_bgl": 2.1,
+        "five_year_avg_m_bgl": 5.619999999999999,
+        "change_5yr_m": -5.699999999999999,
+        "trend": "Improving",
+        "trend_description": "Water level has become shallower",
+        "n_5yr_observations": 20,
+        "seasonal": [
+          {
+            "year": 2023,
+            "pre_monsoon": {
+              "level_m_bgl": 7.1,
+              "observations": 1,
+              "dates": [
+                "25-05-2023"
+              ],
+              "months": [
+                "May"
+              ]
+            },
+            "monsoon": {
+              "level_m_bgl": 3.1,
+              "observations": 1,
+              "dates": [
+                "24-08-2023"
+              ],
+              "months": [
+                "Aug"
+              ]
+            },
+            "observed_months": [
+              "Jan",
+              "May",
+              "Aug",
+              "Nov"
+            ]
+          },
+          {
+            "year": 2024,
+            "pre_monsoon": {
+              "level_m_bgl": 9.9,
+              "observations": 1,
+              "dates": [
+                "23-05-2024"
+              ],
+              "months": [
+                "May"
+              ]
+            },
+            "monsoon": {
+              "level_m_bgl": 0.8,
+              "observations": 1,
+              "dates": [
+                "24-08-2024"
+              ],
+              "months": [
+                "Aug"
+              ]
+            },
+            "observed_months": [
+              "Jan",
+              "May",
+              "Aug",
+              "Nov"
+            ]
+          },
+          {
+            "year": 2025,
+            "pre_monsoon": {
+              "level_m_bgl": 8.1,
+              "observations": 1,
+              "dates": [
+                "16-05-2025"
+              ],
+              "months": [
+                "May"
+              ]
+            },
+            "monsoon": {
+              "level_m_bgl": 1.6,
+              "observations": 1,
+              "dates": [
+                "29-08-2025"
+              ],
+              "months": [
+                "Aug"
+              ]
+            },
+            "observed_months": [
+              "Jan",
+              "May",
+              "Aug",
+              "Nov"
+            ]
+          }
+        ]
+      }
+    ],
+    "trend_counts": {
+      "Improving": 2
+    },
+    "dominant_trend": "Improving",
+    "mean_change_5yr_m": -5.049999999999999,
+    "nearest_well_m": 1863.1026078635955,
+    "nearest_well_depth_m_bgl": 4.2,
+    "well_depth_range_m": [
+      11.7,
+      13.9
+    ],
+    "source": "CGWB manual monthly groundwater monitoring"
+  },
+  "rainfall": {
+    "years": [
+      2023,
+      2024,
+      2025
+    ],
+    "monsoon_months": [
+      6,
+      7,
+      8,
+      9
+    ],
+    "thresholds_mm": {
+      "rain_day": 1.0,
+      "heavy_25": 25.0,
+      "heavy_50": 50.0,
+      "heavy_100": 100.0
+    },
+    "thresholds_in": {
+      "rain_day": 0.03937007874015748,
+      "heavy_25": 0.984251968503937,
+      "heavy_50": 1.968503937007874,
+      "heavy_100": 3.937007874015748
+    },
+    "yearly": [
+      {
+        "year": 2023,
+        "chirps": {
+          "annual_mm": 1437.2537094490222,
+          "monsoon_mm": 1323.0750055887263,
+          "rain_days": 90.106239460371,
+          "days_ge_25mm": 16.24451939291737,
+          "days_ge_50mm": 5.3322091062394605,
+          "days_ge_100mm": 1.0,
+          "max_1day_mm": 130.90383085151143,
+          "annual_in": 56.584791710591425,
+          "monsoon_in": 52.089567149162455,
+          "max_1day_in": 5.153694128012261
+        },
+        "imd": {
+          "annual_mm": 1136.5887451171875,
+          "monsoon_mm": 1048.93359375,
+          "rain_days": 89.0,
+          "days_ge_25mm": 10.0,
+          "days_ge_50mm": 4.0,
+          "days_ge_100mm": 2.0,
+          "max_1day_mm": 164.51991271972656,
+          "annual_in": 44.747588390440455,
+          "monsoon_in": 41.29659817913386,
+          "max_1day_in": 6.477161918099472
+        },
+        "diff_percent": {
+          "annual_mm": 26.453276580777217,
+          "monsoon_mm": 26.135249502178155,
+          "rain_days": 1.2429656858101128,
+          "days_ge_25mm": 62.44519392917368,
+          "days_ge_50mm": 33.30522765598651,
+          "days_ge_100mm": -50.0,
+          "max_1day_mm": -20.432834732585192
+        }
+      },
+      {
+        "year": 2024,
+        "chirps": {
+          "annual_mm": 1175.1941045519836,
+          "monsoon_mm": 1050.1998285639775,
+          "rain_days": 108.94266441821247,
+          "days_ge_25mm": 11.219224283305227,
+          "days_ge_50mm": 3.141652613827993,
+          "days_ge_100mm": 0.0,
+          "max_1day_mm": 62.32556425741108,
+          "annual_in": 46.26748443118046,
+          "monsoon_in": 41.34644994346368,
+          "max_1day_in": 2.453762372339019
+        },
+        "imd": {
+          "annual_mm": 960.6012573242188,
+          "monsoon_mm": 875.8922119140625,
+          "rain_days": 97.0,
+          "days_ge_25mm": 8.0,
+          "days_ge_50mm": 2.0,
+          "days_ge_100mm": 0.0,
+          "max_1day_mm": 65.76191711425781,
+          "annual_in": 37.81894713874877,
+          "monsoon_in": 34.483945350947344,
+          "max_1day_in": 2.58905185489204
+        },
+        "diff_percent": {
+          "annual_mm": 22.339430184124385,
+          "monsoon_mm": 19.900578436358675,
+          "rain_days": 12.312025173414922,
+          "days_ge_25mm": 40.240303541315335,
+          "days_ge_50mm": 57.08263069139965,
+          "days_ge_100mm": null,
+          "max_1day_mm": -5.2254450716153125
+        }
+      },
+      {
+        "year": 2025,
+        "chirps": {
+          "annual_mm": 1390.7800353278349,
+          "monsoon_mm": 1114.5909716995054,
+          "rain_days": 112.47723440134907,
+          "days_ge_25mm": 18.424957841483977,
+          "days_ge_50mm": 1.9797639123102868,
+          "days_ge_100mm": 0.0,
+          "max_1day_mm": 67.21374457682566,
+          "annual_in": 54.75511950109586,
+          "monsoon_in": 43.88153431887817,
+          "max_1day_in": 2.6462104164104594
+        },
+        "imd": {
+          "annual_mm": 1101.76806640625,
+          "monsoon_mm": 929.82275390625,
+          "rain_days": 97.0,
+          "days_ge_25mm": 11.0,
+          "days_ge_50mm": 3.0,
+          "days_ge_100mm": 0.0,
+          "max_1day_mm": 65.31114959716797,
+          "annual_in": 43.37669552780512,
+          "monsoon_in": 36.60719503567913,
+          "max_1day_in": 2.5713051022507076
+        },
+        "diff_percent": {
+          "annual_mm": 26.231652353501662,
+          "monsoon_mm": 19.87133752288071,
+          "rain_days": 15.955911753968108,
+          "days_ge_25mm": 67.49961674076343,
+          "days_ge_50mm": -34.007869589657105,
+          "days_ge_100mm": null,
+          "max_1day_mm": 2.9131243155153297
+        }
+      }
+    ],
+    "means": {
+      "chirps": {
+        "annual_mm": 1334.4092831096136,
+        "monsoon_mm": 1162.6219352840699,
+        "rain_days": 103.84204609331084,
+        "days_ge_25mm": 15.296233839235525,
+        "days_ge_50mm": 3.4845418774592467,
+        "days_ge_100mm": 0.3333333333333333,
+        "max_1day_mm": 86.81437989524939,
+        "annual_in": 52.53579854762258,
+        "monsoon_in": 45.77251713716811,
+        "max_1day_in": 3.417888972253913
+      },
+      "imd": {
+        "annual_mm": 1066.319356282552,
+        "monsoon_mm": 951.5495198567709,
+        "rain_days": 94.33333333333333,
+        "days_ge_25mm": 9.666666666666666,
+        "days_ge_50mm": 3.0,
+        "days_ge_100mm": 0.6666666666666666,
+        "max_1day_mm": 98.53099314371745,
+        "annual_in": 41.981077018998114,
+        "monsoon_in": 37.46257952192011,
+        "max_1day_in": 3.879172958414073
+      }
+    },
+    "wettest_day_mm": {
+      "chirps": 130.90383085151143,
+      "imd": 164.51991271972656
+    },
+    "wettest_day_in": {
+      "chirps": 5.153694128012261,
+      "imd": 6.477161918099472
+    },
+    "imd_grid": [
+      {
+        "year": 2023,
+        "latitude": 22.5,
+        "longitude": 75.75
+      },
+      {
+        "year": 2024,
+        "latitude": 22.5,
+        "longitude": 75.75
+      },
+      {
+        "year": 2025,
+        "latitude": 22.5,
+        "longitude": 75.75
+      }
+    ],
+    "notes": [
+      "CHIRPS v3 daily (UCSB-CHC/CHIRPS/V3/DAILY_RNL), AOI mean over 5.0 km, native ~5.5 km grid.",
+      "IMD 0.25\u00b0 gridded daily rainfall at the grid cell nearest the site.",
+      "diff_percent = 100 x (CHIRPS - IMD) / |IMD| \u2014 a diagnostic, not a claim that either dataset is ground truth."
+    ],
+    "source": "CHIRPS v3 daily + IMD 0.25\u00b0 gridded daily"
+  },
+  "air_temperature": {
+    "annual_mean_c": 24.469284146871573,
+    "coldest_month": "2023-01",
+    "coldest_month_c": 18.194696879319483,
+    "warmest_month": "2024-05",
+    "warmest_month_c": 32.8688749288528,
+    "months": 36,
+    "period": "2023\u20132025",
+    "source": "ERA5-Land monthly aggregated, 2 m air temperature"
+  },
+  "land_surface_temperature": {
+    "mean_c": 40.103905062898434,
+    "min_c": 30.27101657,
+    "max_c": 46.97317130000002,
+    "scenes": 30,
+    "source": "Landsat 8 C2 L2 ST_B10 (median composite)"
+  },
+  "terrain": {
+    "elevation_mean_m": 580.4490022098415,
+    "elevation_min_m": 421,
+    "elevation_max_m": 632,
+    "slope_mean_deg": 4.967756192700279,
+    "slope_median_deg": 2.731455261942614,
+    "slope_min_deg": 0,
+    "slope_max_deg": 51.12657928466797,
+    "slope_range_90pct_deg": [
+      0.9274099469184873,
+      20.35190075495566
+    ],
+    "slope_median_deg_100m": 2.108249335195262,
+    "slope_class_share": [
+      {
+        "class": "lt_3",
+        "label": "< 3\u00b0 (nearly level)",
+        "share_percent": 55.91202379280348
+      },
+      {
+        "class": "3_8",
+        "label": "3\u20138\u00b0 (gentle)",
+        "share_percent": 28.10926061448315
+      },
+      {
+        "class": "8_15",
+        "label": "8\u201315\u00b0 (moderate)",
+        "share_percent": 8.23953459147392
+      },
+      {
+        "class": "ge_15",
+        "label": ">= 15\u00b0 (steep)",
+        "share_percent": 7.739181001239413
+      }
+    ],
+    "source": "SRTM 1 arc-second (USGS/SRTMGL1_003)"
+  },
+  "roads": {
+    "features": 0,
+    "nearest_major_road_m": null,
+    "nearest_major_road_class": null,
+    "nearest_major_road_name": null,
+    "nearest_major_road_beyond_aoi": false,
+    "source": "OpenStreetMap via OSMnx"
+  },
+  "railways": {
+    "features": 0,
+    "source": "OpenStreetMap via OSMnx"
+  },
+  "water_resources": {
+    "features": 0,
+    "source": "OpenStreetMap via OSMnx",
+    "worldcover_permanent_water_percent": 0.22568143426588785
+  },
+  "hydrology": {
+    "river_floodplain": {
+      "inside_supplied_river_polygon": false,
+      "nearest_river_m": 2053.0047929664843,
+      "nearest_river_name": "Choral R",
+      "features_in_query_window": 1,
+      "rivers_in_query_window": [
+        {
+          "name": "Choral R",
+          "ripcode": "01",
+          "distance_m": 2053.0047929664843
+        }
+      ],
+      "source": "river_polygon.GeoJSON; polygon coverage used as floodplain proxy"
+    },
+    "sac_water_bodies": {
+      "waterbodies_in_aoi": 43,
+      "nearest_water_body_m": 766.7964575701282,
+      "nearest_water_body_name": null,
+      "nearest_water_body_type": "Tank/Pond",
+      "water_bodies": [
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.28389749848930335,
+          "distance_m": 766.7964575701282
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.18162711934041548,
+          "distance_m": 891.9890057757071
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.3180980314563215,
+          "distance_m": 1212.7801628153086
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 2.90472148011525,
+          "distance_m": 1498.3555538347027
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.5162884720255253,
+          "distance_m": 1815.6426128852381
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 1.2394431524366734,
+          "distance_m": 1860.1966862242866
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.2756443422652818,
+          "distance_m": 2018.877681268289
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.16831996601714633,
+          "distance_m": 2031.9254389972118
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.4533180576072317,
+          "distance_m": 2069.7460340112457
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.19652108304639646,
+          "distance_m": 2248.524610885577
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.2494410296743911,
+          "distance_m": 2372.116156253808
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.5416715327752961,
+          "distance_m": 2569.4314510556583
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.3446998596668341,
+          "distance_m": 2570.6517875703357
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.16837509398299486,
+          "distance_m": 2614.1231567195377
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.1310786017476741,
+          "distance_m": 3035.1901599608595
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.8472882983901604,
+          "distance_m": 3262.338283343157
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.5434724464737702,
+          "distance_m": 3273.1480488105663
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.4417171441953473,
+          "distance_m": 3286.8857307635003
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.8253069919846031,
+          "distance_m": 3485.0457392612084
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 1.1949261432752314,
+          "distance_m": 3537.0667375543358
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 1.1391858441826015,
+          "distance_m": 3552.7268610411584
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.4244305110263743,
+          "distance_m": 3631.6095648050073
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.9573414492307735,
+          "distance_m": 3699.3617000278605
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.17274412085382265,
+          "distance_m": 3709.452318882887
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.40115720780338626,
+          "distance_m": 3721.9312869158516
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.22006007238362443,
+          "distance_m": 3769.1078800076825
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.3999562467228281,
+          "distance_m": 3808.9057850209447
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.29005799545392386,
+          "distance_m": 3825.3144117586035
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.8022386071150535,
+          "distance_m": 3917.5992022836995
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.559008361763188,
+          "distance_m": 3943.96205765804
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 2.1262361343736136,
+          "distance_m": 4021.2361030502034
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.9150983888230537,
+          "distance_m": 4039.425032117193
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.45442331373589534,
+          "distance_m": 4147.355704586309
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 1.097341246275932,
+          "distance_m": 4173.915097092874
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.39308415103898026,
+          "distance_m": 4199.572637562263
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 2.743294456027149,
+          "distance_m": 4206.025493152755
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 1.1142597821619342,
+          "distance_m": 4339.5308881237
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.15898858897835078,
+          "distance_m": 4362.790802934416
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.6272854927203675,
+          "distance_m": 4469.812987090899
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.254097695540551,
+          "distance_m": 4488.3267780030865
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.6186832301556447,
+          "distance_m": 4550.868274457947
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.20164793975835213,
+          "distance_m": 4557.374864462975
+        },
+        {
+          "name": null,
+          "type": "Tank/Pond",
+          "area_ha": 0.10405810939217165,
+          "distance_m": 4599.618305940851
+        }
+      ],
+      "source": "SAC water bodies (wb_sac_mp.GeoJSON)"
+    }
+  },
+  "settlements": {
+    "settlement_count_10km": 0,
+    "distance_to_nearest_settlement_km": null,
+    "nearest_settlement_name": null,
+    "nearest_settlement_type": null,
+    "search_radius_km": 10,
+    "settlements": [],
+    "source": "OpenStreetMap via OSMnx"
+  },
+  "nearby_places": {
+    "search_radius_km": 10,
+    "serpapi_enabled": true,
+    "categories": [
+      {
+        "category": "tourist_attractions",
+        "count": 10,
+        "nearest": {
+          "name": "Patalpani Water Falls",
+          "type": "Tourist attraction",
+          "rating": 4.3,
+          "reviews": 8469,
+          "address": "GQ3X+HF4, Kekariya Dabri, Madhya Pradesh 453441, India",
+          "latitude": 22.5038981,
+          "longitude": 75.7987131,
+          "distance_km": 1.397,
+          "place_id": "ChIJa3qS3db2YjkRZR3ghY2c6-Y",
+          "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Patalpani+Water+Falls&query_place_id=ChIJa3qS3db2YjkRZR3ghY2c6-Y"
+        },
+        "places": [
+          {
+            "name": "Patalpani Water Falls",
+            "type": "Tourist attraction",
+            "rating": 4.3,
+            "reviews": 8469,
+            "address": "GQ3X+HF4, Kekariya Dabri, Madhya Pradesh 453441, India",
+            "latitude": 22.5038981,
+            "longitude": 75.7987131,
+            "distance_km": 1.397,
+            "place_id": "ChIJa3qS3db2YjkRZR3ghY2c6-Y",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Patalpani+Water+Falls&query_place_id=ChIJa3qS3db2YjkRZR3ghY2c6-Y"
+          },
+          {
+            "name": "Patalpani Rock View point",
+            "type": "Tourist attraction",
+            "rating": 4,
+            "reviews": 33,
+            "address": "GR22+HJX, Kekariya Dabri, Madhya Pradesh 453441, India",
+            "latitude": 22.5014999,
+            "longitude": 75.8016076,
+            "distance_km": 1.502,
+            "place_id": "ChIJY0iIiNf3YjkRQDS-lReQOmI",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Patalpani+Rock+View+point&query_place_id=ChIJY0iIiNf3YjkRQDS-lReQOmI"
+          },
+          {
+            "name": "Bridge 647 Valley View Point",
+            "type": "Tourist attraction",
+            "rating": 4.6,
+            "reviews": 41,
+            "address": "FRW5+8MQ, Ambajhar Mandir Rd, Patal Pani, Madhya Pradesh 453441, India",
+            "latitude": 22.4958264,
+            "longitude": 75.80922269999999,
+            "distance_km": 2.139,
+            "place_id": "ChIJYTf57-rxYjkRM2LLrWpwW44",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bridge+647+Valley+View+Point&query_place_id=ChIJYTf57-rxYjkRM2LLrWpwW44"
+          },
+          {
+            "name": "Dhawalgiri View Point",
+            "type": "Tourist attraction",
+            "rating": 4.4,
+            "reviews": 68,
+            "address": "FRX8+8Q, Patal Pani, Madhya Pradesh 453441, India",
+            "latitude": 22.498267,
+            "longitude": 75.816943,
+            "distance_km": 2.946,
+            "place_id": "ChIJ7y-GTADxYjkRmWf18AwWt04",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Dhawalgiri+View+Point&query_place_id=ChIJ7y-GTADxYjkRmWf18AwWt04"
+          },
+          {
+            "name": "Bamniya Kund Waterfall",
+            "type": "Tourist attraction",
+            "rating": 4.4,
+            "reviews": 382,
+            "address": "Unnamed Road, Jhikadiya Khedi, Malendi, Madhya Pradesh 453441, India",
+            "latitude": 22.4681872,
+            "longitude": 75.7769828,
+            "distance_km": 3.277,
+            "place_id": "ChIJTwDoTQr3YjkRCDEgyA5gDFI",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bamniya+Kund+Waterfall&query_place_id=ChIJTwDoTQr3YjkRCDEgyA5gDFI"
+          },
+          {
+            "name": "Mehndikund Waterfalls",
+            "type": "Tourist attraction",
+            "rating": 4.3,
+            "reviews": 353,
+            "address": "FQ6M+FRJ, Jhikadiya Khedi, Madhya Pradesh 453441, India",
+            "latitude": 22.4612064,
+            "longitude": 75.7845164,
+            "distance_km": 3.857,
+            "place_id": "ChIJ4RXiFKD2YjkRObZa62eOAN4",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Mehndikund+Waterfalls&query_place_id=ChIJ4RXiFKD2YjkRObZa62eOAN4"
+          },
+          {
+            "name": "Mhow Fort",
+            "type": "Tourist attraction",
+            "rating": 4.1,
+            "reviews": 34,
+            "address": "GQX4+P77, Dr. Ambedkar Nagar, Madhya Pradesh 453441, India",
+            "latitude": 22.5492976,
+            "longitude": 75.7556821,
+            "distance_km": 6.841,
+            "place_id": "ChIJq6qqxoD3YjkRbOIiS_w058U",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Mhow+Fort&query_place_id=ChIJq6qqxoD3YjkRbOIiS_w058U"
+          },
+          {
+            "name": "Kalakund Tourist Spot",
+            "type": "Tourist attraction",
+            "rating": 4.5,
+            "reviews": 404,
+            "address": "FVG6+X4F, Indore, Madhya Pradesh 453552, India",
+            "latitude": 22.477437899999998,
+            "longitude": 75.8602966,
+            "distance_km": 7.661,
+            "place_id": "ChIJIS2RO37xYjkRsZLKkRFVwXI",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Kalakund+Tourist+Spot&query_place_id=ChIJIS2RO37xYjkRsZLKkRFVwXI"
+          },
+          {
+            "name": "VRS sunset point",
+            "type": "Tourist attraction",
+            "rating": 4.9,
+            "reviews": 13,
+            "address": "FVH6+3RF, Dr. Ambedkar Nagar, Madhya Pradesh 453552, India",
+            "latitude": 22.478752699999998,
+            "longitude": 75.8628809,
+            "distance_km": 7.881,
+            "place_id": "ChIJi9xlTgDxYjkRZ-qn55CF-ls",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=VRS+sunset+point&query_place_id=ChIJi9xlTgDxYjkRZ-qn55CF-ls"
+          },
+          {
+            "name": "Junapani waterfall",
+            "type": "Tourist attraction",
+            "rating": 4.3,
+            "reviews": 379,
+            "address": "GV69+834, Bhagora, Madhya Pradesh 453552, India",
+            "latitude": 22.510750599999998,
+            "longitude": 75.8677046,
+            "distance_km": 8.317,
+            "place_id": "ChIJJxjmjQTxYjkRct4vE9z5EcU",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Junapani+waterfall&query_place_id=ChIJJxjmjQTxYjkRct4vE9z5EcU"
+          }
+        ]
+      },
+      {
+        "category": "restaurants",
+        "count": 12,
+        "nearest": {
+          "name": "Anmol's Cafe and Restaurant",
+          "type": "Restaurant",
+          "rating": 4.6,
+          "reviews": 31,
+          "address": "behind Shiksha Shikhar School, Ashapur, Dr. Ambedkar Nagar, Madhya Pradesh 453441, India",
+          "latitude": 22.5038451,
+          "longitude": 75.74868169999999,
+          "distance_km": 4.18,
+          "place_id": "ChIJ2TtHM-j3YjkR6qEt5YW8S6c",
+          "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Anmol%27s+Cafe+and+Restaurant&query_place_id=ChIJ2TtHM-j3YjkR6qEt5YW8S6c"
+        },
+        "places": [
+          {
+            "name": "Anmol's Cafe and Restaurant",
+            "type": "Restaurant",
+            "rating": 4.6,
+            "reviews": 31,
+            "address": "behind Shiksha Shikhar School, Ashapur, Dr. Ambedkar Nagar, Madhya Pradesh 453441, India",
+            "latitude": 22.5038451,
+            "longitude": 75.74868169999999,
+            "distance_km": 4.18,
+            "place_id": "ChIJ2TtHM-j3YjkR6qEt5YW8S6c",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Anmol%27s+Cafe+and+Restaurant&query_place_id=ChIJ2TtHM-j3YjkR6qEt5YW8S6c"
+          },
+          {
+            "name": "Pratima Restaurant",
+            "type": "Restaurant",
+            "rating": 5,
+            "reviews": 12,
+            "address": "in front of petrol pump, Ashapura, Dr. Ambedkar Nagar, Madhya Pradesh 453441, India",
+            "latitude": 22.5059051,
+            "longitude": 75.7479014,
+            "distance_km": 4.312,
+            "place_id": "ChIJlVWi9jv3YjkRqhWTxBQu_qA",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Pratima+Restaurant&query_place_id=ChIJlVWi9jv3YjkRqhWTxBQu_qA"
+          },
+          {
+            "name": "garage cafe Mhow",
+            "type": "Cafe",
+            "rating": 4.2,
+            "reviews": 247,
+            "address": "Survey No: 1199, State Highway 1, 1/1/1/3, near Parsi Tekri, Dr. Ambedkar Nagar, Madhya Pradesh 453441, India",
+            "latitude": 22.512049599999997,
+            "longitude": 75.7434923,
+            "distance_km": 4.958,
+            "place_id": "ChIJP9GXPHb3YjkR-1eP5t2Dn44",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=garage+cafe+Mhow&query_place_id=ChIJP9GXPHb3YjkR-1eP5t2Dn44"
+          },
+          {
+            "name": "Dakshin Zayka",
+            "type": "South Indian restaurant",
+            "rating": 4.8,
+            "reviews": 111,
+            "address": "Shyam Villas square, opposite Gokul ganj, Gokul Ganj, Dr. Ambedkar Nagar, Madhya Pradesh 453441, India",
+            "latitude": 22.5576126,
+            "longitude": 75.76761669999999,
+            "distance_km": 7.207,
+            "place_id": "ChIJr-dPltv5YjkRvgABjWSmNU4",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Dakshin+Zayka&query_place_id=ChIJr-dPltv5YjkRvgABjWSmNU4"
+          },
+          {
+            "name": "Wrapstick Mhow",
+            "type": "Chicken restaurant",
+            "rating": 5,
+            "reviews": 56,
+            "address": "Bunglow no 60, bhaiyaji road, near Badhshah printing press, Bombay Bazar, Hasalpur, Dr. Ambedkar Nagar, Madhya Pradesh 453441, India",
+            "latitude": 22.5579051,
+            "longitude": 75.7593557,
+            "distance_km": 7.532,
+            "place_id": "ChIJ1xxHBKr3YjkRYKKTaUPanvs",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Wrapstick+Mhow&query_place_id=ChIJ1xxHBKr3YjkRYKKTaUPanvs"
+          },
+          {
+            "name": "UFO BURGER",
+            "type": "Indian restaurant",
+            "rating": 4.8,
+            "reviews": 24,
+            "address": "HQ56+RC8, Bombay Bazar, Hasalpur, Dr. Ambedkar Nagar, Madhya Pradesh 453441, India",
+            "latitude": 22.559537499999998,
+            "longitude": 75.7610835,
+            "distance_km": 7.632,
+            "place_id": "ChIJXaNmIwD5YjkRQqULEJ0ycWE",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=UFO+BURGER&query_place_id=ChIJXaNmIwD5YjkRQqULEJ0ycWE"
+          },
+          {
+            "name": "IDC Idliwali",
+            "type": "South Indian restaurant",
+            "rating": 4.7,
+            "reviews": 470,
+            "address": "Bungalow No 67, Bhayaji Road, Bombay Bazar, Dr. Ambedkar Nagar, Madhya Pradesh 453441, India",
+            "latitude": 22.560367799999998,
+            "longitude": 75.7611909,
+            "distance_km": 7.714,
+            "place_id": "ChIJ0Y3QL5_5YjkRzjIjSuOq0Yg",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=IDC+Idliwali&query_place_id=ChIJ0Y3QL5_5YjkRzjIjSuOq0Yg"
+          },
+          {
+            "name": "Mr. Buns",
+            "type": "Fast food restaurant",
+            "rating": 4.9,
+            "reviews": 89,
+            "address": "165, Main Street, Bombay Bazar, Dr. Ambedkar Nagar, Madhya Pradesh 453441, India",
+            "latitude": 22.5627587,
+            "longitude": 75.7635361,
+            "distance_km": 7.881,
+            "place_id": "ChIJK0oPNWP5YjkRYsT4nMzJ5PY",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Mr.+Buns&query_place_id=ChIJK0oPNWP5YjkRYsT4nMzJ5PY"
+          },
+          {
+            "name": "Nawabi Zayke",
+            "type": "Non vegetarian restaurant",
+            "rating": 4.8,
+            "reviews": 36,
+            "address": "HQ77+FFW, Dr. Ambedkar Nagar, Madhya Pradesh 453441, India",
+            "latitude": 22.5641932,
+            "longitude": 75.7656811,
+            "distance_km": 7.965,
+            "place_id": "ChIJpx5zuvn5YjkRslAZmHgUwTk",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Nawabi+Zayke&query_place_id=ChIJpx5zuvn5YjkRslAZmHgUwTk"
+          },
+          {
+            "name": "Baba Ka Mhow Barbecue",
+            "type": "Barbecue restaurant",
+            "rating": 5,
+            "reviews": 29,
+            "address": "Shop No 5, wine shop, Maruti Nagar front of gaikwad, Dharnaka, Dr. Ambedkar Nagar, Mhow Gaon, Madhya Pradesh 453441, India",
+            "latitude": 22.566391,
+            "longitude": 75.74732399999999,
+            "distance_km": 8.92,
+            "place_id": "ChIJLbg3UQD5YjkRwl8Y_aJ2BdI",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Baba+Ka+Mhow+Barbecue&query_place_id=ChIJLbg3UQD5YjkRwl8Y_aJ2BdI"
+          },
+          {
+            "name": "Swad Sagar Restaurant & Cafe",
+            "type": "Restaurant",
+            "rating": 5,
+            "reviews": 1,
+            "address": "Gawli Palasia, Mhow, Madhya Pradesh 453441, India",
+            "latitude": 22.529958399999998,
+            "longitude": 75.70544249999999,
+            "distance_km": 9.334,
+            "place_id": "ChIJLatJ311ZYjkR-tKATCNHYbU",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Swad+Sagar+Restaurant+%26+Cafe&query_place_id=ChIJLatJ311ZYjkR-tKATCNHYbU"
+          },
+          {
+            "name": "Hare Krishna Health Food",
+            "type": "Health food restaurant",
+            "rating": 4.9,
+            "reviews": 25,
+            "address": "Hare krishna Health Food, 3, Indrapuri Colony, Kishanganj, Dr. Ambedkar Nagar, Madhya Pradesh 453441, India",
+            "latitude": 22.579222599999998,
+            "longitude": 75.7777425,
+            "distance_km": 9.351,
+            "place_id": "ChIJjSe9w4z5YjkRvE6-J6mWzTY",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Hare+Krishna+Health+Food&query_place_id=ChIJjSe9w4z5YjkRvE6-J6mWzTY"
+          }
+        ]
+      },
+      {
+        "category": "hospitals",
+        "count": 9,
+        "nearest": {
+          "name": "Madhya Bharat Hospital",
+          "type": "Hospital",
+          "rating": 2.9,
+          "reviews": 44,
+          "address": "GQX7+XJG, Post Office Rd, Dr. Ambedkar Nagar, Madhya Pradesh 453441, India",
+          "latitude": 22.5499474,
+          "longitude": 75.7640905,
+          "distance_km": 6.528,
+          "place_id": "ChIJgUKSRX73YjkRjtLr--uyhO4",
+          "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Madhya+Bharat+Hospital&query_place_id=ChIJgUKSRX73YjkRjtLr--uyhO4"
+        },
+        "places": [
+          {
+            "name": "Madhya Bharat Hospital",
+            "type": "Hospital",
+            "rating": 2.9,
+            "reviews": 44,
+            "address": "GQX7+XJG, Post Office Rd, Dr. Ambedkar Nagar, Madhya Pradesh 453441, India",
+            "latitude": 22.5499474,
+            "longitude": 75.7640905,
+            "distance_km": 6.528,
+            "place_id": "ChIJgUKSRX73YjkRjtLr--uyhO4",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Madhya+Bharat+Hospital&query_place_id=ChIJgUKSRX73YjkRjtLr--uyhO4"
+          },
+          {
+            "name": "Govement Hospital Kelod",
+            "type": "Government hospital",
+            "rating": 3,
+            "reviews": 1,
+            "address": "GP5C+HQJ, Kelod, Madhya Pradesh 453441, India",
+            "latitude": 22.508972399999998,
+            "longitude": 75.7218856,
+            "distance_km": 6.991,
+            "place_id": "ChIJM_mHDdH3YjkRp4qORxnExVs",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Govement+Hospital+Kelod&query_place_id=ChIJM_mHDdH3YjkRp4qORxnExVs"
+          },
+          {
+            "name": "MNH CARE Hospital",
+            "type": "Hospital",
+            "rating": 4.7,
+            "reviews": 292,
+            "address": "Dr. Abdul Gaffur Road, 1854, Mhow - Indore Hwy, Bombay Bazar, Hari Phatak, Indore, Dr. Ambedkar Nagar, Madhya Pradesh 453441, India",
+            "latitude": 22.5577653,
+            "longitude": 75.7635061,
+            "distance_km": 7.359,
+            "place_id": "ChIJI6ynj-75YjkRkHx2k0D8OEY",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=MNH+CARE+Hospital&query_place_id=ChIJI6ynj-75YjkRkHx2k0D8OEY"
+          },
+          {
+            "name": "Military Hospital (MH) ,MHOW",
+            "type": "Hospital",
+            "rating": 4.7,
+            "reviews": 11,
+            "address": "Military Hospital, Hasalpur, Dr. Ambedkar Nagar, Madhya Pradesh 453441, India",
+            "latitude": 22.5554009,
+            "longitude": 75.7563575,
+            "distance_km": 7.409,
+            "place_id": "ChIJSSe9RwD5YjkRfQ6EdZgg694",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Military+Hospital+%28MH%29+%2CMHOW&query_place_id=ChIJSSe9RwD5YjkRfQ6EdZgg694"
+          },
+          {
+            "name": "Red Cross Hospital Mhow",
+            "type": "Hospital",
+            "rating": 3.6,
+            "reviews": 56,
+            "address": "HQ56+JC9, Plowden Rd, Bombay Bazar, Hasalpur, Dr. Ambedkar Nagar, Madhya Pradesh 453441, India",
+            "latitude": 22.559046199999997,
+            "longitude": 75.7611196,
+            "distance_km": 7.58,
+            "place_id": "ChIJo-R0R9P5YjkRAdEHNFGnerE",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Red+Cross+Hospital+Mhow&query_place_id=ChIJo-R0R9P5YjkRAdEHNFGnerE"
+          },
+          {
+            "name": "AYUSHMAN AROGYA MANDIRA (AYUSH), Gawali palasia ,Indore, Madhya Pradesh,Pin -453441",
+            "type": "Ayurvedic clinic",
+            "rating": 4.8,
+            "reviews": 21,
+            "address": "GPMG+36X, Gawli Palasia, Madhya Pradesh 453441, India",
+            "latitude": 22.5327381,
+            "longitude": 75.7256112,
+            "distance_km": 7.652,
+            "place_id": "ChIJK5oiYu_3YjkREsSkoPMl7k0",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=AYUSHMAN+AROGYA+MANDIRA+%28AYUSH%29%2C+Gawali+palasia+%2CIndore%2C+Madhya+Pradesh%2CPin+-453441&query_place_id=ChIJK5oiYu_3YjkREsSkoPMl7k0"
+          },
+          {
+            "name": "Getwell Hospital",
+            "type": "General hospital",
+            "rating": 4.4,
+            "reviews": 517,
+            "address": "Chana Godam, 147, AB Road, Indore Rd, near Ganesh Temple, Dr. Ambedkar Nagar, Madhya Pradesh 453441, India",
+            "latitude": 22.5618886,
+            "longitude": 75.76154129999999,
+            "distance_km": 7.859,
+            "place_id": "ChIJZXdEv9L5YjkRhR4l36MyK7k",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Getwell+Hospital&query_place_id=ChIJZXdEv9L5YjkRhR4l36MyK7k"
+          },
+          {
+            "name": "Hospital",
+            "type": "Government hospital",
+            "rating": 5,
+            "reviews": 1,
+            "address": "HP8X+9JV, Navin Colony, Dharnaka, Mhow Gaon, Madhya Pradesh 453441, India",
+            "latitude": 22.5659909,
+            "longitude": 75.7490576,
+            "distance_km": 8.798,
+            "place_id": "ChIJt1TBwHv5YjkRMuiGDAQ9J8Y",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Hospital&query_place_id=ChIJt1TBwHv5YjkRMuiGDAQ9J8Y"
+          },
+          {
+            "name": "Mewara Medicare & Eyecare Hospital",
+            "type": "Hospital",
+            "rating": 4.5,
+            "reviews": 1358,
+            "address": "102, Mewara Garden, Old AB Road Dist Indore, Kishanganj, Dr. Ambedkar Nagar, Madhya Pradesh 453441, India",
+            "latitude": 22.578944999999997,
+            "longitude": 75.7768856,
+            "distance_km": 9.331,
+            "place_id": "ChIJKUSx27j5YjkRBcKrRIcw1wE",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Mewara+Medicare+%26+Eyecare+Hospital&query_place_id=ChIJKUSx27j5YjkRBcKrRIcw1wE"
+          }
+        ]
+      },
+      {
+        "category": "schools",
+        "count": 14,
+        "nearest": {
+          "name": "Rajeshwar Hr. Sc. School",
+          "type": "Secondary school",
+          "rating": null,
+          "reviews": null,
+          "address": "Bunglow No.141, Bakery road, Dr. Ambedkar Nagar, Madhya Pradesh 453441, India",
+          "latitude": 22.547012199999998,
+          "longitude": 75.7665937,
+          "distance_km": 6.129,
+          "place_id": "ChIJqf77qX73YjkRPFa3nYfAkJs",
+          "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Rajeshwar+Hr.+Sc.+School&query_place_id=ChIJqf77qX73YjkRPFa3nYfAkJs"
+        },
+        "places": [
+          {
+            "name": "Rajeshwar Hr. Sc. School",
+            "type": "Secondary school",
+            "rating": null,
+            "reviews": null,
+            "address": "Bunglow No.141, Bakery road, Dr. Ambedkar Nagar, Madhya Pradesh 453441, India",
+            "latitude": 22.547012199999998,
+            "longitude": 75.7665937,
+            "distance_km": 6.129,
+            "place_id": "ChIJqf77qX73YjkRPFa3nYfAkJs",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Rajeshwar+Hr.+Sc.+School&query_place_id=ChIJqf77qX73YjkRPFa3nYfAkJs"
+          },
+          {
+            "name": "Army public School, Mhow",
+            "type": "CBSE school",
+            "rating": null,
+            "reviews": null,
+            "address": "GQV5+GMH, Mall Rd, Dr. Ambedkar Nagar, Madhya Pradesh 453441, India",
+            "latitude": 22.543802,
+            "longitude": 75.7592337,
+            "distance_km": 6.13,
+            "place_id": "ChIJjSTScYL3YjkRlawLCptQnrE",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Army+public+School%2C+Mhow&query_place_id=ChIJjSTScYL3YjkRlawLCptQnrE"
+          },
+          {
+            "name": "Mount Litera Zee School - Mhow",
+            "type": "CBSE school",
+            "rating": null,
+            "reviews": null,
+            "address": "361/7, Beircha, Road, Dr. Ambedkar Nagar, Madhya Pradesh 453441, India",
+            "latitude": 22.505603999999998,
+            "longitude": 75.72932709999999,
+            "distance_km": 6.168,
+            "place_id": "ChIJi3GpE675YjkR2oSrwn36lGg",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Mount+Litera+Zee+School+-+Mhow&query_place_id=ChIJi3GpE675YjkR2oSrwn36lGg"
+          },
+          {
+            "name": "The Upnishad School",
+            "type": "CBSE school",
+            "rating": null,
+            "reviews": null,
+            "address": "Simrol Road, New Guradiya, Dr. Ambedkar Nagar, Madhya Pradesh 453441, India",
+            "latitude": 22.5517772,
+            "longitude": 75.7956648,
+            "distance_km": 6.279,
+            "place_id": "ChIJ1bUQAOH3YjkRtvLyzn4I6zM",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=The+Upnishad+School&query_place_id=ChIJ1bUQAOH3YjkRtvLyzn4I6zM"
+          },
+          {
+            "name": "St. Mary's Higher Secondary School",
+            "type": "Secondary school",
+            "rating": null,
+            "reviews": null,
+            "address": "HQ27+H4W, Post Office Road,Indore, Dr. Ambedkar Nagar, Madhya Pradesh 453441, India",
+            "latitude": 22.551496699999998,
+            "longitude": 75.76281759999999,
+            "distance_km": 6.737,
+            "place_id": "ChIJPwMWxXj3YjkRzyLmZVAt-Kg",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=St.+Mary%27s+Higher+Secondary+School&query_place_id=ChIJPwMWxXj3YjkRzyLmZVAt-Kg"
+          },
+          {
+            "name": "SHRI JAIGOVIND GOPINATH HIGHER SECONDARY SCHOOL",
+            "type": "CBSE school",
+            "rating": null,
+            "reviews": null,
+            "address": "49, Peet Road, near RAILWAY STATION, Dr. Ambedkar Nagar, Madhya Pradesh 453441, India",
+            "latitude": 22.5571837,
+            "longitude": 75.77333759999999,
+            "distance_km": 7.009,
+            "place_id": "ChIJLSy_z9n5YjkR0gBajgh3XGo",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=SHRI+JAIGOVIND+GOPINATH+HIGHER+SECONDARY+SCHOOL&query_place_id=ChIJLSy_z9n5YjkR0gBajgh3XGo"
+          },
+          {
+            "name": "Wishwood Cottage School",
+            "type": "Educational institution",
+            "rating": 4.5,
+            "reviews": 43,
+            "address": "HQ22+73J, Old AB Rd, Dr. Ambedkar Nagar, Madhya Pradesh 453441, India",
+            "latitude": 22.5507051,
+            "longitude": 75.75015309999999,
+            "distance_km": 7.269,
+            "place_id": "ChIJGRzrHyj4YjkRCI5r2zdzS_c",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Wishwood+Cottage+School&query_place_id=ChIJGRzrHyj4YjkRCI5r2zdzS_c"
+          },
+          {
+            "name": "Jesus and Mary's Nursery School",
+            "type": "Kindergarten",
+            "rating": 4.7,
+            "reviews": 33,
+            "address": "Swarg Mandir Road, next to Kendriya Vidyalaya, Dr. Ambedkar Nagar, Madhya Pradesh 453441, India",
+            "latitude": 22.566699999999997,
+            "longitude": 75.7660226,
+            "distance_km": 8.222,
+            "place_id": "ChIJ0asQK8z5YjkRERKBwUSt_mw",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Jesus+and+Mary%27s+Nursery+School&query_place_id=ChIJ0asQK8z5YjkRERKBwUSt_mw"
+          },
+          {
+            "name": "Little Angels Higher Secondary School ,Mhow",
+            "type": "Secondary school",
+            "rating": null,
+            "reviews": null,
+            "address": "Littel Angels Higher Secondary School, Telikheda,, Mhow Jail Rd, Dr. Ambedkar Nagar, Madhya Pradesh 453441, India",
+            "latitude": 22.5584296,
+            "longitude": 75.7385431,
+            "distance_km": 8.653,
+            "place_id": "ChIJMYB0Pyr4YjkRWtwGxAFvnWs",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Little+Angels+Higher+Secondary+School+%2CMhow&query_place_id=ChIJMYB0Pyr4YjkRWtwGxAFvnWs"
+          },
+          {
+            "name": "Sideras International School",
+            "type": "General education school",
+            "rating": null,
+            "reviews": null,
+            "address": "HQJV+53H, Borkhedi, Madhya Pradesh 453441, India",
+            "latitude": 22.5804469,
+            "longitude": 75.79272329999999,
+            "distance_km": 9.433,
+            "place_id": "ChIJ-ZUTXTv5YjkRDM33X3rW18w",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Sideras+International+School&query_place_id=ChIJ-ZUTXTv5YjkRDM33X3rW18w"
+          },
+          {
+            "name": "C.M. RISE Govt. Model School Mhowgaon",
+            "type": "General education school",
+            "rating": null,
+            "reviews": null,
+            "address": "HP9Q+PG7, Dharnaka, Mhow Gaon, Madhya Pradesh 453441, India",
+            "latitude": 22.5692813,
+            "longitude": 75.7387875,
+            "distance_km": 9.638,
+            "place_id": "ChIJmdInMj74YjkR2YoBih3bXL8",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=C.M.+RISE+Govt.+Model+School+Mhowgaon&query_place_id=ChIJmdInMj74YjkR2YoBih3bXL8"
+          },
+          {
+            "name": "Fountainhead International School",
+            "type": "School",
+            "rating": 4.8,
+            "reviews": 119,
+            "address": "35/2 Behind Veterinary College Navda, Road, Borkhedi, Mhow, Madhya Pradesh 453441, India",
+            "latitude": 22.5844989,
+            "longitude": 75.79039949999999,
+            "distance_km": 9.875,
+            "place_id": "ChIJpeMf9Xb3YjkRTrSJEl2PGbw",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Fountainhead+International+School&query_place_id=ChIJpeMf9Xb3YjkRTrSJEl2PGbw"
+          },
+          {
+            "name": "Stellar Career Public School",
+            "type": "Building",
+            "rating": null,
+            "reviews": null,
+            "address": "682/4, Mhow-Ghatabillod Rd, near Shanti Nagar, Shanti Nagar, Housing Board Colony, Mhow Gaon, Madhya Pradesh 453441, India",
+            "latitude": 22.5736475,
+            "longitude": 75.74033709999999,
+            "distance_km": 9.974,
+            "place_id": "ChIJ501ohkD4YjkRgmSSPVYiGD0",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Stellar+Career+Public+School&query_place_id=ChIJ501ohkD4YjkRgmSSPVYiGD0"
+          },
+          {
+            "name": "Yashwant Group of School",
+            "type": "CBSE school",
+            "rating": null,
+            "reviews": null,
+            "address": "142-B, South Shanti Nagar, mhow, Mhow Gaon, Madhya Pradesh 453441, India",
+            "latitude": 22.5661964,
+            "longitude": 75.7279891,
+            "distance_km": 9.997,
+            "place_id": "ChIJq6qqBhX4YjkRhsY5veIq9YQ",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Yashwant+Group+of+School&query_place_id=ChIJq6qqBhX4YjkRhsY5veIq9YQ"
+          }
+        ]
+      },
+      {
+        "category": "markets",
+        "count": 16,
+        "nearest": {
+          "name": "Regiment Bazaar",
+          "type": "Market",
+          "rating": 3.9,
+          "reviews": 52,
+          "address": "Dr. Ambedkar Nagar, Madhya Pradesh 453441, India",
+          "latitude": 22.5382583,
+          "longitude": 75.7673238,
+          "distance_km": 5.203,
+          "place_id": "ChIJI86m3HD3YjkRBv9rSr1utDw",
+          "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Regiment+Bazaar&query_place_id=ChIJI86m3HD3YjkRBv9rSr1utDw"
+        },
+        "places": [
+          {
+            "name": "Regiment Bazaar",
+            "type": "Market",
+            "rating": 3.9,
+            "reviews": 52,
+            "address": "Dr. Ambedkar Nagar, Madhya Pradesh 453441, India",
+            "latitude": 22.5382583,
+            "longitude": 75.7673238,
+            "distance_km": 5.203,
+            "place_id": "ChIJI86m3HD3YjkRBv9rSr1utDw",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Regiment+Bazaar&query_place_id=ChIJI86m3HD3YjkRBv9rSr1utDw"
+          },
+          {
+            "name": "Haat Maidan",
+            "type": "Produce market",
+            "rating": 3.5,
+            "reviews": 74,
+            "address": "HQ49+77P, Dr. Ambedkar Nagar, Madhya Pradesh 453441, India",
+            "latitude": 22.555714299999998,
+            "longitude": 75.7681963,
+            "distance_km": 6.988,
+            "place_id": "ChIJ8aGB8Nb5YjkRH0bwtBIdXIA",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Haat+Maidan&query_place_id=ChIJ8aGB8Nb5YjkRH0bwtBIdXIA"
+          },
+          {
+            "name": "shiv shakti stores",
+            "type": "Wholesale grocer",
+            "rating": null,
+            "reviews": null,
+            "address": "105, opp. janpad panchayat gate, Luniyapura, Dr. Ambedkar Nagar, Madhya Pradesh 453441, India",
+            "latitude": 22.555854099999998,
+            "longitude": 75.76572039999999,
+            "distance_km": 7.082,
+            "place_id": "ChIJfdU5xn_3YjkR4ZvMhQ5ZDiA",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=shiv+shakti+stores&query_place_id=ChIJfdU5xn_3YjkR4ZvMhQ5ZDiA"
+          },
+          {
+            "name": "Malwa Complex",
+            "type": "Market",
+            "rating": 3.9,
+            "reviews": 1136,
+            "address": "HQ46+484, Dreamland Square, Dr. Ambedkar Nagar, Madhya Pradesh 453441, India",
+            "latitude": 22.5552703,
+            "longitude": 75.7608383,
+            "distance_km": 7.203,
+            "place_id": "ChIJ0ZCezdT5YjkRnyVsfaYUTqE",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Malwa+Complex&query_place_id=ChIJ0ZCezdT5YjkRnyVsfaYUTqE"
+          },
+          {
+            "name": "Mhow fish market",
+            "type": "Butcher shop",
+            "rating": 4.7,
+            "reviews": 3,
+            "address": "HQ57+8P5, Bombay Bazar, Hari Phatak, Dr. Ambedkar Nagar, Madhya Pradesh 453441, India",
+            "latitude": 22.558329,
+            "longitude": 75.764172,
+            "distance_km": 7.395,
+            "place_id": "ChIJfV7pN3v5YjkRtzbTAvsWWks",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Mhow+fish+market&query_place_id=ChIJfV7pN3v5YjkRtzbTAvsWWks"
+          },
+          {
+            "name": "Ever Fresh Chicken Center",
+            "type": "Store",
+            "rating": 3.9,
+            "reviews": 28,
+            "address": "73, Sabji Market, in front of Vegetable shop, Bombay Bazar, Hari Phatak, Dr. Ambedkar Nagar, Madhya Pradesh 453441, India",
+            "latitude": 22.5584885,
+            "longitude": 75.7645505,
+            "distance_km": 7.398,
+            "place_id": "ChIJad5xNtP5YjkR_iOdqNsFhqY",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Ever+Fresh+Chicken+Center&query_place_id=ChIJad5xNtP5YjkR_iOdqNsFhqY"
+          },
+          {
+            "name": "PRAKASH VEGETABLES",
+            "type": "Produce market",
+            "rating": 5,
+            "reviews": 6,
+            "address": "SHOP NO 40, Sabji Market, Hari Phatak, Dr. Ambedkar Nagar, Madhya Pradesh 453441, India",
+            "latitude": 22.5585828,
+            "longitude": 75.7647039,
+            "distance_km": 7.403,
+            "place_id": "ChIJTcafsOb5YjkRiJodUYmn-w8",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=PRAKASH+VEGETABLES&query_place_id=ChIJTcafsOb5YjkRiJodUYmn-w8"
+          },
+          {
+            "name": "Sabji Market Mhow",
+            "type": "Market",
+            "rating": 4,
+            "reviews": 478,
+            "address": "Market Chowk, Mahatma Gandhi Road, Dr. Ambedkar Nagar, Madhya Pradesh 453441, India",
+            "latitude": 22.558573499999998,
+            "longitude": 75.7643748,
+            "distance_km": 7.413,
+            "place_id": "ChIJJc9yUCD5YjkRaARBdBpubCk",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Sabji+Market+Mhow&query_place_id=ChIJJc9yUCD5YjkRaARBdBpubCk"
+          },
+          {
+            "name": "Fruit Market",
+            "type": "Cosmetics store",
+            "rating": 4.1,
+            "reviews": 401,
+            "address": "Fruit Market Square, 1635, Mahatma Gandhi Road, Bombay Bazar, Hari Phatak, market chowk, Dr. Ambedkar Nagar, Madhya Pradesh 453441, India",
+            "latitude": 22.5586725,
+            "longitude": 75.7641663,
+            "distance_km": 7.431,
+            "place_id": "ChIJty-E_db5YjkRkBVc1Sx-BPc",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Fruit+Market&query_place_id=ChIJty-E_db5YjkRkBVc1Sx-BPc"
+          },
+          {
+            "name": "Nariyal Pani wala",
+            "type": "Produce market",
+            "rating": null,
+            "reviews": null,
+            "address": "Panna Lal Gali, Bombay Bazar, Hari Phatak, Dr. Ambedkar Nagar, Madhya Pradesh 453441, India",
+            "latitude": 22.558538499999997,
+            "longitude": 75.7633029,
+            "distance_km": 7.447,
+            "place_id": "ChIJqSCX7a75YjkR-5bYzsdeYtg",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Nariyal+Pani+wala&query_place_id=ChIJqSCX7a75YjkR-5bYzsdeYtg"
+          },
+          {
+            "name": "Fruit Market",
+            "type": "Building",
+            "rating": null,
+            "reviews": null,
+            "address": "Bombay Bazar, Hari Phatak, Dr. Ambedkar Nagar, Madhya Pradesh 453441, India",
+            "latitude": 22.558802099999998,
+            "longitude": 75.7640507,
+            "distance_km": 7.448,
+            "place_id": "ChIJ73hVl9P5YjkR9ZpuaVSB4Tk",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Fruit+Market&query_place_id=ChIJ73hVl9P5YjkR9ZpuaVSB4Tk"
+          },
+          {
+            "name": "New Sabji Market",
+            "type": "Produce market",
+            "rating": 3.5,
+            "reviews": 85,
+            "address": "1482, Cander Marg, near Moti mahal chauraha, Dr. Ambedkar Nagar, Madhya Pradesh 453441, India",
+            "latitude": 22.5596312,
+            "longitude": 75.7663103,
+            "distance_km": 7.461,
+            "place_id": "ChIJRbqGYdH5YjkRSUHu6Th3wlI",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=New+Sabji+Market&query_place_id=ChIJRbqGYdH5YjkRSUHu6Th3wlI"
+          },
+          {
+            "name": "Rajkumar Mills",
+            "type": "Clothing store",
+            "rating": 4.3,
+            "reviews": 187,
+            "address": "53, Main Street, Bombay Bazar, Dr. Ambedkar Nagar, Madhya Pradesh 453441, India",
+            "latitude": 22.558177099999998,
+            "longitude": 75.7618722,
+            "distance_km": 7.462,
+            "place_id": "ChIJvUiBYqn5YjkRV8LM-PH_npo",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Rajkumar+Mills&query_place_id=ChIJvUiBYqn5YjkRV8LM-PH_npo"
+          },
+          {
+            "name": "Lala Vastralaya",
+            "type": "Clothing store",
+            "rating": 5,
+            "reviews": 7,
+            "address": "Mahatma Gandhi Road, Bombay Bazar, Hari Phatak, Dr. Ambedkar Nagar, Madhya Pradesh 453441, India",
+            "latitude": 22.559036199999998,
+            "longitude": 75.7632776,
+            "distance_km": 7.5,
+            "place_id": "ChIJp_AVddP5YjkR26q7tokMr5w",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Lala+Vastralaya&query_place_id=ChIJp_AVddP5YjkR26q7tokMr5w"
+          },
+          {
+            "name": "Mhow market",
+            "type": "Store",
+            "rating": 4.6,
+            "reviews": 7,
+            "address": "HQ56+FM3, Plowden Rd, Bombay Bazar, Dr. Ambedkar Nagar, Madhya Pradesh 453441, India",
+            "latitude": 22.5586412,
+            "longitude": 75.7617305,
+            "distance_km": 7.515,
+            "place_id": "ChIJf0DvWAD5YjkRkfnD0cw38Ow",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Mhow+market&query_place_id=ChIJf0DvWAD5YjkRkfnD0cw38Ow"
+          },
+          {
+            "name": "Sabji Market",
+            "type": null,
+            "rating": null,
+            "reviews": null,
+            "address": "Dr. Ambedkar Nagar, Madhya Pradesh 453441, India",
+            "latitude": 22.5591389,
+            "longitude": 75.7628585,
+            "distance_km": 7.525,
+            "place_id": "ChIJb_CIDNP5YjkROL95EC2jCss",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Sabji+Market&query_place_id=ChIJb_CIDNP5YjkROL95EC2jCss"
+          }
+        ]
+      },
+      {
+        "category": "hotels",
+        "count": 13,
+        "nearest": {
+          "name": "Royal Resort & Adventure Park Patalpani",
+          "type": "Resort hotel",
+          "rating": 4.1,
+          "reviews": 314,
+          "address": "Patalpani, Dr. Ambedkar Nagar, Madhya Pradesh 452441, India",
+          "latitude": 22.5065264,
+          "longitude": 75.7955132,
+          "distance_km": 1.408,
+          "place_id": "ChIJR7KufXz3YjkRQgqd8q5pCSE",
+          "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Royal+Resort+%26+Adventure+Park+Patalpani&query_place_id=ChIJR7KufXz3YjkRQgqd8q5pCSE"
+        },
+        "places": [
+          {
+            "name": "Royal Resort & Adventure Park Patalpani",
+            "type": "Resort hotel",
+            "rating": 4.1,
+            "reviews": 314,
+            "address": "Patalpani, Dr. Ambedkar Nagar, Madhya Pradesh 452441, India",
+            "latitude": 22.5065264,
+            "longitude": 75.7955132,
+            "distance_km": 1.408,
+            "place_id": "ChIJR7KufXz3YjkRQgqd8q5pCSE",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Royal+Resort+%26+Adventure+Park+Patalpani&query_place_id=ChIJR7KufXz3YjkRQgqd8q5pCSE"
+          },
+          {
+            "name": "Fortalice Nature Stay",
+            "type": "Villa",
+            "rating": 4.4,
+            "reviews": 47,
+            "address": "GR32+X82, Patalpani Rd, Kekariya Dabri, Madhya Pradesh 453441, India",
+            "latitude": 22.5043126,
+            "longitude": 75.8007465,
+            "distance_km": 1.589,
+            "place_id": "ChIJS9hQmI_3YjkRyNybKdGLj4c",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Fortalice+Nature+Stay&query_place_id=ChIJS9hQmI_3YjkRyNybKdGLj4c"
+          },
+          {
+            "name": "Dharashray Wellness Resort",
+            "type": "Resort hotel",
+            "rating": 4.9,
+            "reviews": 39,
+            "address": "GR32+6V, Kekariya Dabri, Madhya Pradesh 453441, India",
+            "latitude": 22.503111,
+            "longitude": 75.802194,
+            "distance_km": 1.639,
+            "place_id": "ChIJcYohTQD3YjkRXU16L5HDgQQ",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Dharashray+Wellness+Resort&query_place_id=ChIJcYohTQD3YjkRXU16L5HDgQQ"
+          },
+          {
+            "name": "Sunrise Hotel & Resort",
+            "type": "Resort hotel",
+            "rating": 4.5,
+            "reviews": 90,
+            "address": "GQ4F+4CX, Malendi Rd, Malendi, Madhya Pradesh 453441, India",
+            "latitude": 22.5051664,
+            "longitude": 75.7734732,
+            "distance_km": 1.86,
+            "place_id": "ChIJC50gUrj3YjkR3iFAB50K3MI",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Sunrise+Hotel+%26+Resort&query_place_id=ChIJC50gUrj3YjkR3iFAB50K3MI"
+          },
+          {
+            "name": "Leopard Farmhouse",
+            "type": "Farmstay",
+            "rating": 4.4,
+            "reviews": 48,
+            "address": "Farmhouse No 7, Nisarg, Dr. Ambedkar Nagar, Madhya Pradesh 453441, India",
+            "latitude": 22.481975199999997,
+            "longitude": 75.74951589999999,
+            "distance_km": 4.277,
+            "place_id": "ChIJEzsEI9n3YjkRAO47i0JacHU",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Leopard+Farmhouse&query_place_id=ChIJEzsEI9n3YjkRAO47i0JacHU"
+          },
+          {
+            "name": "Pyra Healing Gardens",
+            "type": "Resort hotel",
+            "rating": 4.2,
+            "reviews": 469,
+            "address": "308, Birchha Road, near Kelod Village, Sumeru Hills, Kelod Village, Mhow, Dr. Ambedkar Nagar, Madhya Pradesh 453441, India",
+            "latitude": 22.502913,
+            "longitude": 75.7259804,
+            "distance_km": 6.462,
+            "place_id": "ChIJhZvMb9L3YjkRwbp7Y0gsQbQ",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Pyra+Healing+Gardens&query_place_id=ChIJhZvMb9L3YjkRwbp7Y0gsQbQ"
+          },
+          {
+            "name": "Tulsi Leela - Home Stay",
+            "type": "Guest house",
+            "rating": 4.9,
+            "reviews": 19,
+            "address": "Mehta Ki Chal, 93, Dr. Ambedkar Nagar, Madhya Pradesh 453441, India",
+            "latitude": 22.5519055,
+            "longitude": 75.76872469999999,
+            "distance_km": 6.568,
+            "place_id": "ChIJs4gSfn33YjkR6wSpfilmOvE",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Tulsi+Leela+-+Home+Stay&query_place_id=ChIJs4gSfn33YjkR6wSpfilmOvE"
+          },
+          {
+            "name": "Col's Hotel Uphaar",
+            "type": "Hotel",
+            "rating": 3.9,
+            "reviews": 1287,
+            "address": "136 dongar gaon, A.b.road, opp gaurav automobiles, Dr. Ambedkar Nagar, Madhya Pradesh 453441, India",
+            "latitude": 22.5461627,
+            "longitude": 75.7435331,
+            "distance_km": 7.261,
+            "place_id": "ChIJj2qYZYn3YjkRpSkbWwLfwoQ",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Col%27s+Hotel+Uphaar&query_place_id=ChIJj2qYZYn3YjkRpSkbWwLfwoQ"
+          },
+          {
+            "name": "The Nature's Nest Hotel & Resorts",
+            "type": "Resort hotel",
+            "rating": 4.5,
+            "reviews": 544,
+            "address": "736,738, near Badgonda Balaji Temple Gram Badgonda, Dr. Ambedkar Nagar, Madhya Pradesh 453441, India",
+            "latitude": 22.4465716,
+            "longitude": 75.73712929999999,
+            "distance_km": 7.59,
+            "place_id": "ChIJuTbMT531YjkReMonAZCA2mM",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=The+Nature%27s+Nest+Hotel+%26+Resorts&query_place_id=ChIJuTbMT531YjkReMonAZCA2mM"
+          },
+          {
+            "name": "Bhavya Farms and Resort",
+            "type": "Farmstay",
+            "rating": 4.9,
+            "reviews": 56,
+            "address": "Rd, Ambachandan, Harsola, Madhya Pradesh 453441, India",
+            "latitude": 22.5631876,
+            "longitude": 75.8198719,
+            "distance_km": 8.17,
+            "place_id": "ChIJdxZjA2T7YjkRrl5X-cNbPr4",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bhavya+Farms+and+Resort&query_place_id=ChIJdxZjA2T7YjkRrl5X-cNbPr4"
+          },
+          {
+            "name": "JB Resort",
+            "type": "Hotel",
+            "rating": 4.9,
+            "reviews": 9,
+            "address": "HQJH+2V5, Santer, Madhya Pradesh 453441, India",
+            "latitude": 22.580003599999998,
+            "longitude": 75.77974689999999,
+            "distance_km": 9.415,
+            "place_id": "ChIJTa-nRQD5YjkRbTaU_RWXAlw",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=JB+Resort&query_place_id=ChIJTa-nRQD5YjkRbTaU_RWXAlw"
+          },
+          {
+            "name": "Solana Hills",
+            "type": "Resort hotel",
+            "rating": 4.9,
+            "reviews": 25,
+            "address": "Jamli, Madhya Pradesh 453661, India",
+            "latitude": 22.5133147,
+            "longitude": 75.697993,
+            "distance_km": 9.492,
+            "place_id": "ChIJJ4icOgBZYjkR9S6_-d66ov0",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Solana+Hills&query_place_id=ChIJJ4icOgBZYjkR9S6_-d66ov0"
+          },
+          {
+            "name": "MPT Choral Resort, Choral",
+            "type": "Resort hotel",
+            "rating": 4,
+            "reviews": 1032,
+            "address": "Choral Dam, Thana, Badgonda Tehsil, Dr. Ambedkar Nagar, Madhya Pradesh 453441, India",
+            "latitude": 22.4163919,
+            "longitude": 75.7531826,
+            "distance_km": 9.533,
+            "place_id": "ChIJ35qj2qf5YjkR6E8oLQI1C20",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=MPT+Choral+Resort%2C+Choral&query_place_id=ChIJ35qj2qf5YjkR6E8oLQI1C20"
+          }
+        ]
+      },
+      {
+        "category": "industrial_businesses",
+        "count": 0,
+        "nearest": null,
+        "places": []
+      },
+      {
+        "category": "warehouses_logistics",
+        "count": 2,
+        "nearest": {
+          "name": "RSP Trading Company wooden pallets",
+          "type": "Pallet supplier",
+          "rating": 4.9,
+          "reviews": 8,
+          "address": "39,Shree Ram Nagar Colony, Dhar Naka, Mhow, Indore, Madhya Pradesh 453441, India",
+          "latitude": 22.565886,
+          "longitude": 75.7464708,
+          "distance_km": 8.913,
+          "place_id": "ChIJxTmHKJH5YjkRwokGXhl85ac",
+          "google_maps_url": "https://www.google.com/maps/search/?api=1&query=RSP+Trading+Company+wooden+pallets&query_place_id=ChIJxTmHKJH5YjkRwokGXhl85ac"
+        },
+        "places": [
+          {
+            "name": "RSP Trading Company wooden pallets",
+            "type": "Pallet supplier",
+            "rating": 4.9,
+            "reviews": 8,
+            "address": "39,Shree Ram Nagar Colony, Dhar Naka, Mhow, Indore, Madhya Pradesh 453441, India",
+            "latitude": 22.565886,
+            "longitude": 75.7464708,
+            "distance_km": 8.913,
+            "place_id": "ChIJxTmHKJH5YjkRwokGXhl85ac",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=RSP+Trading+Company+wooden+pallets&query_place_id=ChIJxTmHKJH5YjkRwokGXhl85ac"
+          },
+          {
+            "name": "Aviral Warehousing Corporation",
+            "type": "Warehouse",
+            "rating": 5,
+            "reviews": 1,
+            "address": "Dongargaon, Madhya Pradesh 453441, India",
+            "latitude": 22.5529016,
+            "longitude": 75.7256283,
+            "distance_km": 9.056,
+            "place_id": "ChIJyfOCyhz4YjkRk_r-1mUG7Mk",
+            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Aviral+Warehousing+Corporation&query_place_id=ChIJyfOCyhz4YjkRk_r-1mUG7Mk"
+          }
+        ]
+      }
+    ],
+    "source": "SerpApi / Google Maps local results"
+  },
+  "ndvi": {
+    "mean": 0.3270994947254951,
+    "min": -0.4841849207878113,
+    "max": 0.8308354616165161,
+    "share_ge_030_percent": 50.76119502181016,
+    "share_ge_050_percent": 10.688898369886141,
+    "period": "2025-09-14 \u2192 2026-09-14",
+    "source": "Sentinel-2 SR Harmonized (median NDVI, whole year)",
+    "peak": {
+      "mean": 0.4939326614613651,
+      "period": "Sep-Nov",
+      "scene_count": 24,
+      "source": "Sentinel-2 SR Harmonized (median NDVI, peak 3-month period found within the year; mean from the 30 m scan, no separate min/max/share breakdown)"
+    }
+  },
+  "buying_purpose": {
+    "key": "resort",
+    "label": "resort",
+    "is_other": false,
+    "free_text": null
+  },
+  "buying_preferences": "scenic, good for weekend tourism, near Patalpani waterfall"
+}

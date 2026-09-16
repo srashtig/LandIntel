@@ -1,0 +1,16 @@
+{
+  "generated_at": "2026-09-14T21:47:59.893113+00:00",
+  "assets": {
+    "site_context_map": "report_assets/site_context_map.png",
+    "groundwater_map": "report_assets/groundwater_map.png",
+    "water_bodies_map": "report_assets/water_bodies_map.png",
+    "ndvi_map": "report_assets/ndvi_map.png",
+    "land_cover_map": "report_assets/land_cover_map.png",
+    "groundwater_chart": "report_assets/groundwater_chart.png",
+    "slope_class_chart": "report_assets/slope_class_chart.png",
+    "nearby_places_map": "report_assets/nearby_places_map.png"
+  },
+  "warnings": [
+    "reference_location_map: no data available for this run"
+  ]
+}
