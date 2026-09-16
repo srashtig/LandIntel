@@ -12,7 +12,7 @@ from typing import Optional
 import requests
 import streamlit as st
 
-from data_analysis_pipeline.custom_facts import haversine_km
+from data_analysis_pipeline.aoi import haversine_km
 from data_analysis_pipeline.location_search import parse_latlon_query, search_google_maps
 from data_analysis_pipeline.runs import DEFAULT_LAT, DEFAULT_LON, DEFAULT_RADIUS_KM
 
