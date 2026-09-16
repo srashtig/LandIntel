@@ -12,6 +12,7 @@ map geometries/images.
 from __future__ import annotations
 
 import html as html_lib
+import logging
 
 import branca
 import folium
@@ -19,6 +20,13 @@ import geopandas as gpd
 import pandas as pd
 
 from .get_nearby_places import PLACE_STYLES, place_popup
+
+# A child of orchestrator.py's "data_analysis_pipeline" logger (propagates
+# up to its handler by default), so a layer that fails to render shows up
+# in the same run.log a failed data-fetch stage would — a print() (as this
+# used to do) is invisible once this runs inside a deployed Streamlit
+# process, where stdout isn't shown to the user.
+logger = logging.getLogger(__name__)
 
 WORLDCOVER_COLORS = {
     "Tree cover": "#006400", "Shrubland": "#ffbb22", "Grassland": "#ffff4c",
@@ -384,7 +392,7 @@ def build_map(aoi, results: dict, site_summary: dict):
             ).add_to(road_fg)
             road_fg.add_to(m)
     except Exception as error:
-        print("Roads layer could not be added:", error)
+        logger.warning("Roads layer could not be added: %s", error)
 
     # --- 10C. Railways -------------------------------------------------
     try:
@@ -397,7 +405,7 @@ def build_map(aoi, results: dict, site_summary: dict):
             ).add_to(rail_fg)
             rail_fg.add_to(m)
     except Exception as error:
-        print("Railways layer could not be added:", error)
+        logger.warning("Railways layer could not be added: %s", error)
 
     # --- 10D. Water (OSM + SAC) -----------------------------------------
     try:
@@ -419,7 +427,7 @@ def build_map(aoi, results: dict, site_summary: dict):
                 ).add_to(water_fg)
             water_fg.add_to(m)
     except Exception as error:
-        print("Water layer could not be added:", error)
+        logger.warning("Water layer could not be added: %s", error)
 
     # --- 10D-1. River floodplain proxy + village boundaries -------------
     try:
@@ -442,7 +450,7 @@ def build_map(aoi, results: dict, site_summary: dict):
             ).add_to(river_fg)
             river_fg.add_to(m)
     except Exception as error:
-        print("River floodplain layer could not be added:", error)
+        logger.warning("River floodplain layer could not be added: %s", error)
 
     try:
         if not villages_in_aoi_gdf.empty:
@@ -466,7 +474,7 @@ def build_map(aoi, results: dict, site_summary: dict):
             ).add_to(village_fg)
             village_fg.add_to(m)
     except Exception as error:
-        print("Village boundaries layer could not be added:", error)
+        logger.warning("Village boundaries layer could not be added: %s", error)
 
     # Always-visible village NAME labels — a separate overlay from "Village
     # boundaries" above (which only shows names on hover). Deliberately uses
@@ -494,7 +502,7 @@ def build_map(aoi, results: dict, site_summary: dict):
                 ).add_to(label_fg)
             label_fg.add_to(m)
     except Exception as error:
-        print("Village name labels layer could not be added:", error)
+        logger.warning("Village name labels layer could not be added: %s", error)
 
     # --- 10E. Groundwater markers -----------------------------------------
     try:
@@ -548,7 +556,7 @@ def build_map(aoi, results: dict, site_summary: dict):
                 ).add_to(gw_fg)
             gw_fg.add_to(m)
     except Exception as error:
-        print("Groundwater layer could not be added:", error)
+        logger.warning("Groundwater layer could not be added: %s", error)
 
     # --- Terrain tile layers ---------------------------------------------
     try:
@@ -558,7 +566,7 @@ def build_map(aoi, results: dict, site_summary: dict):
         folium.TileLayer(tiles=elevation_image.getMapId(elevation_vis)["tile_fetcher"].url_format, attr="SRTM", name="Terrain - Elevation", overlay=True, control=True, show=False).add_to(m)
         folium.TileLayer(tiles=slope_image.getMapId(slope_vis)["tile_fetcher"].url_format, attr="SRTM", name="Terrain - Slope", overlay=True, control=True, show=False).add_to(m)
     except Exception as error:
-        print("Terrain tile layers could not be added:", error)
+        logger.warning("Terrain tile layers could not be added: %s", error)
 
     # --- Earth Engine raster layers via geemap --------------------------
     import os
@@ -569,19 +577,19 @@ def build_map(aoi, results: dict, site_summary: dict):
         ndvi_vis = {"min": 0.0, "max": 0.9, "palette": ["440154", "414487", "2A788E", "22A884", "7AD151", "FDE725"]}
         geemap.ee_tile_layer(sentinel_obs["ndvi_image"], ndvi_vis, "NDVI", shown=False).add_to(m)
     except Exception as error:
-        print("NDVI layer could not be added:", error)
+        logger.warning("NDVI layer could not be added: %s", error)
 
     try:
         landcover_vis = {"min": 10, "max": 100, "palette": ["006400", "ffbb22", "ffff4c", "f096ff", "fa0000", "b4b4b4", "f0f0f0", "0064c8", "0096a0", "00cf75", "fae6a0"]}
         geemap.ee_tile_layer(land_cover_obs["worldcover_image"], landcover_vis, "Land Cover", shown=False).add_to(m)
     except Exception as error:
-        print("Land Cover layer could not be added:", error)
+        logger.warning("Land Cover layer could not be added: %s", error)
 
     try:
         lst_vis = {"min": 20, "max": 50, "palette": ["313695", "74add1", "abd9e9", "fee090", "f46d43", "a50026"]}
         geemap.ee_tile_layer(lst_obs["lst_image"], lst_vis, "Heat / Land Surface Temperature", shown=False).add_to(m)
     except Exception as error:
-        print("Heat layer could not be added:", error)
+        logger.warning("Heat layer could not be added: %s", error)
 
     # --- Nearby places markers -------------------------------------------
     try:
@@ -598,13 +606,13 @@ def build_map(aoi, results: dict, site_summary: dict):
                     ).add_to(nearby_fg)
             nearby_fg.add_to(m)
     except Exception as error:
-        print("Nearby places layer could not be added:", error)
+        logger.warning("Nearby places layer could not be added: %s", error)
 
     # --- Summary panel -----------------------------------------------
     try:
         panel_html = _build_panel_html(site_summary)
     except Exception as error:
-        print("Summary panel could not be built:", error)
+        logger.warning("Summary panel could not be built: %s", error)
         panel_html = PANEL_CSS + (
             '<div class="li-summary" id="li-summary"><div class="li-summary__body">'
             f'<div class="li-foot">Summary panel unavailable: {_esc(error)}</div></div></div>'

@@ -15,6 +15,7 @@ import pandas as pd
 from shapely.geometry import Point
 
 from . import config
+from ._util import clean_text
 from .aoi import AOI
 
 REQUIRED_COLUMNS = {"Latitude", "Longitude", "Water Level"}
@@ -23,15 +24,6 @@ GW_SEASON_YEARS = [2023, 2024, 2025]
 PRE_MONSOON_MONTHS = [3, 4, 5, 6]
 MONSOON_MONTHS = [7, 8, 9]
 TREND_THRESHOLD_M = 0.5
-
-
-def _clean_opt(value):
-    """Return a stripped string, or None for null/empty values."""
-
-    if value is None or pd.isna(value):
-        return None
-    text = str(value).strip()
-    return text or None
 
 
 def _season_level(df: pd.DataFrame, year: int, months: list[int]):
@@ -248,10 +240,10 @@ def get_groundwater(aoi: AOI) -> dict:
             "well_no": well_no,
             "latitude": float(geometry.y) if geometry is not None else None,
             "longitude": float(geometry.x) if geometry is not None else None,
-            "village": _clean_opt(row.get("Village")),
-            "district": _clean_opt(row.get("District")),
-            "well_type": _clean_opt(row.get("Well Type")),
-            "agency": _clean_opt(row.get("Agency")),
+            "village": clean_text(row.get("Village")),
+            "district": clean_text(row.get("District")),
+            "well_type": clean_text(row.get("Well Type")),
+            "agency": clean_text(row.get("Agency")),
             "depth_of_well_m": None if pd.isna(row.get("Depth of Well")) else float(row.get("Depth of Well")),
             "latest_date": row["latest_date"].strftime("%Y-%m-%d") if pd.notna(row.get("latest_date")) else None,
             "latest_level_m_bgl": None if pd.isna(row.get("latest_level")) else float(row.get("latest_level")),

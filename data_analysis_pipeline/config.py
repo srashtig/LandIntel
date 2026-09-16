@@ -11,7 +11,10 @@ Path layout (this file lives at
                   (the ~2.3 GB reference dataset — see LAND_INTEL_DATA_DIR
                   in .env.example, and the "Download reference data" sidebar
                   button, which fetches it from REFERENCE_DATA_BUNDLE_URL)
-    CACHE_DIR  -> <repo root>/cache/
+    CACHE_DIR  -> <repo root>/cache/ (ephemeral OSM/Overpass HTTP cache
+                  only — gitignored; the small precomputed assets that used
+                  to live here, mp_boundary.geojson/mp_location_index.parquet,
+                  now ship inside data_analysis_pipeline/ itself)
     RUNS_DIR   -> <repo root>/runs/
 
 Every setting below (API keys + DATA_DIR) can also be changed at runtime —
@@ -46,7 +49,20 @@ BASE_DIR = _THIS_FILE.parents[1]
 # .env, not just the real shell environment.
 load_dotenv(BASE_DIR / ".env")
 
+# Ephemeral OSM/Overpass HTTP response cache — gitignored, never committed,
+# safe to delete anytime.
 CACHE_DIR = BASE_DIR / "cache"
+
+# osmnx's default cache_folder ("./cache", relative to the process's current
+# working directory) means the same app produces a *different* cache
+# location depending on how/where it's launched — confirmed happening in
+# practice (a stray cache/ appeared under frontend/ when Streamlit's cwd
+# didn't match the repo root). Pointed at CACHE_DIR (an absolute path) here,
+# once, so every osmnx call anywhere in the codebase lands in one
+# consistent place regardless of entry point.
+import osmnx as _ox  # noqa: E402
+
+_ox.settings.cache_folder = str(CACHE_DIR)
 
 # Where analysis runs (site_summary.json/map.html/report_assets/ per run)
 # are saved to and loaded from. Overridable via LAND_INTEL_RUNS_DIR (e.g.
@@ -106,12 +122,12 @@ def _recompute_data_paths() -> None:
 
 _recompute_data_paths()
 
-# Small, deliberately-committed precomputed asset (built by
-# scripts/build_mp_boundary_cache.py) — ships alongside the package code
-# itself, not in CACHE_DIR (which also holds ephemeral request-cache blobs
-# that aren't meant to be committed).
+# Small, deliberately-committed precomputed assets (built by
+# scripts/build_mp_boundary_cache.py / scripts/build_location_search_index.py)
+# — ship alongside the package code itself, not in CACHE_DIR (which holds
+# only ephemeral, gitignored OSM request-cache blobs).
 MP_BOUNDARY_CACHE = BASE_DIR / "data_analysis_pipeline" / "mp_boundary.geojson"
-LOCATION_SEARCH_INDEX = CACHE_DIR / "mp_location_index.parquet"
+LOCATION_SEARCH_INDEX = BASE_DIR / "data_analysis_pipeline" / "mp_location_index.parquet"
 
 # ---------------------------------------------------------------------
 # Runtime setting helpers — used by the sidebar's key/data-directory

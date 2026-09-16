@@ -16,6 +16,7 @@ import numpy as np
 import pandas as pd
 
 from . import config
+from ._util import clean_text
 from .aoi import AOI, read_local_vector
 
 VILLAGE_COLUMNS = [
@@ -160,10 +161,10 @@ def _lookup_govt_guideline_rates(
                 row = rural.iloc[0]
                 return {
                     "row_kind": "rural_village",
-                    "village": _clean_text(row.get("village")),
+                    "village": clean_text(row.get("village")),
                     "vlcode": vlcode_int,
-                    "tehsil": _clean_text(row.get("tehsil")),
-                    "frontage_type": _clean_text(row.get("frontage_type")),
+                    "tehsil": clean_text(row.get("tehsil")),
+                    "frontage_type": clean_text(row.get("frontage_type")),
                     "match_score": _to_number(row.get("match_score")),
                     **{col: _to_number(row.get(col)) for col in GUIDELINE_RATE_COLUMNS},
                     "source": "MP Govt district guideline rates, FY2026-27",
@@ -178,7 +179,7 @@ def _lookup_govt_guideline_rates(
                 rates[f"{col}_max"] = _to_number(row.get(f"{col}_max"))
             return {
                 "row_kind": "urban_range",
-                "tehsil": _clean_text(row.get("tehsil")),
+                "tehsil": clean_text(row.get("tehsil")),
                 "n_wards": _to_number(row.get("n_wards")),
                 "n_rows": _to_number(row.get("n_rows")),
                 **rates,
@@ -266,19 +267,10 @@ def _attach_village_guideline_rates(villages_gdf: pd.DataFrame) -> pd.DataFrame:
     return villages_gdf
 
 
-def _clean_text(value):
-    """Return a stripped string, or None for null/empty values."""
-
-    if value is None or pd.isna(value):
-        return None
-    text = str(value).strip()
-    return text or None
-
-
 def _to_number(value):
     """Coerce ``value`` to a float, or None if it is null/non-numeric."""
 
-    number = pd.to_numeric(_clean_text(value), errors="coerce")
+    number = pd.to_numeric(clean_text(value), errors="coerce")
     return None if pd.isna(number) else float(number)
 
 
@@ -408,7 +400,7 @@ def get_admin_context(aoi: AOI) -> dict:
         host = villages.loc[idx]
         point_inside = False
 
-    administration = {key: _clean_text(host.get(column)) for column, key in VILLAGE_FIELDS.items()}
+    administration = {key: clean_text(host.get(column)) for column, key in VILLAGE_FIELDS.items()}
     administration["point_inside_village_polygon"] = point_inside
     administration["source"] = "Survey of India village boundaries (vb_soi_mp)"
 
@@ -442,7 +434,7 @@ def get_admin_context(aoi: AOI) -> dict:
     villages_in_aoi_gdf = _attach_village_guideline_rates(villages_in_aoi_gdf)
 
     def unique_sorted(series):
-        return sorted({name for name in (_clean_text(v) for v in series) if name})
+        return sorted({name for name in (clean_text(v) for v in series) if name})
 
     villages_in_aoi = unique_sorted(villages_in_aoi_gdf["village"])
     tehsils_in_aoi = unique_sorted(villages_in_aoi_gdf["subdistric"])

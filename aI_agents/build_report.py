@@ -32,12 +32,15 @@ interpretation (no separate box needed there).
 from __future__ import annotations
 
 import base64
+import functools
 import html as html_lib
 import io
 import json
 from pathlib import Path
 
 from .qa import ChatUnavailable, _settlement_context, generate_report_interpretations
+
+_ICON_PATH = Path(__file__).resolve().parents[1] / "docs" / "icon_title.png"
 
 # ---------------------------------------------------------------------
 # Look & feel — plain, portable CSS (no custom properties, no fixed
@@ -58,7 +61,17 @@ body { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; col
 .li-hero { background: #1e3a2f; color: #ffffff; border-radius: 12px; padding: 16px 22px; margin-bottom: 14px; }
 .li-hero p { margin: 0; color: #cfe3d7; font-size: 13px; line-height: 1.7; }
 .li-hero .title-line { font-size: 20px; font-weight: 700; color: #ffffff; }
-.li-hero .tagline { font-size: 12px; font-weight: 400; font-style: italic; color: #cfe3d7; }
+/* xhtml2pdf supports neither `float` nor flexbox/grid for the logo-on-the-
+   right layout (confirmed directly — `float` was silently ignored, logo
+   rendered inline instead) — a table is the one layout mechanism it
+   reliably supports for this. The table needs its OWN background color,
+   not just the wrapping .li-hero div's: confirmed directly that xhtml2pdf
+   does not paint a parent div's background behind a child table, leaving
+   the hero looking blank/backgroundless without this. */
+table.li-hero-table { width: 100%; background: #1e3a2f; }
+table.li-hero-table td { vertical-align: middle; padding: 0; background: #1e3a2f; }
+td.li-hero-logo-cell { width: 150px; text-align: right; }
+img.li-logo { height: 56px; }
 .li-card { background: #ffffff; border: 1px solid #e5e3dd; border-radius: 12px; padding: 14px 18px;
            margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); page-break-before: always; }
 .li-card h2 { margin: 0 0 10px; font-size: 16px; color: #1e3a2f; border-bottom: 2px solid #2f855a; padding-bottom: 6px; }
@@ -203,6 +216,40 @@ def _img_tag(manifest: dict, run_dir: Path, key: str, alt: str) -> str | None:
     return f'<img class="li-chart" src="data:image/png;base64,{b64}" alt="{_esc(alt)}">'
 
 
+_HERO_BACKGROUND_RGB = (0x1E, 0x3A, 0x2F)  # matches .li-hero's background: #1e3a2f
+
+
+@functools.lru_cache(maxsize=1)
+def _logo_img_tag() -> str:
+    """Embed the app's static ``docs/icon_title.png`` logo (icon + "LANDINTEL"
+    wordmark lockup) as a base64 ``<img>`` tag — unlike :func:`_img_tag`,
+    this isn't a per-run generated asset, so it's read once and cached for
+    the life of the process rather than looked up per report. Returns ``""``
+    if the file is missing, so a caller can just concatenate it into the
+    HTML unconditionally.
+
+    ``docs/icon_title.png`` itself is a fully opaque RGB image (a white
+    card behind the logo, not a transparent background) — the flatten step
+    below is a no-op for it today, but is kept so a future transparent
+    variant of this asset would still render correctly against the hero's
+    dark green (``_HERO_BACKGROUND_RGB``) instead of showing a white box:
+    confirmed directly that xhtml2pdf does not composite PNG alpha against
+    the page background on its own.
+    """
+
+    if not _ICON_PATH.exists():
+        return ""
+    from PIL import Image
+
+    icon = Image.open(_ICON_PATH).convert("RGBA")
+    background = Image.new("RGBA", icon.size, (*_HERO_BACKGROUND_RGB, 255))
+    flattened = Image.alpha_composite(background, icon).convert("RGB")
+    buffer = io.BytesIO()
+    flattened.save(buffer, format="PNG")
+    b64 = base64.b64encode(buffer.getvalue()).decode("ascii")
+    return f'<img class="li-logo" src="data:image/png;base64,{b64}" alt="LandIntel logo">'
+
+
 def _load_manifest(run_dir: Path) -> dict:
     manifest_path = run_dir / "report_assets" / "manifest.json"
     if not manifest_path.exists():
@@ -233,9 +280,7 @@ def _cover(site_summary: dict, manifest: dict, run_dir: Path) -> str:
     # with a <br>), so keeping this whole hero as a single block is what
     # makes the PDF match the on-screen HTML's clean, unbroken look.
     lines = [
-        f'<span class="title-line">LandIntel — Site Report<br>'
-        f'<span class="tagline">AI powered tool to analyse a land, grounded in data. Know it before you buy it!'
-        f"</span></span>",
+        '<span class="title-line">Site Report</span>',
         f"{_esc(admin.get('village'))}, {_esc(admin.get('tehsil'))}, {_esc(admin.get('district'))}, "
         f"{_esc(admin.get('state'))}",
         f"{_fmt_num(site.get('latitude'), 5)}, {_fmt_num(site.get('longitude'), 5)} &middot; "
@@ -249,7 +294,13 @@ def _cover(site_summary: dict, manifest: dict, run_dir: Path) -> str:
             f"Rs. {_fmt_num(land_price.get('total_price'), 0)} total "
             f"(Rs. {_fmt_num(land_price.get('price_per_sqft'), 2)}/sqft)"
         )
-    hero = '<div class="li-hero"><p>' + "<br>".join(lines) + "</p></div>"
+    text_cell = "<p>" + "<br>".join(lines) + "</p>"
+    hero = (
+        '<div class="li-hero"><table class="li-hero-table" cellpadding="0" cellspacing="0" border="0"><tr>'
+        f"<td>{text_cell}</td>"
+        f'<td class="li-hero-logo-cell">{_logo_img_tag()}</td>'
+        "</tr></table></div>"
+    )
 
     img = _img_tag(manifest, run_dir, "site_context_map", "Site overview map")
     footer = f'<p class="li-footer">Generated at {_esc(site_summary.get("generated_at"))}</p>'

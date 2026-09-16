@@ -52,7 +52,7 @@ import requests
 from matplotlib.colors import LinearSegmentedColormap
 from PIL import Image as PILImage
 
-from data_analysis_pipeline.aoi import AOI
+from data_analysis_pipeline.aoi import AOI, haversine_km
 from data_analysis_pipeline.get_nearby_places import PLACE_STYLES
 
 _TO_3857 = pyproj.Transformer.from_crs("EPSG:4326", "EPSG:3857", always_xy=True)
@@ -316,7 +316,7 @@ def _reference_location_map(aoi: AOI, site_summary: dict, out_path: Path) -> boo
     ref_lat, ref_lon = ref["lat"], ref["lon"]
     # Frame around the midpoint of site + reference so both fit.
     mid_lat, mid_lon = (aoi.lat + ref_lat) / 2, (aoi.lon + ref_lon) / 2
-    span_km = max(aoi.radius_km, _haversine_km(aoi.lat, aoi.lon, ref_lat, ref_lon) / 1.6)
+    span_km = max(aoi.radius_km, haversine_km(aoi.lat, aoi.lon, ref_lat, ref_lon) / 1.6)
     fake_aoi_center = _TO_3857.transform(mid_lon, mid_lat)
     buf = span_km * 1000 * 1.3
     w, s, e, n = fake_aoi_center[0] - buf, fake_aoi_center[1] - buf, fake_aoi_center[0] + buf, fake_aoi_center[1] + buf
@@ -515,16 +515,6 @@ def _slope_class_chart(site_summary: dict, out_path: Path) -> bool:
 # ---------------------------------------------------------------------
 # Small utility + entrypoint
 # ---------------------------------------------------------------------
-
-
-def _haversine_km(lat1, lon1, lat2, lon2) -> float:
-    import math
-
-    radius = 6371.0
-    lat1, lon1, lat2, lon2 = map(math.radians, [lat1, lon1, lat2, lon2])
-    dlat, dlon = lat2 - lat1, lon2 - lon1
-    value = math.sin(dlat / 2) ** 2 + math.cos(lat1) * math.cos(lat2) * math.sin(dlon / 2) ** 2
-    return 2 * radius * math.asin(min(1.0, value ** 0.5))
 
 
 def generate_report_assets(aoi: AOI, results: dict, site_summary: dict, assets_dir: Path) -> dict:

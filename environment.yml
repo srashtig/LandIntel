@@ -29,3 +29,4 @@ dependencies:
       - earthengine-api==1.7.42
       - xhtml2pdf==0.2.19
       - gdown==6.2.0
+      - pyarrow==23.0.0

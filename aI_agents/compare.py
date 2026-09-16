@@ -54,11 +54,11 @@ def compare(
     preferences: str | None = None,
 ) -> tuple[dict, list[tuple[str, list]]]:
     """Returns ``(ranking_result, facts_table)`` for 2+ ``(label,
-    site_summary)`` sites — see :func:`app.qa.rank_sites` for
+    site_summary)`` sites — see :func:`aI_agents.qa.rank_sites` for
     ``ranking_result``'s shape and :func:`side_by_side_facts` for the table.
 
     Raises:
-        ValueError: Fewer than 2 or more than :data:`app.qa._MAX_RANK_SITES` sites.
+        ValueError: Fewer than 2 or more than :data:`aI_agents.qa._MAX_RANK_SITES` sites.
         ChatUnavailable: If no Groq API key is configured.
     """
 

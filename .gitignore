@@ -10,9 +10,15 @@ __pycache__/
 # "Download source data" button or a manual Drive link, not committed.
 data/
 
-# osmnx's Overpass HTTP response cache (hash-named .json blobs, ephemeral
-# and regenerable) — everything else in cache/ (e.g. mp_location_index.parquet)
-# is a small, deliberately-committed precomputed asset and stays tracked.
-cache/*.json
+# osmnx's Overpass HTTP response cache — ephemeral and regenerable, always
+# lands here (see CACHE_DIR / ox.settings.cache_folder in config.py). The
+# two small precomputed assets that used to live in a cache/ folder
+# (mp_boundary.geojson, mp_location_index.parquet) now ship inside
+# data_analysis_pipeline/ itself, so this whole directory can be ignored.
+cache/
+
+# A single shared, ever-growing log file (data_analysis_pipeline/orchestrator.py) —
+# not run output worth versioning.
+runs/pipeline.log
 
 .DS_Store

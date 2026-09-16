@@ -2,26 +2,21 @@
 provide: distance/travel-time to a reference location the user cares
 about, and price/area for the plot being evaluated.
 
-Pure functions only (no Streamlit/notebook coupling) so both call sites —
-Stage B's Streamlit "Custom facts" expander and Stage C's chat-driven
-notebook flow — share one implementation. Callers are responsible for
-persisting the returned ``site_summary``/map HTML to disk; nothing here
-does file I/O itself.
+Pure functions only (no Streamlit coupling) — ``frontend/streamlit_app.py``
+calls :func:`merge_custom_facts` and is responsible for persisting the
+returned ``site_summary`` itself; nothing here does file I/O.
 
-:func:`merge_custom_facts` writes directly into the same ``site_summary``
-keys the original notebook's scoring engine and :mod:`build_map` already know
-how to read (a new ``reference_location`` section, and the existing
-``land_price`` section) — so once saved, both the decision engine and the
-Stage C notebook pick these facts up with no further plumbing.
+:func:`merge_custom_facts` writes into a new ``reference_location`` section
+and the existing ``land_price`` section of ``site_summary``, which
+:mod:`build_map` and :mod:`aI_agents.qa` already know how to read.
 """
 
 from __future__ import annotations
 
-import math
-
 import requests
 
 from . import config
+from .aoi import haversine_km
 
 _OSRM_ROUTE_URL = "https://router.project-osrm.org/route/v1/driving"
 _SERPAPI_URL = "https://serpapi.com/search"
@@ -30,8 +25,7 @@ _SERPAPI_URL = "https://serpapi.com/search"
 # rail-like (train/subway/tram) vs. everything else (bus, private coach).
 _TRANSIT_RAIL_ICON_HINTS = ("rail", "train", "subway", "tram")
 
-# acres per 1 unit, for normalizing a user-entered price/area to INR/acre —
-# the unit decision_engine.py's existing "land_price" factor already uses.
+# acres per 1 unit, for normalizing a user-entered price/area to INR/acre.
 _ACRES_PER_UNIT = {
     "acre": 1.0,
     "hectare": 2.4710538146717,
@@ -39,17 +33,6 @@ _ACRES_PER_UNIT = {
     "sqm": 1.0 / 4_046.8564224,
 }
 _SQFT_PER_ACRE = 43_560.0
-
-
-def haversine_km(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
-    """Great-circle distance between two lat/lon points, in kilometers."""
-
-    earth_radius_km = 6371.0088
-    phi1, phi2 = math.radians(lat1), math.radians(lat2)
-    dphi = math.radians(lat2 - lat1)
-    dlambda = math.radians(lon2 - lon1)
-    a = math.sin(dphi / 2) ** 2 + math.cos(phi1) * math.cos(phi2) * math.sin(dlambda / 2) ** 2
-    return 2 * earth_radius_km * math.asin(math.sqrt(a))
 
 
 def fetch_road_travel_time(
@@ -107,8 +90,8 @@ def fetch_transit_time(
     next), so both the duration and which bus/train it finds depend
     entirely on when this is called. Treat the result as "one real option
     found just now," never as a typical/average travel time — this is why
-    it is surfaced for display only, never as a decision_engine scoring
-    input. There is also no reliable way to force "bus only" vs "train
+    it is surfaced for display only, never as a scoring input. There is
+    also no reliable way to force "bus only" vs "train
     only" as independent alternatives through this API (a ``transit_mode``
     param exists but was verified to have no effect); whichever mode(s)
     appear are just whatever Google's own routing happened to pick as
@@ -228,7 +211,7 @@ def merge_custom_facts(
     if one was given. Also attaches a best-effort public-transit itinerary
     (see :func:`fetch_transit_time`) alongside the driving time — a
     one-off scheduled snapshot, not a stable average, so it's for display
-    only and never read by decision_engine.py.
+    only, not a scoring input.
 
     Args:
         site_summary: A ``site_summary`` dict (mutated in place). Must
@@ -286,7 +269,7 @@ def merge_custom_facts(
         }
 
         # Local import: build_map pulls in folium/geemap/branca, which
-        # every other caller of this module (e.g. decision_engine.py) has
+        # this module's other callers (e.g. frontend/streamlit_app.py) have
         # no reason to import transitively.
         from .build_map import build_reference_map
 

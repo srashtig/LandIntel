@@ -81,9 +81,10 @@ report's chapter-by-chapter deterministic/AI split.
    - **Option B — set them from inside the running app.** Skip `.env`
      entirely, run the app (step 4 below), and open the sidebar's
      **⚙️ Settings** panel: paste `GROQ_API_KEY`/`SERPAPI_KEY`/
-     `GEE_PROJECT_ID` there and click **Save settings** — this writes them
-     into `.env` for you (so it's really the same end state as Option A,
-     just entered through the UI instead of a text editor) and takes effect
+     `GEE_PROJECT_ID` there (the same panel also has a **Run directory**
+     field, see below) and click **Save settings** — this writes them into
+     `.env` for you (so it's really the same end state as Option A, just
+     entered through the UI instead of a text editor) and takes effect
      immediately, no restart needed.
 3. **Point at the reference dataset — either of these two ways:**
    - **Option A — download it yourself.** Get the reference-data zip (MP
@@ -94,9 +95,12 @@ report's chapter-by-chapter deterministic/AI split.
      Defaults to `data/` (in the repo root) if unset.
    - **Option B — let the app download it.** If a
      `REFERENCE_DATA_BUNDLE_URL` is already configured (in `.env`), open the
-     sidebar and click **⬇️ Download reference data** — it fetches and
-     extracts the zip straight into the Data directory field's location,
-     with a live progress bar, and confirms the exact path once done.
+     sidebar and click **📥 Download source data (~500 MB, optional)** — it
+     fetches and extracts the zip into the currently-saved Data directory
+     (`config.DATA_DIR`, not whatever is typed but not yet saved in the
+     field), with a live progress bar, and confirms the exact path once done
+     — the success dialog also tells you to update the Data directory field
+     if it doesn't already match.
    - **This step is optional** — it's only needed to run a **new** site
      analysis; browsing, generating reports for, and chatting about the 7
      bundled demo runs in `runs/` all work with zero reference data and zero

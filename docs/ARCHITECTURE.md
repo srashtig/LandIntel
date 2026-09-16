@@ -5,13 +5,15 @@
 ```
 <repo root>/
 ├── data_analysis_pipeline/   # the analysis pipeline: orchestrator + one
-│                              #   get_*.py per data source
+│                              #   get_*.py per data source, plus two small
+│                              #   precomputed assets (mp_boundary.geojson,
+│                              #   mp_location_index.parquet)
 ├── aI_agents/                 # the purpose-driven AI layer: Q&A, report,
 │                              #   compare, static report-asset generation
 ├── frontend/                  # the one Streamlit app
 ├── runs/                      # shared run store: site_summary.json,
 │                              #   map.html, report_assets/ per run
-├── cache/                     # offline location-search index
+├── cache/                     # ephemeral OSM/Overpass HTTP cache (gitignored)
 ├── scripts/                   # one-time offline precompute scripts
 └── docs/                      # this file + DATA_SOURCES.md + REPORT_METHODOLOGY.md
 ```
@@ -169,10 +171,24 @@ is a real public entry point another module calls.
 ### `data_analysis_pipeline/`
 
 **`config.py`** — paths (`DATA_DIR`, `CACHE_DIR`, `RUNS_DIR`), API keys, and
-Earth Engine bootstrap; loads `.env` once at import time.
+Earth Engine bootstrap; loads `.env` once at import time. Also backs the
+sidebar's runtime settings — every consumer elsewhere reads these as
+`config.ATTR`, never a name-import, so changes below take effect
+immediately, no restart needed.
 - `init_earth_engine()` — authenticate/initialize GEE once per process.
 - `_resolve_serpapi_key()` / `_resolve_groq_key()` — env var first, then a
   legacy out-of-repo key-file fallback.
+- `set_env_key(name, value)` — set one API-key-style setting at runtime:
+  updates `os.environ`, this module's matching attribute, and upserts it
+  into `.env`. Used by the sidebar's "Save settings" button.
+- `reset_data_dir(new_dir)` / `reset_runs_dir(new_dir)` — same idea for
+  `DATA_DIR` (and everything derived from it: `VILLAGE_BOUNDARY_FILE`,
+  `RIVER_POLYGON_FILE`, etc., recomputed via `_recompute_data_paths()`) and
+  `RUNS_DIR`. Used by the sidebar's "Data directory"/"Run directory" fields.
+- `reset_earth_engine()` — force the next `init_earth_engine()` call to
+  actually re-initialize, after `GEE_PROJECT_ID` changes at runtime.
+- `_upsert_env_file(name, value)` — shared helper: replace a `NAME=...`
+  line in `.env` if present, else append one.
 
 **`aoi.py`** — the area-of-interest polygon every `get_*` module takes.
 - `class AOI` — lat/lon/radius + its polygon in a few CRSes.
@@ -245,7 +261,7 @@ price/area), addable to any existing run after the fact.
 - `search_google_maps(query, limit)` — live Google Maps place search (via
   SerpApi) for the location picker's search box.
 - `search_places(query, limit)` — offline MP-only fuzzy search over the
-  cached village/tehsil/district index (`cache/mp_location_index.parquet`,
+  cached village/tehsil/district index (`data_analysis_pipeline/mp_location_index.parquet`,
   built by `scripts/build_location_search_index.py`); no network call.
 - `_load_index()` — lazily load and cache that parquet index.
 
@@ -406,7 +422,19 @@ above for how these fit together.
   inside View Analysis.
 - `_render_chat` — the free-flowing chat box.
 - `_run_progress_dialog` — polls a fresh run's progress queue until done.
-- `_render_sidebar` — session-only saved-sites list.
+- `_render_sidebar` — thin wrapper that renders `_render_api_key_settings`
+  inside `st.sidebar`.
+- `_render_api_key_settings` — the **⚙️ Settings** panel: `GROQ_API_KEY`,
+  `SERPAPI_KEY`, `GEE_PROJECT_ID` fields; "Run directory" and "Data
+  directory" fields; the "📥 Download source data" button (enabled only
+  when `config.REFERENCE_DATA_BUNDLE_URL` is configured); calls
+  `config.set_env_key`/`config.reset_data_dir`/`runs_module.reset_runs_dir`
+  and, after a key change, `groq_client.reset_client()` /
+  `config.reset_earth_engine()` so it takes effect without a restart.
+- `_key_status(value)` — "configured (…last 4 chars)" vs. "not set", used by
+  the settings panel's placeholder text.
+- `_data_download_success_dialog(path)` — the `st.dialog` popup confirming a
+  finished source-data download, with the extracted path to copy.
 - `_init_session_state`, `_sync_active_site` — session-state defaults and
   the "reset any open dialog when the active site changes" guard.
 - `_map_html_with_default_layers` — post-processes the Folium map HTML to

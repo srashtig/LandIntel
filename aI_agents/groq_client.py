@@ -90,7 +90,19 @@ def _require_client():
 
 def _create_completion(client, **kwargs):
     """``client.chat.completions.create`` with one retry on a transient
-    rate-limit error, surfaced as :class:`ChatUnavailable` if it persists.
+    rate-limit error or a malformed-output error, surfaced as
+    :class:`ChatUnavailable` if it persists.
+
+    The malformed-output case (Groq's ``json_validate_failed`` /
+    ``tool_use_failed`` error codes) is a real, observed model quirk: in
+    ``response_format={"type": "json_object"}`` mode (used throughout this
+    app — there is no ``tools=`` param registered anywhere), the model can
+    still occasionally emit output shaped like a native tool call instead
+    of the requested plain JSON object, which Groq rejects outright rather
+    than returning it as content. A retry (same prompt, same temperature)
+    was confirmed to get a valid response back in practice, since this is
+    model sampling variance, not a persistent problem with the request
+    itself.
 
     Args:
         client: A Groq client, from :func:`_get_client`.
@@ -103,7 +115,13 @@ def _create_completion(client, **kwargs):
         ChatUnavailable: If the call still fails after one retry.
     """
 
-    from groq import RateLimitError
+    from groq import BadRequestError, RateLimitError
+
+    _MALFORMED_OUTPUT_CODES = {"json_validate_failed", "tool_use_failed"}
+
+    def _is_malformed_output(error: BadRequestError) -> bool:
+        body = error.body if isinstance(error.body, dict) else {}
+        return body.get("error", {}).get("code") in _MALFORMED_OUTPUT_CODES
 
     try:
         return client.chat.completions.create(**kwargs)
@@ -114,4 +132,15 @@ def _create_completion(client, **kwargs):
         except RateLimitError as retry_error:
             raise ChatUnavailable(
                 f"Groq rate limit exceeded even after retrying: {retry_error}"
+            ) from retry_error
+    except BadRequestError as error:
+        if not _is_malformed_output(error):
+            raise
+        try:
+            return client.chat.completions.create(**kwargs)
+        except BadRequestError as retry_error:
+            if not _is_malformed_output(retry_error):
+                raise
+            raise ChatUnavailable(
+                f"Groq returned malformed output even after retrying: {retry_error}"
             ) from retry_error

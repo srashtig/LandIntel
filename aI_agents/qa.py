@@ -325,6 +325,16 @@ def _drop_empty(value):
     return value
 
 
+# Chat history keeps growing for the life of a session; sending all of it
+# on every turn would eventually blow past the Groq free tier's 8000
+# tokens-per-minute cap on its own, on top of the curated site data already
+# in every call. Only the last few exchanges are ever actually needed to
+# resolve a follow-up question, so older turns are dropped rather than
+# summarized/truncated — simpler, and the model was never grounded in them
+# being available beyond resolving immediate follow-ups anyway.
+_MAX_HISTORY_TURNS = 2
+
+
 def answer_question(
     site_summary: dict,
     question: str,
@@ -351,7 +361,9 @@ def answer_question(
             there is no per-purpose profile to select.
         preferences: Optional free-text user preferences.
         history: Prior chat turns (``{"role", "content"}`` dicts), for a
-            multi-turn conversation. Not mutated.
+            multi-turn conversation. Not mutated; only the last
+            ``_MAX_HISTORY_TURNS`` exchanges are actually sent (older turns
+            are dropped, not summarized) to bound Groq token usage.
         site_label: A human label for the primary site (e.g. its run name)
             — included in the grounding context, mainly useful when
             ``additional_sites`` is also given so the model can refer to
@@ -408,7 +420,8 @@ def answer_question(
         )
 
     system_message = {"role": "system", "content": "".join(prompt_parts)}
-    messages = [system_message, *(history or []), {"role": "user", "content": question}]
+    recent_history = (history or [])[-(_MAX_HISTORY_TURNS * 2):]
+    messages = [system_message, *recent_history, {"role": "user", "content": question}]
 
     response = _create_completion(
         client,
@@ -558,7 +571,7 @@ def generate_report_interpretations(site_summary: dict, purpose: str, preference
     piece the report needs — a short plain-language interpretation per
     chapter, plus the dedicated strengths/concerns/trade-offs chapter —
     instead of a separate call per chapter (which would both cost more Groq
-    free-tier TPM budget and be slower). Used by :mod:`app.build_report`.
+    free-tier TPM budget and be slower). Used by :mod:`aI_agents.build_report`.
 
     Deliberately the ONLY Groq call in report generation: everything else
     (facts, tables, charts, maps) is deterministic, computed straight from
@@ -673,7 +686,7 @@ def rank_sites(
         purpose: The shared stated purpose (e.g. "housing").
         preferences: Optional shared free-text preferences.
         extra_context: Optional pre-formatted text (e.g. a live tool result
-            — see :mod:`app.qa_agent`) appended to the grounding context,
+            — see :mod:`aI_agents.qa_agent`) appended to the grounding context,
             available to the model while it reasons about every site.
 
     Returns:

@@ -4,7 +4,6 @@
 from __future__ import annotations
 
 import html as html_lib
-import math
 from datetime import datetime, timezone
 from urllib.parse import quote_plus
 
@@ -14,7 +13,8 @@ import requests
 from shapely.geometry import Point
 
 from . import config
-from .aoi import AOI
+from ._util import clean_text
+from .aoi import AOI, haversine_km
 
 NEARBY_RADIUS_KM = 10
 SETTLEMENT_TAGS = {"place": ["city", "town", "village", "suburb", "neighbourhood", "hamlet", "isolated_dwelling"]}
@@ -41,34 +41,6 @@ PLACE_STYLES = {
     "industrial_businesses": {"icon": "industry", "color": "gray"},
     "warehouses_logistics": {"icon": "truck", "color": "black"},
 }
-
-
-def _clean_opt(value):
-    """Return a stripped string, or None for null/empty values."""
-
-    import pandas as pd
-    if value is None or pd.isna(value):
-        return None
-    text = str(value).strip()
-    return text or None
-
-
-def haversine_km(lat1, lon1, lat2, lon2) -> float:
-    """Great-circle distance between two (lat, lon) points, in kilometers.
-
-    Args:
-        lat1, lon1: First point, decimal degrees.
-        lat2, lon2: Second point, decimal degrees.
-
-    Returns:
-        Distance in kilometers.
-    """
-
-    radius = 6371.0
-    lat1, lon1, lat2, lon2 = map(math.radians, [float(lat1), float(lon1), float(lat2), float(lon2)])
-    dlat, dlon = lat2 - lat1, lon2 - lon1
-    value = math.sin(dlat / 2) ** 2 + math.cos(lat1) * math.cos(lat2) * math.sin(dlon / 2) ** 2
-    return 2 * radius * math.atan2(math.sqrt(value), math.sqrt(1 - value))
 
 
 def google_maps_link(name, latitude, longitude, place_id=None) -> str:
@@ -233,8 +205,8 @@ def get_nearby_places(aoi: AOI, radius_km: float = NEARBY_RADIUS_KM) -> dict:
     if not nearby_settlements_metric.empty:
         for _, row in settlement_points.sort_values("distance_km").iterrows():
             nearby_settlements_list.append({
-                "name": _clean_opt(row.get("name")),
-                "place_type": _clean_opt(row.get("place")),
+                "name": clean_text(row.get("name")),
+                "place_type": clean_text(row.get("place")),
                 "distance_km": float(row["distance_km"]),
             })
 
@@ -253,10 +225,7 @@ def get_nearby_places(aoi: AOI, radius_km: float = NEARBY_RADIUS_KM) -> dict:
     if config.SERPAPI_DISABLED:
         warnings.append("SERPAPI_DISABLED is set - SerpApi searches skipped.")
     else:
-        try:
-            api_key = config.SERPAPI_KEY
-        except RuntimeError as error:
-            warnings.append(str(error))
+        api_key = config.SERPAPI_KEY
 
     if api_key:
         for category, query in SERPAPI_QUERIES.items():

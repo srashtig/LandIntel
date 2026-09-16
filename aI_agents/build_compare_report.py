@@ -1,17 +1,17 @@
 """Beautified, PDF-downloadable HTML report for Compare (Phase 4).
 
-Reuses :mod:`app.build_report`'s CSS/helpers (cards, icons, number
+Reuses :mod:`aI_agents.build_report`'s CSS/helpers (cards, icons, number
 formatting, ``report_to_pdf_bytes``) for the same visual style as Generate
-Report, adding: one "facts" card per site (built from :mod:`app.qa`'s
+Report, adding: one "facts" card per site (built from :mod:`aI_agents.qa`'s
 curated context — the exact same data the ranking was grounded in, so the
 card and the AI reasoning never disagree on a number), a rank/score/verdict
 badge per site, the "thinking" paragraph per site (see
-:func:`app.qa.rank_sites`), and an overall summary.
+:func:`aI_agents.qa.rank_sites`), and an overall summary.
 """
 
 from __future__ import annotations
 
-from .build_report import _CARD_CLOSE, _REPORT_CSS, _ai_box, _card_open, _esc, _fact, _fmt_num
+from .build_report import _CARD_CLOSE, _REPORT_CSS, _ai_box, _card_open, _esc, _fact, _fmt_num, _logo_img_tag
 from .qa import _curate_site_context
 
 _VERDICT_COLORS = {"Excellent": "#16a34a", "Good": "#2563eb", "Moderate": "#d97706", "Poor": "#dc2626"}
@@ -90,13 +90,13 @@ def generate_compare_html(
     purpose: str,
 ) -> str:
     """Build the full comparison report HTML — same card/icon/PDF-portable
-    style as :func:`app.build_report.generate_report`.
+    style as :func:`aI_agents.build_report.generate_report`.
 
     Args:
         sites: ``[(label, site_summary), ...]`` in the order compared.
-        ranking_result: From :func:`app.qa_agent.rank_sites_with_tools` —
+        ranking_result: From :func:`aI_agents.qa_agent.rank_sites_with_tools` —
             ``{"ranking": [...], "summary": str, "tool_used": str | None}``.
-        facts: From :func:`app.compare.side_by_side_facts`.
+        facts: From :func:`aI_agents.compare.side_by_side_facts`.
         purpose: The shared stated purpose these sites were compared for.
     """
 
@@ -109,8 +109,10 @@ def generate_compare_html(
     tool_used = ranking_result.get("tool_used")
     tool_note = f" &middot; used a live tool while reasoning: {_esc(tool_used)}" if tool_used else ""
     hero = (
-        '<div class="li-hero"><p><span class="title-line">Site Comparison</span><br>'
-        f"{len(sites)} sites compared for: {_esc(purpose)}{tool_note}</p></div>"
+        '<div class="li-hero"><table class="li-hero-table" cellpadding="0" cellspacing="0" border="0"><tr><td>'
+        '<p><span class="title-line">Site Comparison</span><br>'
+        f"{len(sites)} sites compared for: {_esc(purpose)}{tool_note}</p>"
+        f'</td><td class="li-hero-logo-cell">{_logo_img_tag()}</td></tr></table></div>'
     )
 
     cards = []

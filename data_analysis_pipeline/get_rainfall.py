@@ -213,9 +213,8 @@ def get_rainfall(aoi: AOI, years: list[int] | None = None) -> dict:
     Args:
         aoi: The area of interest, from :func:`data_analysis_pipeline.aoi.build_aoi`.
         years: Calendar years to compute metrics for, e.g. [2023, 2024, 2025].
-            Defaults to the most recent :data:`DEFAULT_RAIN_YEAR_SPAN` fully
-            completed years (see :func:`_default_rain_years`), recomputed
-            relative to today on every call. IMD files must exist locally
+            Defaults to the years covered by ``config.IMD_RAINFALL_FILES``
+            (see :func:`_default_rain_years`). IMD files must exist locally
             for each year (see ``config.IMD_RAINFALL_FILES``) or that
             year's IMD metrics are None.
 

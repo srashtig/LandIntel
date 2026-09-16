@@ -5,7 +5,7 @@ Villages are indexed individually (one centroid each); subdistricts and
 districts are dissolved first so e.g. "Dewas district" resolves to a single
 point rather than one row per village in that district.
 
-Writes ``cache/mp_location_index.parquet`` with columns
+Writes ``data_analysis_pipeline/mp_location_index.parquet`` with columns
 ``name, level, centroid_lat, centroid_lon, district, subdistric``.
 
 Not imported by the app — run manually:
@@ -62,7 +62,7 @@ def _centroid_rows(gdf: gpd.GeoDataFrame, name_col: str, level: str) -> pd.DataF
 
 
 def main() -> None:
-    """Build ``cache/mp_location_index.parquet``: one centroid row per
+    """Build ``data_analysis_pipeline/mp_location_index.parquet``: one centroid row per
     village, plus one per dissolved subdistrict and one per dissolved
     district, for :func:`data_analysis_pipeline.location_search.search_places`.
     Run once (or whenever the source file changes); not imported by the app."""

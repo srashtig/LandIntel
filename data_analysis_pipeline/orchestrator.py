@@ -159,14 +159,6 @@ def _call_with_hard_timeout(fn: Callable, args: tuple, timeout_seconds: float):
         returned normally within the deadline.
     """
 
-    outcome: dict = {}
-
-    def target() -> None:
-        try:
-            outcome["value"] = fn(*args)
-        except Exception as error:  # noqa: BLE001 - handed back to the caller, not swallowed
-            outcome["error"] = error
-
     thread, outcome = _start_hard_timeout_call(fn, args)
     return _join_hard_timeout_call(thread, outcome, timeout_seconds)
 

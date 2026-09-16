@@ -23,11 +23,20 @@ import requests
 from bs4 import BeautifulSoup
 
 from data_analysis_pipeline import config
+from data_analysis_pipeline.aoi import haversine_km
+from data_analysis_pipeline.custom_facts import fetch_road_travel_time
 from data_analysis_pipeline.get_nearby_places import _serpapi_search
+from data_analysis_pipeline.location_search import search_google_maps
 from data_analysis_pipeline.runs import list_previous_runs
 from .groq_client import _REASONING_EFFORT, _create_completion, _require_client
 
-from .qa import _MAX_RANK_SITES, ChatUnavailable, _curate_site_context, answer_question  # noqa: F401 — re-exported
+from .qa import (  # noqa: F401 — re-exported
+    _MAX_HISTORY_TURNS,
+    _MAX_RANK_SITES,
+    ChatUnavailable,
+    _curate_site_context,
+    answer_question,
+)
 
 _ONEFIVENINE_USER_AGENT = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
@@ -35,22 +44,68 @@ _ONEFIVENINE_USER_AGENT = (
 )
 
 _TOOLS_DESCRIPTION = """Available tools (pick at most one per question, or none if not needed):
-- "nearby_category_search": an ad-hoc LIVE search (Google Maps, via SerpApi) for a category of place \
-NOT already covered by this site's saved categories (tourist_attractions, restaurants, hospitals, \
-schools, markets, hotels, industrial_businesses, warehouses_logistics) — e.g. "petrol pump", "bank", \
-"ATM", "temple", "police station". Args: {"query": "<short category>"}.
+- "nearby_category_search": an ad-hoc LIVE search (Google Maps, via SerpApi) for a category of place. \
+Use it for a category NOT already covered by this site's saved categories (tourist_attractions, \
+restaurants, hospitals, schools, markets, hotels, industrial_businesses, warehouses_logistics) — e.g. \
+"petrol pump", "bank", "ATM", "temple", "police station" — OR for a SAVED category too if the question \
+asks about a radius wider than this site's own analysis radius (e.g. "tourist attractions within 50 km" \
+when the site was analyzed at a smaller radius). Args: {"query": "<short category>", "radius_km": \
+<number, ONLY if the question states a specific distance — omit entirely to use the site's own default>, \
+"sort_by": "rating" <ONLY if the question asks for the "most popular/famous/best/top-rated" places, \
+to rank by actual rating + review count instead of nearest-first — omit entirely otherwise>}. Results \
+always include each place's rating and number of reviews when available.
 - "onefivenine_tehsil_info": fetches a public page (onefivenine.com) with tehsil-level info NOT in \
 this app's own pipeline data — village list, population, rivers, nearby railway stations, registered \
 companies, schools/hospitals, bus stops, weather — for the site's own tehsil/district. No args needed. \
 Only use for the PRIMARY site's tehsil (not available per comparison site).
 - "wikipedia_summary": a short Wikipedia summary for a named place (a village/town/river/etc.), for \
 general background not in this app's own data at all. Args: {"query": "<place name>"}.
+- "road_distance_to_place": geocodes a named place (via Google Maps/SerpApi) and computes the road \
+driving distance/time from the PRIMARY site to it (via OSRM), plus straight-line distance as a \
+fallback figure — use this for ANY "how far/how long to <named place>" or "distance to <named place>" \
+question about a place that isn't the site's own saved reference_location. Args: {"place": "<place name>"}.
 """
 
 
+def _format_recent_history(history: list[dict[str, str]] | None, max_turns: int = _MAX_HISTORY_TURNS) -> str:
+    """Render the last ``max_turns`` (user, assistant) exchanges from
+    ``history`` as plain text, for follow-up resolution in the routing
+    prompt — deliberately NOT passed as actual chat messages (see
+    :func:`_decide_and_fetch_tool`'s docstring for why: mixing prose
+    assistant turns into this JSON-mode call was confirmed to make the
+    model occasionally emit a native-style tool call instead of the
+    requested plain JSON, which Groq then rejects outright).
+
+    Each turn's content is capped at 300 characters so a long prior answer
+    can't blow up this call's token budget.
+    """
+
+    if not history:
+        return ""
+    recent = history[-(max_turns * 2):]
+    lines = []
+    for turn in recent:
+        role = "User" if turn.get("role") == "user" else "Assistant"
+        content = (turn.get("content") or "").strip()[:300]
+        if content:
+            lines.append(f"{role}: {content}")
+    return "\n".join(lines)
+
+
 def _routing_system_prompt(
-    known_context_keys: list[str], has_comparison_sites: bool, other_run_choices: list[dict]
+    known_context_keys: list[str],
+    has_comparison_sites: bool,
+    other_run_choices: list[dict],
+    recent_history_text: str = "",
 ) -> str:
+    history_note = (
+        f"\n\nRecent conversation so far (most recent last — use this ONLY to resolve a short/vague "
+        f"follow-up question like \"by road?\" or \"what about the second one?\"; the question you're "
+        f"routing right now is the LATEST one, given separately below, not part of this block):\n"
+        f"{recent_history_text}\n"
+        if recent_history_text
+        else ""
+    )
     comparison_note = (
         "\nThis question may be about a comparison across `site` and one or more `comparison_sites`. "
         "The SAME data fields are already available for every one of those sites — a question like "
@@ -75,7 +130,13 @@ def _routing_system_prompt(
         )
     return (
         "You are the routing layer of a land-suitability Q&A assistant. Given a user's question, decide "
-        "how it should be answered. You do not answer the question yourself here — only the routing.\n\n"
+        "how it should be answered. You do not answer the question yourself here — only the routing. A "
+        "short or vague-looking question (e.g. \"by road?\", \"what about the second one?\") is very often "
+        "a follow-up that only makes sense together with the immediately preceding turn — if a recent "
+        "conversation is given below, resolve it using that before ever concluding it's incomplete; only "
+        "treat it as genuinely unanswerable if it's still unclear once that context is taken into "
+        "account.\n"
+        f"{history_note}\n"
         f"Data already available about the site (and, in a comparison, every comparison site too — no "
         f"tool needed for any of this): {', '.join(known_context_keys)}."
         f"{comparison_note}{other_sites_note}\n\n{_TOOLS_DESCRIPTION}\n"
@@ -124,25 +185,73 @@ def _fetch_onefivenine_tehsil_info(site_summary: dict) -> str | None:
     return text[:6000]
 
 
-def _nearby_category_search_text(site_summary: dict, query: str) -> str | None:
+_DEFAULT_NEARBY_SEARCH_RADIUS_KM = 10.0
+# Bounds how far a user-requested radius can push a single SerpApi call —
+# large enough for a genuine "within 50 km" question, small enough that one
+# search can't balloon into a huge, expensive result set/tool_result_text.
+_MAX_NEARBY_SEARCH_RADIUS_KM = 100.0
+# Displayed results are capped small on purpose: this tool's output goes
+# straight into the answering call's prompt, and a long list here is exactly
+# the kind of per-call growth that eats into the Groq free tier's tight
+# tokens-per-minute/tokens-per-day budget for no real benefit — 5 good
+# matches answers "what/where" just as well as 10 would.
+_MAX_NEARBY_RESULTS = 5
+
+
+def _nearby_category_search_text(site_summary: dict, query: str, radius_km=None, sort_by: str | None = None) -> str | None:
     if not query:
         return None
     site = site_summary.get("site") or {}
     lat, lon = site.get("latitude"), site.get("longitude")
-    radius_km = site.get("radius_km") or 10.0
+    try:
+        radius_km = float(radius_km)
+        if radius_km <= 0:
+            raise ValueError
+    except (TypeError, ValueError):
+        # `site["aoi_radius_km"]` is this run's own analysis radius (the key
+        # a previous version of this function got wrong: it read a
+        # nonexistent "radius_km" field and always silently fell back to
+        # 10.0, ignoring even that).
+        radius_km = site.get("aoi_radius_km") or _DEFAULT_NEARBY_SEARCH_RADIUS_KM
+    radius_km = min(radius_km, _MAX_NEARBY_SEARCH_RADIUS_KM)
     if lat is None or lon is None or not config.SERPAPI_KEY or config.SERPAPI_DISABLED:
         return None
+    by_rating = sort_by == "rating"
     try:
-        results = _serpapi_search(lat, lon, config.SERPAPI_KEY, query, radius_km, max_results=10)
+        # Only ranking by rating needs a bigger pool to choose from first
+        # (SerpApi's own distance-nearest ordering isn't what we want to
+        # truncate on before re-ranking, or a genuinely most-famous-but-
+        # farther-out place could get cut before it's ever considered) — the
+        # final displayed list is capped at _MAX_NEARBY_RESULTS either way,
+        # to keep this tool's contribution to the Groq prompt small.
+        results = _serpapi_search(
+            lat, lon, config.SERPAPI_KEY, query, radius_km,
+            max_results=20 if by_rating else _MAX_NEARBY_RESULTS,
+        )
     except Exception:
         return None
     if not results:
-        return f"Live search found no '{query}' within {radius_km} km of the site."
-    lines = [
-        f"- {place.get('name')} ({place.get('distance_km', 0):.2f} km) — {place.get('address', '')}"
-        for place in results
-    ]
-    return f"Live search results for '{query}' near the site:\n" + "\n".join(lines)
+        return f"Live search found no '{query}' within {radius_km:g} km of the site."
+    if by_rating:
+        results = sorted(
+            results,
+            key=lambda place: (place.get("rating") or 0, place.get("reviews") or 0),
+            reverse=True,
+        )
+    results = results[:_MAX_NEARBY_RESULTS]
+    lines = []
+    for place in results:
+        rating = place.get("rating")
+        reviews = place.get("reviews")
+        rating_text = "N/A" if rating is None else f"{rating}"
+        if reviews is not None:
+            rating_text += f" ({reviews} reviews)"
+        lines.append(
+            f"- {place.get('name')} ({place.get('distance_km', 0):.2f} km) — "
+            f"rating: {rating_text} — {place.get('address', '')}"
+        )
+    order_note = "sorted by rating (highest first)" if by_rating else "nearest first"
+    return f"Live search results for '{query}' within {radius_km:g} km of the site ({order_note}):\n" + "\n".join(lines)
 
 
 def _wikipedia_summary_text(query: str) -> str | None:
@@ -162,12 +271,74 @@ def _wikipedia_summary_text(query: str) -> str | None:
         return None
 
 
+def _road_distance_text(site_summary: dict, place: str) -> str | None:
+    if not place:
+        return None
+    site = site_summary.get("site") or {}
+    site_lat, site_lon = site.get("latitude"), site.get("longitude")
+    if site_lat is None or site_lon is None:
+        return None
+
+    if not config.SERPAPI_KEY or config.SERPAPI_DISABLED:
+        return f"Live place lookup for '{place}' is unavailable (SerpApi not configured), so a distance couldn't be computed."
+
+    try:
+        results = search_google_maps(place, limit=1)
+    except Exception:
+        results = []
+    if not results:
+        return f"Could not find/geocode '{place}' via live place search."
+
+    match = results[0]
+    place_lat, place_lon = match.get("centroid_lat"), match.get("centroid_lon")
+    if place_lat is None or place_lon is None:
+        return f"Could not find/geocode '{place}' via live place search."
+    resolved_name = match.get("name") or place
+    address = match.get("address")
+    resolved_label = f"{resolved_name} ({address})" if address else resolved_name
+    # Always echo the ORIGINAL place the user asked about, explicitly tied to
+    # whatever the live search actually resolved it to — a real live search
+    # ("Mhow" -> "Dr. Ambedkar Nagar", its official renamed listing) can come
+    # back with a place name that doesn't textually match the question at
+    # all; without this explicit link the answering model has no way to
+    # confidently connect the two and was observed refusing to answer even
+    # with a correct, fully-grounded distance already in hand.
+    label = resolved_label if resolved_name.lower() == place.strip().lower() else f"{place} (found as: {resolved_label})"
+
+    straight_km = haversine_km(site_lat, site_lon, place_lat, place_lon)
+    travel = fetch_road_travel_time(site_lat, site_lon, place_lat, place_lon)
+    if travel:
+        return (
+            f"Route from the site to {label}: approximately {travel['travel_distance_km']:.1f} km by road, "
+            f"~{travel['travel_time_min']:.0f} min driving (via OSRM, a free public routing demo — treat as "
+            f"an estimate, not authoritative). Straight-line distance: {straight_km:.1f} km."
+        )
+    return (
+        f"Could not compute a road route to {label} (routing service unavailable or no route found). "
+        f"Straight-line distance only: {straight_km:.1f} km."
+    )
+
+
 _TOOL_FUNCS = {
     "onefivenine_tehsil_info": lambda site_summary, args: _fetch_onefivenine_tehsil_info(site_summary),
     "nearby_category_search": lambda site_summary, args: _nearby_category_search_text(
-        site_summary, (args or {}).get("query", "")
+        site_summary, (args or {}).get("query", ""), (args or {}).get("radius_km"), (args or {}).get("sort_by")
     ),
     "wikipedia_summary": lambda site_summary, args: _wikipedia_summary_text((args or {}).get("query", "")),
+    "road_distance_to_place": lambda site_summary, args: _road_distance_text(
+        site_summary, (args or {}).get("place", "")
+    ),
+}
+
+# Human-readable labels for `route_and_answer`'s `tool_used`, for the chat UI
+# to show which live tool (if any) grounded an answer — kept next to
+# `_TOOL_FUNCS` so a renamed/added/removed tool can't silently drift out of
+# sync with what's shown to the user.
+TOOL_DISPLAY_NAMES = {
+    "onefivenine_tehsil_info": "onefivenine.com tehsil lookup",
+    "nearby_category_search": "live nearby-places search (Google Maps)",
+    "wikipedia_summary": "Wikipedia summary",
+    "road_distance_to_place": "road-distance lookup (Google Maps + OSRM)",
 }
 
 
@@ -194,12 +365,28 @@ def _decide_and_fetch_tool(
     question: str,
     has_comparison_sites: bool = False,
     exclude_summary_path: str | None = None,
+    history: list[dict[str, str]] | None = None,
 ) -> tuple[bool, str | None, str | None, list[str], str | None]:
     """The shared routing step: decide whether ``question`` can be answered
     at all, whether one live tool should be fetched first (grounded against
     ``site_summary`` only — tools never run per comparison site, see
     ``_TOOLS_DESCRIPTION``), and whether it names any other saved site by
     nickname/village (e.g. "which of X and Y has better security").
+
+    Args:
+        history: Prior chat turns, same shape as
+            :func:`aI_agents.qa.answer_question`'s — folded into the system
+            prompt as plain text (see :func:`_format_recent_history`), NOT
+            passed as actual chat messages, so a context-dependent
+            follow-up (e.g. "by road?" right after a distance question) can
+            be resolved instead of misread as an incomplete question in
+            isolation. Deliberately not raw messages: this call is
+            JSON-mode-only (no ``tools=`` registered anywhere in this app),
+            and a prose assistant turn mixed into that message array was
+            confirmed to make the model occasionally emit a native-style
+            tool call instead of the requested JSON object, which Groq
+            rejects outright — a failure a retry can't fix since it's
+            deterministic at ``temperature=0.0``, not transient noise.
 
     Returns:
         ``(can_answer, tool_name, tool_result_text, mentioned_dir_names,
@@ -213,7 +400,10 @@ def _decide_and_fetch_tool(
 
     context_keys = sorted(_curate_site_context(site_summary).keys())
     other_run_choices = _other_run_choices(exclude_summary_path)
-    system_prompt = _routing_system_prompt(context_keys, has_comparison_sites, other_run_choices)
+    recent_history_text = _format_recent_history(history)
+    system_prompt = _routing_system_prompt(
+        context_keys, has_comparison_sites, other_run_choices, recent_history_text
+    )
 
     response = _create_completion(
         client,
@@ -282,7 +472,11 @@ def route_and_answer(
     """
 
     can_answer, tool_name, tool_result_text, mentioned_dir_names, refusal_reason = _decide_and_fetch_tool(
-        site_summary, question, has_comparison_sites=bool(additional_sites), exclude_summary_path=summary_path
+        site_summary,
+        question,
+        has_comparison_sites=bool(additional_sites),
+        exclude_summary_path=summary_path,
+        history=history,
     )
     if not can_answer:
         return {"answer": refusal_reason, "tool_used": None, "refused": True, "mentioned_sites": []}

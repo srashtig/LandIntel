@@ -35,6 +35,9 @@ for _dir in (_FRONTEND_DIR, _REPO_ROOT_DIR):
     if str(_dir) not in sys.path:
         sys.path.insert(0, str(_dir))
 
+_ICON_PATH = _REPO_ROOT_DIR / "docs" / "icon.png"
+_ICON_TITLE_PATH = _REPO_ROOT_DIR / "docs" / "icon_title.png"
+
 import streamlit as st
 
 from data_analysis_pipeline import config, data_bundle
@@ -1058,12 +1061,15 @@ def _render_results(site_summary: dict, map_html: str, summary_path: Path) -> No
 
 
 def main() -> None:
-    st.set_page_config(page_title="LandIntel", layout="wide")
+    st.set_page_config(page_title="LandIntel", page_icon=str(_ICON_PATH), layout="wide")
     st.markdown(_GLOBAL_CSS, unsafe_allow_html=True)
     _init_session_state()
     _render_sidebar()
 
-    st.markdown("## 🤖 LandIntel")
+    if _ICON_TITLE_PATH.exists():
+        st.image(str(_ICON_TITLE_PATH), width=380)
+    else:
+        st.markdown("## 🤖 LandIntel")
     st.markdown(
         '<p style="font-size:1.05rem;color:#5c5c5c;margin-top:-8px;">'
         "AI powered tool to analyse a land, grounded in data. "

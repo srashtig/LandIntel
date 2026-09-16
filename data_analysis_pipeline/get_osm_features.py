@@ -14,6 +14,10 @@ import pandas as pd
 
 from .aoi import AOI
 
+# osmnx's cache_folder is set once, centrally, in config.py (importing
+# `data_analysis_pipeline` at all already runs that module) — see the note
+# there on why it must be an absolute path.
+
 # OSMnx's default (180s) means a stalled/unreachable Overpass connection for
 # one layer (roads, rail, or water — queried independently, see
 # _fetch_osm_layer) can silently eat 3 minutes before this module's own
@@ -369,56 +373,5 @@ def get_water(aoi: AOI) -> dict:
         water_summary = {"features": 0, "source": "OpenStreetMap via OSMnx"}
 
     return _envelope("osm_water", aoi, {"gdf": water, "summary": water_summary}, warnings)
-
-
-def get_osm_features(aoi: AOI) -> dict:
-    """Fetch roads, railways and mapped water features from OpenStreetMap
-    within the AOI (combines :func:`get_roads`, :func:`get_railways` and
-    :func:`get_water` into one envelope). Not used by the orchestrator
-    directly — it runs the three separately so a slow/rate-limited layer
-    (rail was the observed offender) can be started early and joined later,
-    overlapped with unrelated pipeline stages, and so one layer's stall
-    doesn't gate the other two. Kept here for standalone/CLI use.
-
-    Args:
-        aoi: The area of interest, from :func:`data_analysis_pipeline.aoi.build_aoi`.
-
-    Returns:
-        A standard envelope dict (``dataset``, ``source``, ``params``,
-        ``observations``, ``timestamp``, ``resolution``, ``confidence``,
-        ``warnings``, ``limitations``). ``observations`` holds both the raw
-        GeoDataFrames (for map layers) and the derived summary stats (for
-        ``site_summary``):
-        ``{"roads": {"gdf": GeoDataFrame, "summary": {features, total_length_km,
-           length_km_by_class, density_km_per_km2, nearest_road_m,
-           nearest_road_class, nearest_road_name, nearest_major_road_m,
-           nearest_major_road_class, nearest_major_road_name, source}},
-           "railways": {"gdf": GeoDataFrame, "summary": {features,
-           nearest_rail_m, nearest_rail_name, source}},
-           "water": {"gdf": GeoDataFrame, "summary": {features,
-           waterbody_area_km2, waterway_length_km, waterbodies, waterways,
-           waterway_types, nearest_water_m, nearest_water_type,
-           nearest_water_name, waterbody_share_of_aoi, source}}}``.
-        All distances are in meters, areas in km², lengths in km.
-    """
-
-    roads_env, rail_env, water_env = get_roads(aoi), get_railways(aoi), get_water(aoi)
-    warnings = [*roads_env["warnings"], *rail_env["warnings"], *water_env["warnings"]]
-
-    return {
-        "dataset": "osm_features",
-        "source": "OpenStreetMap via OSMnx",
-        "params": {"lat": aoi.lat, "lon": aoi.lon, "radius_km": aoi.radius_km},
-        "observations": {
-            "roads": roads_env["observations"],
-            "railways": rail_env["observations"],
-            "water": water_env["observations"],
-        },
-        "timestamp": datetime.now(timezone.utc).isoformat(),
-        "resolution": None,
-        "confidence": "high",
-        "warnings": warnings,
-        "limitations": ["OSM coverage/tagging completeness varies by area."],
-    }
 
 

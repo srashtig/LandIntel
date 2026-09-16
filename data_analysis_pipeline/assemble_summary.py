@@ -262,8 +262,7 @@ Top-level keys:
                           itinerary found at the moment custom facts were
                           saved, not a stable daily average (a different
                           query time could find a different bus/train
-                          entirely). Display-only: decision_engine.py never
-                          reads this field.
+                          entirely). Display-only, not a scoring input.
 
 ----------------------------------------------------------------------------
 Dropped duplicates (present twice, byte-identical, in the original JSON):

@@ -7,6 +7,7 @@ vector reader (notebook cell 27 / 55).
 
 from __future__ import annotations
 
+import math
 from dataclasses import dataclass
 
 import geopandas as gpd
@@ -17,6 +18,21 @@ from shapely.geometry import Point, Polygon
 # edge effects when computing "nearest feature" distances.
 VECTOR_SOURCE_CRS = "EPSG:7755"
 NATIVE_QUERY_PAD_M = 2000.0
+
+
+def haversine_km(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
+    """Great-circle distance between two (lat, lon) points, in kilometers.
+
+    The one canonical implementation — every distance calculation in this
+    codebase (data_analysis_pipeline, aI_agents, frontend) should import
+    this rather than redefine it, so the constant/formula can't drift.
+    """
+
+    earth_radius_km = 6371.0088
+    lat1, lon1, lat2, lon2 = map(math.radians, [float(lat1), float(lon1), float(lat2), float(lon2)])
+    dlat, dlon = lat2 - lat1, lon2 - lon1
+    a = math.sin(dlat / 2) ** 2 + math.cos(lat1) * math.cos(lat2) * math.sin(dlon / 2) ** 2
+    return 2 * earth_radius_km * math.atan2(math.sqrt(a), math.sqrt(1 - a))
 
 
 @dataclass
