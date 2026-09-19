@@ -4,3 +4,9 @@ backgroundColor = "#ffffff"
 secondaryBackgroundColor = "#f1f5f2"
 textColor = "#262626"
 font = "sans serif"
+
+[server]
+# Defense in depth for "Upload an analysis" (frontend/streamlit_app.py) —
+# matches data_analysis_pipeline.upload_run.MAX_UPLOAD_ZIP_BYTES, so an
+# oversized upload is rejected before it even reaches application code.
+maxUploadSize = 20

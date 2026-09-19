@@ -18,6 +18,7 @@ from __future__ import annotations
 
 import json
 import queue
+import shutil
 import sys
 import threading
 import time
@@ -38,6 +39,7 @@ for _dir in (_FRONTEND_DIR, _REPO_ROOT_DIR):
 _ICON_PATH = _REPO_ROOT_DIR / "docs" / "icon.png"
 _ICON_TITLE_PATH = _REPO_ROOT_DIR / "docs" / "icon_title.png"
 
+import requests
 import streamlit as st
 
 from data_analysis_pipeline import config, data_bundle
@@ -45,13 +47,11 @@ from data_analysis_pipeline import runs as runs_module
 from data_analysis_pipeline.custom_facts import merge_custom_facts
 from data_analysis_pipeline.main import _json_safe
 from data_analysis_pipeline.mp_boundary import is_in_mp
+from data_analysis_pipeline.upload_run import UploadValidationError, extract_uploaded_bundle
 from data_analysis_pipeline.runs import (
-    DEFAULT_LAT,
-    DEFAULT_LON,
     DEFAULT_RADIUS_KM,
     failed_sections,
     list_previous_runs,
-    load_default_site,
     resolve_run_output_dir,
     unique_dir,
 )
@@ -118,7 +118,12 @@ def _init_session_state() -> None:
         "_active_summary_path": None,  # tracks which site's results are showing, see _sync_active_site
         "run_dialog_open": False,  # whether the "Running analysis" popup should be shown
         "pending_site_details": None,  # step-2 form values, snapshotted at click time — see below
+        "request_analysis_open": False,  # whether the "Request Analysis" popup should be shown
         "_force_source_choice": None,  # set by "Pick a different site" — see main()'s radio setup
+        "uploaded_runs": [],  # [{"dir_name", "summary_path", "map_path", "label", "mtime"}, ...] from "Upload analysis"
+        "uploaded_run_root_dir": None,  # the tempdir holding all of uploaded_runs — removed when replaced
+        "_uploaded_run_source_name": None,  # tracks the uploaded file's name so a re-run doesn't re-extract it
+        "_uploaded_run_warnings": [],  # per-run reasons a site in the last upload was dropped, if any
     }
     for key, value in defaults.items():
         if key not in st.session_state:
@@ -376,6 +381,70 @@ def _data_download_success_dialog(path: str) -> None:
         st.rerun()
 
 
+@st.dialog("Request Analysis", width="large")
+def _request_analysis_dialog(
+    *,
+    lat: float | None,
+    lon: float | None,
+    radius_km: float,
+    run_label: str,
+    purpose_key: str,
+    purpose_other: str,
+    preferences: str,
+    ref_label: str,
+    plot_area: float,
+    area_unit: str,
+    plot_price: float,
+) -> None:
+    """No API keys of your own? Leave an email instead — forwards the
+    email plus whatever site details are currently filled in on the
+    "Analyse new site" form to the deployer's inbox (via a Formspree-style
+    form webhook, ``config.CONTACT_FORM_URL`` — no SMTP credentials in this app)
+    so the report can be prepared and sent back manually."""
+
+    st.write("The LandIntel report for your site will be sent to this email:")
+    email = st.text_input("Email", key="request_analysis_email", placeholder="you@example.com")
+    st.caption(
+        "Make sure the site details above (location, purpose, preferences) are filled in "
+        "the way you want — submitting forwards your email and those details to "
+        "sangushinu@gmail.com so the report can be prepared for you."
+    )
+
+    if st.button("Submit", key="request_analysis_submit"):
+        if not email or "@" not in email:
+            st.error("Please enter a valid email address.")
+        elif not config.CONTACT_FORM_URL:
+            st.error("Request Analysis isn't set up yet — contact sangushinu@gmail.com directly.")
+        else:
+            payload = {
+                "email": email,
+                "latitude": lat,
+                "longitude": lon,
+                "radius_km": radius_km,
+                "site_label": run_label or None,
+                "buying_purpose": purpose_other.strip() if purpose_key == "other" else purpose_key,
+                "preferences": preferences.strip() or None,
+                "reference_location_label": ref_label or None,
+                "reference_latitude": st.session_state.get("new_run_ref_lat"),
+                "reference_longitude": st.session_state.get("new_run_ref_lon"),
+                "plot_area": plot_area or None,
+                "area_unit": area_unit if plot_area else None,
+                "plot_price": plot_price or None,
+            }
+            try:
+                response = requests.post(
+                    config.CONTACT_FORM_URL, data=payload, headers={"Accept": "application/json"}, timeout=10
+                )
+                response.raise_for_status()
+            except Exception as error:
+                st.error(f"Couldn't send your request: {error}. Please try again, or email sangushinu@gmail.com directly.")
+            else:
+                st.success(
+                    "Submitted successfully! You may now close this window and request another "
+                    "analysis or browse already run site results."
+                )
+
+
 def _render_sidebar() -> None:
     with st.sidebar:
         _render_api_key_settings()
@@ -546,7 +615,7 @@ def _edit_purpose_dialog(site_summary: dict, summary_path: Path) -> None:
             }
             updated["buying_preferences"] = preferences.strip() or None
             summary_path.write_text(json.dumps(updated, indent=2, default=_json_safe))
-            # "Run a new analysis" renders from st.session_state.site_summary
+            # "Analyse new site" renders from st.session_state.site_summary
             # (an in-memory copy), not a fresh disk read like the other two
             # source branches — without this, the rerun below would still
             # show the pre-save (purpose-less) copy.
@@ -855,7 +924,11 @@ def _compare_dialog(site_summary: dict, summary_path: Path) -> None:
         "not a scoring formula."
     )
 
-    other_runs = [r for r in list_previous_runs() if r["summary_path"] != summary_path]
+    other_runs = [
+        r
+        for r in list_previous_runs() + st.session_state.get("uploaded_runs", [])
+        if r["summary_path"] != summary_path
+    ]
     if not other_runs:
         st.info("No other runs to compare against yet.")
         return
@@ -915,7 +988,7 @@ def _compare_dialog(site_summary: dict, summary_path: Path) -> None:
 
 @st.dialog("Running analysis", width="large")
 def _run_progress_dialog() -> None:
-    """Shown while a fresh 'Run a new analysis' is in flight. Polls (drain
+    """Shown while a fresh 'Analyse new site' run is in flight. Polls (drain
     the queue, re-render, sleep, rerun — while the dialog function keeps
     getting called each rerun, it stays open). On success it shows "Ready"
     and auto-closes onto the normal results view; on Stop it just closes
@@ -1033,7 +1106,7 @@ def _secondary_actions(site_summary: dict, summary_path: Path) -> None:
     col_pick, col_compare = st.columns(2)
     with col_pick:
         if st.button("📍 Pick a different site", key="pick_different_site_button", use_container_width=True):
-            st.session_state["_force_source_choice"] = "Run a new analysis"
+            st.session_state["_force_source_choice"] = "Analyse new site"
             st.session_state.view_mode = None
             for key in ("site_summary", "map_html", "summary_path", "picked_lat", "picked_lon"):
                 st.session_state[key] = None
@@ -1089,10 +1162,11 @@ def main() -> None:
 
     source = st.radio(
         "Pick a site to analyse:",
-        options=["Use existing default site", "Browse a previous run", "Run a new analysis"],
+        options=["Explore analysed sites", "Analyse new site", "Upload analysis"],
         index=0,
         key="source_choice",
         horizontal=True,
+        label_visibility="collapsed",
     )
 
     # A dialog (View Analysis/Generate Report/Compare) stays open across
@@ -1105,27 +1179,14 @@ def main() -> None:
         st.session_state.view_mode = None
         st.session_state["_prev_source_choice"] = source
 
-    if source == "Use existing default site":
-        try:
-            site_summary, map_html = load_default_site()
-        except FileNotFoundError as error:
-            st.error(str(error))
-            return
-        st.success(
-            f"Loaded default site: {runs_module.DEFAULT_SUMMARY_PATH.name} "
-            f"(lat {DEFAULT_LAT}, lon {DEFAULT_LON}, radius {DEFAULT_RADIUS_KM} km)."
-        )
-        _render_results(site_summary, map_html, runs_module.DEFAULT_SUMMARY_PATH)
-        return
-
-    if source == "Browse a previous run":
+    if source == "Explore analysed sites":
         runs = list_previous_runs()
         if not runs:
             st.info("No previous runs found yet under `runs/`.")
             return
         labels = [r["label"] for r in runs]
         selected = st.radio(
-            f"Previous runs ({len(runs)} found, newest first)",
+            "Pick a site to analyse",
             options=range(len(runs)),
             format_func=lambda i: labels[i],
             key="previous_run_selected",
@@ -1137,7 +1198,57 @@ def main() -> None:
         _render_results(site_summary, map_html, chosen["summary_path"])
         return
 
-    # ---------------- Run a new analysis ----------------
+    if source == "Upload analysis":
+        st.caption(
+            "Upload a .zip of one or more LandIntel runs (site_summary.json required; "
+            "map.html and report_assets/ are optional but recommended) — e.g. one you "
+            "received after using Request Analysis. A zip can hold a single run flat, or "
+            "several runs each in their own folder. Uploaded runs are session-only — edits "
+            "here aren't saved anywhere durable, and they disappear if you upload something "
+            "else or reload — but they *can* be used in Compare (they just can't be "
+            "mentioned by name in chat the way saved runs can)."
+        )
+        uploaded = st.file_uploader("Upload a LandIntel run or bundle (.zip)", type=["zip"], key="uploaded_run_zip")
+
+        if uploaded is not None and st.session_state.get("_uploaded_run_source_name") != uploaded.name:
+            old_root_dir = st.session_state.get("uploaded_run_root_dir")
+            if old_root_dir:
+                shutil.rmtree(old_root_dir, ignore_errors=True)
+            try:
+                runs, warnings = extract_uploaded_bundle(uploaded.getvalue(), uploaded.name)
+            except UploadValidationError as error:
+                st.session_state.uploaded_runs = []
+                st.session_state.uploaded_run_root_dir = None
+                st.session_state._uploaded_run_source_name = uploaded.name
+                st.error(f"Couldn't use this file: {error}")
+            else:
+                st.session_state.uploaded_runs = runs
+                st.session_state.uploaded_run_root_dir = str(runs[0]["summary_path"].parent.parent)
+                st.session_state._uploaded_run_source_name = uploaded.name
+                st.session_state["_uploaded_run_warnings"] = warnings
+
+        for warning in st.session_state.get("_uploaded_run_warnings") or []:
+            st.warning(f"Skipped a run from this upload — {warning}")
+
+        uploaded_runs = st.session_state.get("uploaded_runs") or []
+        if not uploaded_runs:
+            return
+
+        st.success(f"Loaded {len(uploaded_runs)} site(s) from your upload.")
+        labels = [r["label"] for r in uploaded_runs]
+        selected = st.radio(
+            "Pick a site to analyse",
+            options=range(len(uploaded_runs)),
+            format_func=lambda i: labels[i],
+            key="uploaded_run_selected",
+        )
+        chosen = uploaded_runs[selected]
+        site_summary = json.loads(chosen["summary_path"].read_text())
+        map_html = chosen["map_path"].read_text()
+        _render_results(site_summary, map_html, chosen["summary_path"])
+        return
+
+    # ---------------- Analyse new site ----------------
     # The setup form (steps 1-4) is only shown before a run starts — once
     # it's in progress or has completed, this collapses to just the
     # loading indicator (below) and then the same buttons+chat view every
@@ -1208,9 +1319,17 @@ def main() -> None:
                 )
             run_enabled = bool(in_mp)
 
-        run_clicked = st.button(
-            "Run full analysis", disabled=(not run_enabled) or st.session_state.run_in_progress, type="primary"
-        )
+        run_col, request_col = st.columns([1, 1])
+        with run_col:
+            st.caption("For developers")
+            run_clicked = st.button(
+                "Analyse Now", disabled=(not run_enabled) or st.session_state.run_in_progress, type="primary"
+            )
+        with request_col:
+            st.caption("For everyone else")
+            if st.button("Request Analysis", disabled=not run_enabled, type="primary"):
+                st.session_state.request_analysis_open = True
+                st.rerun()
 
         if run_clicked and run_enabled and not st.session_state.run_in_progress:
             out_dir = unique_dir(resolve_run_output_dir(lat, lon, radius_km, label=run_label or None))
@@ -1258,6 +1377,21 @@ def main() -> None:
             st.session_state.run_thread = thread
             thread.start()
             st.rerun()
+
+        if st.session_state.request_analysis_open:
+            _request_analysis_dialog(
+                lat=lat,
+                lon=lon,
+                radius_km=radius_km,
+                run_label=run_label,
+                purpose_key=new_run_purpose_key,
+                purpose_other=new_run_purpose_other,
+                preferences=new_run_preferences,
+                ref_label=new_run_ref_label,
+                plot_area=new_run_plot_area,
+                area_unit=new_run_area_unit,
+                plot_price=new_run_plot_price,
+            )
 
     if st.session_state.run_dialog_open:
         _run_progress_dialog()
