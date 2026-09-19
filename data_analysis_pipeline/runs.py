@@ -1,8 +1,8 @@
 """Pure (no Streamlit) helpers for working with ``config.RUNS_DIR`` — run
-directory naming, listing, and loading the default fast-path site. Lives in
-the pipeline layer (not ``frontend/``) because both ``frontend/`` and
-``aI_agents/`` (whose chat tool routing lists previous runs to resolve a
-mentioned site) need it, and ``aI_agents/`` must not depend on ``frontend/``.
+directory naming and listing. Lives in the pipeline layer (not
+``frontend/``) because both ``frontend/`` and ``aI_agents/`` (whose chat
+tool routing lists previous runs to resolve a mentioned site) need it, and
+``aI_agents/`` must not depend on ``frontend/``.
 """
 
 from __future__ import annotations
@@ -15,51 +15,18 @@ from typing import Optional
 
 from . import config
 
-# ---------------------------------------------------------------------------
-# Default fast-path files.
-#
-# NOTE (deviation from the plan's literal wording): the plan's Stage B text
-# names `land_intelligence_site_summary.json` /
-# `land_intelligence_map.html` (the pre-refactor notebook's output) as the
-# default fast path. Those files use the OLD pre-Stage-A schema (different
-# nesting, dict-keyed sections that assemble_summary.py now emits as lists,
-# etc.) and are stale relative to anything the current pipeline produces.
-# Instead we use `runs/manual/site_summary.json` + `map.html` — a real,
-# already-verified Stage-A CLI run (main.py) for the exact same real site
-# (Budasa / Tonk Khurd / Dewas, lat 23.0401972, lon 76.2086806, 5 km), in the
-# current schema_version "1.0" shape that every part of this app expects.
-# ---------------------------------------------------------------------------
-
-
-def _recompute_default_paths() -> None:
-    """(Re)compute ``DEFAULT_SUMMARY_PATH``/``DEFAULT_MAP_PATH`` from
-    ``config.RUNS_DIR``, as module globals. Called once below at import
-    time, and again by :func:`reset_runs_dir` after the run directory
-    changes at runtime (e.g. via the sidebar) — without this, these two
-    paths would keep pointing at the *old* run directory forever, even
-    after everything else (``list_previous_runs``, etc., which read
-    ``config.RUNS_DIR`` fresh on every call) correctly follows the change."""
-
-    global DEFAULT_SUMMARY_PATH, DEFAULT_MAP_PATH
-    DEFAULT_SUMMARY_PATH = config.RUNS_DIR / "manual" / "site_summary.json"
-    DEFAULT_MAP_PATH = config.RUNS_DIR / "manual" / "map.html"
-
-
-_recompute_default_paths()
-
 DEFAULT_LAT = 23.0401972
 DEFAULT_LON = 76.2086806
 DEFAULT_RADIUS_KM = 5.0
 
 
 def reset_runs_dir(new_dir: str) -> None:
-    """Change ``config.RUNS_DIR`` at runtime (persisted to ``.env``) and
-    recompute this module's own derived paths — the sidebar's "Run
-    directory" field calls this rather than ``config.reset_runs_dir``
-    directly, so both stay in sync."""
+    """Change ``config.RUNS_DIR`` at runtime (persisted to ``.env``) — the
+    sidebar's "Run directory" field calls this rather than
+    ``config.reset_runs_dir`` directly, kept as a thin wrapper so callers
+    only ever need to import this module, not ``config`` too."""
 
     config.reset_runs_dir(new_dir)
-    _recompute_default_paths()
 
 
 def slugify_run_label(label: str, max_length: int = 60) -> str:
@@ -144,35 +111,9 @@ def unique_dir(base: Path) -> Path:
         n += 1
 
 
-def load_default_site() -> tuple[dict, str]:
-    """Load the default fast-path site (see ``DEFAULT_SUMMARY_PATH`` /
-    ``DEFAULT_MAP_PATH`` above).
-
-    Returns:
-        ``(site_summary, map_html)``.
-
-    Raises:
-        FileNotFoundError: If the default run hasn't been generated yet —
-            see the module docstring / plan for the CLI command to
-            regenerate it.
-    """
-
-    if not DEFAULT_SUMMARY_PATH.exists() or not DEFAULT_MAP_PATH.exists():
-        raise FileNotFoundError(
-            f"Default site files not found at {DEFAULT_SUMMARY_PATH} / {DEFAULT_MAP_PATH}. "
-            "Regenerate with:\n"
-            "  conda run -n land_intel python -m data_analysis_pipeline.main "
-            f"--lat {DEFAULT_LAT} --lon {DEFAULT_LON} --radius {DEFAULT_RADIUS_KM} --out-dir runs/manual"
-        )
-
-    site_summary = json.loads(DEFAULT_SUMMARY_PATH.read_text())
-    map_html = DEFAULT_MAP_PATH.read_text()
-    return site_summary, map_html
-
-
 def list_previous_runs() -> list[dict]:
     """List completed analysis runs under ``config.RUNS_DIR`` that have a
-    ``site_summary.json`` + ``map.html`` (the default ``manual/`` run is
+    ``site_summary.json`` + ``map.html`` (the ``default/`` run is
     included — it's a real past run too), newest first.
 
     Runs are discovered from disk on every call rather than tracked only in

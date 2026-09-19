@@ -197,6 +197,26 @@ an end user pastes in) can all be set from the app's own sidebar at
 runtime — no `.env` edit or restart required, though the sidebar does
 write its changes back into `.env` so they persist across restarts too.
 
+**"Upload analysis" treats every zip as adversarial input.** This is the
+one place in the app that accepts an arbitrary file from a public visitor,
+so `data_analysis_pipeline/upload_run.py` is deliberately conservative
+rather than trusting: every member is checked for path-safety (no `..`,
+absolute paths, or symlinks) and against a strict per-run allowlist
+(`site_summary.json`/`map.html`/`report.pdf`/`run.log`/`report_assets/*`
+only, and only `site_summary.json` is mandatory) *before* anything is
+written to disk, with the whole upload capped in compressed size (20 MB),
+uncompressed size (50 MB), member count, and number of sites bundled
+together (8). A single unsafe or unexpected member anywhere rejects the
+*whole* upload; a run that merely fails schema
+validation inside an otherwise-good multi-site zip is dropped individually
+with a warning instead. Building this also surfaced a real, previously
+unguarded path-traversal gap: `aI_agents/build_report.py`'s `_img_tag`
+resolves a `report_assets/manifest.json` entry with no containment check —
+harmless while manifests were only ever pipeline-generated, but exploitable
+the moment a manifest can come from a user upload — so `upload_run.py`
+explicitly re-validates every manifest path stays inside its own run
+directory as defense in depth before the run is ever trusted.
+
 **One cohesive package with a strict, one-way dependency direction.**
 `data_analysis_pipeline` (Stage 1), `aI_agents` (Stage 2), and `frontend`
 (UI) are three plain top-level packages: `frontend` depends on `aI_agents`,

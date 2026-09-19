@@ -34,29 +34,35 @@ for why the app is laid out this way.
 ```
 Pick a site               Add details            Run / load           Act on results
 ─────────────             ────────────            ──────────           ───────────────
-default site       ┐
-previous run        ├──►  (skip — already   ──►  load from disk  ──┐
-new pin/search/URL ┘      has purpose/price)      or run pipeline   │
+previous run          ┐
+(incl. default/)       ├──► (skip — already  ──►  load from disk  ──┐
+uploaded .zip          │    has purpose/price)     or run pipeline   │
+new pin/search/URL    ┘                                              │
                                                                      ▼
                     buying purpose + prefs                 View Analysis / Generate
                     (+ reference location,                 Report / Compare / Pick a
                      price/area, optional)                 different site — then chat
 ```
 
-1. **Pick a site** — `st.radio` between "Use existing default site",
-   "Browse a previous run" (`data_analysis_pipeline.runs.list_previous_runs`),
-   or "Run a new analysis" (`frontend.location_picker.render_location_picker_with_satellite`
+1. **Pick a site** — `st.radio` between "Explore analysed sites"
+   (`data_analysis_pipeline.runs.list_previous_runs` — includes the bundled
+   `default/` site, a real past run like any other), "Analyse new site"
+   (`frontend.location_picker.render_location_picker_with_satellite`
    — search box / pasted Google Maps link / pin-drop, MP-boundary-checked via
-   `data_analysis_pipeline.mp_boundary.is_in_mp`).
+   `data_analysis_pipeline.mp_boundary.is_in_mp`), or "Upload analysis"
+   (`data_analysis_pipeline.upload_run.extract_uploaded_bundle` — a hardened,
+   allowlist-based zip extractor; see its module reference below for the
+   security model, since this is the one path in the app that treats a file
+   as untrusted, adversarial input).
 2. **For a new analysis only** — a short form collects buying purpose +
    preferences, an optional reference location, and optional plot
-   price/area, *before* the run starts; clicking "Run full analysis"
+   price/area, *before* the run starts; clicking "Analyse Now"
    launches `aI_agents.run_worker.run_analysis_worker` on a background
    thread and shows `frontend.streamlit_app._run_progress_dialog` (a polling
    `st.dialog`) until it finishes, then merges those step-2 answers into the
    freshly-produced `site_summary.json` via `data_analysis_pipeline.custom_facts.merge_custom_facts`.
 3. **Shared results view** (`frontend.streamlit_app._render_results`, used
-   by all three sources) — a compact site-identity header
+   by all four sources) — a compact site-identity header
    (`_site_header`, with a "Change purpose" popup,
    `_edit_purpose_dialog`), then action buttons:
    - **View Analysis** (`_view_analysis_dialog`) — the interactive Folium
@@ -68,7 +74,10 @@ new pin/search/URL ┘      has purpose/price)      or run pipeline   │
      PDF/HTML report (`aI_agents.build_report.generate_report` +
      `report_to_pdf_bytes`) from the run's pre-generated `report_assets/`.
    - **Compare** (`_compare_dialog`) — pick up to `MAX_RANK_SITES - 1` other
-     runs, then `aI_agents.compare.compare` produces a ranked shortlist +
+     runs (candidates are `list_previous_runs()` merged with any sites
+     currently held in `st.session_state.uploaded_runs`, so an uploaded
+     bundle's sites can be compared against each other and against saved
+     runs alike), then `aI_agents.compare.compare` produces a ranked shortlist +
      side-by-side fact table rendered via `aI_agents.build_compare_report.generate_compare_html`.
    - **Pick a different site** — resets back to step 1.
    - **Chat** (`_render_chat`) — a free-flowing chat box grounded in the
@@ -221,8 +230,8 @@ immediately, no restart needed.
 **`runs.py`** — pure (no Streamlit) run-directory helpers, shared by
 `frontend` and `aI_agents` (see the cycle-avoidance note above).
 - `list_previous_runs()` — every completed run under `RUNS_DIR`, newest
-  first, with a display label built from its own `site_summary.json`.
-- `load_default_site()` — load the bundled `runs/manual/` fast-path site.
+  first, with a display label built from its own `site_summary.json`
+  (includes the bundled `runs/default/` site — a real past run too).
 - `resolve_run_output_dir(lat, lon, radius_km, label)` /
   `make_run_dir_name(...)` / `slugify_run_label(label)` — naming a fresh
   run's output directory.
@@ -230,6 +239,38 @@ immediately, no restart needed.
 - `rename_run_dir(old_dir, new_label)` — rename a run directory in place.
 - `failed_sections(site_summary)` — list section names with
   `available: false`, for the partial-failure warning banner.
+
+**`upload_run.py`** — hardened zip extraction/validation for "Upload an
+analysis". The one place in this app that treats a file as untrusted,
+adversarial input (a public deployment accepting arbitrary user uploads),
+so it's deliberately conservative: every member of the zip is checked for
+path-safety (no `..`, no absolute paths, no symlinks) and against a strict
+per-run allowlist (`site_summary.json`/`map.html`/`report.pdf`/`run.log`/
+`report_assets/*`) *before* anything is written to disk, and the whole
+upload is capped in compressed size, uncompressed size, member count, and
+site count. A single unsafe or unexpected member anywhere rejects the
+*whole* upload (fail-closed); by contrast, a run that merely fails schema
+validation inside an otherwise-good multi-site zip is just dropped with a
+warning, not the whole upload. `site_summary.json` is the only mandatory
+file — a run uploaded without `map.html` still loads, with a plain "no map
+included" placeholder substituted in its place.
+- `extract_uploaded_bundle(zip_bytes, upload_filename)` — the entry point;
+  returns `(runs, warnings)` where `runs` is shaped exactly like
+  `list_previous_runs()`'s output, so downstream code (the site picker,
+  `_compare_dialog`) needs no special-casing for uploaded vs. saved runs.
+  Accepts either a flat single-run zip or a multi-folder bundle (one run
+  per top-level folder) — see the module docstring for the exact detection
+  rule.
+- `validate_run_directory(run_dir)` — per-run schema check (required
+  files, `schema_version`, valid `site.latitude`/`longitude`) plus a
+  defense-in-depth re-check that every path in `report_assets/manifest.json`
+  stays inside `run_dir` — closes a real path-traversal gap found while
+  building this feature: `aI_agents.build_report._img_tag` resolves a
+  manifest asset path with no containment check of its own, which was
+  harmless while manifests were only ever pipeline-generated but becomes
+  exploitable the moment a manifest can come from a user upload.
+- `UploadValidationError` — the one exception type both functions raise,
+  always safe to show directly in the UI.
 
 **`build_map.py`** — the interactive Folium map + its summary panel.
 - `build_map(aoi, results, site_summary)` — the map builder: layered
@@ -376,7 +417,7 @@ per pipeline run (see the `on_assembled` hook above).
 
 **`run_worker.py`** — `run_analysis_worker(lat, lon, radius_km, log_path,
 progress_queue, cancel_event, result)`: the background-thread entry point
-`frontend`'s "Run full analysis" button starts, binding
+`frontend`'s "Analyse Now" button starts, binding
 `report_assets.generate_report_assets` as `run_analysis`'s `on_assembled`.
 
 **`build_report.py`** — the 6-chapter report assembler (see

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "run_success": true,
-  "generated_at": "2026-09-15 03:17",
+  "generated_at": "2026-09-17 16:05",
   "site": {
     "latitude": 23.0401972,
     "longitude": 76.2086806,
@@ -1701,8 +1701,8 @@
           {
             "name": "Rajanal Reservior and Lake",
             "type": "Tourist attraction",
-            "rating": 4.4,
-            "reviews": 54,
+            "rating": 4.5,
+            "reviews": 55,
             "address": "X5V9+6X9, Near Khatamba ,near Anandpurdungariya, Indore - Bhopal Rd, Dewas, Madhya Pradesh 455115, India",
             "latitude": 22.9930487,
             "longitude": 76.1699945,
@@ -1738,7 +1738,7 @@
       },
       {
         "category": "restaurants",
-        "count": 2,
+        "count": 1,
         "nearest": {
           "name": "Shree mukut family restaurant",
           "type": "Family restaurant",
@@ -1763,18 +1763,6 @@
             "distance_km": 7.14,
             "place_id": "ChIJGQI_CoY7YzkRskTLXJQzLUs",
             "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Shree+mukut+family+restaurant&query_place_id=ChIJGQI_CoY7YzkRskTLXJQzLUs"
-          },
-          {
-            "name": "Highway Restaurant",
-            "type": "Restaurant",
-            "rating": 4.2,
-            "reviews": 22,
-            "address": "Sia, Jasodgarh, Madhya Pradesh 455001, India",
-            "latitude": 23.0425917,
-            "longitude": 76.1212235,
-            "distance_km": 8.953,
-            "place_id": "ChIJR_6kotA9YzkRjnrqDSvI0jU",
-            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Highway+Restaurant&query_place_id=ChIJR_6kotA9YzkRjnrqDSvI0jU"
           }
         ]
       },
@@ -1810,33 +1798,9 @@
       },
       {
         "category": "schools",
-        "count": 1,
-        "nearest": {
-          "name": "School teacher",
-          "type": "Education center",
-          "rating": null,
-          "reviews": null,
-          "address": "Gourav Kumawat 39, Durgapura, Madhya Pradesh 455001, India",
-          "latitude": 23.0153215,
-          "longitude": 76.1210369,
-          "distance_km": 9.386,
-          "place_id": "ChIJMwDAs7g9YzkRnu8FDsqVxdc",
-          "google_maps_url": "https://www.google.com/maps/search/?api=1&query=School+teacher&query_place_id=ChIJMwDAs7g9YzkRnu8FDsqVxdc"
-        },
-        "places": [
-          {
-            "name": "School teacher",
-            "type": "Education center",
-            "rating": null,
-            "reviews": null,
-            "address": "Gourav Kumawat 39, Durgapura, Madhya Pradesh 455001, India",
-            "latitude": 23.0153215,
-            "longitude": 76.1210369,
-            "distance_km": 9.386,
-            "place_id": "ChIJMwDAs7g9YzkRnu8FDsqVxdc",
-            "google_maps_url": "https://www.google.com/maps/search/?api=1&query=School+teacher&query_place_id=ChIJMwDAs7g9YzkRnu8FDsqVxdc"
-          }
-        ]
+        "count": 0,
+        "nearest": null,
+        "places": []
       },
       {
         "category": "markets",
@@ -1851,7 +1815,7 @@
           "name": "BR Resort & Club",
           "type": "Hotel",
           "rating": 4.5,
-          "reviews": 473,
+          "reviews": 474,
           "address": "INDORE Bhopal Highway, Arniya Village, Near Sonkatch. Arniya, Sonkatch, Arniya Village, Madhya Pradesh 455115, India",
           "latitude": 22.987382099999998,
           "longitude": 76.26171769999999,
@@ -1864,7 +1828,7 @@
             "name": "BR Resort & Club",
             "type": "Hotel",
             "rating": 4.5,
-            "reviews": 473,
+            "reviews": 474,
             "address": "INDORE Bhopal Highway, Arniya Village, Near Sonkatch. Arniya, Sonkatch, Arniya Village, Madhya Pradesh 455115, India",
             "latitude": 22.987382099999998,
             "longitude": 76.26171769999999,
@@ -1876,7 +1840,7 @@
             "name": "Aarany Jungle Resort & Adventure - The Highway Treat",
             "type": "Resort hotel",
             "rating": 4,
-            "reviews": 2126,
+            "reviews": 2127,
             "address": "Indore-Bhopal Highway Near Pushpgiri Jain Tirth Araniyajagir, Sonkatch, Madhya Pradesh 455115, India",
             "latitude": 22.9877835,
             "longitude": 76.2738893,
@@ -1931,10 +1895,10 @@
     "max": 0.7808941006660461,
     "share_ge_030_percent": 28.009225961838297,
     "share_ge_050_percent": 4.015426399137985,
-    "period": "2025-09-14 \u2192 2026-09-14",
+    "period": "2025-09-17 \u2192 2026-09-17",
     "source": "Sentinel-2 SR Harmonized (median NDVI, whole year)",
     "peak": {
-      "mean": 0.6187303724265352,
+      "mean": 0.5936813939038348,
       "period": "Dec-Feb",
       "scene_count": 16,
       "source": "Sentinel-2 SR Harmonized (median NDVI, peak 3-month period found within the year; mean from the 30 m scan, no separate min/max/share breakdown)"

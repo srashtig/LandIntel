@@ -1,7 +1,7 @@
 """CLI entrypoint.
 
     python -m data_analysis_pipeline.main --lat 23.0401972 --lon 76.2086806 \\
-        --radius 5 --out-dir runs/manual
+        --radius 5 --out-dir runs/default
 """
 
 from __future__ import annotations

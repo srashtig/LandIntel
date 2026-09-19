@@ -30,3 +30,4 @@ dependencies:
       - xhtml2pdf==0.2.19
       - gdown==6.2.0
       - pyarrow==23.0.0
+      - psutil==7.2.1

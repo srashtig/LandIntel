@@ -21,4 +21,8 @@ cache/
 # not run output worth versioning.
 runs/pipeline.log
 
+# Raw per-run profiling artifacts (scripts/profile_pipeline.py) — the
+# human-readable summary it produces lives at docs/PROFILING.md instead.
+profiling_results/
+
 .DS_Store

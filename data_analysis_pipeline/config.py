@@ -282,6 +282,13 @@ GROQ_MODEL = os.environ.get("GROQ_MODEL", "openai/gpt-oss-20b").strip() or "open
 # themselves. See data_analysis_pipeline/data_bundle.py.
 REFERENCE_DATA_BUNDLE_URL = os.environ.get("REFERENCE_DATA_BUNDLE_URL", "").strip() or None
 
+# Set once by whoever deploys this app (in .env) — not exposed as a sidebar
+# text input. A Formspree-style form-webhook endpoint: the "Request
+# Analysis" button (frontend/streamlit_app.py) POSTs a visitor's email +
+# site details here, which forwards them to the deployer's inbox — no SMTP
+# credentials of any kind live in this app.
+CONTACT_FORM_URL = os.environ.get("CONTACT_FORM_URL", "").strip() or None
+
 # ---------------------------------------------------------------------
 # Earth Engine bootstrap
 # ---------------------------------------------------------------------

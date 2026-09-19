@@ -155,10 +155,10 @@ saved-sites/chat history (no persistence layer yet). Data sources is limited and
 
 One can exercise the whole app without any API keys configured, using
 the bundled demo runs in `runs/` (betma, kishangarh, malendi, kampel,
-jabalpur, balwara, manual/Budasa — all with real satellite/groundwater/
+jabalpur, balwara, default/Budasa — all with real satellite/groundwater/
 hydrology/nearby-places data and pre-generated report assets):
 
-- **Browse a previous run** — pick any of the 7 bundled runs, view the
+- **Explore analysed sites** — pick any of the 7 bundled runs, view the
   interactive map + summary panel.
 - **Generate a report** — click "Generate Report" on a bundled run; confirm
   the PDF/HTML assembles from the pre-generated `report_assets/` with no live
@@ -168,9 +168,18 @@ hydrology/nearby-places data and pre-generated report assets):
   or "is this a good site for farming?") — requires `GROQ_API_KEY`.
 - **Compare sites** — select two or more bundled runs and generate a
   narrative comparison.
-- **Run a fresh analysis** — pick a new location inside Madhya Pradesh (or
+- **Analyse new site** — pick a new location inside Madhya Pradesh (or
   paste a lat/lon) and run the full pipeline end-to-end — requires
   `GEE_PROJECT_ID` at minimum.
+- **Upload analysis** — no API keys needed at all: zip up one or more
+  existing run folders (`site_summary.json` required; `map.html` and
+  `report_assets/` optional but recommended) and upload it to browse them
+  exactly like a bundled run, including Compare. This is the intended path
+  for a visitor who used **Request Analysis** — the deployer runs LandIntel
+  with their own keys,
+  zips the result(s), and sends the zip back for the visitor to upload
+  here. Try it: zip two of the `runs/` folders above together (e.g. `cd
+  runs && zip -r ../bundle.zip betma kishangarh`) and upload `bundle.zip`.
 
 ## Documentation
 
