@@ -197,27 +197,23 @@ hydrology/nearby-places data and pre-generated report assets):
 - [docs/REPORT_METHODOLOGY.md](docs/REPORT_METHODOLOGY.md) — the
   deterministic/AI split explained chapter by chapter.
 
+
+## Demo Video & Sample
+
+[![Youtube](image.png)](https://www.youtube.com/watch?v=Ngdg0d8aNTc)
+
+LINK: https://www.youtube.com/watch?v=Ngdg0d8aNTc
+
+**Sample screenshots & reports can be found at:** https://github.com/srashtig/landintel-sample/tree/main
+
 ## License
 
 [MIT](LICENSE) — for the LandIntel source code itself. See the disclaimer
 below for the third-party data and services it queries at runtime, which
 are **not** covered by this license.
 
-## Third-party data & services disclaimer
 
-This app queries or displays data from several third-party sources at
-runtime — Google Earth Engine datasets (Sentinel-2, ESA WorldCover, SRTM,
-Landsat, ERA5-Land, CHIRPS), OpenStreetMap, SerpApi/Google Maps, Esri
-basemap tiles, Groq LLM inference, and several Government of India open
-datasets (CGWB groundwater, IMD rainfall, Survey of India boundaries,
-Census, MP Govt guideline rates). None of that third-party data is bundled
-or redistributed as part of this repository — the reference dataset is
-downloaded separately by whoever deploys the app, and the 7 demo runs
-shipped under `runs/` are small, already-derived outputs (summaries,
-maps, charts), not the raw source data itself. See
-[docs/DATA_SOURCES.md](docs/DATA_SOURCES.md) for the full list, attribution
-requirements, and each source's own terms of use — anyone deploying or
-redistributing this app is responsible for complying with them.
+## Disclaimer
 
 This app is a research/demonstration tool, not professional land-survey,
 legal, or financial advice. AI-generated content (chat answers, report
