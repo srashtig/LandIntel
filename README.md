@@ -169,8 +169,11 @@ hydrology/nearby-places data and pre-generated report assets):
 - **Compare sites** — select two or more bundled runs and generate a
   narrative comparison.
 - **Analyse new site** — pick a new location inside Madhya Pradesh (or
-  paste a lat/lon) and run the full pipeline end-to-end — requires
-  `GEE_PROJECT_ID` at minimum.
+  paste a lat/lon), then either **Analyse Now** to run the full pipeline
+  live end-to-end (requires `GEE_PROJECT_ID` at minimum), or, if you don't
+  have keys configured, **Request Analysis** — an automated email is sent
+  to the developer with the site details, and the user receives the
+  results back in their own inbox once it's run.
 - **Upload analysis** — no API keys needed at all: zip up one or more
   existing run folders (`site_summary.json` required; `map.html` and
   `report_assets/` optional but recommended) and upload it to browse them
