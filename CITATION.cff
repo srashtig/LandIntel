@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use LandIntel in your work, please cite it as below."
+title: "LandIntel: AI-Assisted Land Intelligence for Madhya Pradesh"
+type: software
+authors:
+  - family-names: "Goyal"
+    given-names: "Srashti"
+repository-code: "https://github.com/srashtig/LandIntel"
+license: MIT
+version: "0.1.0"
+date-released: "2026-09-19"
+abstract: >
+  LandIntel is a Streamlit application that runs a geospatial + socio-economic
+  analysis pipeline for a chosen site in Madhya Pradesh, India (satellite
+  imagery, groundwater, terrain, hydrology, roads/rail, nearby places,
+  administration/census data), then grounds an LLM in that real data for
+  purpose-driven Q&A, report generation, and multi-site comparison — with no
+  hand-tuned scoring formula.
+keywords:
+  - geospatial
+  - remote-sensing
+  - land-intelligence
+  - google-earth-engine
+  - streamlit
+  - llm
+  - groq

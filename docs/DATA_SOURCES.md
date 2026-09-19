@@ -27,3 +27,64 @@ Static maps embedded in generated reports use free, keyless basemap tiles —
 World Boundaries and Places** (via `contextily`) — chosen after confirming
 empirically that both the raw OSM tile server and CartoDB's Voyager basemap
 now block or require a key for this kind of scripted/bulk use.
+
+## Licensing & attribution
+
+None of the datasets above are bundled or redistributed as part of this
+repository — the reference dataset is downloaded separately by whoever
+deploys the app, and each source remains subject to its own license and
+terms of use, independent of this project's [MIT license](../LICENSE).
+This is a best-effort summary, not legal advice — verify current terms
+directly with each source before any commercial use or redistribution,
+especially for the Government of India datasets noted below.
+
+**Open, well-established licenses:**
+- **Copernicus (Sentinel-2, ERA5-Land)** — free and open under the EU's
+  Copernicus data policy. Required attribution: *"Contains modified
+  Copernicus Sentinel/Climate Change Service information [year]"*, with the
+  standard disclaimer that neither the European Commission nor ECMWF is
+  responsible for any use made of it.
+- **ESA WorldCover v200** — CC BY 4.0. Cite as *Zanaga, D. et al. (2022).
+  ESA WorldCover 10 m 2021 v200*, https://doi.org/10.5281/zenodo.7254221.
+- **SRTM / Landsat 8 (USGS, NASA)** — U.S. Government work, public domain;
+  no legal attribution requirement, though *"Courtesy of the U.S.
+  Geological Survey"* is customary.
+- **CHIRPS (UCSB Climate Hazards Center)** — freely available for any use;
+  suggested citation: Funk, C. et al. (2015), *"The climate hazards
+  infrared precipitation with stations — a new environmental record for
+  monitoring extremes."* Scientific Data 2, 150066.
+- **OpenStreetMap** — © OpenStreetMap contributors, [ODbL
+  1.0](https://opendatacommons.org/licenses/odbl/) — attribution required;
+  see [openstreetmap.org/copyright](https://www.openstreetmap.org/copyright).
+- **Esri basemap tiles** — used under Esri's free/keyless tile-service
+  terms (display/attribution only, no bulk download or redistribution of
+  the tiles themselves); attribution ("Source: Esri...") is baked directly
+  into every generated map image.
+
+**Government of India open data — verify current terms before reuse:**
+CGWB groundwater levels, IMD gridded rainfall, Survey of India village
+boundaries, Census of India derived figures, and MP Govt district
+guideline land rates are all sourced from Indian government agencies,
+generally under India's National Data Sharing and Accessibility Policy
+(NDSAP) framework, which typically permits reuse with attribution to the
+originating agency (Central Ground Water Board / Ministry of Jal Shakti;
+India Meteorological Department; Survey of India; Office of the Registrar
+General & Census Commissioner; Government of Madhya Pradesh). **Survey of
+India boundary data in particular can carry additional usage
+restrictions** (per India's National Map Policy) — confirm the exact terms
+attached to your specific copy of this data before any commercial use,
+redistribution, or public display beyond this kind of research/
+demonstration context.
+
+**Commercial third-party services (not open data):**
+- **SerpApi / Google Maps** — metered commercial API; usage is bound by
+  both [SerpApi's Terms of Service](https://serpapi.com/legal) and
+  [Google Maps Platform's Terms of Service](https://cloud.google.com/maps-platform/terms),
+  which apply to Google Maps content even when accessed through a
+  third-party proxy. This app displays results live within a session and
+  does not cache, store, or redistribute them beyond that.
+- **Groq** — commercial LLM inference API; usage is bound by
+  [Groq's Terms of Service](https://groq.com/terms-of-use/). Generated text
+  (chat answers, report interpretations, comparisons) is grounded in this
+  app's own pipeline data under explicit guardrails, but remains
+  AI-generated content and should be independently verified.
