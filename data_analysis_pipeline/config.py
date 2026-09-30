@@ -289,6 +289,15 @@ REFERENCE_DATA_BUNDLE_URL = os.environ.get("REFERENCE_DATA_BUNDLE_URL", "").stri
 # credentials of any kind live in this app.
 CONTACT_FORM_URL = os.environ.get("CONTACT_FORM_URL", "").strip() or None
 
+# Off by default — set to 1/true/yes in a *local* .env only, never in a
+# public deployment's secrets. Gates the sidebar (API keys, run/data
+# directory, source-data download) and the "Analyse Now" live-pipeline
+# button in frontend/streamlit_app.py, so a public showcase deployment
+# (which won't have this set) can't have its own GEE/SerpApi/Groq quota
+# triggered by a visitor — they get "Request Analysis" instead, which
+# doesn't touch this app's own keys at all.
+DEVELOPER_MODE = os.environ.get("DEVELOPER_MODE", "").strip().lower() in ("1", "true", "yes")
+
 # ---------------------------------------------------------------------
 # Earth Engine bootstrap
 # ---------------------------------------------------------------------

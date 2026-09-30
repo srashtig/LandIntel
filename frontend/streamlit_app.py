@@ -446,6 +446,12 @@ def _request_analysis_dialog(
 
 
 def _render_sidebar() -> None:
+    # DEVELOPER_MODE is off by default (see config.py) — a public showcase
+    # deployment won't have it set, so the API-key/run-directory/
+    # source-data-download panel (and the "Analyse Now" live-pipeline
+    # button, gated separately below) stay hidden from every visitor.
+    if not config.DEVELOPER_MODE:
+        return
     with st.sidebar:
         _render_api_key_settings()
 
@@ -1184,9 +1190,13 @@ def main() -> None:
         if not runs:
             st.info("No previous runs found yet under `runs/`.")
             return
+        st.caption(
+            "Pick a site to explore — you can change the purpose, see the analysis and map "
+            "layers, generate a LandIntel report, ask questions, and compare with other sites."
+        )
         labels = [r["label"] for r in runs]
         selected = st.radio(
-            "Pick a site to analyse",
+            "Pick a site to explore",
             options=range(len(runs)),
             format_func=lambda i: labels[i],
             key="previous_run_selected",
@@ -1319,14 +1329,24 @@ def main() -> None:
                 )
             run_enabled = bool(in_mp)
 
-        run_col, request_col = st.columns([1, 1])
-        with run_col:
-            st.caption("For developers")
-            run_clicked = st.button(
-                "Analyse Now", disabled=(not run_enabled) or st.session_state.run_in_progress, type="primary"
-            )
-        with request_col:
-            st.caption("For everyone else")
+        # "Analyse Now" (the live pipeline) is developer-only — see
+        # config.DEVELOPER_MODE — so a public showcase deployment never lets
+        # a visitor trigger this app's own GEE/SerpApi/Groq quota; they only
+        # ever see "Request Analysis" instead.
+        run_clicked = False
+        if config.DEVELOPER_MODE:
+            run_col, request_col = st.columns([1, 1])
+            with run_col:
+                st.caption("For developers")
+                run_clicked = st.button(
+                    "Analyse Now", disabled=(not run_enabled) or st.session_state.run_in_progress, type="primary"
+                )
+            with request_col:
+                st.caption("For everyone else")
+                if st.button("Request Analysis", disabled=not run_enabled, type="primary"):
+                    st.session_state.request_analysis_open = True
+                    st.rerun()
+        else:
             if st.button("Request Analysis", disabled=not run_enabled, type="primary"):
                 st.session_state.request_analysis_open = True
                 st.rerun()
